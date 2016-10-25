@@ -140,7 +140,7 @@
                 <div class="component-box">
 					
 					<!-- code view button -->
-					<div class="pmd-card-title custom-heading clearfix"> 
+					<div class="pmd-card-title custom-heading view-code-xs clearfix"> 
 						<a title="" data-placement="bottom" data-toggle="tooltip" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary rotate-90 pull-right pmd-tooltip" href="javascript:void(0);" data-original-title="View Code"><i class="material-icons md-dark pmd-sm">code</i></a> 
 					</div> <!-- code view button end -->
 					
@@ -202,7 +202,7 @@
 			<div class="col-md-9"> 
 				<div class="component-box">
 					<!-- code view button -->
-					<div class="pmd-card-title custom-heading clearfix"> 
+					<div class="pmd-card-title custom-heading  clearfix"> 
 						<a title="" data-placement="bottom" data-toggle="tooltip" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary rotate-90 pull-right pmd-tooltip" href="javascript:void(0);" data-original-title="View Code"><i class="material-icons md-dark pmd-sm">code</i></a> 
 					</div> <!-- code view button end -->
 					
@@ -250,7 +250,7 @@
                 <div class="component-box">
 					
 					<!-- code view button -->
-					<div class="pmd-card-title custom-heading clearfix"> 
+					<div class="pmd-card-title view-code-xs custom-heading clearfix"> 
 						<a title="" data-placement="bottom" data-toggle="tooltip" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary rotate-90 pull-right pmd-tooltip" href="javascript:void(0);" data-original-title="View Code"><i class="material-icons md-dark pmd-sm">code</i></a> 
 					</div> <!-- code view button end -->
 					
@@ -298,7 +298,7 @@
                 <div class="component-box">
 					
 					<!-- code view button -->
-					<div class="pmd-card-title custom-heading clearfix"> 
+					<div class="pmd-card-title custom-heading view-code-xs clearfix"> 
 						<a title="" data-placement="bottom" data-toggle="tooltip" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary rotate-90 pull-right pmd-tooltip" href="javascript:void(0);" data-original-title="View Code"><i class="material-icons md-dark pmd-sm">code</i></a> 
 					</div> <!-- code view button end -->
 					
@@ -359,7 +359,7 @@
                 <div class="component-box">
 					
 					<!-- code view button -->
-					<div class="pmd-card-title custom-heading clearfix"> 
+					<div class="pmd-card-title view-code-xs custom-heading clearfix"> 
 						<a title="" data-placement="bottom" data-toggle="tooltip" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary rotate-90 pull-right pmd-tooltip" href="javascript:void(0);" data-original-title="View Code"><i class="material-icons md-dark pmd-sm">code</i></a> 
 					</div> <!-- code view button end -->
 					

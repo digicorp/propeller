@@ -9,7 +9,7 @@
 }
 
 /*input focus bar*/
-.pmd-textfield-focused{ display: block;  width: 100%; height:2px; background-color:#e2e2e2; display:block; top:-1px;  background-color:#8E8DBE; transform:scaleX(0); -moz-transform: scaleX(0); -ms-transform: scaleX(0); -o-transform: scaleX(0);  -webkit-transform: scaleX(0); position:relative; z-index:2;}
+.pmd-textfield-focused{ display: block;  width: 100%; height:2px; background-color:#e2e2e2; display:block; top:-1px;  background-color:#4285f4; transform:scaleX(0); -moz-transform: scaleX(0); -ms-transform: scaleX(0); -o-transform: scaleX(0);  -webkit-transform: scaleX(0); position:relative; z-index:2;}
 .pmd-textfield.pmd-textfield-floating-label-active .pmd-textfield-focused { transform: scaleX(1); -moz-transform: scaleX(1); -ms-transform: scaleX(1); -o-transform: scaleX(1); -webkit-transform: scaleX(1);}
 
 /*paper input*/

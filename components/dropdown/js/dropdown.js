@@ -83,6 +83,7 @@
 				var h = that.outerHeight();
 				var dcdmc = that.closest('.pmd-dropdown-menu-container');
 				var dcdmbg = dcdmc.find('.pmd-dropdown-menu-bg');
+				
 				if (hassidebar) {
 					that.first().stop(true, true).slideDown();
 				} else if ( dropdowncenter ) {

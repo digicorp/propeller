@@ -10,7 +10,7 @@
 .pmd-navbar.navbar .btn.pmd-btn-fab:hover, .pmd-navbar.navbar .btn.pmd-btn-fab:focus, .pmd-navbar.navbar .btn.pmd-btn-fab.focus { color: #fff;}
 
 /*========================== header css ===========================*/
-.navbar-inverse{ background-color:#2c6fdd; border-color:#2c6fdd;}
+.navbar-inverse{ background-color:#4285f4; border-color:#4285f4;}
 
 /*============================= notification =========================*/
 .notification .pmd-badge[data-badge]::after{ background-color:#fff; color:#333;}
@@ -452,7 +452,7 @@ h2.typo-fill-secondary{ color:rgba(77, 87, 93, 0.68); font-size:22px;}
 .contact-page .contact-form {bottom: 0;left: 0;margin-top: -436px;position: relative;right: 0;top: 200px;}
 .contact-page .contact-details {display: table; width:100%;}
 .contact-page .feedback-form {padding: 30px 20px;width: 100%;}
-.contact-page .fill .adress-col {background: #2c6fdd none repeat scroll 0 0;display: table-cell;float: none;padding-bottom: 30px;padding-top: 30px;vertical-align: top;}
+.contact-page .fill .adress-col {background: #4285f4 none repeat scroll 0 0;display: table-cell;float: none;padding-bottom: 30px;padding-top: 30px;vertical-align: top;}
 .contact-page .pmd-display1 {color: #4d4d4d;margin-top: 0;opacity: 1; font:33px/40px "Roboto";}
 .contact-page .fill .adress-col .contact-info {color: #fff;margin-top: 35px;}
 .contact-page .fill .adress-col .contact-info span b {text-transform: uppercase; color:#fff; font-weight:300; opacity:0.74; font-size:13px;}

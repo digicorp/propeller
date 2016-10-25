@@ -4,52 +4,52 @@
 <!--header end --> 
 
 <!--navigation start-->
-	<nav class="navbar navbar-inverse pmd-navbar navbar-fixed-top pmd-z-depth guideline-header pmd-content">
-	
-		<div class="container-fluid"> 
-		
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header" style="display:none;"> 
-				<a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary pull-left margin-r8 pmd-sidebar-toggle"><i class="material-icons">menu</i></a> 
-			</div>
-			<div class="container">
-			<div class="row">
+<nav class="navbar navbar-inverse pmd-navbar navbar-fixed-top pmd-z-depth guideline-header pmd-content">
 
-				<!-- component title and description-->
-				<div class="col-md-10 col-sm-10 col-xs-12">
-					<h1 class="pmd-display1">Icons</h1>
-				</div> <!--end component title and description-->
-				
-				<!-- component download button dropdown -->
-				<div class="col-md-2 col-sm-2 col-xs-12">
-					<div class="dropdown pmd-dropdown clearfix pull-right">
-						<button class="btn pmd-btn-raised dropdown-toggle pmd-ripple-effect btn-primary" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-expanded="true">Download</button>
-						<!--dropdown-menu -->
-						<ul aria-labelledby="dropdownMenuDivider" role="menu" class="dropdown-menu dropdown-menu-custom mega-dropdown-menu dropdown-menu-right">
-							<li role="presentation" class="right-border">
-								<h4>UI Framework</h4>
-								<a class="btn btn-success btn-sm pmd-btn-raised pmd-ripple-effect" onClick="downloadUIFramework()" href="../archive/pmd-1.0.0.zip">Download ZIP</a>
-							</li>
-							<li role="presentation">
-								<h4>Standalone</h4>
-								<form id='component_form' method="post" action="custom/copy.php">
-									<input type="hidden"  name="icons" value="icons"/>
-									<button name='btn_submit' value='icons' type="submit" onClick="downloadIcon()" class="btn btn-default pmd-btn-raised btn-sm pmd-ripple-effect pmd-btn-flat custom-btn">Download ZIP</button>
-								</form>
-							</li>
-						</ul> <!--end dropdown menu -->
-					</div>
-				</div> <!--end download component button dropdown -->
-			</div>
+	<div class="container-fluid"> 
+	
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header" style="display:none;"> 
+			<a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary pull-left margin-r8 pmd-sidebar-toggle"><i class="material-icons">menu</i></a> 
 		</div>
+		<div class="container">
+		<div class="row">
+
+			<!-- component title and description-->
+			<div class="col-md-10 col-sm-10 col-xs-12">
+				<h1 class="pmd-display1">Icons</h1>
+			</div> <!--end component title and description-->
+			
+			<!-- component download button dropdown -->
+			<div class="col-md-2 col-sm-2 col-xs-12">
+				<div class="dropdown pmd-dropdown clearfix pull-right">
+					<button class="btn pmd-btn-raised dropdown-toggle pmd-ripple-effect btn-primary" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-expanded="true">Download</button>
+					<!--dropdown-menu -->
+					<ul aria-labelledby="dropdownMenuDivider" role="menu" class="dropdown-menu dropdown-menu-custom mega-dropdown-menu dropdown-menu-right">
+						<li role="presentation" class="right-border">
+							<h4>UI Framework</h4>
+							<a class="btn btn-success btn-sm pmd-btn-raised pmd-ripple-effect" onClick="downloadUIFramework()" href="../archive/pmd-1.0.0.zip">Download ZIP</a>
+						</li>
+						<li role="presentation">
+							<h4>Standalone</h4>
+							<form id='component_form' method="post" action="custom/copy.php">
+								<input type="hidden"  name="icons" value="icons"/>
+								<button name='btn_submit' value='icons' type="submit" onClick="downloadIcon()" class="btn btn-default pmd-btn-raised btn-sm pmd-ripple-effect pmd-btn-flat custom-btn">Download ZIP</button>
+							</form>
+						</li>
+					</ul> <!--end dropdown menu -->
+				</div>
+			</div> <!--end download component button dropdown -->
 		</div>
-		<!-- /.container-fluid --> 
-		
-	</nav>
-	<!--navigation end -->
+	</div>
+	</div>
+	<!-- /.container-fluid --> 
+	
+</nav>
+<!--navigation end -->
 
 <!--Icons -->
-<div class="pmd-content pmd-content-custom" id="content"> 
+<div class="pmd-content pmd-content-custom guidelime-icons" id="content"> 
 
 	<!--component header -->
 	<div class="componant-title-bg"> 
@@ -150,12 +150,12 @@
                                     <div class="row"> 
                                         
                                         <!-- Default Propeller icon -->
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="col-xs-6">
                                             <i class="material-icons pmd-lg md-dark">account_balance</i><br>
                                             Active
                                         </div>
                                         <!-- Default Inactive Propeller icon -->
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="col-xs-6">
                                             <i class="material-icons pmd-lg md-dark md-inactive">account_balance</i><br>
                                             Inactive
                                         </div>
@@ -172,13 +172,13 @@
                                     <div class="row"> 
                                     
                                         <!-- Inverse Propeller icon -->
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="col-xs-6">
                                             <i class="material-icons pmd-lg md-light">add_to_queue</i><br>
                                             Active
                                         </div>
 
                                         <!-- Inverse Inactive Propeller icon -->
-                                        <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <div class="col-xs-6">
                                             <i class="material-icons pmd-lg md-light md-inactive">add_to_queue</i><br>
                                             Inactive
                                         </div>

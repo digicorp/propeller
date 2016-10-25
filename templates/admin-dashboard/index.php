@@ -520,27 +520,27 @@
 					<div class="row">
 						<div class="col-xs-6 value-added-section">
 							<div class="source-semibold typo-fill-secondary title">Firefox</div>
-							<div class="pmd-display2"><a href="value-added-services-detail.php">25%</a></div>
+							<div class="pmd-display2"><a href="javascript:void(0)">25%</a></div>
 						</div>
 						<div class="col-xs-6 value-added-section">
 							<div class="source-semibold typo-fill-secondary title">Google Chrome</div>
-							<div class="pmd-display2"><a href="value-added-services-detail.php">32%</a></div>
+							<div class="pmd-display2"><a href="javascript:void(0)">32%</a></div>
 						</div>
 						<div class="col-xs-6 value-added-section">
 							<div class="source-semibold typo-fill-secondary title">Safari</div>
-							<div class="pmd-display2"><a href="value-added-services-detail.php">13%</a></div>
+							<div class="pmd-display2"><a href="javascript:void(0)">13%</a></div>
 						</div>
 						<div class="col-xs-6 value-added-section">
 							<div class="source-semibold typo-fill-secondary title">Opera</div>
-							<div class="pmd-display2"><a href="value-added-services-detail.php">7%</a></div>
+							<div class="pmd-display2"><a href="javascript:void(0)">7%</a></div>
 						</div>
 						<div class="col-xs-6 value-added-section">
 							<div class="source-semibold typo-fill-secondary title">Mobile & Tablet</div>
-							<div class="pmd-display2"><a href="value-added-services-detail.php">4%</a></div>
+							<div class="pmd-display2"><a href="javascript:void(0)">4%</a></div>
 						</div>
 						<div class="col-xs-6 value-added-section">
 							<div class="source-semibold typo-fill-secondary title">Others</div>
-							<div class="pmd-display2"><a href="value-added-services-detail.php">2%</a></div>
+							<div class="pmd-display2"><a href="javascript:void(0)">2%</a></div>
 						</div>
 					</div>
 				</div>

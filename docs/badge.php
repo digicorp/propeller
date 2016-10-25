@@ -50,7 +50,7 @@
 <!--navigation end -->
 
 <!--Badge -->
-<div class="pmd-content pmd-content-custom" id="content"> 
+<div class="pmd-content pmd-content-custom guidelime-badge" id="content"> 
 	
 	<!--component header -->
 	<div class="componant-title-bg"> 

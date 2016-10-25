@@ -142,9 +142,8 @@ Propeller Table
 .pmd-table.table > thead > tr > td,
 .pmd-table.table > tbody > tr > td,
 .pmd-table.table > tfoot > tr > td{ vertical-align:middle;}
-
+.pmd-table-card.pmd-z-depth{ box-shadow:none; background-color:transparent;}
 .pmd-table-card .pmd-table.table { margin-bottom:0;}
-
 .pmd-table.table > thead > tr,
 .pmd-table.table > tbody > tr,
 .pmd-table.table > tfoot > tr { -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease;}
@@ -179,7 +178,7 @@ Table Card
 .pmd-table-card .table.pmd-table thead,
 .pmd-table-card .table.pmd-table tfoot { display: none;}
 .pmd-table-card .table.pmd-table tbody {display: block;}
-.pmd-table-card .table.pmd-table tbody tr { display: block; border-radius: 2px; margin-bottom:1.25rem; }
+.pmd-table-card .table.pmd-table tbody tr { display: block; border-radius: 2px; margin-bottom:1.25rem; box-shadow:0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)}
 .pmd-table-card .table.pmd-table tbody tr td { background-color: #ffffff; display: block; vertical-align: middle; text-align: right;}
 .pmd-table-card .table.pmd-table tbody tr td[data-title]:before { content: attr(data-title); float: left; font-size: inherit; font-weight: 400; color: #757575;}
 
@@ -235,6 +234,7 @@ Child Table
 .pmd-table .child-table > td{ padding:0 !important;}
 .pmd-table .child-table > td .table > thead > tr{ background-color: #fff;}
 .pmd-table .child-table .table-sm th, .child-table .table-sm td{padding: 0.3rem 0.75rem;}
+.pmd-table .child-table .pmd-table {margin-bottom:0;}
 @media screen and (max-width: 768px) {
 .pmd-table .child-table{ margin-top:-20px;}
 }

@@ -61,11 +61,11 @@
 				<div id="download">
 				  <h2>Download</h2>
 				 </div> 
-                  <p>Propeller comes in three different forms. You can choose either of them depending on your preference and requirements. Download from one of the options available below to get started.</p>				  
+                  <p>Propeller comes in four different forms. You can choose either of them depending on your preference and requirements. Download from one of the options available below to get started.</p>				  
 			</div> <!-- Download section title and description end -->
 			
 			
-			<div class="col-md-4 col-sm-12">
+			<div class="col-md-3 col-sm-12">
 				<div class="component-box">
 					<div class="pmd-card pmd-z-depth">
 					   <div class="pmd-card-body">
@@ -78,12 +78,12 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 col-sm-12">
+			<div class="col-md-3 col-sm-12">
 				<div class="component-box code-sm">
 					<div class="pmd-card pmd-z-depth">
 					   <div class="pmd-card-body">
 						 <h2>Propeller Kit</h2>
-						 <p>This kit has both minified and unminified versions of css and javascript along with html code for all 22 Components.</p>
+						 <p>This kit has both minified and unminified versions of css and javascript along with html code for all 25 Components.</p>
 						 <div class="dropdown pmd-dropdown clearfix mt25 custom-mt25 text-left">
 							<a href="../archive/pmd-1.0.0.zip" onClick="downloadUIFramework()" class="btn pmd-btn-raised pmd-ripple-effect btn-primary custom-primary" type="button">Download</a>
 						 </div>
@@ -91,7 +91,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4 col-sm-12">
+			<div class="col-md-3 col-sm-12">
 				<div class="component-box code-sm">
 					<div class="pmd-card pmd-z-depth">
 					   <div class="pmd-card-body">
@@ -99,6 +99,19 @@
 						 <p>Download and use the individual component. You'll get the css, javascript and html files of the component.</p>
 						 <div class="dropdown pmd-dropdown clearfix mt25 custom-mt25 text-left">
 							<button data-target="#standalone-list-dialog" data-toggle="modal" class="btn pmd-btn-raised pmd-ripple-effect btn-primary custom-primary" type="button">View List</button>
+						 </div>
+					   </div>
+					</div>
+				</div>
+			</div>
+            <div class="col-md-3 col-sm-12">
+				<div class="component-box code-sm">
+					<div class="pmd-card pmd-z-depth">
+					   <div class="pmd-card-body">
+						 <h2>Admin Template</h2>
+						 <p>Preview and download our precreated Admin template with all standards to save time and speed up your development.</p>
+						 <div class="dropdown pmd-dropdown clearfix mt25 custom-mt25 text-left">
+							<a href="../propeller-template-list.html" class="btn pmd-btn-raised pmd-ripple-effect btn-primary custom-primary" target="_blank" type="button">Preview Template</a>
 						 </div>
 					   </div>
 					</div>

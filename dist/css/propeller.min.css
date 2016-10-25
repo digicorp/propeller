@@ -307,7 +307,7 @@ h2.pmd-card-title-text{ font-size:1.5rem; font-weight:400; margin-bottom:2px;}
 /* -- Buttons Default outline --*/
 .btn-default.pmd-btn-outline{border:solid 1px #333;}
 /* -- Buttons Primary --*/
-.btn-primary,.dropdown-toggle.btn-primary{ background-color: #5677fc;}
+.btn-primary,.dropdown-toggle.btn-primary{ background-color: #4285f4;}
 .btn-primary:hover,.dropdown-toggle.btn-primary:hover { background-color: #4e6cef;}
 .btn-primary:active,.dropdown-toggle.btn-primary:active,.btn-primary.active,.dropdown-toggle.btn-primary.active {background-color: #4e6cef;}
 .btn-primary:focus,.dropdown-toggle.btn-primary:focus { background-color: #455ede;}
@@ -315,14 +315,14 @@ h2.pmd-card-title-text{ font-size:1.5rem; font-weight:400; margin-bottom:2px;}
 .btn-primary[disabled],.dropdown-toggle.btn-primary[disabled] { background-color: #b3b3b3;}
 .btn-primary .ink,.dropdown-toggle.btn-primary .ink { background-color: #3b50ce;}
 /* -- Buttons primary flat --*/
-.pmd-btn-flat.btn-primary { color: #5677fc; background-color: transparent;}
+.pmd-btn-flat.btn-primary { color: #4285f4; background-color: transparent;}
 .pmd-btn-flat.btn-primary:hover { color: #4e6cef; background-color: #e5e5e5;}
 .pmd-btn-flat.btn-primary:active,.pmd-btn-flat.btn-primary.active { color: #455ede; background-color: #cccccc;}
 .pmd-btn-flat.btn-primary:focus { color: #3b50ce; background-color: #cccccc;}
 .pmd-btn-flat.btn-primary .ink { background-color: #808080;}
 /* -- Buttons primary outline --*/
-.pmd-btn-outline.btn-primary{ border: solid 1px #5677fc; background-color:transparent; color:#5677fc;}
-.pmd-btn-outline.btn-primary:hover, .pmd-btn-outline.btn-primary:focus { border: solid 1px #5677fc; background-color:#5677fc; color:#fff;}
+.pmd-btn-outline.btn-primary{ border: solid 1px #4285f4; background-color:transparent; color:#4285f4;}
+.pmd-btn-outline.btn-primary:hover, .pmd-btn-outline.btn-primary:focus { border: solid 1px #4285f4; background-color:#4285f4; color:#fff;}
 /* -- Buttons Success --*/
 .btn-success,
 .dropdown-toggle.btn-success { background-color: #259b24;}
@@ -512,7 +512,7 @@ h2.pmd-card-title-text{ font-size:1.5rem; font-weight:400; margin-bottom:2px;}
 }
 
 /*input focus bar*/
-.pmd-textfield-focused{ display: block;  width: 100%; height:2px; background-color:#e2e2e2; display:block; top:-1px;  background-color:#8E8DBE; transform:scaleX(0); -moz-transform: scaleX(0); -ms-transform: scaleX(0); -o-transform: scaleX(0);  -webkit-transform: scaleX(0); position:relative; z-index:2;}
+.pmd-textfield-focused{ display: block;  width: 100%; height:2px; background-color:#e2e2e2; display:block; top:-1px;  background-color:#4285f4; transform:scaleX(0); -moz-transform: scaleX(0); -ms-transform: scaleX(0); -o-transform: scaleX(0);  -webkit-transform: scaleX(0); position:relative; z-index:2;}
 .pmd-textfield.pmd-textfield-floating-label-active .pmd-textfield-focused { transform: scaleX(1); -moz-transform: scaleX(1); -ms-transform: scaleX(1); -o-transform: scaleX(1); -webkit-transform: scaleX(1);}
 
 /*paper input*/
