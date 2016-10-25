@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Propeller is a front-end responsive framework based on Material design & Bootstrap.">
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+
+    <title>Propeller - Develop more, Code less.</title>
+    
+	<!-- favicon --> 
+	<link rel="icon" href="../../assets/landing-page/images/favicon.ico" type="image/x-icon">
+	
+	<!-- Bootstrap --> 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+	
+	<!-- Propeller Docs -->
+	<link href="../../docs/css/docs.css" type="text/css" rel="stylesheet" /> 
+
+	<!-- Propeller typography -->
+	<link href="http://propeller.in/components/typography/css/typography.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Propeller radio -->
+	<link href="http://propeller.in/components/radio/css/radio.css" type="text/css" rel="stylesheet" />
+	
+</head>
+
+<body>
+
+<!-- Radio -->
+<div class="pmd-content pmd-content-custom" id="content"> 
+	<br><br>
+	<div class="container">
+
+		<!-- Radio -->
+		<section class="row component-section">
+		
+			<!-- radio title and description -->
+			<div class="col-md-3">
+				<div id="radio">
+					<h2>Radio</h2>
+				</div>
+				<p>Use radio buttons for exclusive selection if you think that the user needs to see all available options side-by-side. Add <code>.pmd-radio</code> to create a propeller customized radio. You can also add <code>.pmd-radio-pmd-ripple-effect</code> to provide a ripple effect to the radio. Inside this div you need to also add a span element with <code>.pmd-radio-label</code>.</p>
+			</div> <!-- radio title and description end-->
+			
+			<!-- radio code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+
+					<!-- radio example -->
+					<div class="row">
+						<div class="col-md-6">
+							<div class="pmd-card pmd-z-depth">
+								<div class="pmd-card-body"> 
+									<!-- Simple radio with label -->
+									<div class="radio">
+										<label class="pmd-radio pmd-radio-pmd-ripple-effect">
+											<input type="radio" name="optionsRadios" id="click" value="option1" checked>
+											<span for="click">Option one is this and that&mdash;be sure to include why it's great</span> </label>
+									</div>
+									<!-- Radio button checked -->
+									<div class="radio">
+										<label class="pmd-radio pmd-radio-pmd-ripple-effect">
+											<input type="radio" name="optionsRadios" id="click1" value="option1" checked>
+											<span for="click1">Option one is this and that&mdash;be sure to include why it's great</span> </label>
+									</div>
+									<!-- Radio button disable -->
+									<div class="radio disabled">
+										<label class="pmd-radio pmd-radio-pmd-ripple-effect">
+											<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+											<span for="optionsRadios3">Option three is disabled</span> </label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="pmd-card pmd-card-inverse pmd-z-depth">
+								<div class="pmd-card-body"> 
+									<!-- Simple radio with label -->
+									<div class="radio">
+										<label class="pmd-radio pmd-radio-pmd-ripple-effect">
+											<input type="radio" name="optionsRadios" id="click4" value="option1">
+											<span for="click4">Option one is this and that&mdash;be sure to include why it's great</span> </label>
+									</div>
+									<!-- Radio button checked -->
+									<div class="radio">
+										<label class="pmd-radio pmd-radio-pmd-ripple-effect">
+											<input type="radio" name="optionsRadios" id="click5" value="option2" checked>
+											<span for="click5">Option one is this and that&mdash;be sure to include why it's great</span> </label>
+									</div>
+									<!-- Radio button disable -->
+									<div class="radio disabled">
+										<label class="pmd-radio pmd-radio-pmd-ripple-effect">
+											<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+											<span for="optionsRadios3">Option three is disabled</span> </label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> <!-- radio example end -->
+				</div>
+			</div> <!-- radio code and example end -->
+		</section> <!-- Radio end --> 
+		
+		<!-- Inline radio -->
+		<section class="row component-section">
+		
+			<!-- radio title and description -->
+			<div class="col-md-3">
+				<div id="radio">
+					<h2></h2>
+				</div>
+				<p>Inline Radio - Use <code>.radio-inline</code> on a series of radio boxes for controls that appear on the same line.</p>
+			</div> <!-- radio title and description end-->
+			
+			<!-- radio code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+				
+					<!-- radio example -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pmd-card pmd-z-depth">
+								<div class="pmd-card-body"> 
+									<!-- Inline radio -->
+									<label class="radio-inline pmd-radio">
+										<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										<span for="inlineRadio1">1</span> </label>
+									<label class="radio-inline pmd-radio">
+										<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked>
+										<span for="inlineRadio2">2</span> </label>
+									<label class="radio-inline pmd-radio">
+										<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+										<span for="inlineRadio3">3</span> </label>
+								</div>
+							</div>
+						</div>
+					</div> <!-- radio example end -->
+				</div>
+			</div> <!-- radio code and example end -->
+		</section> <!-- Inline radio end --> 
+		
+		<!-- Configuration starts--> 
+		<section class="row component-section">
+			<div class="col-md-3">
+				<div id="config">
+					<h2>Configuration Options</h2>
+				</div>
+				<p>The Propeller CSS classes apply various predefined visual enhancements to the form elements. The table lists the available classes and their effects.</p>
+			</div>
+			<div class="col-md-9">
+				<div class="pmd-card pmd-z-depth pmd-card-custom">
+					<div class="table-responsive">
+						<table class="table pmd-table table-hover">
+							<thead>
+								<tr>
+									<th>Propeller Class</th>
+									<th>Effect</th>
+									<th>Remark</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-title="Class"><code>.form-group</code></td>
+									<td data-title="Effect">Wrapper class for form elements</td>
+									<td data-title="Remark">Required</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.form-control</code></td>
+									<td data-title="Effect">Class added for styling of the input</td>
+									<td data-title="Remark">Required</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-textfield</code></td>
+									<td data-title="Effect">Class added for general label and input formatting. </td>
+									<td data-title="Remark">Required</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-textfield-floating-label</code></td>
+									<td data-title="Effect">Adds floating animation to the label of input</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-textfield-floating-label-completed</code></td>
+									<td data-title="Effect">Class added dynamically after completion of floating animation of the label of input</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.has-warning</code></td>
+									<td data-title="Effect">To create a warning input field</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.has-success</code></td>
+									<td data-title="Effect">To create a success input field</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.has-error</code></td>
+									<td data-title="Effect">To create an error input field</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.input-group-addon</code></td>
+									<td data-title="Effect">To create an input field with icon</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-checkbox</code></td>
+									<td data-title="Effect">To create propeller customized checkbox</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-checkbox-label</code></td>
+									<td data-title="Effect">Add this class to an element inside the parent div to create checkbox</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-checkbox-pmd-ripple-effect</code></td>
+									<td data-title="Effect">Add this class to create ripple effect to checkboxes</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.checkbox-inline</code></td>
+									<td data-title="Effect">Add this class to create inline checkboxes</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-radio</code></td>
+									<td data-title="Effect">To create propeller customized radiobutton</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-radio-label</code></td>
+									<td data-title="Effect">Add this class to an element inside the parent div to create radio</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-radio-pmd-ripple-effect</code></td>
+									<td data-title="Effect">Add this class to create ripple effect to radio</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.radio-inline</code></td>
+									<td data-title="Effect">Add this class to create inline radio</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.togglebutton</code></td>
+									<td data-title="Effect">To create toggle switch</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.toggle</code></td>
+									<td data-title="Effect">Add this class inside parent div to an element to create toggle switch</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-select2-tags</code></td>
+									<td data-title="Effect">To create selectbox with tags</td>
+									<td data-title="Remark">Optional</td>
+								</tr>						
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section> <!-- Configuration ends-->
+		 
+	</div> <!--container end --> 
+	
+</div> <!-- Radio -->
+
+<!-- jquery JS -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Propeller js --> 
+<script type="text/javascript" src="http://propeller.in/assets/js/propeller.min.js"></script>
+
+</body>
+
+</html>

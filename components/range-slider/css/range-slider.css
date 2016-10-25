@@ -1,0 +1,112 @@
+/*!
+ * Propeller v1.0.0 (http://propeller.in)
+ * Copyright 2016-2017 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+/* Propeller common css */
+.pmd-range-slider.noUi-target { box-shadow: none; border: none; height: 2px; margin:40px 0 6px;}
+.pmd-range-slider.noUi-connect { background:#0f9d58;}
+.pmd-range-slider .noUi-handle { border:none; box-shadow:none; border-radius:50%;  background:none;}
+
+.pmd-range-slider.noUi-background,
+.pmd-range-slider .noUi-background { box-shadow:none; background:#dedede; }
+.pmd-range-slider.noUi-background { transition:all ease-in-out 0.2s; -moz-transition:all ease-in-out 0.1s;-webkit-transition:all ease-in-out 0.2s; -o-transition:all ease-in-out 0.2s;  }
+.pmd-range-slider .noUi-handle { width:14px; height:14px; left: -7px; top: -6px; cursor:pointer;}
+.pmd-range-slider .noUi-handle:after,
+.pmd-range-slider .noUi-handle:before { display:none;} 
+.pmd-range-slider .noUi-handle:before { display:block; width:100%; height:100%; background:#0f9d58; position:absolute; left:0; top:0; border-radius:50%;}
+.pmd-range-slider .noUi-base { z-index:100;}
+
+.pmd-range-slider .noUi-pips-horizontal { height:2px; padding:0; top:1px; z-index:10;}
+.pmd-range-slider .noUi-pips .noUi-value { display:none;}
+.pmd-range-slider .noUi-pips .noUi-marker-horizontal { background:#000; height:2px;}
+.pmd-range-slider .noUi-pips.noUi-pips-horizontal .noUi-marker-large:first-child { margin-left:0;}
+.pmd-range-slider .noUi-pips.noUi-pips-horizontal .noUi-marker-large:nth-last-child(2) { margin-left:-2px;}
+
+.pmd-range-slider .noUi-pips-vertical {  width:2px; padding:0; left:1px; z-index:10;}
+.pmd-range-slider .noUi-pips .noUi-marker-vertical { background:#000; width:2px; }
+.pmd-range-slider .noUi-pips.noUi-pips-vertical .noUi-marker-large:first-child { margin-top:-2px;}
+.pmd-range-slider .noUi-pips.noUi-pips-vertical .noUi-marker-large:nth-last-child(2) { margin-top:0px;}
+
+
+.pmd-range-slider .noUi-tooltip { left:50%; padding:0; width:28px; height:28px; margin-left:-14px; border:none; background:#0f9d58; color:#fff; line-height:28px; border-radius:50%; font-size:11px;  }
+
+/* Propeller horizontal css */
+.pmd-range-slider.noUi-horizontal .noUi-handle-upper .noUi-tooltip,
+.pmd-range-slider.noUi-horizontal .noUi-handle-lower .noUi-tooltip { top:-32px; bottom:auto;}
+
+.pmd-range-slider.noUi-horizontal .noUi-handle-upper .noUi-tooltip:before,
+.pmd-range-slider.noUi-horizontal .noUi-handle-lower .noUi-tooltip:before { content: ""; width: 20px; height: 20px; position: absolute; left: 50%; background: #0f9d58; margin-left: -10px; z-index: -1; transform: rotate(45deg); -moz-transform: rotate(45deg); -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); top:9px; border-radius: 10px 10px 0px 10px;}
+
+/* horizontal tooltip open  bottom */
+.pmd-range-slider.pmd-range-tooltip-right-bottom.noUi-horizontal .noUi-handle-upper .noUi-tooltip,
+.pmd-range-slider.pmd-range-tooltip-left-bottom.noUi-horizontal .noUi-handle-lower .noUi-tooltip,
+.pmd-range-slider.pmd-range-tooltip-bottom.noUi-horizontal .noUi-handle-upper .noUi-tooltip,
+.pmd-range-slider.pmd-range-tooltip-bottom.noUi-horizontal .noUi-handle-lower .noUi-tooltip,
+.pmd-range-slider.pmd-range-tooltip-bottom.noUi-horizontal .noUi-tooltip { top:auto; bottom:-32px;}
+
+.pmd-range-slider.pmd-range-tooltip-right-bottom.noUi-horizontal .noUi-handle-upper .noUi-tooltip:before,
+.pmd-range-slider.pmd-range-tooltip-left-bottom.noUi-horizontal .noUi-handle-lower .noUi-tooltip:before,
+.pmd-range-slider.pmd-range-tooltip-bottom.noUi-horizontal .noUi-handle-upper .noUi-tooltip:before,
+.pmd-range-slider.pmd-range-tooltip-bottom.noUi-horizontal .noUi-handle-lower .noUi-tooltip:before { top:auto; bottom:9px; border-radius: 0 10px 10px 10px;}
+
+.pmd-range-slider.pmd-range-tooltip-right-bottom.noUi-horizontal .noUi-handle-upper .noUi-tooltip,
+.pmd-range-slider.pmd-range-tooltip-left-bottom.noUi-horizontal .noUi-handle-lower .noUi-tooltip,
+.pmd-range-slider.pmd-range-tooltip-bottom.noUi-horizontal .noUi-tooltip { transform-origin: 50% -50%; -moz-transform-origin: 50% -50%; -webkit-transform-origin: 50% -50%; -ms-transform-origin: 50% -50%;}
+
+
+/* Propeller verticle css */
+.pmd-range-slider.noUi-vertical { height: 300px; margin: 20px auto;}
+.pmd-range-slider.noUi-vertical.noUi-target { width:2px;}
+.pmd-range-slider.noUi-vertical.noUi-connect { background:#0f9d58;}
+.pmd-range-slider.noUi-vertical .noUi-handle {left: -6px;}
+.pmd-range-slider.noUi-vertical .noUi-tooltip { margin-left:0; margin-top:-14px; top:50%; left:-32px;}
+.pmd-range-slider.noUi-vertical .noUi-handle-upper .noUi-tooltip:before,
+.pmd-range-slider.noUi-vertical .noUi-handle-lower .noUi-tooltip:before { content: ""; width: 20px; height: 20px; position: absolute; top: 50%; background: #0f9d58; margin-top: -10px; z-index: -1; transform: rotate(45deg); -moz-transform: rotate(45deg); -webkit-transform: rotate(45deg); -ms-transform: rotate(45deg); left:9px; border-radius: 10px 0px 10px 10px;}
+
+/**/
+.pmd-range-slider.pmd-range-tooltip-top-right.noUi-vertical .noUi-handle-upper .noUi-tooltip,
+.pmd-range-slider.pmd-range-tooltip-bottom-right.noUi-vertical .noUi-handle-lower .noUi-tooltip,
+.pmd-range-slider.pmd-range-tooltip-right.noUi-vertical .noUi-handle-upper .noUi-tooltip,
+.pmd-range-slider.pmd-range-tooltip-right.noUi-vertical .noUi-handle-lower .noUi-tooltip,
+.pmd-range-slider.pmd-range-tooltip-right.noUi-vertical .noUi-tooltip { left:auto; right:-32px;}
+
+.pmd-range-slider.pmd-range-tooltip-top-right.noUi-vertical .noUi-handle-upper .noUi-tooltip:before,
+.pmd-range-slider.pmd-range-tooltip-bottom-right.noUi-vertical .noUi-handle-lower .noUi-tooltip:before,
+.pmd-range-slider.pmd-range-tooltip-right.noUi-vertical .noUi-handle-upper .noUi-tooltip:before,
+.pmd-range-slider.pmd-range-tooltip-right.noUi-vertical .noUi-handle-lower .noUi-tooltip:before { left:auto; right:9px; border-radius: 10px 10px 10px 0px;}
+
+.pmd-range-slider.pmd-range-tooltip-top-right.noUi-vertical .noUi-handle-upper .noUi-tooltip,
+.pmd-range-slider.pmd-range-tooltip-bottom-right.noUi-vertical .noUi-handle-lower .noUi-tooltip,
+.pmd-range-slider.pmd-range-tooltip-right.noUi-vertical .noUi-tooltip { transform-origin: -50% 50%; -moz-transform-origin: -50% 50%; -webkit-transform-origin: -50% 50%; -ms-transform-origin: -50% 50%;}
+
+
+
+/* range slider tooltip animation */
+.pmd-range-slider .noUi-tooltip {  transform:scale(0,0); -moz-transform:scale(0,0); -ms-transform:scale(0,0); -o-transform:scale(0,0); -webkit-transform:scale(0,0); }
+
+.pmd-range-slider.noUi-horizontal .noUi-tooltip { transform-origin:50% 150%; -moz-transform-origin:50% 150%; -webkit-transform-origin:50% 150%; -ms-transform-origin:50% 150%;}
+.pmd-range-slider.noUi-vertical .noUi-tooltip { transform-origin:150% 50%; -moz-transform-origin:150% 50%; -webkit-transform-origin:150% 50%; -ms-transform-origin:150% 50%;}
+
+.pmd-range-slider .noUi-handle:before,
+.pmd-range-slider .noUi-tooltip { transition:all ease-in-out 0.2s; -moz-transition:all ease-in-out 0.1s;-webkit-transition:all ease-in-out 0.2s; -o-transition:all ease-in-out 0.2s;  }
+
+.pmd-range-slider .noUi-handle.noUi-active:before { opacity:0; transform:scale(0,0); -moz-transform:scale(0,0); -ms-transform:scale(0,0);-o-transform:scale(0,0); -webkit-transform:scale(0,0);}
+.pmd-range-slider .noUi-handle.noUi-active .noUi-tooltip { transform:scale(1,1); -moz-transform:scale(1,1); -ms-transform:scale(1,1); -o-transform:scale(1,1); -webkit-transform:scale(1,1);}
+
+
+/* default tooltip open */
+.pmd-range-slider.pmd-range-tooltip  .noUi-handle:before {  transform:scale(0,0); -moz-transform:scale(0,0); -ms-transform:scale(0,0);-o-transform:scale(0,0); -webkit-transform:scale(0,0); }
+.pmd-range-slider.pmd-range-tooltip .noUi-tooltip { transform:scale(1,1); -moz-transform:scale(1,1); -ms-transform:scale(1,1); -o-transform:scale(1,1); -webkit-transform:scale(1,1);}
+
+
+/* Disable slider */
+[disabled] .noUi-connect,
+[disabled].noUi-connect { background: #d0d0d0;}
+[disabled].pmd-range-slider.noUi-background,
+[disabled].pmd-range-slider .noUi-background { background:#f1f1f1;}
+[disabled].pmd-range-slider .noUi-handle:before { background: #d0d0d0;}
+.pmd-range-slider [disabled].noUi-origin .noUi-handle,
+[disabled].pmd-range-slider .noUi-handle { cursor:not-allowed;}
+.pmd-range-slider [disabled].noUi-origin .noUi-handle:before { background: #d0d0d0;}

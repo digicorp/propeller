@@ -1,0 +1,30 @@
+/* Bootstrap css */
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";
+
+/* Propeller typography */
+@import "http://propeller.in/components/typography/css/typography.css";
+
+/* Propeller buttons */
+@import "http://propeller.in/components/button/css/button.css";
+
+/* Propeller icons */
+@import "http://fonts.googleapis.com/icon?family=Material+Icons";
+@import "http://propeller.in/components/icons/css/google-icons.css";
+
+/* Propeller css for Floating Action Button*/
+.pmd-floating-action{ bottom: 0; position: fixed;  margin:1em;  right: 0;}
+.pmd-floating-action-btn { display:block; position: relative; -webkit-transition: all .2s ease-out; transition: all .2s ease-out;}
+.pmd-floating-action-btn:before { bottom: 10%; content: attr(data-title); opacity: 0; position: absolute; right: 100%; -webkit-transition: all .2s ease-out .5s; transition: all .2s ease-out .5s;  white-space: nowrap; background-color:#fff; padding:6px 12px; border-radius:2px; color:#333; font-size:12px; margin-right:5px; display:inline-block; box-shadow: 0px 2px 3px -2px rgba(0, 0, 0, 0.18), 0px 2px 2px -7px rgba(0, 0, 0, 0.15);}
+.pmd-floating-action-btn:last-child:before { font-size: 14px; bottom: 25%;}
+.pmd-floating-action-btn:active, .pmd-floating-action-btn:focus, .pmd-floating-action-btn:hover {box-shadow: 0px 5px 11px -2px rgba(0, 0, 0, 0.18), 0px 4px 12px -7px rgba(0, 0, 0, 0.15);}
+.pmd-floating-action-btn:not(:last-child){ opacity: 0; -webkit-transform: translateY(20px) scale(0.3); -ms-transform: translateY(20px) scale(0.3); transform: translateY(20px) scale(0.3); margin-bottom:15px; margin-left:8px;}
+.pmd-floating-action-btn:not(:last-child):nth-last-child(1) { -webkit-transition-delay: 50ms; transition-delay: 50ms;}
+.pmd-floating-action-btn:not(:last-child):nth-last-child(2) { -webkit-transition-delay: 100ms; transition-delay: 100ms;}
+.pmd-floating-action-btn:not(:last-child):nth-last-child(3) { -webkit-transition-delay: 150ms; transition-delay: 150ms;}
+.pmd-floating-action-btn:not(:last-child):nth-last-child(4) { -webkit-transition-delay: 200ms; transition-delay: 200ms;}
+.pmd-floating-action-btn:not(:last-child):nth-last-child(5) { -webkit-transition-delay: 250ms; transition-delay: 250ms;}
+.pmd-floating-action-btn:not(:last-child):nth-last-child(6) { -webkit-transition-delay: 300ms; transition-delay: 300ms;}
+.pmd-floating-action:hover .pmd-floating-action-btn, .menu--floating--open .pmd-floating-action-btn { opacity: 1; -webkit-transform: none; -ms-transform: none; transform: none;}
+.pmd-floating-action:hover .pmd-floating-action-btn:before, .menu--floating--open .pmd-floating-action-btn:before { opacity: 1;}
+.pmd-floating-hidden{ display:none;}
+.pmd-floating-action-btn.btn:hover{ overflow:visible;}

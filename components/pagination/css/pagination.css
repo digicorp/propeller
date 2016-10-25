@@ -1,0 +1,17 @@
+/*!
+ * Propeller v1.0.0 (http://propeller.in)
+ * Copyright 2016-2017 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+/*Propeller*/
+.pmd-pagination{ margin:0; margin-right:-16px;}
+.pmd-pagination a, .pmd-pagination span{ display:inline-block; vertical-align:middle;}
+.pmd-pagination a{ padding:0 12px;}
+.pmd-pagination .dropdown-menu{ min-width: 60px;}
+.pmd-pagination .btn{min-width:inherit;}
+
+@media screen and (max-width: 767px) {
+	.pmd-pagination.pull-right{ float:none !important; text-align:center;}
+	.pmd-pagination a{ padding:0;}
+}

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Propeller is a front-end responsive framework based on Material design & Bootstrap.">
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+    <title>Form - Propeller Components</title>
+
+	<!-- favicon --> 	
+	<link href="http://propeller.in/assets/landing-page/images/favicon.ico" type="image/x-icon" rel="icon"  />
+    
+   	<!-- Bootstrap --> 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+ 
+    <!-- Propeller card (CSS for helping component example file)-->
+	<link href="http://propeller.in/components/card/css/card.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Example docs (CSS for helping component example file)-->
+	<link href="http://propeller.in/docs/css/example-docs.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Propeller typography (CSS for helping component example file) -->
+	<link href="http://propeller.in/components/typography/css/typography.css" type="text/css" rel="stylesheet" />
+
+	<!-- Google Icon Font -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="http://propeller.in/components/icons/css/google-icons.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Propeller Checkbox -->
+    <link href="http://propeller.in/components/checkbox/css/checkbox.css" type="text/css" rel="stylesheet" />
+
+	<!-- Propeller textfield -->
+    <link href="http://propeller.in/components/textfield/css/textfield.css" type="text/css" rel="stylesheet" />
+    
+	<!-- Propeller Radio -->
+    <link href="http://propeller.in/components/radio/css/radio.css" type="text/css" rel="stylesheet" />
+    
+	<!-- Propeller Toggle -->
+    <link href="http://propeller.in/components/toggle-switch/css/toggle-switch.css" type="text/css" rel="stylesheet" />
+
+</head>
+<body>
+
+<!--Form-->
+<div class="pmd-content pmd-content-custom" id="content"> 
+	
+	<!--component header -->
+	<div class="componant-title-bg"> 
+		<div class="container">
+			<div class="row">
+			
+				<!-- component title and description-->
+				<div class="col-xs-12">
+					<h1>Form</h1>
+					<p class="lead">An HTML form is a section of a document containing normal content, markup, special elements called controls (checkboxes, radio buttons, menus, etc.), and labels on those controls. Users generally "complete" a form by modifying its controls (entering text, selecting menu items, etc.), before submitting the form to an agent for processing (e.g., to a Web server, to a mail server, etc.)</p>
+				</div><!-- component title and description end--> 
+				
+			</div>
+		</div>
+	</div><!--end component header-->
+
+	<div class="container">
+		<!-- Bootstrap Fields -->
+		<section class="row component-section">
+			<!-- Text fields title and description -->
+			<div class="col-md-3">
+				<div id="basic">
+					<h2>Bootstrap Form fields</h2>
+				</div>
+				<p> Bootstrap has some global styling defined for each of the individual form controls. All textual &lt;input&gt;, &lt;textarea&gt;, and &lt;select&gt; elements with <code>.form-control</code> are set to width: 100%; by default. Wrap labels and controls in <code>.form-group</code> for optimum spacing.</p>
+			</div><!-- end Text fields title and description -->
+			
+			<!-- Text fields code, example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- Text fields example -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body"> 
+									<!-- Regular Input -->
+									<div class="form-group">
+										<label for="regular1" class="control-label">Regular Input</label>
+										<input type="text" id="regular1" class="form-control">
+										</div>
+									<!-- Textarea -->
+									<div class="form-group">
+										<label class="control-label">Text Area</label>
+										<textarea required class="form-control"></textarea>
+									</div>
+                                    <!-- Bootstrap Selectbox -->
+                                    <div class="form-group">
+                                    	<label for="regular1" class="control-label">Regular Selectbox</label>
+                                    	<select class="form-control">
+                                          <option>1</option>
+                                          <option>2</option>
+                                          <option>3</option>
+                                          <option>4</option>
+                                          <option>5</option>
+                                        </select>
+									</div>
+								</div>
+							</div>
+							<p class="component-desc">Basic bootstrap elements</p>
+						</div>
+					</div><!-- end Text fields example -->
+
+				</div>
+			</div><!--end Text fields code, example -->
+		</section><!-- Bootstrap Fields end --> 
+		
+		<!-- Text Fields-->
+		<section class="row component-section">
+			<!-- Text fields title and description -->
+			<div class="col-md-3">
+				<div id="field">
+					<h2>Propeller Form Fields</h2>
+				</div>
+                <p>Propeller Form Fields consists of Bootstrap HTML structure with Propeller customized classes based on material design standards.</p>
+				<p> Add <code>.pmd-textfield</code> to the parent div of input to customize Bootstrap input into Propeller input. Additionally, use <code>.pmd-textfield-floating-label</code> to make input label float upwards.</p>
+			</div><!-- end Text fields title and description -->
+			
+			<!-- Text fields code, example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- Text fields example -->
+					<div class="row">
+						<div class="col-md-6">
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body"> 
+									<!-- Regular Input -->
+									<div class="form-group pmd-textfield">
+										<label for="regular1" class="control-label">Regular Input</label>
+										<input type="text" id="regular1" class="form-control">
+										</div>
+									<!-- Password Input -->
+									<div class="form-group pmd-textfield">
+										<label for="password1" class="control-label">Password</label>
+										<input id="password1" class="form-control" type="password">
+										</div>
+									<!--Help Text Input -->
+									<div class="form-group pmd-textfield">
+										<label for="help1">Input with help text</label>
+										<input type="text" id="help1" class="form-control">
+										<p class="help-block">Help text</p>
+									</div>
+								</div>
+							</div>
+							<p class="component-desc">Basic elements</p>
+						</div>
+						<div class="col-md-6">
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body"> 
+									<!-- Regular Floating Input -->
+									<div class="form-group pmd-textfield pmd-textfield-floating-label">
+										<label for="regular1" class="control-label">Regular Input</label>
+										<input type="text" id="regular1" class="form-control">
+										</div>
+									<!-- Password Floating Input -->
+									<div class="form-group pmd-textfield pmd-textfield-floating-label">
+										<label for="password1" class="control-label">Password</label>
+										<input id="password1" class="form-control" type="password">
+										</div>
+									<!--Help Text Floating Input -->
+									<div class="form-group pmd-textfield pmd-textfield-floating-label">
+										<label for="help1">Input with help text</label>
+										<input type="text" id="help1" class="form-control">
+										<p class="help-block">Help text</p>
+									</div>
+								</div>
+							</div>
+							<p class="component-desc">Basic elements with floating labels</p>
+						</div>
+					</div><!-- end Text fields example -->
+
+				</div>
+			</div><!--end Text fields code, example -->
+		</section><!-- text fields end --> 
+		
+		<!-- Input sizes-->
+		<section class="row component-section">
+		 
+		 	<!-- Input sizes title and description -->
+			<div class="col-md-3">
+				<div id="sizes">
+					<h2></h2>
+				</div>
+				<p> Bootstrap provides inputs in various sizes: small, medium and large. Using Bootstrap HTML structure and Propeller customized classes, you can create such inputs with varying sizes.</p>
+			</div> <!--end Input sizes title and description -->
+			
+			<!-- Input sizes code, example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- Input sizes example -->
+					<div class="row">
+							<div class="col-md-6">
+								<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+									<div class="pmd-card-body"> 
+										<!-- Large Input -->
+										<div class="form-group pmd-textfield form-group-lg">
+											<label for="Large" class="control-label">Large input</label>
+											<input type="Large" id="regular1" class="form-control input-group-lg" placeholder=".input-lg">
+											</div>
+										<!-- Default Input -->
+										<div class="form-group pmd-textfield">
+											<label for="Default" class="control-label">Default input</label>
+											<input id="Default" class="form-control" type="text" placeholder="Default input">
+											</div>
+										<!-- Small Input -->
+										<div class="form-group pmd-textfield form-group-sm">
+											<label for="Small">Small input</label>
+											<input type="text" id="Small" class="form-control" placeholder=".input-sm">
+										</div>
+									</div>
+								</div>
+								<p class="component-desc">Control sizes</p>
+							</div>
+							<div class="col-md-6">
+								<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+									<div class="pmd-card-body"> 
+										<!-- Large Input -->
+										<div class="form-group pmd-textfield pmd-textfield-floating-label form-group-lg">
+											<label for="Large" class="control-label">Large input</label>
+											<input type="Large" id="regular1" class="form-control input-group-lg">
+											</div>
+										<!-- Default Input -->
+										<div class="form-group pmd-textfield pmd-textfield-floating-label">
+											<label for="Default" class="control-label">Default input</label>
+											<input id="Default" class="form-control" type="text">
+											</div>
+										<!-- Small Input -->
+										<div class="form-group pmd-textfield pmd-textfield-floating-label form-group-sm">
+											<label for="Small">Small input</label>
+											<input type="text" id="Small" class="form-control" >
+										</div>
+									</div>
+								</div>
+								<p class="component-desc">Control sizing with floating labels</p>
+							</div>
+						</div><!--end Input sizes example -->
+					
+				</div>
+			</div><!--end Text fields code, example -->
+		</section><!--end Input sizes-->
+		
+		
+		<!-- Input States-->
+		<section class="row component-section">
+		
+			<!-- input states title and description -->
+			<div class="col-md-3">
+				<div id="states">
+					<h2></h2>
+				</div>
+				<p>Use <strong>Input states</strong> by adding the <code>disabled</code> boolean attribute on an input to prevent user input and trigger a slightly different look.</p>
+				<p>Add the <code>readonly</code> boolean attribute on an input to prevent user input and style the input as disabled.</p>
+			</div> <!-- input states title and description end -->
+			
+			<!-- input states code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- input states example -->				
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body"> 
+									<div class="form-group pmd-textfield">
+										<label for="first-name" class="control-label">Disabled state</label>
+										<input type="text" disabled="" value="Disabled value" id="disabled" class="mat-input form-control">
+									</div>
+									<div class="form-group pmd-textfield">
+										<label for="first-name" class="control-label">Readonly input</label>
+										<input type="text" readonly value="Readonly input" id="first-name" class="mat-input form-control">
+									</div>
+								</div>
+							</div>
+							<p class="component-desc">Input states</p>
+						</div>
+						
+					</div> <!-- input states example end -->
+				</div>	
+			</div> <!-- input states code and example end-->
+		</section> <!-- Input States end -->
+		
+		<!-- Validation state -->
+		<section class="row component-section">
+			
+			<!-- validation state title and description -->
+			<div class="col-md-3">
+				<div id="validation">
+					<h2></h2>
+				</div>
+				<p>Bootstrap provides validation states for error, warning, and success states on form controls. Add <code>.has-warning</code> to the parent div of the input in order to create a warning input field. Similarly, add <code>.has-success</code> and <code>.has-error</code> to create success and error input fields respectively. Using Bootstrap HTML structure and Propeller customized classes, you can create such inputs with varying validation states.</p>
+			</div> <!-- validation state title and description end-->
+			
+			<!-- validation state code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- validation state example -->
+					<div class="row">
+						<div class="col-md-6">
+								<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+									<div class="pmd-card-body"> 
+										<!-- warning Input -->
+										<div class="form-group pmd-textfield has-warning">
+											<label for="inputWarning1" class="control-label">Warning label</label>
+											<input type="text" value="" id="inputWarning1" class="form-control">
+											<p class="help-block">Help text</p>
+										</div>
+										<!-- Success Input -->
+										<div class="form-group pmd-textfield has-success">
+											<label for="inputSuccess1" class="control-label">Success label</label>
+											<input type="text" id="inputSuccess1" class="form-control">
+											<p class="help-block">Help text</p>
+										</div>
+										<!-- Error Input -->
+										<div class="form-group pmd-textfield has-error">
+											<label for="inputError1" class="control-label">Error label</label>
+											<input type="email" required class="form-control">
+											<p class="help-block">Help text</p>
+										</div>
+									</div>
+								</div>
+								<p class="component-desc">Validation states</p>
+							</div>
+						<div class="col-md-6">
+								<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+									<div class="pmd-card-body"> 
+										<!-- warning floating Input -->
+										<div class="form-group pmd-textfield has-warning pmd-textfield-floating-label">
+											<label for="inputWarning1" class="control-label">Warning label</label>
+											<input type="text" value="" id="inputWarning1" class="form-control">
+											</div>
+										<!-- Success floating Input -->
+										<div class="form-group pmd-textfield has-success pmd-textfield-floating-label">
+											<label for="inputSuccess1" class="control-label">Success label</label>
+											<input type="text" id="inputSuccess1" class="form-control">
+											</div>
+										<!-- Error floating Input -->
+										<div class="form-group pmd-textfield has-error pmd-textfield-floating-label">
+											<label for="inputError1" class="control-label">Error label</label>
+											<input type="email" required class="form-control">
+											</div>
+									</div>
+								</div>
+								<p class="component-desc">Validation states with floating labels</p>
+							</div>
+					</div> <!-- validation state example end -->
+				</div>
+			</div> <!-- validation state code and example end -->
+		</section> <!-- Validation state end-->
+		
+		<!-- Input with icons -->
+		<section class="row component-section">
+			
+			<!-- validation state title and description -->
+			<div class="col-md-3">
+				<div id="input-icon">
+					<h2></h2>
+				</div>
+				<p>Propeller input fields with icon. Add the div with <code>.input-group-addon</code> containing the icon to create an input field with icon.</p>
+			</div> <!-- validation state title and description end-->
+			
+			<!-- validation state code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- validation state example -->
+					<div class="row">
+						<div class="col-md-6">
+								<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+									<div class="pmd-card-body"> 
+										<!-- User name -->
+										<div class="form-group pmd-textfield">
+											<label for="inputError1" class="control-label pmd-input-group-label">Username</label>
+											<div class="input-group">
+												<div class="input-group-addon"><i class="material-icons md-dark pmd-sm">perm_identity</i></div>
+												<input type="text" class="form-control" id="exampleInputAmount">
+											</div>
+										</div>
+										<!-- Password -->
+										<div class="form-group pmd-textfield">
+											<label for="inputError1" class="control-label pmd-input-group-label">Password</label>
+											<div class="input-group">
+												<div class="input-group-addon"><i class="material-icons md-dark pmd-sm">https</i></div>
+												<input type="password" class="form-control" id="exampleInputAmount">
+											</div>
+										</div>
+									</div>
+								</div>
+								<p class="component-desc">Input fields with icons</p>
+							</div>
+						<div class="col-md-6">
+								<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+									<div class="pmd-card-body"> 
+										<!-- User name with floating label -->
+										<div class="form-group pmd-textfield pmd-textfield-floating-label">
+											<label for="inputError1" class="control-label pmd-input-group-label">Username</label>
+											<div class="input-group">
+												<div class="input-group-addon"><i class="material-icons md-dark pmd-sm">perm_identity</i></div>
+												<input type="text" class="form-control" id="exampleInputAmount">
+											</div>
+										</div>
+										<!-- Password with floating label -->
+										<div class="form-group pmd-textfield pmd-textfield-floating-label">
+											<label for="inputError1" class="control-label pmd-input-group-label">Password</label>
+											<div class="input-group">
+												<div class="input-group-addon"><i class="material-icons md-dark pmd-sm">https</i></div>
+												<input type="password" class="form-control" id="exampleInputAmount">
+											</div>
+										</div>
+									</div>
+								</div>
+								<p class="component-desc">Input fields with floating labels</p>
+							</div>
+					</div> <!-- validation state example end -->
+				</div>
+			</div> <!-- validation state code and example end -->
+		</section> <!-- Input with icons-->
+		 
+		<!-- text area -->
+		<section class="row component-section">
+		
+			<!-- text area title and description -->
+			<div class="col-md-3">
+				<div id="textarea">
+					<h2>Text Area</h2>
+				</div>
+				<p>Multi-line text fields automatically break to a new line for overflow text and scroll vertically when the cursor reaches the lower edge.</p>
+				<p> Add <code>.pmd-textfield-floating-label</code> class to get floating textarea.</p>
+			</div> <!-- text area title and description end-->
+			
+			<!-- text area code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- text area example -->
+					<div class="row">
+						<div class="col-md-6">
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body"> 
+									<!-- Normal Textarea -->
+									<div class="form-group pmd-textfield">
+										<label class="control-label">Text Area</label>
+										<textarea required class="form-control"></textarea>
+									</div>
+								</div>
+							</div>
+							<p class="component-desc">Normal textarea</p>
+						</div>
+						<div class="col-md-6">
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body"> 
+									<!-- Floating Textarea -->
+									<div class="form-group pmd-textfield pmd-textfield-floating-label">
+										<label class="control-label">Text Area</label>
+										<textarea required class="form-control"></textarea>
+									</div>
+								</div>
+							</div>
+							<p class="component-desc">Floating Textarea</p>
+						</div>
+					</div> <!-- text area example end -->
+				</div>
+			</div> <!-- text area code and example end -->
+		</section> <!-- text area end-->
+		
+		<!-- checkbox -->
+		<section class="row component-section">
+		
+			<!-- checkbox title and description -->
+			<div class="col-md-3">
+				<div id="checkbox">
+					<h2>Checkboxes</h2>
+				</div>
+				<p>Add <code>.pmd-checkbox</code> in label to create propeller customized checkbox. You can also add <code>.pmd-checkbox-ripple-effect</code> to provide a ripple effect to the checkbox.</p>
+			</div> <!-- checkbox title and description end-->
+			
+			<!-- checkbox code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- checkbox example -->
+					<div class="row">
+						<div class="col-md-6">
+							<div class="pmd-card pmd-z-depth">
+								<div class="pmd-card-body"> 
+									<!-- Simple checkbox with label, checked -->
+									<div class="checkbox pmd-default-theme">
+										<label class="pmd-checkbox pmd-checkbox-ripple-effect">
+											<input type="checkbox" value="" checked>
+											<span>On</span> </label>
+									</div>
+										
+									<!-- Simple checkbox with label -->
+									<div class="checkbox pmd-default-theme">
+										<label class="pmd-checkbox pmd-checkbox-ripple-effect">
+											<input type="checkbox" value="">
+											<span> Option one is this and that&mdash;be sure to include why it's great</span> </label>
+									</div>
+										
+									<!-- Simple checkbox with label, Disabled -->
+									<div class="checkbox pmd-default-theme disabled">
+										<label class="pmd-checkbox pmd-checkbox-ripple-effect">
+										<input type="checkbox" value="" disabled>
+										<span>Option two is disabled</span> </label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="pmd-card pmd-card-inverse pmd-z-depth">
+								<div class="pmd-card-body"> 
+									<!-- Simple checkbox with label, checked -->
+									<div class="checkbox pmd-default-theme">
+										<label class="pmd-checkbox pmd-checkbox-ripple-effect">
+											<input type="checkbox" value="" checked>
+											<span>On</span> </label>
+									</div>
+									<!-- Simple checkbox with label -->
+									<div class="checkbox pmd-default-theme">
+										<label class="pmd-checkbox pmd-checkbox-ripple-effect">
+											<input type="checkbox" value="">
+											<span> Option one is this and that&mdash;be sure to include why it's great</span> </label>
+									</div>
+									<!-- Simple checkbox with label, Disabled -->
+									<div class="checkbox pmd-default-theme disabled">
+										<label class="pmd-checkbox pmd-checkbox-ripple-effect">
+											<input type="checkbox" value="" disabled>
+											<span>Option two is disabled</span></label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> <!-- checkbox example end-->
+				</div>
+			</div> <!-- checkbox code and example end-->
+			
+		</section> <!-- checkbox end --> 	
+		
+		<!-- Inline checkbox -->
+		<section class="row component-section">
+		
+			<!-- Inline checkbox title and description -->
+			<div class="col-md-3">
+				<div>
+					<h2></h2>
+				</div>
+				<p>Inline Checkboxes - Use <code>.checkbox-inline</code> on a series of checkboxes for controls that appear on the same line.</p>
+			</div> <!-- Inline checkbox title and description end-->
+			
+			<!-- Inline checkbox code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- checkbox example -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pmd-card pmd-z-depth">
+								<div class="pmd-card-body"> 
+									<!--Inline checkboxes-->
+									<form>
+										<label class="checkbox-inline pmd-checkbox pmd-checkbox-ripple-effect">
+											<input type="checkbox" value="" checked>
+											<span> 1</span> </label>
+										<label class="checkbox-inline pmd-checkbox pmd-checkbox-ripple-effect">
+											<input type="checkbox" value="">
+											<span> 2</span> </label>
+										<label class="checkbox-inline pmd-checkbox pmd-checkbox-ripple-effect">
+											<input type="checkbox" value="">
+											<span> 3</span> </label>
+										<label class="checkbox-inline pmd-checkbox pmd-checkbox-ripple-effect">
+											<input type="checkbox" value="">
+										</label>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div> <!-- checkbox example end-->
+				</div>
+			</div> <!-- Inline checkbox code and example end-->
+			
+		</section> <!-- Inline checkbox end --> 		
+		
+		<!-- Radio -->
+		<section class="row component-section">
+		
+			<!-- radio title and description -->
+			<div class="col-md-3">
+				<div id="radio">
+					<h2>Radio</h2>
+				</div>
+				<p>Add <code>.pmd-radio</code> in label to create a propeller customized radio. You can also add <code>.pmd-radio-ripple-effect</code> to provide a ripple effect to the radio.</p>
+			</div> <!-- radio title and description end-->
+			
+			<!-- radio code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- radio example -->
+					<div class="row">
+						<div class="col-md-6">
+							<div class="pmd-card pmd-z-depth">
+								<div class="pmd-card-body"> 
+									<!-- Simple radio with label -->
+									<div class="radio">
+										<label class="pmd-radio pmd-radio-ripple-effect">
+											<input type="radio" name="optionsRadios" id="click" value="option1" checked>
+											<span for="click">Option one is this and that&mdash;be sure to include why it's great</span> </label>
+									</div>
+									<!-- Radio button checked -->
+									<div class="radio">
+										<label class="pmd-radio pmd-radio-ripple-effect">
+											<input type="radio" name="optionsRadios" id="click1" value="option1" checked>
+											<span for="click1">Option one is this and that&mdash;be sure to include why it's great</span> </label>
+									</div>
+									<!-- Radio button disable -->
+									<div class="radio disabled">
+										<label class="pmd-radio pmd-radio-ripple-effect">
+											<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+											<span for="optionsRadios3">Option three is disabled</span> </label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="pmd-card pmd-card-inverse pmd-z-depth">
+								<div class="pmd-card-body"> 
+									<!-- Simple radio with label -->
+									<div class="radio">
+										<label class="pmd-radio pmd-radio-ripple-effect">
+											<input type="radio" name="optionsRadios" id="click4" value="option1">
+											<span for="click4">Option one is this and that&mdash;be sure to include why it's great</span> </label>
+									</div>
+									<!-- Radio button checked -->
+									<div class="radio">
+										<label class="pmd-radio pmd-radio-ripple-effect">
+											<input type="radio" name="optionsRadios" id="click5" value="option2" checked>
+											<span for="click5">Option one is this and that&mdash;be sure to include why it's great</span> </label>
+									</div>
+									<!-- Radio button disable -->
+									<div class="radio disabled">
+										<label class="pmd-radio pmd-radio-ripple-effect">
+											<input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+											<span for="optionsRadios3">Option three is disabled</span> </label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> <!-- radio example end -->
+				</div>
+			</div> <!-- radio code and example end -->
+		</section> <!-- Radio end --> 
+		
+		<!-- Inline radio -->
+		<section class="row component-section">
+		
+			<!-- radio title and description -->
+			<div class="col-md-3">
+				<div id="radio">
+					<h2></h2>
+				</div>
+				<p>Inline Radio - Use <code>.radio-inline</code> on a series of radio boxes for controls that appear on the same line.</p>
+			</div> <!-- radio title and description end-->
+			
+			<!-- radio code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- radio example -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pmd-card pmd-z-depth">
+								<div class="pmd-card-body"> 
+									<!-- Inline radio -->
+									<label class="radio-inline pmd-radio">
+										<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+										<span for="inlineRadio1">1</span> </label>
+									<label class="radio-inline pmd-radio">
+										<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" checked>
+										<span for="inlineRadio2">2</span> </label>
+									<label class="radio-inline pmd-radio">
+										<input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+										<span for="inlineRadio3">3</span> </label>
+								</div>
+							</div>
+						</div>
+					</div> <!-- radio example end -->
+				</div>
+			</div> <!-- radio code and example end -->
+		</section> <!-- Inline radio end --> 
+		
+		<!-- Toggle Switch -->
+		<section class="row component-section">
+			
+			<!-- toogle switch title and description -->
+			<div class="col-md-3">
+				<div id="toggle">
+					<h2>Toggle Switch</h2>
+				</div>
+				<p>Toggle Switch is - To switch from one setting to another. It implies that there are only two possible settings and that you are switching from the current setting to the other setting.
+                For example, light switches that turn a light on or off are toggle switches.</p>
+				<p>Add <code>.pmd-switch</code> to the parent div and <code>.pmd-switch-label</code> to the tag containing label.</p>
+			</div> <!-- toogle switch title and description end -->
+			
+			<!-- toggle switch code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- toggle switch example -->
+					<div class="row toggle-button-custom">
+						<div class="col-md-6">
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body">
+									<div class="pmd-switch">
+										<label>
+											<input type="checkbox">
+											<span class="pmd-switch-label"></span> </label>
+									</div>
+									<div class="pmd-switch">
+										<label>
+											<input type="checkbox">
+											<span class="pmd-switch-label"></span> </label>
+									</div>
+								</div>
+							</div>
+							<p class="component-desc">Light theme</p>
+						</div>
+						<div class="col-md-6">
+							<div class="pmd-card pmd-card-inverse pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body">
+									<div class="pmd-switch">
+										<label>
+											<input type="checkbox">
+											<span class="pmd-switch-label"></span> </label>
+									</div>
+									<div class="pmd-switch">
+										<label>
+											<input type="checkbox">
+											<span class="pmd-switch-label"></span> </label>
+									</div>
+								</div>
+							</div>
+							<p class="component-desc">Dark theme</p>
+						</div>
+					</div> <!-- toggle switch example end -->
+						
+				</div>
+			</div> <!-- toggle switch code and example end -->
+		</section> <!-- Toggle Switch end -->		 
+		
+		<!-- Configuration starts--> 
+		<section class="row component-section">
+			<div class="col-md-3">
+				<div id="config">
+					<h2>Configuration Options</h2>
+				</div>
+				<p>The Propeller CSS classes apply various predefined visual enhancements to the form elements. The table lists the available classes and their effects.</p>
+			</div>
+			<div class="col-md-9">
+				<div class="pmd-card pmd-table-card-responsive">
+					<div class="pmd-table-card"> 
+						<table class="table pmd-table table-hover">
+							<thead>
+								<tr>
+									<th>Propeller Class</th>
+									<th>Effect</th>
+									<th>Remark</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-title="Class"><code>.pmd-textfield</code></td>
+									<td data-title="Effect">Class added for general label and input formatting. </td>
+									<td data-title="Remark">Required</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-textfield-floating-label</code></td>
+									<td data-title="Effect">Adds floating animation to the label of input</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-checkbox</code></td>
+									<td data-title="Effect">To create propeller customized checkbox</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-checkbox-ripple-effect</code></td>
+									<td data-title="Effect">Add this class to create ripple effect to checkboxes</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-radio</code></td>
+									<td data-title="Effect">To create propeller customized radiobutton</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-radio-ripple-effect</code></td>
+									<td data-title="Effect">Add this class to create ripple effect to radio</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-input-group-label</code></td>
+									<td data-title="Effect">Add this class to create inline radio</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-switch</code></td>
+									<td data-title="Effect">Add this class to create inline radio</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-switch-label</code></td>
+									<td data-title="Effect">Add this class to create inline radio</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section> <!-- Configuration ends-->
+		 
+	</div> <!--container end --> 
+	
+</div> <!--Form-->
+
+</body>
+<!-- Jquery js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Propeller checkbox js -->
+<script type="text/javascript" src="http://propeller.in/components/checkbox/js/checkbox.js"></script>
+
+<!-- Propeller checkbox js -->
+<script type="text/javascript" src="http://propeller.in/components/textfield/js/textfield.js"></script>
+
+<!-- Propeller checkbox js -->
+<script type="text/javascript" src="http://propeller.in/components/radio/js/radio.js"></script>
+
+</html>

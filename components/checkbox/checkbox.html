@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Propeller is a front-end responsive framework based on Material design & Bootstrap.">
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+
+    <title>Propeller - Develop more, Code less.</title>
+    
+	<!-- favicon --> 
+	<link rel="icon" href="../../assets/landing-page/images/favicon.ico" type="image/x-icon">
+	
+	<!-- Bootstrap --> 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+	
+	<!-- Propeller Docs -->
+	<link href="../../docs/css/docs.css" type="text/css" rel="stylesheet" /> 
+
+	<!-- Propeller typography -->
+	<link href="http://propeller.in/components/typography/css/typography.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Propeller text field -->
+	<link href="http://propeller.in/components/checkbox/css/checkbox.css" type="text/css" rel="stylesheet" />
+	
+</head>
+
+<body>
+
+<!--text Checkbox-->
+<div class="pmd-content pmd-content-custom" id="content"> 
+	<br><br>
+	<div class="container">
+
+		<!-- checkbox -->
+		<section class="row component-section">
+		
+			<!-- checkbox title and description -->
+			<div class="col-md-3">
+				<div id="checkbox">
+					<h2>Checkboxes</h2>
+				</div>
+				<p>Note that pre-checked buttons require you to manually add <code>.active</code> to the input’s <code>&lt;label&gt;</code>. Add <code>.pmd-checkbox</code> to create propeller customized checkbox. You can also add <code>.pmd-checkbox-pmd-ripple-effect</code> to provide a ripple effect to the checkbox.</p>
+			</div> <!-- checkbox title and description end-->
+			
+			<!-- checkbox code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					
+					<!-- checkbox example -->
+					<div class="row">
+						<div class="col-md-6">
+							<div class="pmd-card pmd-z-depth">
+								<div class="pmd-card-body"> 
+									<!-- Simple checkbox with label, checked -->
+									<div class="checkbox pmd-default-theme">
+										<label class="pmd-checkbox pmd-checkbox-pmd-ripple-effect">
+											<input type="checkbox" value="" checked>
+											<span>On</span> </label>
+									</div>
+										
+									<!-- Simple checkbox with label -->
+									<div class="checkbox pmd-default-theme">
+										<label class="pmd-checkbox pmd-checkbox-pmd-ripple-effect">
+											<input type="checkbox" value="">
+											<span> Option one is this and that&mdash;be sure to include why it's great</span> </label>
+									</div>
+										
+									<!-- Simple checkbox with label, Disabled -->
+									<div class="checkbox pmd-default-theme disabled">
+										<label class="pmd-checkbox pmd-checkbox-pmd-ripple-effect">
+										<input type="checkbox" value="" disabled>
+										<span>Option two is disabled</span> </label>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="pmd-card pmd-card-inverse pmd-z-depth">
+								<div class="pmd-card-body"> 
+									<!-- Simple checkbox with label, checked -->
+									<div class="checkbox pmd-default-theme">
+										<label class="pmd-checkbox pmd-checkbox-pmd-ripple-effect">
+											<input type="checkbox" value="" checked>
+											<span>On</span> </label>
+									</div>
+									<!-- Simple checkbox with label -->
+									<div class="checkbox pmd-default-theme">
+										<label class="pmd-checkbox pmd-checkbox-pmd-ripple-effect">
+											<input type="checkbox" value="">
+											<span> Option one is this and that&mdash;be sure to include why it's great</span> </label>
+									</div>
+									<!-- Simple checkbox with label, Disabled -->
+									<div class="checkbox pmd-default-theme disabled">
+										<label class="pmd-checkbox pmd-checkbox-pmd-ripple-effect">
+											<input type="checkbox" value="" disabled>
+											<span>Option two is disabled</span></label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> <!-- checkbox example end-->
+				</div>
+			</div> <!-- checkbox code and example end-->
+			
+		</section> <!-- checkbox end --> 	
+		
+		<!-- Inline checkbox -->
+		<section class="row component-section">
+		
+			<!-- Inline checkbox title and description -->
+			<div class="col-md-3">
+				<div>
+					<h2></h2>
+				</div>
+				<p>Inline Checkboxes - Use <code>.checkbox-inline</code> on a series of checkboxes for controls that appear on the same line.</p>
+			</div> <!-- Inline checkbox title and description end-->
+			
+			<!-- Inline checkbox code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- checkbox example -->
+					<div class="row">
+						<div class="col-md-12">
+							<div class="pmd-card pmd-z-depth">
+								<div class="pmd-card-body"> 
+									<!--Inline checkboxes-->
+									<form>
+										<label class="checkbox-inline pmd-checkbox pmd-checkbox-pmd-ripple-effect">
+											<input type="checkbox" value="" checked>
+											<span> 1</span> </label>
+										<label class="checkbox-inline pmd-checkbox pmd-checkbox-pmd-ripple-effect">
+											<input type="checkbox" value="">
+											<span> 2</span> </label>
+										<label class="checkbox-inline pmd-checkbox pmd-checkbox-pmd-ripple-effect">
+											<input type="checkbox" value="">
+											<span> 3</span> </label>
+										<label class="checkbox-inline pmd-checkbox pmd-checkbox-pmd-ripple-effect">
+											<input type="checkbox" value="">
+										</label>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div> <!-- checkbox example end-->
+				</div>
+			</div> <!-- Inline checkbox code and example end-->
+			
+		</section> <!-- Inline checkbox end --> 		
+		
+	</div> <!--container end --> 
+	
+</div> <!-- Checkbox-->
+
+<!-- jquery JS -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Propeller js --> 
+<script type="text/javascript" src="http://propeller.in/assets/js/propeller.min.js"></script>
+
+</body>
+
+</html>

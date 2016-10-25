@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang=""><head>
+ 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Propeller is a front-end responsive framework based on Material design & Bootstrap.">
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+    <title>Badge - Style - Propeller</title>
+    
+	<!-- favicon --> 
+	<link rel="icon" href="http://propeller.in/assets/images/favicon.ico" type="image/x-icon">
+	
+	<!-- Bootstrap --> 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+	
+	<!-- Propeller card (CSS for helping component example file)-->
+	<link href="http://propeller.in/components/card/css/card.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Example docs (CSS for helping component example file)-->
+	<link href="http://propeller.in/docs/css/example-docs.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Propeller typography (CSS for helping component example file) -->
+	<link href="http://propeller.in/components/typography/css/typography.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Google Icon Font -->
+	<link href="http://fonts.googleapis.com/icon?family=Material+Icons" type="text/css" rel="stylesheet" /> 
+	<link href="http://propeller.in/components/icons/css/google-icons.css" />
+	
+	<!-- Propeller Button -->
+	<link href="http://propeller.in/components/button/css/button.css" type="text/css" rel="stylesheet" />
+
+	<!-- Propeller Badge -->
+	<link rel="stylesheet" type="text/css" href="css/badge.css">
+
+</head>
+
+<body>
+
+<!--Badge -->
+<div class="pmd-content pmd-content-custom" id="content"> 
+	
+	<!--component header -->
+	<div class="componant-title-bg"> 
+		<div class="container">
+			<div class="row">
+				
+				<!-- component title and description -->
+				<div class="col-xs-12">
+					<h1>Badge</h1>
+					<p class="lead">Badge is a new feature in user interfaces, and provides users with a visual clue to help them discover additional relevant content. A badge can be both a notifier that there are additional 
+                    items associated with an object and an indicator of how many items there are.</p>
+				</div> <!-- component title and description end-->
+				
+			</div>
+		</div>
+	</div> <!--component header end-->
+	
+	<div class="container">
+		
+		<!-- badge code and example -->
+		<section class="row component-section">
+			
+			<!-- Badge title and description -->
+			<div class="col-md-3">
+				<div id="badge-buttons">
+					<h2>Bootstrap Badge</h2>
+				</div>
+				<p>Easily highlight new or unread items by adding a <code>&lt;span class="badge"&gt;</code> to links, Bootstrap navs, and more.</p>
+                <p>Badge can also be used inside other elements, such as buttons.</p>
+			</div> <!-- Badge title and description end-->
+			
+			<div class="col-md-9"> 
+					<!-- badge example -->
+					<div class="row"> 
+						<div class="col-md-12"> 
+							<div class="pmd-card pmd-z-depth">
+								<div class="pmd-card-body"> 
+									<!-- Default badge with ripple effect --> 
+									<span class="badge">1</span> 
+									
+									<!-- Success badge with ripple effect --> 
+									<span class="badge badge-success">2</span> 
+									
+									<!-- Warning badge with ripple effect --> 
+									<span class="badge badge-warning">4</span> 
+									
+									<!-- Error badge with ripple effect --> 
+									<span class="badge badge-error">6</span> 
+									
+									<!-- Information badge with ripple effect --> 
+									<span class="badge badge-info">8</span> 
+									
+									<!-- Inverse badge with ripple effect --> 
+									<span class="badge badge-inverse">10</span> </div>
+							</div>
+						</div>
+						
+						<div class="col-md-12"> 
+							<div class="pmd-card pmd-z-depth pmd-card-custom-view">
+								<div class="pmd-card-body"> 
+									<!--Badges on Buttons--> 
+									<!-- Badge on primary button with ripple effect -->
+									<button type="button" class="btn btn-primary">Primary <span class="badge">7</span></button>
+									
+									<!-- Badge on success button with ripple effect -->
+									<button type="button" class="btn btn-success">Success <span class="badge">3</span></button>
+									
+									<!-- Badge on danger button with ripple effect -->
+									<button type="button" class="btn btn-danger">Danger <span class="badge">5</span></button>
+								</div>
+							</div>
+						</div>
+					</div> <!-- badge example end -->
+					
+				</div> <!--Badge code and example end-->
+
+		</section> <!-- badge code and example end -->
+		
+		<!-- Notification badge -->
+		<section class="row component-section">
+			
+			<!-- Notification badge title and description -->
+			<div class="col-md-3">
+				<div id="notification-badge">
+					<h2>Notification Badge</h2>
+				</div>
+				<p>You can also create a badge which overlaps any element. Create the notification badge using <code>.pmd-badge .pmd-badge-overlap</code>.</p>
+			</div> <!-- Notification badge title and description end -->
+			
+			<div class="col-md-9"> 
+				
+				<!-- Notification badge code and example -->
+				<div class="component-box">
+					<!-- Notification badge example -->
+					<div class="row"> 
+						<div class="col-md-12"> 
+							<div class="pmd-card pmd-z-depth pmd-card-custom-view">
+								<div class="pmd-card-body">
+									<div class="row">
+										<div class="col-md-6 col-sm-6"> 
+											<!--notification overlapping Badge over an icon -->
+											<div class="pmd-badge-custom text-center">
+												<div data-badge="3" class="material-icons pmd-md pmd-badge pmd-badge-overlap">account_box</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-6"> 
+											<!--notification overlapping Badge over text-->
+											<div class="pmd-badge-custom text-center">
+												<div data-badge="3" class="pmd-badge pmd-badge-overlap pmd-badge-text">Inbox</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> <!-- Notification badge example end -->
+					
+				</div> <!-- Notification badge code and example end -->
+			</div>
+		</section> <!-- Notification badge end -->
+		 
+		<!-- Chips -->
+		<section class="row component-section">
+			
+			<!-- Chips title and description -->
+			<div class="col-md-3">
+				<div id="chip">
+					<h2>Chip</h2>
+				</div>
+				<p>Chip component is a small, interactive element. Chip is commonly used for contacts, text, rules, icons, and photos. To create a chip add <code>.pmd-chip</code> to the tag. To create chip that contain icons, add <code>.pmd-chip-contact</code> to the tag.</p>
+			</div> <!-- Chips title and description end-->
+			
+			<div class="col-md-9"> 
+					<!-- chips example -->
+					<div class="row"> 
+						<div class="col-md-12"> 
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body">
+									<div class="row">
+										<div class="col-md-6 col-sm-6"> 
+											<!--Chips with text-->
+											<div class="text-center">
+												<div class="pmd-chip">
+													Example Chip 
+													<a class="pmd-chip-action" href="javascript:void(0);"><i class="material-icons">close</i></a>
+												</div>
+											</div>
+										</div>
+										<div class="col-md-6 col-sm-6"> 
+											<!--Chips with text and an icon-->
+											<div class="text-center">
+												<div class="pmd-chip pmd-chip-contact"> 
+													<img src="http://propeller.in/assets/images/avatar-icon-40x40.png" alt="avatar"> 
+													<span>Trevor Hensen</span> 
+													<a class="pmd-chip-action" href="javascript:void(0);">
+													<i class="material-icons">close</i></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> <!-- chips example end -->
+					
+				</div> <!-- chips code and example end -->
+
+		</section> <!-- Chips end -->
+		
+		<!-- Configuration starts-->		
+		<section class="row component-section">
+			<div class="col-md-3">
+				<div id="configuration-options">
+					<h2>Configuration Options</h2>
+				</div>
+				<p>The Propeller CSS classes apply various predefined visual enhancements to the Badge. The table lists the available classes and their effects.</p>
+			</div>
+			<div class="col-md-9"> 
+				<div class="pmd-card pmd-table-card-responsive">
+					<div class="pmd-table-card"> 
+						<table class="table pmd-table table-hover">
+							<thead>
+								<tr>
+									<th>Classes</th>
+									<th>Effect</th>
+									<th>Remark</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-title="Propeller Classes"><code>.pmd-badge</code></td>
+									<td data-title="Effect">Add this class to create notification badge.</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Propeller Classes"><code>.pmd-badge-overlap</code></td>
+									<td data-title="Effect">Add this class to create notification badge which overlaps the element.</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Propeller Classes"><code>.pmd-chip</code></td>
+									<td data-title="Effect">Add this class to create chips.</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Propeller Classes"><code>.pmd-chip-contact</code></td>
+									<td data-title="Effect">Add this class to create chips with an image/icon.</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section> <!-- Configuration ends--> 		
+</div> <!--Badge end-->
+
+</body>
+</html>

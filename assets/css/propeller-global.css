@@ -1,0 +1,36 @@
+/*------------------------------------------------------------------
+[Master Stylesheet]
+
+Project: Propeller
+Version: 1.0
+Last change: Workign
+-------------------------------------------------------------------*/
+@import "bootstrap.css";
+@import "fonts/roboto.css";
+@import "../../components/icons/css/google-icons.css";
+
+/* Core CSS*/
+@import "../../components/typography/css/typography.css";
+@import "../../components/dropdown/css/dropdown.css";
+@import "../../components/table/css/table.css";
+@import "../../components/button/css/button.css";
+@import "../../components/list/css/list.css";
+@import "../../components/textfield/css/textfield.css";
+@import "../../components/checkbox/css/checkbox.css";
+@import "../../components/radio/css/radio.css";
+@import "../../components/tab/css/tab.css";
+@import "../../components/navbar/css/navbar.css";
+@import "../../components/card/css/card.css";
+@import "../../components/popover/css/popover.css";
+@import "../../components/pagination/css/pagination.css";
+@import "../../components/alert/css/alert.css";
+@import "../../components/modal/css/modal.css";
+@import "../../components/accordion/css/accordion.css";
+@import "../../components/floating-action-button/css/floating-action-button.css";
+@import "../../components/sidebar/css/sidebar.css";
+@import "../../components/tooltip/css/tooltip.css";
+@import "../../components/badge/css/badge.css";
+@import "../../components/toggle-switch/css/toggle-switch.css";
+
+/* Utility classes*/
+@import "utilities.css";

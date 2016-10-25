@@ -1,0 +1,11 @@
+/* Bootstrap css */
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";
+
+/* Propeller card css*/
+@import "http://propeller.in/components/card/css/card.css";
+ 
+/* mCustomScrollbar css*/
+@import "http://propeller.in/components/custom-scrollbar/css/jquery.mCustomScrollbar.css";
+
+/* Propeller scrollbar css*/
+@import "http://propeller.in/components/custom-scrollbar/css/pmd-scrollbar.css";

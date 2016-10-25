@@ -1,0 +1,11 @@
+/* Bootstrap css */
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";
+
+/* Propeller typography */
+@import "http://propeller.in/components/typography/css/typography.css";
+
+/* Propeller cards */
+@import "http://propeller.in/components/card/css/card.css";
+
+/* Propeller tab */
+@import "http://propeller.in/components/tab/css/tab.css";

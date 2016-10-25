@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="">
+<head>
+ 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Propeller is a front-end responsive framework based on Material design & Bootstrap.">
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+    <title>Data table - Propeller Components</title>
+    
+	<!-- favicon --> 
+	<link rel="icon" href="http://propeller.in/assets/images/favicon.ico" type="image/x-icon">
+	
+	<!-- Bootstrap --> 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+	
+	<!-- Example docs (CSS for helping component example file)-->
+	<link href="http://propeller.in/docs/css/example-docs.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Propeller card (CSS for helping component example file)-->
+	<link href="http://propeller.in/components/card/css/card.css" type="text/css" rel="stylesheet"/>
+
+	<!-- Propeller typography -->
+	<link href="http://propeller.in/components/typography/css/typography.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Propeller textbox -->
+	<link href="http://propeller.in/components/textfield/css/textfield.css" type="text/css" rel="stylesheet"/>
+
+	<!-- Select2 css -->
+	<link href="css/select2.min.css" type="text/css" rel="stylesheet"/>
+	<link href="css/select2-bootstrap.css" type="text/css" rel="stylesheet"/>
+	
+	<!-- Propeller Select2 css -->
+	<link href="css/pmd-select2.css" type="text/css" rel="stylesheet"/>
+
+</head>
+
+<body>
+
+<!--Form-->
+<div class="pmd-content pmd-content-custom" id="content"> 
+	
+	<!--component header -->
+	<div class="componant-title-bg"> 
+		<div class="container">
+			<div class="row">
+			
+				<!-- component title and description-->
+				<div class="col-xs-12">
+					<h1>Select2</h1>
+					<p class="lead">The Select2 widget provides a styleable select element replacement. It acts as a proxy back to the original select element, controlling its state for form submission or serialization.
+                    It duplicates and extends the functionality of a native HTML select element to overcome the limitations of the native control.</p>
+                    <p class="lead">We have used Select2 plugin as a reference which we have then customized based on our Propeller theme.</p>
+                    <p class="lead">For more options and documentation, visit : <a href="http://select2.github.io/" target="_blank">Select2</a></p>
+				</div><!-- component title and description end--> 
+				
+			</div>
+		</div>
+	</div><!--end component header-->
+
+	<div class="container">
+		
+		<!-- Selectbox -->
+		<section class="row component-section">
+		
+			<!-- selectbox title and description -->
+			<div class="col-md-3">
+				<div id="selectbox">
+					<h2>Propeller Select2</h2>
+				</div>
+				<p>To create an enhanced simple select, add <code>.pmd-select2</code> to the select tag.</p>
+			</div> <!-- selectbox title and description end-->
+			
+			<!-- selectbox code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- selectbox example -->
+					<div class="row toggle-button-custom">
+						<div class="col-md-12">
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body"> 
+									<!--Simple select -->
+									<div class="form-group pmd-textfield pmd-textfield-floating-label">
+										<label>Simple Select</label>
+										<select class="select-simple form-control pmd-select2">
+											<!--<option></option> -->
+											<option>Dallas Cowboys</option>
+											<option>New York Giants</option>
+											<option>Philadelphia Eagles</option>
+											<option>Washington Redskins</option>
+											<option>Chicago Bears</option>
+											<option>Detroit Lions</option>
+											<option>Green Bay Packers</option>
+											<option>Minnesota Vikings</option>
+											<option>Arizona Cardinals</option>
+											<option>St. Louis Rams</option>
+											<option>San Francisco 49ers</option>
+											<option>Seattle Seahawks</option>
+											<option>Baltimore Ravens</option>
+											<option>Cincinnati Bengals</option>
+											<option>Cleveland Browns</option>
+											<option>Pittsburgh Steelers</option>
+											<option>Houston Texans</option>
+											<option>Indianapolis Colts</option>
+											<option>Jacksonville Jaguars</option>
+											<option>Tennessee Titans</option>
+											<option>Denver Broncos</option>
+											<option>Kansas City Chiefs</option>
+											<option>Oakland Raiders</option>
+											<option>San Diego Chargers</option>
+										</select>
+									</div>
+									
+								</div>
+							</div>
+							<p class="component-desc">Propeller Simple select</p>
+						</div>
+					</div> <!-- selectbox example end-->
+				</div>
+                
+                <div class="component-box">
+					<!-- selectbox example -->
+					<div class="row toggle-button-custom">
+						<div class="col-md-12">
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body"> 
+									
+									<!--Simple Select with Search-->
+									<div class="form-group pmd-textfield pmd-textfield-floating-label">
+										<label>Simple Select with Search</label>
+										<select class="select-with-search pmd-select2 form-control">
+											<!--<option></option> -->
+											<option>Dallas Cowboys</option>
+											<option>New York Giants</option>
+											<option>Philadelphia Eagles</option>
+											<option>Washington Redskins</option>
+											<option>Chicago Bears</option>
+											<option>Detroit Lions</option>
+											<option>Green Bay Packers</option>
+											<option>Minnesota Vikings</option>
+											<option>Arizona Cardinals</option>
+											<option>St. Louis Rams</option>
+											<option>San Francisco 49ers</option>
+											<option>Seattle Seahawks</option>
+											<option>Baltimore Ravens</option>
+											<option>Cincinnati Bengals</option>
+											<option>Cleveland Browns</option>
+											<option>Pittsburgh Steelers</option>
+											<option>Houston Texans</option>
+											<option>Indianapolis Colts</option>
+											<option>Jacksonville Jaguars</option>
+											<option>Tennessee Titans</option>
+											<option>Denver Broncos</option>
+											<option>Kansas City Chiefs</option>
+											<option>Oakland Raiders</option>
+											<option>San Diego Chargers</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<p class="component-desc">Simple select2 with search</p>
+						</div>
+					</div> <!-- selectbox example end-->
+				</div>
+			</div> <!-- selectbox code and example end-->
+		</section>	
+
+		<section class="row component-section">
+
+			<!-- selectbox title and description -->
+			<div class="col-md-3">
+				<div id="selectbox">
+					<h2>Select2 with Multiple Tags</h2>
+				</div>
+				<p>For selectbox with multiple tags add <code>.pmd-select2-tags</code> to the <code>select</code> tag.</p>
+			</div> <!-- selectbox title and description end-->
+		
+			<div class="col-md-9">	
+				<div class="component-box">
+				<div class="row toggle-button-custom">
+					<div class="col-md-12">
+						<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+							<div class="pmd-card-body"> 
+								<!--Select Multiple Tags -->
+								<div class="form-group pmd-textfield pmd-textfield-floating-label">
+									<label>Select Multiple Tags</label>
+									<select class="form-control select-tags pmd-select2-tags" multiple>
+										<option>Dallas Cowboys</option>
+										<option>New York Giants</option>
+										<option>Philadelphia Eagles</option>
+										<option>Washington Redskins</option>
+										<option>Chicago Bears</option>
+										<option>Detroit Lions</option>
+										<option>Green Bay Packers</option>
+										<option>Minnesota Vikings</option>
+										<option>Arizona Cardinals</option>
+										<option>St. Louis Rams</option>
+										<option>San Francisco 49ers</option>
+										<option>Seattle Seahawks</option>
+										<option>Baltimore Ravens</option>
+										<option>Cincinnati Bengals</option>
+										<option>Cleveland Browns</option>
+										<option>Pittsburgh Steelers</option>
+										<option>Houston Texans</option>
+										<option>Indianapolis Colts</option>
+										<option>Jacksonville Jaguars</option>
+										<option>Tennessee Titans</option>
+										<option>Denver Broncos</option>
+										<option>Kansas City Chiefs</option>
+										<option>Oakland Raiders</option>
+										<option>San Diego Chargers</option>
+									</select>
+								</div>
+								
+							</div>
+						</div>
+						<p class="component-desc">Select Multiple Tags and Select &amp; Add Multiple Tags</p>
+					</div>
+				</div>
+			</div>
+			</div>
+	
+		</section> <!-- Selectbox end --> 		
+
+		<section class="row component-section">
+
+			<!-- selectbox title and description -->
+			<div class="col-md-3">
+				<div id="select2-add-tag">
+					<h2>Select2 with Search and Custom Tags</h2>
+				</div>
+				<p>To create custom multiple tags add <code>.pmd-select2-tags</code> to the select tag.</p>
+			</div> <!-- selectbox title and description end-->
+		
+			<div class="col-md-9">	
+				<div class="component-box">
+				<div class="row toggle-button-custom">
+					<div class="col-md-12">
+						<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+							<div class="pmd-card-body"> 
+								
+								<!--Select &amp; Add Multiple Tags -->
+								<div class="form-group pmd-textfield pmd-textfield-floating-label">
+									<label>Select &amp; Add Multiple Tags</label>
+									<select class="form-control select-add-tags pmd-select2-tags" multiple>
+										<option>Dallas Cowboys</option>
+										<option>New York Giants</option>
+										<option>Philadelphia Eagles</option>
+										<option>Washington Redskins</option>
+										<option>Chicago Bears</option>
+										<option>Detroit Lions</option>
+										<option>Green Bay Packers</option>
+										<option>Minnesota Vikings</option>
+										<option>Arizona Cardinals</option>
+										<option>St. Louis Rams</option>
+										<option>San Francisco 49ers</option>
+										<option>Seattle Seahawks</option>
+										<option>Baltimore Ravens</option>
+										<option>Cincinnati Bengals</option>
+										<option>Cleveland Browns</option>
+										<option>Pittsburgh Steelers</option>
+										<option>Houston Texans</option>
+										<option>Indianapolis Colts</option>
+										<option>Jacksonville Jaguars</option>
+										<option>Tennessee Titans</option>
+										<option>Denver Broncos</option>
+										<option>Kansas City Chiefs</option>
+										<option>Oakland Raiders</option>
+										<option>San Diego Chargers</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<p class="component-desc">Select Multiple Tags and Select &amp; Add Multiple Tags</p>
+					</div>
+				</div>
+			</div>
+			</div>
+	
+		</section> <!-- Selectbox end --> 		
+		
+		<!-- Configuration starts--> 
+		<section class="row component-section">
+			<div class="col-md-3">
+				<div id="config">
+					<h2>Configuration Options</h2>
+				</div>
+				<p>The Propeller CSS classes apply various predefined visual enhancements to the form elements. The table lists the available classes and their effects.</p>
+			</div>
+			<div class="col-md-9">
+				<div class="pmd-card pmd-table-card-responsive">
+					<div class="pmd-table-card"> 
+						<table class="table pmd-table table-hover">
+							<thead>
+								<tr>
+									<th>Propeller Class</th>
+									<th>Effect</th>
+									<th>Remark</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-title="Class"><code>.pmd-select2</code></td>
+									<td data-title="Effect">Add this class to create simple selectbox</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-select2-tags</code></td>
+									<td data-title="Effect">Add this class to create selectbox with tags</td>
+									<td data-title="Remark">Optional</td>
+								</tr>						
+								<tr>
+									<td data-title="Class"><code>.pmd-textfield</code></td>
+									<td data-title="Effect">Class added for general label and input formatting. </td>
+									<td data-title="Remark">Required</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>.pmd-textfield-floating-label</code></td>
+									<td data-title="Effect">Adds floating animation to the label of input</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section> <!-- Configuration ends-->
+		 
+	</div> <!--container end --> 
+	
+</div> <!--Form-->
+
+<!-- Jquery js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Propeller textfield js -->
+<script type="text/javascript" src="http://propeller.in/components/textfield/js/textfield.js"></script>
+
+<!-- Select2 js-->
+<script type="text/javascript" src="js/select2.full.js"></script>
+
+<!-- Propeller Select2 -->
+<script type="text/javascript">
+	$(document).ready(function() {
+		<!-- Select Multiple Tags -->
+		$(".select-tags").select2({
+			tags: false,
+			theme: "bootstrap",
+		})
+		<!-- Simple Selectbox -->
+		$(".select-simple").select2({
+			theme: "bootstrap",
+			minimumResultsForSearch: Infinity,
+		});
+		<!-- Selectbox with search -->
+		$(".select-with-search").select2({
+			theme: "bootstrap"
+		});
+		<!-- Select & Add Multiple Tags -->
+		$(".select-add-tags").select2({
+			tags: true,
+			theme: "bootstrap",
+		})
+	});
+</script>
+
+<!-- Propeller Select2 -->
+<script type="text/javascript" src="js/pmd-select2.js"></script>
+
+</body>
+
+</html>

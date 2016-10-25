@@ -1,0 +1,115 @@
+
+.gallery-item {
+  display: inline-block;
+  vertical-align: top;
+  -webkit-transition: height 500ms ease;
+  -o-transition: height 500ms ease;
+  transition: height 500ms ease;
+}
+
+.gallery-expander {
+  position: absolute;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  max-height: 0;
+  -webkit-transition: max-height 500ms ease;
+  -o-transition: max-height 500ms ease;
+  transition: max-height 500ms ease;
+}
+
+.gallery-contents { position: relative; cursor:pointer; }
+
+.gallery-contents:after {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  margin-left: -30px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom-style: solid;
+  border-bottom-width: 0px;
+  -webkit-transition: border-bottom-width 500ms ease;
+  -o-transition: border-bottom-width 500ms ease;
+  transition: border-bottom-width 500ms ease;
+  bottom: 0;
+  z-index:1;
+}
+
+.gallery-item.active .gallery-contents:after { border-bottom-width: 30px; }
+.gallery-item {
+  margin: 0 10px;
+  width:23%;
+  padding-bottom:20px; min-height:260px;
+}
+.gallery-contents .card { margin-bottom:0;}
+
+.gallery-contents:after { border-bottom-color: #efefef; }
+
+.gallery-expander { background: #fff; margin: 0 20px; }
+
+@media (min-width: 640px) and (max-width: 999px) {
+
+.gallery-expander-contents { width: 640px; }
+}
+@media (max-width: 639px) {
+
+.gallery-expander-contents { width: 100%; }
+}
+
+.gallery-expander-contents:after {
+  clear: both;
+  display: table;
+  content: '';
+}
+
+@media (min-width: 640px) and (max-width: 999px) {
+
+.gallery-expander-contents > div.col { width: 310px; }
+}
+@media (max-width: 639px) {
+
+.gallery-expander-contents > div.col {
+  float: none;
+  padding: 25px 20px 0;
+  width: auto;
+}
+}
+@media (min-width: 640px) and (max-width: 999px) {
+
+.gallery-expander-contents > div.col + div.col { margin-left: 20px; }
+}
+@media (max-width: 639px) {
+
+.gallery-expander-contents > div.col + div.col { margin-left: 0px; }
+}
+
+.gallery-expander-contents div.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.gallery-expander-contents div.title {
+  font-weight: 500;
+  color: #D28A3C;
+}
+
+.gallery-expander-contents div.contents {
+  margin-top: 10px;
+  border-top: 1px solid #BCB098;
+  border-bottom: 1px solid #BCB098;
+  padding: 10px 0;
+  font-size: 14px;
+  line-height: 24px;
+  color: #797262;
+}
+
+.gallery-expander-contents div.image > img {
+  width: 100%;
+  display: block;
+}

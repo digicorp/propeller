@@ -1,0 +1,8 @@
+/* Bootstrap css */
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";
+
+HTML{ font-size:16px;}
+
+/*Desciption list*/
+.dl-horizontal dt{ margin-bottom:20px;}
+.dl-horizontal dd{ margin-left:0;}

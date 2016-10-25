@@ -1,0 +1,30 @@
+/*!
+ * Propeller v1.0.0 (http://propeller.in)
+ * Copyright 2016-2017 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+/* popover colored css */
+.popover.primary { color: #fff; background-color: #03a9f4; border-color: #46b8da;}
+.popover.primary.left > .arrow:after { border-left-color:#03a9f4;}
+.popover.primary.right > .arrow:after { border-right-color:#03a9f4;}
+.popover.primary.top > .arrow:after { border-top-color:#03a9f4;}
+.popover.primary.bottom > .arrow:after { border-bottom-color:#03a9f4;}
+
+.popover.default { color: #fff; background-color: #ffc107;  border-color: #eea236;}
+.popover.default.left > .arrow:after { border-left-color:#ffc107;}
+.popover.default.right > .arrow:after { border-right-color:#ffc107;}
+.popover.default.top > .arrow:after { border-top-color:#ffc107;}
+.popover.default.bottom > .arrow:after { border-bottom-color:#ffc107;}
+
+.popover.success { color: #fff; background-color: #259b24;  border-color: #4cae4c;}
+.popover.success.left > .arrow:after { border-left-color:#259b24;}
+.popover.success.right > .arrow:after { border-right-color:#259b24;}
+.popover.success.top > .arrow:after { border-top-color:#259b24;}
+.popover.success.bottom > .arrow:after { border-bottom-color:#259b24;}
+
+.popover.danger { color: #fff; background-color: #ff5722;  border-color: #d43f3a;}
+.popover.danger.left > .arrow:after { border-left-color:#ff5722;}
+.popover.danger.right > .arrow:after { border-right-color:#ff5722;}
+.popover.danger.top > .arrow:after { border-top-color:#ff5722;}
+.popover.danger.bottom > .arrow:after { border-bottom-color:#ff5722;}

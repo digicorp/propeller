@@ -1,0 +1,49 @@
+/*!
+ * Propeller v1.0.0 (http://propeller.in)
+ * Copyright 2016-2017 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+/* Propeller*/
+.pmd-tabs{ position:relative;}
+
+/* tabs scrollable*/
+.pmd-tab-active-bar { position: absolute; bottom: 0; width: 25%; height: 3px; background: #CC0; transition: all .3s ease-in-out; -moz-transition: all .3s ease-in-out; -ms-transition: all .3s ease-in-out; -webkit-transition: all .3s ease-in-out; -o-transition: all .3s ease-in-out;}
+.pmd-tabs-scroll-container {display: block; width: 100%; height: 48px; position: relative; overflow: hidden;}
+.pmd-tabs-scroll-right {float: right; right:0; top:0;}
+.pmd-tabs-scroll-left {float: left; left:0;}
+.pmd-tabs-scroll-right, .pmd-tabs-scroll-left{ position:absolute; z-index:99; text-align: center;	cursor: pointer; display: none; white-space: no-wrap; vertical-align: middle; padding:12px 24px 8px 24px; background-color:#4285f4; color:#fff;}
+
+.pmd-tabs .pmd-tab-active-bar { position: absolute; bottom: 0; width: 25%; height: 3px; background: #CC0; ransition: all .3s ease-in-out;}
+.pmd-tabs .nav-tabs.nav-justified > li > a { border:none;  border-radius:0;}
+.pmd-tabs .nav-tabs.nav-justified > .active > a,
+.pmd-tabs .nav-tabs.nav-justified > .active > a:hover,
+.pmd-tabs .nav-tabs.nav-justified > .active > a:focus { border:none;}
+.pmd-tabs .nav-tabs.nav-justified > li > a{border-radius: 0;}
+.pmd-tabs .nav-tabs > li.active > a,
+.pmd-tabs .nav-tabs > li.active > a:hover,
+.pmd-tabs .nav-tabs > li.active > a:focus { color: inherit; cursor: default; background-color: transparent;  border: none;  border-bottom-color: transparent; opacity:1;}
+.pmd-tabs .nav-tabs > li > a:hover {border-color: transparent; background-color:transparent}
+.pmd-tabs .nav-tabs > li > a { margin-right: 0; line-height: 1; border:none; border-radius: 0; text-transform:uppercase;}
+.pmd-tabs .nav-tabs > li { margin-bottom: 0;}
+.pmd-tabs .nav-tabs { border-bottom:none;}
+.pmd-tabs .nav .open > a,
+.pmd-tabs .nav .open > a:hover,
+.pmd-tabs .nav .open > a:focus,
+.pmd-tabs .nav > li > a:hover, 
+.pmd-tabs .nav > li > a:focus { background-color: transparent; border-color: transparent;}
+.pmd-tabs .nav > li > a { padding: 18px 24px 17px; font-size:14px;}
+.pmd-tabs .nav > li > a:hover, .pmd-tabs .nav > li > a:focus{}
+
+/*Themes*/
+.nav-tabs > li > a { opacity:0.54; color:#000; font-weight:500;}
+.pmd-tabs-bg{ background-color:#4285f4; color:#fff;}
+.pmd-tabs-bg li .dropdown-menu a {color:#333;}
+.pmd-tabs-bg li a {color:#fff;}
+.pmd-tabs-bg .pmd-tabs-scroll-right, .pmd-tabs-bg .pmd-tabs-scroll-left, 
+.pmd-tabs-bg .pmd-tabs-scroll-container{background-color:#4285f4; color:#fff;}
+
+@media (max-width: 767px) {
+.pmd-tabs{ overflow-x: auto; overflow-y: hidden;}
+.pmd-tabs .nav-tabs.nav-justified{ width: auto !important;}
+}

@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="">
+<head>
+ 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Propeller is a front-end responsive framework based on Material design & Bootstrap.">
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+    <title>Accordion - Style - Propeller</title>
+    
+	<!-- favicon --> 
+	<link rel="icon" href="http://propeller.in/assets/images/favicon.ico" type="image/x-icon">
+	
+	<!-- Bootstrap --> 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+	
+	<!-- Propeller card (CSS for helping component example file)-->
+	<link href="http://propeller.in/components/card/css/card.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Example docs (CSS for helping component example file)-->
+	<link href="http://propeller.in/docs/css/example-docs.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Propeller typography (CSS for helping component ) -->
+	<link href="http://propeller.in/components/typography/css/typography.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Propeller Button -->
+	<link href="http://propeller.in/components/button/css/button.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Propeller Accordion -->
+	<link href="css/popover.css" type="text/css" rel="stylesheet" /> 
+
+</head>
+
+<body>
+
+<!--Popover -->
+<div class="pmd-content pmd-content-custom" id="content"> 
+	
+	<!--component header -->
+	<div class="componant-title-bg"> 
+		<div class="container">
+			<div class="row">
+				
+				<!-- component title and description -->
+				<div class="col-xs-12">
+					<h1>Popover</h1>
+					<p class="lead">Popover is similar to tooltips; it is a pop-up box that appears when user click or hover on an element.</p>
+				</div> <!-- component title and description end -->
+				
+			</div>
+		</div>
+	</div> <!--component header end -->
+	
+	<div class="container"> 
+		<!-- On Click popover -->
+		<section class="row component-section">
+			
+			<!-- On Click popover title and description -->
+			<div class="col-md-3">
+				<div id="click">
+					<h2>Popover On Click</h2>
+				</div>
+				<p>To make the Popover open on click, use <code>data-trigger="click"</code>. To specify the direction of Popover use attribute <code>data-placement</code> with <code>left</code>, <code>right</code>, <code>top</code>, and <code>bottom</code> values.</p>
+			</div> <!-- On Click popover title and description end -->
+			
+			<!-- On Click popover code and example -->
+			<div class="col-md-9"> 
+            
+				<div class="component-box">
+					<!-- buttons for popover -->
+					<div class="row">
+						<div class="col-md-12"> 
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body text-center"> 
+									
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" data-toggle="popover" data-placement="left" data-content="Popover Left">Left</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" data-toggle="popover" data-placement="top" data-content="Popover top">Top</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" data-toggle="popover" data-placement="bottom" data-content="Popover Bottom">Bottom</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" data-toggle="popover" data-placement="right" data-content="Popover Right">Right</button>
+								</div>
+							</div>
+						</div>
+					</div> <!-- buttons for popover end -->
+				</div>
+                
+                <!-- On Click popover with Title -->
+                <div class="component-box">
+					<!-- On Click popover with Title example -->
+					<div class="row">
+						<div class="col-md-12"> 
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body text-center"> 
+									
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" title="Popover Left Title" data-toggle="popover" data-placement="left" data-content="Popover Left">Left</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" title="Popover Top Title" data-toggle="popover"  data-placement="top" data-content="Popover top">Top</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" title="Popover Bottom Title" data-toggle="popover" data-placement="bottom" data-content="Popover Bottom">Bottom</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" title="Popover Right Title"  data-toggle="popover" data-placement="right" data-content="Popover Right">Right</button>
+								</div>
+							</div>
+						</div>
+					</div> <!-- On Click popover with Title example end -->
+					
+				</div><!-- On Click popover with Title end -->
+                <p class="component-desc"><strong>Popover on Click with Title</strong>. Use attribute <code>title</code> to add title to the Popover.</p>
+			</div> <!-- On Click popover code and example end -->
+		</section> <!-- On Click popover end -->
+		
+		<!-- On hover popover -->
+		<section class="row component-section">
+			
+			<!-- On hover popover title and description -->
+			<div class="col-md-3">
+				<div id="hover">
+					<h2>Popover On Hover</h2>
+				</div>
+				<p>To make your Popover open on hover, use <code>data-trigger="hover"</code>.</p>
+			</div> <!-- On hover popover title and description end -->
+			
+			<!-- On hover popover code and example -->
+			<div class="col-md-9"> 
+				<div class="component-box">
+					<!-- on hover popover example -->
+					<div class="row">
+						<div class="col-md-12"> 
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body text-center"> 
+									<!--popover -->
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="hover" data-toggle="popover" data-placement="left" data-content="Popover Left">Left</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="hover" data-toggle="popover" data-placement="top" data-content="Popover top">Top</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="hover" data-toggle="popover" data-placement="bottom" data-content="Popover Bottom">Bottom</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="hover" data-toggle="popover" data-placement="right" data-content="Popover Right">Right</button>
+								</div>
+							</div>
+						</div>
+					</div> <!-- on hover popover example end -->
+					
+				</div>
+                
+                <!-- Inline HTML code and example -->
+                <div class="component-box">
+					<!-- inline HTML popover example-->
+					<div class="row">
+						<div class="col-md-12"> 
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body text-center"> 
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="hover" data-toggle="popover" data-placement="left" data-html="true" data-content="<div class=''><h1>Heading h1</h1><h2>Heading h2</h2><h3>Heading h3</h3><h4>Heading h4</h4><h5>Heading h5</h5><h6>Heading h6</h6></div>">Left</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="hover" data-toggle="popover" data-placement="top" data-html="true" data-content="<div class=''><h1>Heading h1</h1><h2>Heading h2</h2><h3>Heading h3</h3><h4>Heading h4</h4><h5>Heading h5</h5><h6>Heading h6</h6></div>">Top</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="hover" data-toggle="popover" data-placement="bottom" data-html="true" data-content="<div class=''><h1>Heading h1</h1><h2>Heading h2</h2><h3>Heading h3</h3><h4>Heading h4</h4><h5>Heading h5</h5><h6>Heading h6</h6></div>">Bottom</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="hover" data-toggle="popover" data-placement="right" data-html="true" data-content="<div class=''><h1>Heading h1</h1><h2>Heading h2</h2><h3>Heading h3</h3><h4>Heading h4</h4><h5>Heading h5</h5><h6>Heading h6</h6></div>">Right</button>
+								</div>
+							</div>
+						</div>
+					</div> <!-- inline HTML popover example end -->
+					
+				</div><!-- Inline HTML code and example end -->
+                <p class="component-desc"><strong>Popover on hover with Inline HTML</strong>. Use attribute <code>data-html="true"</code> to add inline HTML to the Popover.</p>
+                
+                <!-- external HTML popover code and example -->
+                <div class="component-box">
+					<!-- external HTML popover example--> 
+					<div class="row">
+						<div class="col-md-12"> 
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body text-center">
+									<div id="popover-left" style="display:none;">
+										<p>HTML for left popover</p>
+									</div>
+									<div id="popover-right" style="display:none;">
+										<p>HTML for right popover</p>
+									</div>
+									<div id="popover-bottom" style="display:none;">
+										<p>HTML for bottom popover</p>
+									</div>
+									<div id="popover-top" style="display:none;">
+										<p>HTML for top popover</p>
+									</div>
+									
+									<button type="button" class="btn pmd-ripple-effect btn-default popover-html pmd-z-depth" data-trigger="hover" data-toggle="popover" data-placement="left" data-html="true" data-id="#popover-left">Left</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default popover-html pmd-z-depth" data-trigger="hover" data-toggle="popover" data-placement="top" data-html="true" data-id="#popover-top">Top</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default popover-html pmd-z-depth" data-trigger="hover" data-toggle="popover" data-placement="bottom" data-html="true" data-id="#popover-bottom">Bottom</button>
+									<button type="button" class="btn pmd-ripple-effect btn-default popover-html pmd-z-depth" data-trigger="hover" data-toggle="popover" data-placement="right" data-html="true" data-id="#popover-right">Right</button>
+								</div>
+							</div>
+						</div>
+					</div> <!-- external HTML popover example end -->
+					
+				</div><!-- external HTML popover code and example end -->
+				<p class="component-desc"><strong>Popover on hover with External HTML</strong>. Use attribute <code>title</code> to add external HTML to the Popover.</p>
+                
+                <!-- colored popover code and example -->
+                <div class="component-box">
+					<!-- colored popover example -->
+					<div class="row">
+						<div class="col-md-12"> 
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
+								<div class="pmd-card-body text-center"> 
+									
+									<button type="button" class="btn pmd-ripple-effect btn-info pmd-btn-raised" data-trigger="hover" data-toggle="popover" data-color="primary" data-placement="left" data-content="Popover left">Left</button>
+									<button type="button" class="btn pmd-ripple-effect btn-warning pmd-z-depth" data-trigger="hover" data-toggle="popover" data-color="default" data-placement="top" data-content="Popover top">Top</button>
+									<button type="button" class="btn pmd-ripple-effect btn-success pmd-z-depth" data-trigger="hover" data-toggle="popover" data-color="success" data-placement="bottom" data-content="Popover bottom">Bottom</button>
+									<button type="button" class="btn pmd-ripple-effect btn-danger pmd-z-depth" data-trigger="hover" data-toggle="popover" data-color="danger" data-placement="right" data-content="Popover right">Right</button>
+								</div>
+							</div>
+						</div>
+					</div> <!-- colored popover example end -->
+					
+				</div><!-- colored popover code and example end -->
+                <p class="component-desc"><strong>Popover on hover with contextual color option</strong>. Use attribute <code>data-color</code> to add external HTML to the popover. For example: <code>data-color="success"</code> adds green color to the Popover.</p>
+			</div> <!-- On hover popover code and example end -->
+		</section> <!-- On hover popover end -->
+		
+		<!-- Configuration starts-->		
+		<section class="row component-section">
+			<div class="col-md-3">
+				<div id="config">
+					<h2>Configuration Options</h2>
+				</div>
+				<p>The Propeller CSS classes apply various predefined visual enhancements to the Popover. The table lists the available classes and their effects.</p>
+			</div>
+			<div class="col-md-9">
+				<div class="pmd-card pmd-table-card-responsive">
+					<div class="pmd-table-card"> 
+						<!--table start -->
+						<table class="table pmd-table table-hover">
+							<thead>
+								<tr>
+									<th>Propeller Classes</th>
+									<th>Effect</th>
+									<th>Remark</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-title="Propeller Classes"><code>.popover-html</code></td>
+									<td data-title="Effect">To load dynamic HTML inside Popover</td>
+									<td data-title="Remark">Optional</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--table start --> 
+					</div>
+				</div>
+				<div class="pmd-card pmd-table-card-responsive">
+					<div class="pmd-table-card"> 
+						<!--table start -->
+						<table class="table pmd-table table-hover">
+							<thead>
+								<tr>
+									<th>HTML Attributes</th>
+									<th>Effect</th>
+									<th>Value</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-title="HTML Attributes"><code>data-toggle</code></td>
+									<td data-title="Effect">To initialize Popover</td>
+									<td data-title="Value">Popover</td>
+								</tr>
+								<tr>
+									<td data-title="HTML Attributes"><code>data-trigger</code></td>
+									<td data-title="Effect">Defines how the Popover opens.</td>
+									<td data-title="Value">hover, Click</td>
+								</tr>
+								<tr>
+									<td data-title="HTML Attributes"><code>data-placement</code></td>
+									<td data-title="Effect">Defines the position of Popover vertically and horizontally.</td>
+									<td data-title="Value">left, right, top, bottom</td>
+								</tr>
+								<tr>
+									<td data-title="HTML Attributes"><code>data-content</code></td>
+									<td data-title="Effect">Defines content of the Popover.</td>
+									<td data-title="Value">text, HTML</td>
+								</tr>
+								<tr>
+									<td data-title="HTML Attributes"><code>data-html</code></td>
+									<td data-title="Effect">Required when your Popover contains HTML in it.</td>
+									<td data-title="Value">true, false</td>
+								</tr>
+								<tr>
+									<td data-title="HTML Attributes"><code>data-id</code></td>
+									<td data-title="Effect">To load outer HTML</td>
+									<td data-title="Value">HTML element ID</td>
+								</tr>
+								<tr>
+									<td data-title="HTML Attributes"><code>data-original-title</code></td>
+									<td data-title="Effect">Defines the title content of Popover.</td>
+									<td data-title="Value">text</td>
+								</tr>
+								<tr>
+									<td data-title="HTML Attributes"><code>data-color</code></td>
+									<td data-title="Effect">Used for colored Popover.</td>
+									<td data-title="Value">primary, default, success, danger, info, warning</td>
+								</tr>
+							</tbody>
+						</table>
+						<!--table start --> 
+					</div>
+				</div>
+			</div>
+		</section> <!-- Configuration ends--> 		
+		
+		<!-- Events starts-->		
+		<section class="row component-section">
+			<div class="col-md-3">
+				<div id="events">
+					<h2>Events</h2>
+				</div>
+				<p>See <a href="http://getbootstrap.com/javascript/#popovers" target="_blank">here</a> for more documentation on this.</p>
+			</div>
+			<div class="col-md-9"> 
+				<!--Events card start -->
+				<div class="pmd-card pmd-table-card-responsive">
+					<div class="pmd-table-card">
+						<table class="table pmd-table table-hover">
+							<thead>
+								<tr>
+									<th>Event Type</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-title="Class"><code>show.bs.popover</code></td>
+									<td data-title="Effect">This event fires immediately when the <code>show</code> instance method is called.</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>shown.bs.popover</code></td>
+									<td data-title="Effect">This event is fired when the popover has been made visible to the user (will wait for CSS transitions to complete).</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>hide.bs.popover</code></td>
+									<td data-title="Effect">This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>hidden.bs.popover</code></td>
+									<td data-title="Effect">This event is fired when the popover has finished being hidden from the user (will wait for CSS transitions to complete).</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>inserted.bs.popover</code></td>
+									<td data-title="Effect">This event is fired after the <code>show.bs.popover</code> event when the Popover template has been added to the DOM.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section> <!-- Events ends-->
+		 
+	</div>
+</div> <!--Popover end  --> 
+
+
+<!-- Jquery js -->
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+<!-- Bootstrap js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Propeller ripple effect js -->
+<script type="text/javascript" src="http://propeller.in/components/button/js/ripple-effect.js"></script>
+
+<!-- Propeller popover js -->
+<script type="text/javascript" src="js/popover.js"></script>
+
+
+</body>
+</html>

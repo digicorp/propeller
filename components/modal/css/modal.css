@@ -1,0 +1,29 @@
+/*!
+ * Propeller v1.0.0 (http://propeller.in)
+ * Copyright 2016-2017 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+.modal-content{border-radius:2px;}
+.modal-header {border-bottom: 1px solid rgba(0, 0, 0, 0);border-top-left-radius: 3px;border-top-right-radius: 3px;margin-bottom: 16px;padding: 16px 16px 0;}
+.modal-header.pmd-modal-bordered{border-bottom:1px solid #e5e5e5;padding-bottom:16px;}
+.modal-header h2.pmd-card-title-text{font-weight:500;}
+.pmd-modal-list{ margin-bottom:16px; margin-top:16px;}
+.modal-body{color: rgba(0, 0, 0, 0.84);margin-bottom:16px;margin-top:16px;padding:0 16px;}
+.modal-body .list-group-item{}
+.modal-body > p:last-child{margin-bottom:0;}
+.modal-footer{padding:16px;}
+.pmd-modal-action{padding:8px 4px;}
+.pmd-modal-action .btn.pmd-btn-fab {padding: 0;}
+.pmd-modal-action.pmd-modal-bordered {border-top:1px solid #e5e5e5;}
+.pmd-modal-action .btn {min-width: inherit;padding: 10px 8px;margin-bottom: 8px;margin-left: 4px;margin-right: 4px;margin-top:8px;}
+.pmd-modal-action .btn:first-child {margin-left: 12px;}
+.pmd-modal-action .btn.pmd-btn-flat:first-child{margin-left: 4px;}
+.pmd-modal-action .pmd-btn-flat{margin:0 4px 0 0;}
+.modal .radio, .modal .checkbox{margin:16px 0;}
+.modal .radio-options > label{padding-left:32px;}
+.modal .list-group.pmd-list-avatar{margin:8px 4px;padding:0}
+.modal .list-group:last-child{margin-bottom:0;}
+
+/* Form css */
+.form-horizontal .form-group{ margin-left:0; margin-right:0;}

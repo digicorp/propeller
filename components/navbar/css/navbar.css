@@ -1,0 +1,104 @@
+/*!
+ * Propeller v1.0.0 (http://propeller.in)
+ * Copyright 2016-2017 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+/*Propeller Navbar*/
+.pmd-navbar.navbar > .container .navbar-brand, .pmd-navbar.navbar > .container-fluid .navbar-brand{ margin-left: 0;}
+.pmd-navbar .navbar-brand{ float: left; padding: 8px 16px 8px 8px; font-size:24px; line-height: 48px; height: inherit;}
+@media (max-width: 767px) {
+.pmd-navbar .navbar-brand{ line-height:40px;}
+}
+@media (min-width: 768px) {
+.pmd-navbar .navbar { border-radius: 0;}
+}
+@media (min-width: 768px) {
+.pmd-navbar.navbar > .container .navbar-brand, .pmd-navbar.navbar > .container-fluid .navbar-brand { margin-left:0px;}
+}
+.pmd-navbar .navbar-nav > li > a { line-height: 24px;}
+@media (min-width: 768px) {
+.pmd-navbar .navbar-nav > li > a { padding-top:20px; padding-bottom:20px;}
+} 
+.pmd-navbar .navbar-nav > li > a{ text-transform:uppercase;}
+.pmd-navbar .navbar-toggle{margin-top: 16px; float:left;}
+.pmd-navbar.navbar .btn.pmd-btn-fab{margin: 12px 0; padding:0;}
+@media (max-width: 767px) {
+.pmd-navbar.navbar .btn.pmd-btn-fab{margin: 8px 0;}
+}
+.pmd-navbar .pmd-navbar-right-icon{ margin-left:16px;}
+.pmd-navbar .pmd-navbar-right-icon a{ display:inline-block;}
+.pmd-navbar .navbar-toggle{border-radius: 50%; border:none; height:40px; width:40px; padding:10px; margin-top: 12px; margin-right:8px;}
+.pmd-navbar .navbar-toggle .icon-bar{ width:20px;}
+
+.pmd-sidebar-overlay, .pmd-sidebar-left-overlay, .right-pmd-sidebar-overlay { visibility: hidden; position: fixed; top: 0; left: 0; right: 0; bottom: 0; opacity: 0; background: #000; z-index:998; -webkit-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1); -moz-transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1); transition: visibility 0 linear 0.4s, opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1); -webkit-transform: translateZ(0); -moz-transform: translateZ(0); -ms-transform: translateZ(0); -o-transform: translateZ(0); transform: translateZ(0);}
+.pmd-sidebar-overlay.pmd-sidebar-overlay-active, .pmd-sidebar-left-overlay.active, .right-pmd-sidebar-overlay.active { opacity: 0.5; visibility: visible; -webkit-transition-delay: 0; -moz-transition-delay: 0; transition-delay: 0;}
+
+.navbar-form .btn{padding:9px 14px}
+
+/*Menu in right sidebar*/
+@media (max-width: 767px) {
+.pmd-navbar .navbar-header{padding:0 8px;}
+.pmd-navbar.navbar-fixed-top, .pmd-navbar.navbar-fixed-bottom{z-index: 998;}
+.pmd-navbar-sidebar{position: relative; display: block; min-height: 100%; overflow-y: auto; overflow-x: hidden; border: none; -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);-o-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1); transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1); background:#fff;}
+.pmd-navbar-sidebar:before, .pmd-navbar-sidebar:after { content: " "; display: table;}
+.pmd-navbar-sidebar:after { clear: both;}
+.pmd-navbar-sidebar::-webkit-scrollbar-track { border-radius: 2px;}
+.pmd-navbar-sidebar::-webkit-scrollbar { width: 5px; background-color: #F7F7F7;}
+.pmd-navbar-sidebar::-webkit-scrollbar-thumb { border-radius: 10px; -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); background-color: #BFBFBF;}
+
+/* -- Navebar DropDown --------------------------- */
+.navbar-nav .dropdown-menu {position: relative; width: 100%; margin: 0; padding: 0; border: none; border-radius: 0; -webkit-box-shadow: none; box-shadow: none;}
+.navbar-nav .dropdown .dropdown-menu > li > a, .navbar-nav .dropdown .dropdown-menu .dropdown-header{ padding: 4px 16px 4px 32px; line-height:24px;}
+
+/* -- sidebar show/hide ------------------------- */
+.pmd-navbar-sidebar { min-width: 85%; width: 85%; -webkit-transform: translate3d(-100%, 0, 0); -moz-transform: translate3d(-100%, 0, 0);transform: translate3d(-100%, 0, 0);}
+.pmd-navbar-sidebar.pmd-sidebar-open { -webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0);transform: translate3d(0, 0, 0);}
+.pmd-navbar-sidebar{position: fixed; top: 0; bottom: 0; z-index:999;}
+.pmd-navbar-sidebar { left: 0; box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35);}
+.pmd-navbar .pmd-navbar-right-icon{ position:absolute; top:0; right:8px;}
+
+/* -- sidebar nav ------------------------------- */
+.pmd-navbar-sidebar .navbar-nav { margin: 0; padding: 0;}
+.pmd-navbar-sidebar .navbar-nav a{ position: relative; cursor: pointer; user-select: none; display: block; padding:12px 16px; text-decoration: none; clear: both; font-weight:400; overflow: hidden; -o-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; -webkit-transition: all 0.2s ease-in-out; -o-transition: all 0.2s ease-in-out; transition: all 0.2s ease-in-out; line-height:24px;}
+.pmd-navbar-sidebar .navbar-nav a:hover, .pmd-navbar-sidebar .navbar-nav li a:focus { -webkit-box-shadow: none; box-shadow: none; outline: none;}
+.container > .navbar-collapse.pmd-navbar-sidebar, .container-fluid > .navbar-collapse.pmd-navbar-sidebar{ margin-left:0; margin-right:0; padding:0;}
+.pmd-navbar-sidebar .navbar-nav{ display:inline-block; width:100%;}
+
+/* -- sidebar inverse ------------------------------- */
+.navbar-inverse .pmd-navbar-sidebar{ background-color:#222;}
+.navbar-inverse .pmd-navbar-sidebar .dropdown-menu > li > a{ color: #9d9d9d;}
+.navbar-inverse .pmd-navbar-sidebar .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus{ background-color:transparent; color:#fff;}
+.navbar-inverse .pmd-navbar-sidebar .pmd-user-info .dropdown-menu{border-color: #080808;}
+
+}
+
+/* -- My Account -------------------------------- */
+.pmd-user-info > a{ padding-top:12px; padding-bottom:12px; padding-right:8px; padding-left:8px; display: block;}
+.pmd-user-info .dropdown-menu{min-width:100%;}
+
+/* -- Nav Bar -- */
+.pmd-navbar .pmd-user-info{ margin-right: -15px; margin-left:16px;}
+.pmd-navbar .pmd-user-info .media-body{ width: auto; height:40px;}
+
+@media (max-width: 767px) {
+.pmd-navbar .navbar-toggle{margin-top: 8px;}
+.pmd-user-info > a{padding-top:8px; padding-bottom:8px;}
+.pmd-navbar .pmd-navbar-sidebar .pmd-user-info a{ padding-left:16px; padding-right:16px;}
+.pmd-navbar .pmd-navbar-sidebar .pmd-user-info .dropdown-menu{ position:relative; box-shadow: inherit; border-bottom:transparent solid 1px}
+.pmd-navbar .pmd-navbar-sidebar .pmd-user-info > a{ background-size:cover; color:#fff;}
+.pmd-navbar .pmd-navbar-sidebar .pmd-user-info{ width:100%; margin-left:0; margin-right:0;}
+.pmd-navbar .pmd-navbar-sidebar .pmd-user-info .media-body{ width:100%;}
+/* -- Themes--*/
+.pmd-navbar .pmd-navbar-sidebar .pmd-user-info .dropdown-menu{ border-color:#e5e5e5}
+
+/* -- Sidebar -- */
+.pmd-navbar-sidebar .pmd-user-info > a{ background-color:#333; background-size:cover; color:#fff;}
+.pmd-navbar-sidebar .pmd-user-info > a:hover, .pmd-sidebar .pmd-user-info > a:focus{ background-color:#333;}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus{ color: #9d9d9d;}
+}
+
+/* -- Propeller Navbar Form ---------------------------- */
+.pmd-navbar .navbar-form{ padding-top:7px; padding-bottom:6px;}
+

@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="">
+<head>
+ 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Propeller is a front-end responsive framework based on Material design & Bootstrap.">
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+    <title>Tab - Style - Propeller</title>
+    
+	<!-- favicon --> 
+	<link rel="icon" href="http://propeller.in/assets/images/favicon.ico" type="image/x-icon">
+	
+	<!-- Bootstrap --> 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+
+	<!-- Google Icon Font -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="http://propeller.in/components/icons/css/google-icons.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Example docs (CSS for helping component example file)-->
+	<link href="http://propeller.in/docs/css/example-docs.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Propeller card -->
+	<link href="http://propeller.in/components/card/css/card.css" type="text/css" rel="stylesheet" />
+	
+	<!-- Propeller typography -->
+	<link href="http://propeller.in/components/typography/css/typography.css" type="text/css" rel="stylesheet" />
+
+	<!-- Propeller dropdown -->
+	<link href="http://propeller.in/components/dropdown/css/dropdown.css" type="text/css" rel="stylesheet" />
+
+	<!-- Propeller tab -->
+	<link href="css/tab.css" type="text/css" rel="stylesheet" /> 
+
+</head>
+
+<body>
+
+<!-- Tab -->
+<div class="pmd-content pmd-content-custom" id="content">
+
+	<!-- Component header -->
+	<div class="componant-title-bg"> 	
+		<div class="container">
+			<div class="row">
+			
+				<!-- component title and description -->
+				<div class="col-xs-12">
+					<h1>Tab</h1>
+                    <p class="lead">Tab is an HTML component that makes exploring and switching between different views easier.</p>
+				</div> <!-- end component title and description -->
+				
+			</div>
+		</div>		
+	</div><!-- end component header -->
+	
+	<div class="container"> 	
+		<!-- Basic Bootstrap tab -->
+		<section class="row component-section">
+			
+			<!-- Basic Bootstrap tab title and description -->
+			<div class="col-md-3">
+				<div id="bootstrap-basic-tab">
+					<h2>Bootstrap Tabs</h2>
+				</div>
+				<p>Bootstrap Tabs add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.</p>
+			</div> <!-- Basic Bootstrap tab title and description end -->
+			
+			<!-- Basic Bootstrap tab example and code -->
+			<div class="col-md-9 col-sm-12"> 
+				<div class="component-box">
+					<!--Basic Bootstrap tab example -->
+					<div> 
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li role="presentation" class="active"><a href="#bootstrap-home" aria-controls="home" role="tab" data-toggle="tab">Default</a></li>
+							<li role="presentation"><a href="#bootstrap-about" aria-controls="about" role="tab" data-toggle="tab">Fixed</a></li>
+							<li role="presentation"><a href="#bootstrap-work" aria-controls="work" role="tab" data-toggle="tab">Scrollable</a></li>
+						</ul>
+						<div class="pmd-card">
+							<div class="pmd-card-body">
+								<!-- Tab panes -->
+								<div class="tab-content">
+									<div role="tablist" class="tab-pane active" id="bootstrap-home">A tab provides the affordance for displaying grouped content. A tab label succinctly describes the tab’s associated grouping of content.</div>
+									<div role="tablist" class="tab-pane" id="bootstrap-about">Fixed tabs have equal width, calculated either as the view width divided by the number of tabs, or based on the widest tab label. To navigate between fixed tabs, touch the tab or swipe the content area left or right.</div>
+									<div role="tablist" class="tab-pane" id="bootstrap-work">To navigate between scrollable tabs, touch the tab or swipe the content area left or right. To scroll the tabs without navigating, swipe the tabs left or right.</div>
+								</div>
+							</div>
+						</div>
+					</div> <!--Basic Bootstrap tab example end-->
+					
+				</div>
+			</div> <!-- end Basic Bootstrap example and code -->
+			
+		</section><!-- end Basic Bootstrap tab --> 
+		
+		<!-- Default tab -->
+		<section class="row component-section">
+			
+			<!-- Default tab title and description -->
+			<div class="col-md-3">
+				<div id="propeller-basic-tab">
+					<h2>Propeller Tabs</h2>
+				</div>
+				<p>Propeller Tabs consist of Bootstrap HTML structure with Propeller customized classes and jQuery based on material design standards. Add <code>.pmd-tabs</code> to nav tag for applying Propeller Theme to the tabs. <code>.pmd-tabs-bg</code> is used to add a background to the tabs.</p>
+			</div> <!-- Default tab title and description end -->
+			
+			<!-- Default tab example and code -->
+			<div class="col-md-9 col-sm-12"> 
+				<div class="component-box">
+					<!--Default tab example -->
+					<div class="pmd-card pmd-z-depth"> 
+						<div class="pmd-tabs pmd-tabs-bg">
+							<div class="pmd-tab-active-bar"></div>
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Default</a></li>
+								<li role="presentation"><a href="#about" aria-controls="about" role="tab" data-toggle="tab">Fixed</a></li>
+								<li role="presentation"><a href="#work" aria-controls="work" role="tab" data-toggle="tab">Scrollable</a></li>
+							</ul>
+						</div>
+						<div class="pmd-card-body">
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="home">A tab provides the affordance for displaying grouped content. A tab label succinctly describes the tab’s associated grouping of content.</div>
+								<div role="tabpanel" class="tab-pane" id="about">Fixed tabs have equal width, calculated either as the view width divided by the number of tabs, or based on the widest tab label. To navigate between fixed tabs, touch the tab or swipe the content area left or right.</div>
+								<div role="tabpanel" class="tab-pane" id="work">To navigate between scrollable tabs, touch the tab or swipe the content area left or right. To scroll the tabs without navigating, swipe the tabs left or right.</div>
+							</div>
+						</div>
+					</div> <!--Default tab example end-->
+					
+				</div>
+			</div> <!-- end Default example and code -->
+			
+		</section><!-- end default tab --> 
+		
+        <!-- Fixed tab -->
+		<section class="row component-section">
+			
+			<!-- Fixed tab title and description -->
+			<div class="col-md-3 col-sm-12">
+				<div id="fixed-tab">
+					<h2>Equal Width Tabs</h2>
+				</div>
+				<p>Equal Width Tabs have same width, calculated either as the view width divided by the number of tabs, or based on the widest tab label. Add <code>.nav-justified</code> to the list to create fixed tabs.</p>
+			</div> <!-- end fixed title tab and description -->
+			
+			<!-- Fixed tab example and code -->
+			<div class="col-md-9 col-sm-12"> 
+				<div class="component-box">
+					<!--Fixed tab example -->
+                    <div class="pmd-card pmd-z-depth">
+					  <div class="pmd-tabs pmd-tabs-bg">
+					  	  <div class="pmd-tab-active-bar"></div>
+						  <ul role="tablist" class="nav nav-tabs nav-justified">
+							<li class="active" role="presentation"><a data-toggle="tab" role="tab" aria-controls="home" href="#home-fixed">Default</a></li>
+							<li role="presentation"><a data-toggle="tab" role="tab" aria-controls="profile" href="#about-fixed">Fixed</a></li>
+							<li role="presentation"><a data-toggle="tab" role="tab" aria-controls="messages" href="#work-fixed">Scrollable</a></li>
+						  </ul>
+					  </div>
+					  <div class="pmd-card-body">
+						  <div class="tab-content">
+						  	<div role="tabpanel" class="tab-pane active" id="home-fixed">A tab provides the affordance for displaying grouped content. A tab label succinctly describes the tab’s associated grouping of content.</div>
+							<div role="tabpanel" class="tab-pane" id="about-fixed">Fixed tabs have equal width, calculated either as the view width divided by the number of tabs, or based on the widest tab label. To navigate between fixed tabs, touch the tab or swipe the content area left or right.</div>
+							<div role="tabpanel" class="tab-pane" id="work-fixed">To navigate between scrollable tabs, touch the tab or swipe the content area left or right. To scroll the tabs without navigating, swipe the tabs left or right.</div>
+						  </div>
+					  </div>
+					</div> <!--Fixed tab example end-->
+					
+				</div>
+			</div> <!-- end Fixed example and code -->
+			
+		</section> <!-- end fixed tab  -->
+         
+		
+		<!-- Scrollable tab -->
+		<section class="row component-section">
+			
+			<!-- Scrollable tab title and description -->
+			<div class="col-md-3 col-sm-12">
+				<div id="scrollable-tab">
+					<h2>Scrollable Tabs</h2>
+				</div>
+				<p>Scrollable tabs display a subset of tabs at any given moment. They can contain longer tab labels and a larger number of tabs than fixed tabs. Add <code>.pmd-tabs-scroll</code> to the nav tag to create scrollable tabs. Also, a div with <code>.pmd-tabs-scroll-container</code> needs to be added.</p>
+			</div> <!-- end scrollable tab title and description -->
+			
+			<!-- scrollable tab example and code -->
+			<div class="col-md-9 col-sm-12"> 
+				<div class="component-box">
+					<!--Scrollable tab example -->
+					<div class="pmd-card pmd-z-depth"> 
+						<div class="pmd-tabs pmd-tabs-scroll pmd-tabs-bg">
+							<div class="pmd-tabs-scroll-left"><i class="material-icons pmd-sm">chevron_left</i></div>
+						    <div class="pmd-tabs-scroll-container pmd-z-depth" style="cursor: grab;">
+								<div class="pmd-tab-active-bar"></div>
+								<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active"><a href="#home-scrollable" aria-controls="home" role="tab" data-toggle="tab">Default</a></li>
+									<li role="presentation"><a href="#about-scrollable" aria-controls="about" role="tab" data-toggle="tab">Fixed</a></li>
+									<li role="presentation"><a href="#work-scrollable" aria-controls="work" role="tab" data-toggle="tab">Scrollable</a></li>
+									<li role="presentation"><a href="#home-scrollable" aria-controls="home" role="tab" data-toggle="tab">Default</a></li>
+									<li role="presentation"><a href="#about-scrollable" aria-controls="about" role="tab" data-toggle="tab">Fixed</a></li>
+									<li role="presentation"><a href="#work-scrollable" aria-controls="work" role="tab" data-toggle="tab">Scrollable</a></li>
+									<li role="presentation"><a href="#home-scrollable" aria-controls="home" role="tab" data-toggle="tab">Default</a></li>
+									<li role="presentation"><a href="#about-scrollable" aria-controls="about" role="tab" data-toggle="tab">Fixed</a></li>
+									<li role="presentation"><a href="#work-scrollable" aria-controls="work" role="tab" data-toggle="tab">Scrollable</a></li>
+									<li role="presentation"><a href="#home-scrollable" aria-controls="home" role="tab" data-toggle="tab">Default</a></li>
+									<li role="presentation"><a href="#about-scrollable" aria-controls="about" role="tab" data-toggle="tab">Fixed</a></li>
+									<li role="presentation"><a href="#work-scrollable" aria-controls="work" role="tab" data-toggle="tab">Scrollable</a></li>
+									<li role="presentation"><a href="#home-scrollable" aria-controls="home" role="tab" data-toggle="tab">Default</a></li>
+									<li role="presentation"><a href="#about-scrollable" aria-controls="about" role="tab" data-toggle="tab">Fixed</a></li>
+									<li role="presentation"><a href="#work-scrollable" aria-controls="work" role="tab" data-toggle="tab">Scrollable</a></li>
+								</ul>
+							</div>
+    						<div class="pmd-tabs-scroll-right"><i class="material-icons pmd-sm">chevron_right</i></div>	
+						</div>
+						<div class="pmd-card-body">
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="home-scrollable">A tab provides the affordance for displaying grouped content. A tab label succinctly describes the tab’s associated grouping of content.</div>
+								<div role="tabpanel" class="tab-pane" id="about-scrollable">Fixed tabs have equal width, calculated either as the view width divided by the number of tabs, or based on the widest tab label. To navigate between fixed tabs, touch the tab or swipe the content area left or right.</div>
+								<div role="tabpanel" class="tab-pane" id="work-scrollable">To navigate between scrollable tabs, touch the tab or swipe the content area left or right. To scroll the tabs without navigating, swipe the tabs left or right.</div>
+							</div>
+						</div>
+					</div> <!--Scrollable tab example end-->
+                    		
+				</div>
+			</div> <!-- end Scrollable example and code -->
+			
+		</section> <!-- end scrollable tab  --> 
+        
+		<!-- Tab with Dropdown -->
+		<section class="row component-section">	
+			
+            <!-- Tab with Dropdown title and description -->
+			<div class="col-md-3 col-sm-12">
+				<div id="tab-with-dropdown">
+					<h2>Tabs with Dropdown</h2>
+				</div>
+				<p>Add <a href="dropdown.php" target="_blank">Propeller's Dropdown menu</a> to make it a part of tab. To do so create a drop down list within the tablist and add <code>.dropdown-menu</code> to it.</p>
+			</div> <!-- end Tab with Dropdown title and description -->
+			
+			<!-- Tab with Dropdown example and code -->
+			<div class="col-md-9 col-sm-12"> 
+				<div class=" component-box">
+					<!--Tab with Dropdown example -->
+					<div class="pmd-card pmd-z-depth dropdown-tab"> 
+						<div class="pmd-tabs pmd-tabs-bg">
+							<div class="pmd-tab-active-bar"></div>
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#home-dropdown" aria-controls="home" role="tab" data-toggle="tab">Default</a></li>
+								<li role="presentation"><a href="#about-dropdown" aria-controls="about" role="tab" data-toggle="tab">Fixed</a></li>
+								<li role="presentation"><a href="#work-dropdown" aria-controls="work" role="tab" data-toggle="tab">Scrollable</a></li>
+								<li class="dropdown pmd-dropdown" role="presentation"> <a aria-expanded="false" role="button" href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle"> More <span class="caret"></span> </a>
+									<ul role="menu" class="dropdown-menu">
+										<li><a href="javascript:void(0);">Profile</a></li>
+										<li><a href="javascript:void(0);">Messages</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<div class="pmd-card-body">
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="home-dropdown">A tab provides the affordance for displaying grouped content. A tab label succinctly describes the tab’s associated grouping of 
+                                content.</div>
+								<div role="tabpanel" class="tab-pane" id="about-dropdown">Fixed tabs have equal width, calculated either as the view width divided by the number of tabs, or based on the widest tab label. To 
+                                navigate between fixed tabs, touch the tab or swipe the content area left or right.</div>
+								<div role="tabpanel" class="tab-pane" id="work-dropdown">To navigate between scrollable tabs, touch the tab or swipe the content area left or right. To scroll the tabs without navigating, swipe the                                tabs left or right.</div>
+							</div>
+						</div>
+					</div> <!--Tab with Dropdown example end-->
+                    	
+				</div>
+			</div> <!-- end Tab with Dropdown example and code -->
+		</section> <!-- end dropdown tab  -->
+		
+		<!-- without background tab -->
+		<section class="row component-section">
+			
+			<!-- without background tab title and description -->
+			<div class="col-md-3 col-sm-12">
+				<div id="tab-without-background">
+					<h2>Tabs without background</h2>
+				</div>
+				<p>Remove <code>.pmd-tabs-bg</code> to remove the background color/background image.</p>
+			</div> <!-- without background tab title and description end-->
+			
+			<!-- without background tab code and example -->
+			<div class="col-md-9 col-sm-12">
+            	<div class=" component-box"> 
+					<!--without background tab example -->
+					<div class="pmd-card pmd-z-depth"> 
+						<div class="pmd-tabs">
+							<div class="pmd-tab-active-bar"></div>
+							<ul class="nav nav-tabs" role="tablist">
+								<li role="presentation" class="active"><a href="#default" aria-controls="default" role="tab" data-toggle="tab">Default</a></li>
+								<li role="presentation"><a href="#fixed" aria-controls="fixed" role="tab" data-toggle="tab">Fixed</a></li>
+								<li role="presentation"><a href="#scrollable" aria-controls="scrollable" role="tab" data-toggle="tab">Scrollable</a></li>
+							</ul>
+						</div>
+						<div class="pmd-card-body">
+							<div class="tab-content">
+								<div role="tabpanel" class="tab-pane active" id="default">A tab provides the affordance for displaying grouped content. A tab label succinctly describes the tab’s associated grouping of content.</div>
+								<div role="tabpanel" class="tab-pane" id="fixed">Fixed tabs have equal width, calculated either as the view width divided by the number of tabs, or based on the widest tab label. To navigate between fixed tabs, touch the tab or swipe the content area left or right.</div>
+								<div role="tabpanel" class="tab-pane" id="scrollable">To navigate between scrollable tabs, touch the tab or swipe the content area left or right. To scroll the tabs without navigating, swipe the tabs left or right.</div>
+							</div>
+						</div>
+					</div> <!--without background tab example end -->
+            	</div>
+                    
+			</div> <!-- without background tab code and example end -->
+			
+		</section> <!-- end without background tab -->
+        
+        <!-- Configuration starts-->            
+        <section class="row component-section">
+            <div class="col-md-3 col-sm-12">
+                <div id="config">
+                    <h2>Configuration Options</h2>
+                </div>
+                <p>The Propeller CSS classes apply various predefined visual enhancements to the tabs. The table lists the available classes and their effects.</p>
+            </div>
+            
+            <div class="col-md-9 col-sm-12">
+            
+                <!--Propeller  Class Configuration card start -->
+                <div class="pmd-card pmd-table-card-responsive">
+					<div class="pmd-table-card"> 
+                        <table class="table pmd-table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Propeller Class</th>
+                                    <th>Effect</th>
+                                    <th>Remark</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-title="Class"><code>.pmd-tabs</code></td>
+                                    <td data-title="Effect">Add Propeller css to the tabs.</td>
+                                    <td data-title="Remark">Required</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Class"><code>.pmd-tab-active-bar</code></td>
+                                    <td data-title="Effect">Used to highlight active tab with a line bar.</td>
+                                    <td data-title="Remark">Required</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Class"><code>.pmd-tabs-scroll</code></td>
+                                    <td data-title="Effect">Add this class while creating scrollable tabs.</td>
+                                    <td data-title="Remark">Required</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Class"><code>.pmd-tabs-scroll-container</code></td>
+                                    <td data-title="Effect">Add this wrapper class to the list of tabs while creating scrollable tabs.</td>
+                                    <td data-title="Remark">Required</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Class"><code>.pmd-tabs-bg</code></td>
+                                    <td data-title="Effect">Adds background css to the tabs.</td>
+                                    <td data-title="Remark">Optional</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!--Propeller  Class Configuration card end -->
+        
+        	</div>
+        </section><!-- Configuration ends-->         
+		
+		<!-- Events starts-->		
+		<section class="row component-section">
+        
+			<div class="col-md-3 col-sm-12">
+            	<div id="events">
+            		<h2>Events</h2>
+                </div>
+				<p>See <a href="http://getbootstrap.com/javascript/#tabs" target="_blank">here</a> for more documentation on this.</p>
+			</div>
+            
+			<div class="col-md-9 col-sm-12"> 
+				
+                <!--Events card start -->
+				<div class="pmd-card pmd-table-card-responsive">
+					<div class="pmd-table-card">
+						<table class="table pmd-table table-hover">
+							<thead>
+								<tr>
+									<th>Event Type</th>
+									<th>Description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td data-title="Class"><code>show.bs.tab</code></td>
+									<td data-title="Effect">This event fires on tab show, but before the new tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>shown.bs.tab</code></td>
+									<td data-title="Effect">This event fires on tab show after a tab has been shown. Use <code>event.target</code> and <code>event.relatedTarget</code> to target the active tab and the previous active tab (if available) respectively.</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>hide.bs.tab</code></td>
+									<td data-title="Effect">This event fires when a new tab is to be shown (and thus the previous active tab is to be hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the current active tab and the new soon-to-be-active tab, respectively.</td>
+								</tr>
+								<tr>
+									<td data-title="Class"><code>hidden.bs.tab</code></td>
+									<td data-title="Effect">This event fires after a new tab is shown (and thus the previous active tab is hidden). Use <code>event.target</code> and <code>event.relatedTarget</code> to target the previous active tab and the new active tab, respectively.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div><!--Events card end -->
+			</div>
+		</section><!-- Events ends-->
+		 
+	</div>
+</div><!--Tab constructor End--> 
+
+
+<!-- Jquery js -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Bootstrap js -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Propeller dropdown -->
+<script type="text/javascript" src="http://propeller.in/components/dropdown/js/dropdown.js"></script>
+
+<!-- Propeller tabs js -->
+<script type="text/javascript" language="javascript" src="http://propeller.in/components/tab/js/tab-scrollable.js"></script>
+<script type="text/javascript">
+	$(document).ready( function() {
+		$('.pmd-tabs').pmdTab();
+	});
+</script>
+
+</body>
+</html>

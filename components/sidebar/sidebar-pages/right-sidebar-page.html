@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="">
+<head>
+ 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Propeller is a front-end responsive framework based on Material design & Bootstrap.">
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+    <title>Navbar - Propeller Components</title>
+    
+	<!-- favicon --> 
+	<link rel="icon" href="http://propeller.in/assets/images/favicon.ico" type="image/x-icon">
+	
+	<!-- Bootstrap --> 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+	
+	<!-- Example docs (CSS for helping component example file)-->
+	<link href="http://propeller.in/docs/css/example-docs.css" type="text/css" rel="stylesheet" />
+
+	<!-- Propeller card (CSS for helping component example file) -->
+	<link href="http://propeller.in/components/card/css/card.css" type="text/css" rel="stylesheet" />
+
+	<!-- Propeller typography -->
+	<link href="http://propeller.in/components/typography/css/typography.css" type="text/css" rel="stylesheet" />
+
+	<!-- Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="http://propeller.in/components/icons/css/google-icons.css" type="text/css" rel="stylesheet" />
+
+	<!-- Propeller dropdown -->
+	<link href="http://propeller.in/components/dropdown/css/dropdown.css" type="text/css" rel="stylesheet"/>
+
+	<!-- Propeller navbar -->
+	<link href="http://propeller.in/components/navbar/css/navbar.css" type="text/css" rel="stylesheet"/>
+	
+	<!-- Propeller button  -->
+	<link href="http://propeller.in/components/button/css/button.css" type="text/css" rel="stylesheet"/>
+	
+	<!-- Propeller list  -->
+	<link href="http://propeller.in/components/list/css/list.css" type="text/css" rel="stylesheet"/>
+
+	<!-- Propeller sidebar  -->
+	<link rel="stylesheet" type="text/css" href="../css/sidebar.css">
+	
+</head>
+
+<body>
+    
+    <nav class="navbar navbar-inverse pmd-navbar navbar-fixed-top pmd-z-depth" style="position:absolute;">
+        <div class="container-fluid"> 
+        
+        <!-- Sidebar Toggle Button-->
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <!--<a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary pull-left margin-r8 pmd-sidebar-toggle"><i class="material-icons">menu</i></a> -->
+            <a class="navbar-brand" href="javascript:void(0);">Brand</a> 
+        </div>
+        <!-- Navbar Right icon -->		
+        <div class="pmd-navbar-right-icon pull-right"> 
+            <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect"><i class="material-icons pmd-sm md-light">search</i></a>
+            <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect topbar-toggle visible-xs-inline-block" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><i class="material-icons pmd-sm">more_vert</i></a>
+            <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect pmd-sidebar-toggle-right"><i class="material-icons md-light">more_horiz</i></a>   
+        </div> 
+        <!-- /.navbar-collapse --> 
+        </div>
+        <!-- /.container-fluid --> 
+    </nav>
+    
+    <section id="pmd-main">
+      <!-- Start Content -->
+      <div class="pmd-content custom-pmd-content" id="content">
+            <h2 class="headline">Sidebar Constructor</h2>
+            <p>This structure shows a permanent app bar with a floating action button. The app bar absorbs elements from the tablet and mobile bottom bars.</p>
+            <p style="margin-bottom:0;">An optional bottom bar can be added for additional functionality or action overflow. A side nav overlays all other structural elements. A right nav menu can be accessed temporarily or pinned for permanent display.<br><br></p>
+      </div>
+    
+      <!-- Right sidebar -->
+      <aside class="pmd-sidebar sidebar-default pmd-sidebar-right-fixed pmd-z-depth" role="navigation"> 
+          <!-- Sidebar navigation -->
+          <ul class="nav pmd-sidebar-nav">
+              <li> <a class="pmd-ripple-effect" href="javascript:void(0);"> Trash</a> </li>
+              <li> <a class="pmd-ripple-effect" href="javascript:void(0);"> Spam</a> </li>
+              <li> <a class="pmd-ripple-effect" href="javascript:void(0);"> Follow Up</a> </li>
+          </ul>
+      </aside>
+      <div class="pmd-sidebar-overlay"></div>	
+    </section>
+
+</body>
+
+<!-- Jquery js -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<!-- Bootstrap js -->
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<!-- Propeller Dropdown js -->
+<script type="text/javascript" language="javascript" src="http://propeller.in/components/dropdown/js/dropdown.js"></script>
+
+<!-- Propeller ripple effect js -->
+<script type="text/javascript" language="javascript" src="http://propeller.in/components/button/js/ripple-effect.js"></script>
+
+<!-- Propeller Sidebar js -->
+<script type="text/javascript" language="javascript" src="../js/sidebar.js"></script>
+
+</html>

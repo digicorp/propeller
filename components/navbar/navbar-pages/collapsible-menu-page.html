@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="">
+<head>
+ 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Propeller is a front-end responsive framework based on Material design & Bootstrap.">
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+    <title>Navbar - Propeller Components</title>
+    
+	<!-- favicon --> 
+	<link rel="icon" href="http://propeller.in/assets/images/favicon.ico" type="image/x-icon">
+	
+	<!-- Bootstrap --> 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+	
+	<!-- Example docs (CSS for helping component example file)-->
+	<link href="http://propeller.in/docs/css/example-docs.css" type="text/css" rel="stylesheet" />
+
+	<!-- Propeller card (CSS for helping component example file) -->
+	<link href="http://propeller.in/components/card/css/card.css" type="text/css" rel="stylesheet" />
+
+	<!-- Propeller typography -->
+	<link href="http://propeller.in/components/typography/css/typography.css" type="text/css" rel="stylesheet" />
+
+	<!-- Google Icon Font -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="http://propeller.in/components/icons/css/google-icons.css" type="text/css" rel="stylesheet" />
+
+	<!-- Propeller dropdown -->
+	<link href="http://propeller.in/components/dropdown/css/dropdown.css" type="text/css" rel="stylesheet"/>
+
+	<!-- Propeller navbar -->
+	<link href="http://propeller.in/components/navbar/css/navbar.css" type="text/css" rel="stylesheet"/>
+	
+	<!-- Propeller button  -->
+	<link href="http://propeller.in/components/button/css/button.css" type="text/css" rel="stylesheet"/>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse navbar-fixed-top pmd-navbar pmd-z-depth">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+		
+        <div class="navbar-header">
+          <button class="pmd-ripple-effect navbar-toggle pmd-navbar-toggle" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="javascript:void(0);" class="navbar-brand navbar-brand-custome">Brand</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse pmd-navbar-sidebar">
+		
+		  <div class="dropdown pmd-dropdown pmd-user-info pull-right">
+              <a href="javascript:void(0);" class="btn-user dropdown-toggle media" data-toggle="dropdown" data-sidebar="true" aria-expanded="false">
+				  <div class="media-left">
+					  <img src="../../../assets/images/avatar-icon-40x40.png" width="40" height="40" alt="avatar">
+				  </div>
+				<div class="media-body media-middle">
+					User
+				</div>
+				<div class="media-right media-middle">
+					<i class="material-icons md-light pmd-sm">more_vert</i>
+				</div>
+			  </a>
+			  <ul class="dropdown-menu dropdown-menu-right" role="menu">
+			  	<li><a href="javascript:void(0);">Edit Profile</a></li>
+				<li><a href="javascript:void(0);">Logout</a></li>
+			  </ul>
+			</div>
+				
+	      <ul class="nav navbar-nav">
+            <li><a class="pmd-ripple-effect" href="javascript:void(0);">Link <span class="sr-only">(current)</span></a></li>
+            <li><a class="pmd-ripple-effect" href="javascript:void(0);">Link</a></li>
+            <li class="dropdown pmd-dropdown">
+              <a data-toggle="dropdown" class="pmd-ripple-effect dropdown-toggle" data-sidebar="true" href="javascript:void(0);">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a class="pmd-ripple-effect" href="javascript:void(0);">Action</a></li>
+                <li><a class="pmd-ripple-effect" href="javascript:void(0);">Another action</a></li>
+                <li><a class="pmd-ripple-effect" href="javascript:void(0);">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a class="pmd-ripple-effect" href="javascript:void(0);">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a class="pmd-ripple-effect" href="javascript:void(0);">One more separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="pmd-ripple-effect" href="javascript:void(0);">Link</a></li>
+            <li class="dropdown pmd-dropdown">
+              <a aria-expanded="false" role="button" data-toggle="dropdown" data-sidebar="true" class="pmd-ripple-effect dropdown-toggle" href="javascript:void(0);">Dropdown <span class="caret"></span></a>
+              <ul role="menu" class="dropdown-menu dropdown-menu-right">
+                <li><a class="pmd-ripple-effect" href="javascript:void(0);">Action</a></li>
+                <li><a class="pmd-ripple-effect" href="javascript:void(0);">Another action</a></li>
+                <li><a class="pmd-ripple-effect" href="javascript:void(0);">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a class="pmd-ripple-effect" href="javascript:void(0);">Separated link</a></li>
+              </ul>
+            </li>
+		  </ul>
+		  
+        </div><!-- /.navbar-collapse -->
+		
+      </div><!-- /.container-fluid -->
+	  <div class="pmd-sidebar-overlay"></div>
+    </nav>
+
+	<!-- Jquery js -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	
+	<!-- Bootstrap js -->
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	
+	<!-- Propeller Dropdown js -->
+	<script type="text/javascript" language="javascript" src="http://propeller.in/components/dropdown/js/dropdown.js"></script>
+	
+	<!-- Propeller ripple effect js -->
+	<script type="text/javascript" language="javascript" src="http://propeller.in/components/button/js/ripple-effect.js"></script>
+	
+	<!-- Propeller Sidebar js -->
+	<script type="text/javascript" language="javascript" src="http://propeller.in/components/sidebar/js/sidebar.js"></script>
+
+</body>
+</html>

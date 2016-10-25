@@ -1,0 +1,11 @@
+/* Bootstrap css */
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";
+
+HTML{ font-size:16px;}
+
+/* small secondary heading text */
+h1 small, h2 small, h3 small, h4 small, h5 small, 
+h6 small, .h1 small, .h2 small, .h3 small, .h4 small,
+.h5 small, .h6 small, h1 .small, h2 .small, h3 .small, 
+h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, 
+.h3 .small, .h4 .small, .h5 .small, .h6 .small { color:rgba(0,0,0,0.54);}

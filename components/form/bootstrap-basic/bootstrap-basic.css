@@ -1,0 +1,11 @@
+/* Bootstrap css */
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";
+
+/* Propeller  css for text fields */
+@import "http://demophp.digi-corp.com/CreativeZone/Websites/Propeller/HTML/components/text-field/css/textbox.css";
+@import "http://demophp.digi-corp.com/CreativeZone/Websites/Propeller/HTML/assets/css/forms.css";
+@import "http://demophp.digi-corp.com/CreativeZone/Websites/Propeller/HTML/assets/css/input-group.css";
+
+/* Propeller  docs.css */
+.form-group.paper-input {position:relative;}
+.form-control-feedback {top:auto; bottom:0;}

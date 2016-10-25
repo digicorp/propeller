@@ -1,0 +1,21 @@
+/*!
+ * Propeller v1.0.0 (http://propeller.in)
+ * Copyright 2016-2017 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+/* Propeller css for toggle button */
+.pmd-switch { vertical-align: middle;}
+.pmd-switch, .pmd-switch label, .pmd-switch input, .pmd-switch .pmd-switch-label { -moz-user-select: none;}
+.pmd-switch label { cursor: pointer; font-weight: 400;}
+.pmd-switch label input[type="checkbox"] { height: 0; opacity: 0; width: 0; position:absolute;}
+.pmd-switch label .pmd-switch-label, .pmd-switch label input[type="checkbox][disabled"] + .pmd-switch-label { background-color: rgba(80, 80, 80, 0.7); border-radius: 15px; content: ""; display: block; height: 15px; transition: background 0.3s ease 0s;   vertical-align: middle; width: 30px; position:relative;}
+.pmd-switch label .pmd-switch-label::after { background-color: #f1f1f1; border-radius: 20px; box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4); content: ""; display: inline-block; height: 20px; left: -6px; position: absolute; top: -2px; transition: left 0.3s ease 0s, background 0.3s ease 0s, box-shadow 0.1s ease 0s; width: 20px;}
+.pmd-switch label input[type="checkbox][disabled"] + .pmd-switch-label::after, .pmd-switch label 
+input[type="checkbox][disabled"]:checked + .pmd-switch-label::after {background-color: #bdbdbd;}
+.pmd-switch label input[type="checkbox"] + .pmd-switch-label:active::after, .pmd-switch label input[type="checkbox][disabled"] + .pmd-switch-label:active::after { box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 0, 0, 0.1);}
+.pmd-switch label input[type="checkbox"]:checked + .pmd-switch-label::after { left: 15px;}
+.pmd-switch label input[type="checkbox"]:checked + .pmd-switch-label, .togglebutton-default label input[type="checkbox"]:checked + .pmd-switch-label { background-color: rgba(0, 150, 136, 0.5);}
+.pmd-switch label input[type="checkbox"]:checked + .pmd-switch-label::after, .togglebutton-default label input[type="checkbox"]:checked + .pmd-switch-label::after { background-color: #009688;}
+.pmd-switch label input[type="checkbox"]:checked + .pmd-switch-label:active::after, .togglebutton-default label input[type="checkbox"]:checked + .pmd-switch-label:active::after { box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 150, 136, 0.2);}
+.togglebutton-black label input[type="checkbox"]:checked + .pmd-switch-label:active::after {box-shadow: 0 1px 3px 1px rgba(0, 0, 0, 0.4), 0 0 0 15px rgba(0, 0, 0, 0.2);}

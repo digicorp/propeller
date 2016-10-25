@@ -1,0 +1,9 @@
+h1{ margin-bottom:20px !important; font-size:30px !important;}
+.component-section h2{ margin:0 0 20px 0;}
+.component-section{ margin-top:20px; margin-bottom:20px;}
+.component-section .pmd-card{ margin:0;}
+.component-section .component-box{ margin-bottom:20px;}
+.icon-custom div { min-height: 90px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.shadow-demo { background-color: #fff; font-size: 15px;  height: 100px; margin: 0 auto 30px; padding-top: 35px; text-align: center;}
+.range-slider-container .pmd-card-body{ min-height:40px;}
+iframe{ width:100%; border:none; min-height:300px;}

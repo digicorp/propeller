@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="">
+<head>
+ 	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Propeller is a front-end responsive framework based on Material design & Bootstrap.">
+	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+    <title>Navbar - Propeller Components</title>
+    
+	<!-- favicon --> 
+	<link rel="icon" href="http://propeller.in/assets/images/favicon.ico" type="image/x-icon">
+	
+	<!-- Bootstrap --> 
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet" /> 
+	
+	<!-- Example docs (CSS for helping component example file)-->
+	<link href="http://propeller.in/docs/css/example-docs.css" type="text/css" rel="stylesheet" />
+
+	<!-- Propeller card (CSS for helping component example file) -->
+	<link href="http://propeller.in/components/card/css/card.css" type="text/css" rel="stylesheet" />
+
+	<!-- Propeller typography (CSS for helping component example file)-->
+	<link href="http://propeller.in/components/typography/css/typography.css" type="text/css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+<!-- menu -->
+<div class="pmd-content pmd-content-custom" id="content">
+
+    <!--component header -->
+     <div class="componant-title-bg">
+        <div class="container">
+            <div class="row">
+            
+            	<!-- component title and description -->
+                <div class="col-xs-12">
+					<h1>Navbar</h1>
+                    <p class="lead">Navbar is a simple wrapper for positioning branding, navigation, and other elements into a concise navigation header. It’s easily extensible and, with the help of our collapse plugin, it can easily integrate offscreen content.</p>
+                </div><!-- end component title and description -->
+                
+            </div>
+        </div>
+    </div><!--component header end -->    
+    
+    <div class="container">
+      
+      	<!-- bootstrap basic menu -->
+        <section class="row component-section">
+        
+        	<!-- bootstrap basic Navbar title and description -->
+          	<div class="col-md-12">
+            	<div id="bootstrapbasic">
+                	<h2>Bootstrap Navbar</h2>
+              	</div>
+                <p>With Bootstrap, a navbar can extend or collapse, depending on the screen size. A standard navigation bar is created with <code><</code><code>nav class="navbar navbar-default"</code><code>></code>.
+          	</div><!-- bootstrap basic Navbar title and description end-->
+            
+          	<!-- bootstrap basic Navbar code and example -->
+            <div class="col-md-12">            
+            	<div class="component-box">
+                   	<!-- bootstrap basic Navbar example-->
+					<div class="pmd-card pmd-z-depth">
+						<section class="nav-show" style="position: relative;">
+							<iframe src="navbar-pages/bootstrap-basic-menu-page.html" class="menubar-iframe"></iframe>
+						</section>
+                    </div><!-- bootstrap basic Navbar example end-->
+                </div>	
+        	</div><!-- bootstrap basic Navbar code and example end -->
+        
+      	</section><!-- bootstrap basic Navbar end -->
+		
+		<!-- basic Navbar -->
+        <section class="row component-section">
+        
+        	<!-- basic menu title and description -->
+          	<div class="col-md-12">
+            	<div id="basics">
+                	<h2>Propeller Navbar</h2>
+              	</div>
+              	<p>Navbar requires a wrapping <code>.navbar</code> and a color scheme class (either <code>.navbar-default</code> or <code>.navbar-inverse</code>).<br/> 
+                Add <code>.pmd-navbar</code> for proper alignment.</p>
+          	</div><!-- basic menu title and description end-->
+            
+          	<!-- basic menu code and example -->
+            <div class="col-md-12">            
+            	<div class="component-box">
+                   	<!-- basic menu example-->
+					<div class="pmd-card pmd-z-depth">
+						<section class="nav-show" style="position: relative;">
+							<iframe src="navbar-pages/basic-menu-page.html" class="menubar-iframe"></iframe>
+						</section>
+                    </div><!-- basic menu example end-->
+                </div>	
+        	</div><!-- basic menu code and example end -->
+        
+      	</section><!-- basic Navbar end -->              
+        
+		<!-- Placement Navbar -->
+      	<section class="row component-section">
+        
+        	<!-- placement menu title and description -->
+            <div class="col-md-12">
+                <div id="placement">
+                    <h2>Navbar with Profile Dropdown</h2>
+                </div>
+                <p>The <code>.pull-right</code> class is used to right-align Profile dropdown.</p>
+            </div><!-- placement menu title and description end -->
+            
+        	<!-- placement menu code and example -->
+            <div class="col-md-12">
+            	<div class="component-box">
+                 	<!-- placement menu example -->
+                    <div class="pmd-card pmd-z-depth">
+						<section class="nav-show" style="position:relative;">
+							<iframe src="navbar-pages/placement-menu-page.html" class="menubar-iframe"></iframe>
+						</section>
+                    </div><!-- placement menu example end -->
+                                            
+                </div>
+        	</div>
+      	</section><!-- Placements Navbar end -->       
+        
+       	<!-- Sidebar Navbar -->
+       	<section class="row component-section">
+       
+       		<!-- sidebar menu title and description -->
+            <div class="col-md-12">
+                <div id="collapsible">
+                    <h2>Navbar Collapsible with Sidebar</h2>
+                </div>
+            <p>The navigation bar takes up too much space on a small screen. Add <code>.pmd-navbar-toggle</code> immediately followed by bootstrap <code>.navbar-toggle</code> to hide the navigation bar for mobile resolution and only show it when needed. Use <code>.pmd-navbar-sidebar</code> to initiate propeller sidebar function.</p>
+            </div><!-- sidebar menu title and description end-->
+            
+            <!-- sidebar menu code and example -->
+            <div class="col-md-12">
+            	<div class="component-box">
+                    <!-- sidebar menu example --> 
+                    <div class="pmd-card pmd-z-depth">
+						<section class="nav-show" style="position: relative;">
+							<iframe src="navbar-pages/sidebar-menu-page.html" class="menubar-iframe"></iframe>
+						</section>
+                    </div><!-- sidebar menu example end-->
+                    
+                </div>
+            </div><!-- sidebar menu code and example end-->          
+       </section><!-- Sidebar Navbar end -->
+        
+       	<!-- Navbar with search -->
+        <section class="row component-section">
+        
+        	<!-- menu with search title and description -->
+        	<div class="col-md-12">
+            	<div id="with-search">
+               		<h2>Navbar with Search</h2>
+             	</div>
+             	<p>We can add search section in the Navbar. It will help in searching elements in the page.</p>
+          	</div><!-- menu with search title and description end -->
+            
+          	<!-- menu with search code and example -->
+            <div class="col-md-12">
+            	<div class="component-box">
+               		<!-- menu with search example -->
+                    <div class="pmd-card pmd-z-depth">
+						<section class="nav-show" style="position: relative;">
+							<iframe src="navbar-pages/search-menu-page.html" class="menubar-iframe"></iframe>
+						</section>
+                    </div><!-- menu with search example end -->
+               			
+            	</div>
+            </div><!-- end menu with search code and example -->
+        </section><!-- Navbar with search end-->
+        
+       <!-- Configuration starts-->        
+       <section class="row component-section">
+            <div class="col-md-12">
+                <div id="config">
+                    <h2>Configuration Options</h2>
+                </div>
+                <p>The Propeller CSS classes apply various predefined visual enhancements to the menu. The table lists the available classes and their effects.</p>
+            </div>
+            <div class="col-md-12">
+                <!--Propeller  Class Configuration card start -->
+                <div class="pmd-card pmd-table-card-responsive">
+					<div class="pmd-table-card"> 
+                        <table class="table pmd-table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Propeller Class</th>
+                                    <th>Effect</th>
+                                    <th>Remark</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-title="Class"><code>.pmd-navbar</code></td>
+                                    <td data-title="Effect">Include this class for navbar formatting.</td>
+                                    <td data-title="Remark">Required</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Class"><code>.pmd-user-info</code></td>
+                                    <td data-title="Effect">Include this class for creating navbar with user information dropdown.</td>
+                                    <td data-title="Remark">Optional</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Class"><code>.pmd-navbar-toggle</code></td>
+                                    <td data-title="Effect">Include this class to open navbar content in sidebar for low screen resolution.</td>
+                                    <td data-title="Remark">Optional</td>
+                                </tr>
+                                <tr>
+                                    <td data-title="Class"><code>.pmd-navbar-sidebar</code></td>
+                                    <td data-title="Effect">Include this class to initiate propeller sidebar function.</td>
+                                    <td data-title="Remark">Optional</td>
+                                </tr>
+								<tr>
+                                    <td data-title="Class"><code>.pmd-sidebar-overlay</code></td>
+                                    <td data-title="Effect">Include this class to highlight sidebar with overlay effect in low resolution. </td>
+                                    <td data-title="Remark">Optional</td>
+                                </tr>
+								<tr>
+                                    <td data-title="Class"><code>.pmd-navbar-right-icon</code></td>
+                                    <td data-title="Effect">Include this class to align icon to right side of navbar. </td>
+                                    <td data-title="Remark">Optional</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div><!--Propeller  Class Configuration card end -->
+                
+            </div>
+        </section><!-- Configuration ends--> 
+	
+    </div><!--container end -->
+    
+</div><!--menu constructor end -->
+
+</body>
+</html>

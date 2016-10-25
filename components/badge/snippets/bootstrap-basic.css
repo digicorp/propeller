@@ -1,0 +1,8 @@
+/* Bootstrap css */
+@import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";
+
+/* Propeller buttons */
+@import "http://propeller.in/components/button/css/button.css";
+
+/* Propeller Notification Badge css */
+@import "http://propeller.in/components/badge/css/badge.css";

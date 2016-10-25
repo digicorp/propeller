@@ -1,0 +1,107 @@
+/*!
+ * Propeller v1.0.0 (http://propeller.in)
+ * Copyright 2016-2017 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+*/
+
+table.dataTable{margin-bottom: 0 !important; margin-top: 0 !important;}
+
+/*Propeller DataTable pagination*/
+.pmd-datatable-pagination {float:right; line-height:40px;}
+.pmd-datatable-pagination > div{ display:inline-block; vertical-align:middle;}
+
+/* Propeller Row infornation*/
+.pmd-datatable-pagination div.dataTables_info{ padding:0; margin-left:32px;}
+.pmd-datatable-pagination div.dataTables_length select{ width:48px; border-width:0; border-bottom-width:1px; box-shadow:none; padding:0; border-radius:0; height:24px;}
+
+/* Propeller DataTable Paginate*/
+div.dataTables_wrapper div.dataTables_paginate{ margin-left:20px;}
+div.dataTables_wrapper div.dataTables_paginate ul.pagination{ vertical-align:middle;}
+
+/* Propeller DataTable Pagination*/
+.pmd-datatable-pagination .pagination{margin:0;}
+.pmd-datatable-pagination .pagination li.disabled a, .pmd-datatable-pagination .pagination li.disabled span,
+.pmd-datatable-pagination .pagination li a, .pmd-datatable-pagination .pagination li span{ background:none; border:none; margin-right:4px; border-radius:3px; min-width:24px; text-align:center; padding:4px 4px; border:1px solid; border-color:transparent; line-height: 22px; padding-top:0; padding-bottom:0; }
+.pmd-datatable-pagination .pagination li.active a, .pmd-datatable-pagination .pagination li.active span{background:#fff;color:#333; border:1px solid rgba(0,0,0,0.15);}
+.pmd-datatable-pagination .pagination li.previous, .pmd-datatable-pagination .pagination li.next{margin:0 12px;}
+.pmd-datatable-pagination .pagination li.previous a, .pmd-datatable-pagination .pagination li.next a{font-family: 'Material Icons'; font-size: 24px; height: auto; line-height: 24px; padding:0; background-color:transparent; border:none; margin:0;}
+.pmd-datatable-pagination .pagination > li{display:inline-block; vertical-align:middle;}
+.pmd-datatable-pagination .pagination li.previous a:before{ content: "\e5cb";}
+.pmd-datatable-pagination .pagination li.next a:before{ content: "\e5cc";}
+
+/*Datatable search*/
+.search-paper{ float:right;}
+/*Datatable Title*/
+.data-table-title{ display:inline-block;}
+@media screen and (max-width: 767px) {
+	.search-paper{ float:none;}
+}
+
+/*Rows per page*/
+div.dataTables_wrapper div.dataTables_length label{ margin-bottom:0;}
+
+/*Datatable Sorting*/
+table.dataTable thead .sorting::after, table.dataTable thead .sorting_asc::after, table.dataTable thead .sorting_desc::after, table.dataTable thead .sorting_asc_disabled::after, table.dataTable thead .sorting_desc_disabled::after{ font-family: 'Material Icons'; font-size: 18px;}
+table.dataTable thead .sorting::after{content: "";}
+table.dataTable thead .sorting_desc::after{content: "\E5C7";}
+table.dataTable thead .sorting_asc::after{content: "\E5C5";}
+
+/*Datatable Custom Select*/		
+.custom-select { margin: 0;  border-bottom: 1px solid #ccc;  width: 120px; overflow: hidden;  background-color: #fff; padding: 2px 0 2px 0; margin-left:32px; position:relative;}
+.custom-select:after{content: "\E5C5"; font-family: 'Material Icons'; font-size:18px; position:absolute; right:0; top:-6px; color:rgba(0,0,0,0.54);}
+.custom-select select::after{ position: absolute; right:8px; font-size:18px; top:-3px;}
+.custom-select select { padding: 5px 8px; width: 130%; border: none; box-shadow: none; background-color: transparent; background-image: none; -webkit-appearance: none;-moz-appearance: none; appearance: none;}
+.custom-select select:focus {outline: none;}
+
+/*Datatable Custom Select*/
+table.dataTable.dtr-column > tbody > tr > td.control::before, table.dataTable.dtr-column > tbody > tr > th.control::before{border: medium none; box-shadow: none;    font-size: 18px; left: inherit; right: 10px; background-color:#fff; color:#31b131; height:22px; line-height:21px; width:22px; top: 44%;}
+table.dataTable.dtr-column > tbody > tr.parent td.control::before, table.dataTable.dtr-column > tbody > tr.parent th.control::before{ background-color:#fff;}
+table.dataTable > tbody > tr.child{ background-color:#fff;}
+table.dataTable > tbody > tr.child ul{display: block;}
+
+@media screen and (max-width: 640px) {
+div.dataTables_wrapper div.dataTables_length label{ position:relative;}	
+.custom-select-title{ vertical-align:top;}
+.custom-select{ margin-left:0;}
+div.dataTables_wrapper .pmd-datatable-pagination div.dataTables_info{margin-left: 0; word-wrap:break-word;}
+.pmd-datatable-pagination > div{ display:inline-block; width:100%; margin-bottom:8px;}
+div.dataTables_wrapper div.dataTables_paginate{margin-left: 0;}
+.search-paper{ width:100%; margin-bottom: -20px;  margin-top: 20px;}
+.search-paper label{width:100%;}
+div.dataTables_wrapper div.dataTables_filter input{ width:100%; margin-left:0;}
+div.dataTables_wrapper div.dataTables_info{white-space:inherit;}
+.pagination li.previous, .pagination li.next{ margin:0 4px}
+.pmd-datatable-pagination{ float:none;}
+}
+
+table.dataTable td.select-checkbox{ width:24px;}		
+table.dataTable td.select-checkbox::before, table.dataTable td.select-checkbox::after{box-sizing: border-box; display: block;  top: 50%;  position: absolute; left: 50%;}
+table.dataTable td.select-checkbox::before{ border-color: rgba(0, 0, 0, 0.54); border-radius: 2px;  border-style: solid;  border-width: 2px; content: ""; height: 18px; width: 18px; margin-left: -9px;  margin-top: -10px;}
+table.dataTable tr.selected td.select-checkbox::after{opacity: 1; transform: rotate(45deg); border-image: none;  border-style: none solid solid none;  border-width: 0 2px 2px 0;  color: #fff; content: "";  display: table;  height: 12px; position: absolute; transition: all 0.2s ease 0s;  width: 6px; margin:-9px 0 0 -3px}
+table.dataTable tr.selected td.select-checkbox::before{ background-color:rgba(0, 0, 0, 0.87);}
+
+/*Propeller custom checkbox for Data table*/
+table.dataTable tbody > tr.selected, table.dataTable tbody > tr > .selected,
+table.dataTable.stripe tbody > tr.odd.selected, table.dataTable.stripe tbody > tr.odd > .selected, table.dataTable.display tbody > tr.odd.selected, table.dataTable.display tbody > tr.odd > .selected{ background-color:#edf4fd;}
+table.dataTable.hover tbody > tr.selected:hover, table.dataTable.hover tbody > tr > .selected:hover, table.dataTable.display tbody > tr.selected:hover, table.dataTable.display tbody > tr > .selected:hover{ background-color:#edf4fd;}
+table.dataTable.display tbody > tr.even.selected > .sorting_1, table.dataTable.order-column.stripe tbody > tr.even.selected > .sorting_1,
+table.dataTable.display tbody > tr.odd.selected > .sorting_1, table.dataTable.order-column.stripe tbody > tr.odd.selected > .sorting_1{ background-color:#edf4fd;}
+
+/*Data table inverse*/
+table.dataTable.table-inverse tbody > tr.selected, table.dataTable.table-inverse tbody > tr > .selected,
+table.dataTable.stripe.table-inverse tbody > tr.odd.selected, table.dataTable.stripe.table-inverse tbody > tr.odd > .selected, table.dataTable.display.table-inverse tbody > tr.odd.selected, table.dataTable.display.table-inverse tbody > tr.odd > .selected{ background-color:#313131;}
+table.dataTable.hover.table-inverse tbody > tr.selected:hover, table.dataTable.hover.table-inverse tbody > tr > .selected:hover, table.dataTable.display.table-inverse tbody > tr.selected:hover, table.dataTable.display.table-inverse tbody > tr > .selected:hover{ background-color:#313131;}
+table.dataTable.display.table-inverse tbody > tr.even.selected > .sorting_1, table.dataTable.order-column.stripe.table-inverse tbody > tr.even.selected > .sorting_1,
+table.dataTable.display.table-inverse tbody > tr.odd.selected > .sorting_1, table.dataTable.order-column.stripe.table-inverse tbody > tr.odd.selected > .sorting_1{ background-color:#313131;}
+table.dataTable.table-inverse td.select-checkbox::before{ border-color: rgba(255, 255, 255, 0.54);}
+.pmd-card-inverse .custom-select{ background: #373a3c url("media/images/arrow_drop_down-white.svg") no-repeat scroll 90% 50%;}
+.pmd-card-inverse div.dataTables_length select{color: #fff;}
+.pmd-card-inverse .custom-select-info{ background-color: #313131;  height: 64px; position: absolute; top: 0; width: 100%; line-height:64px; padding:0 16px; font-size:16px;}
+.pmd-card-inverse table.dataTable > tbody > tr.child{ background-color:#313131;}
+.pmd-card-inverse .custom-select::after{ color:#fff;}
+
+.dataTables_wrapper{ position:relative;}
+.custom-select-info{ background-color: #edf4fd;  height: 64px; position: absolute; top: 0; width: 100%; line-height:64px; padding:0 16px; font-size:16px;}
+.custom-select-item{float:left;}
+.custom-select-action{ float:right;}
+.custom-select-action button{ margin-left:8px;}

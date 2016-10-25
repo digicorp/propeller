@@ -1,0 +1,30 @@
+/*!
+ * Propeller v1.0.0 (http://propeller.in)
+ * Copyright 2016-2017 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+*/
+/* Propeller Accordion css as per google material standards*/
+.panel-group .panel-title a:focus { outline:none;}
+.panel-group.pmd-accordion .panel { border-radius:0; margin:16px 0; border:none; position:relative; transition:all ease-in-out 0.3s; -moz-transition:all ease-in-out 0.3s; -ms-transition:all ease-in-out 0.3s; -o-transition:all ease-in-out 0.3s; -webkit-transition:all ease-in-out 0.3s;   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 1px 3px 0 rgba(0, 0, 0, 0.12); -moz- box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 1px 3px 0 rgba(0, 0, 0, 0.12); -ms- box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 1px 3px 0 rgba(0, 0, 0, 0.12); -o- box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 1px 3px 0 rgba(0, 0, 0, 0.12); -webkit- box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 1px 3px 0 rgba(0, 0, 0, 0.12);}  
+.panel-group.pmd-accordion .panel .panel-body { border:none; }
+.panel-group.pmd-accordion .panel > .panel-heading + .panel-collapse > .panel-body { border:none; }
+.panel-group.pmd-accordion .panel > .panel-heading { background:none; padding:0;}
+.panel-group.pmd-accordion .panel.panel-warning > .panel-heading{ background-color: #fcf8e3; border-color: #faebcc; color: #8a6d3b;}
+.panel-group.pmd-accordion .panel.panel-danger > .panel-heading{ background-color: #f2dede; border-color: #ebccd1; color: #a94442;}
+.panel-group.pmd-accordion .panel.panel-success > .panel-heading{ background-color: #dff0d8; border-color: #d6e9c6; color: #3c763d;}
+.panel-group.pmd-accordion .panel.panel-info > .panel-heading{  background-color: #d9edf7; border-color: #bce8f1; color: #31708f;}
+
+.panel-group.pmd-accordion .panel > .panel-heading a{ padding:12px; line-height:24px; display:block;}
+/* Expanded accordian css*/
+.panel-group.pmd-accordion-inbox .panel.active {  margin: 8px -8px !important;  box-shadow:0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12); -moz-box-shadow:0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12); -ms-box-shadow:0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12); -o-box-shadow:0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12);  -webkit-box-shadow:0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
+/* actie arrow effect css */
+.pmd-accordion-icon-left{ float:left; padding-right:32px;}
+.pmd-accordion-icon-right{ float:right; padding-left:32px;}
+.pmd-accordion-arrow{ float:right;}
+.panel-group .panel.active .material-icons.pmd-accordion-arrow { transform:rotate(180deg); -moz-transform:rotate(180deg);-ms-transform:rotate(180deg); -o-transform:rotate(180deg); -webkit-transform:rotate(180deg);}
+/* Material Accordion css */
+.panel-group.pmd-accordion-nospace .panel {margin:0;}
+.panel-group.pmd-accordion .list-group-item.active, .panel-group.pmd-accordion .list-group-item.active:hover, .panel-group.pmd-accordion .list-group-item.active:focus { background: #ffffff; color: #4d575d;}
+@media screen and (max-width:767px) {
+	.panel-group.pmd-accordion-inbox .panel.active { margin:15px -10px !important; }
+}

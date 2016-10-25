@@ -1,0 +1,54 @@
+/*!
+ * Propeller v1.0.0 (http://propeller.in)
+ * Copyright 2016-2017 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+*/
+/* --------------------------- alert container for positions ----------------------*/
+.pmd-alert-container { position:fixed; width:auto; text-align:right; padding:0; z-index:100000000;}
+
+/* alert container for top, bottom, left, right and center positions */
+.pmd-alert-container.top { top:20px;}
+.pmd-alert-container.bottom { bottom:20px;}
+.pmd-alert-container.left { left:20px;}
+.pmd-alert-container.right { right:20px;}
+.pmd-alert-container.center { left:50%; }
+
+/* ------------ alert container for alert varients ------------------*/
+.pmd-alert-container .pmd-alert  {  position:relative; margin-bottom:5px; text-align:left; vertical-align:middle;  background:#000; padding:9px 24px; color:#fff; width:360px; z-index:1000; clear:both;  margin-bottom:5px; border-radius:3px; -webkit-animation-duration: 1s; -moz-animation-duration: 1s; -o-animation-duration: 1s;animation-duration: 1s;	-webkit-animation-fill-mode: both;-moz-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both;}
+
+/* alert container for error*/
+.pmd-alert-container .pmd-alert.error { background:#FE5722; color:#fff;}
+
+/* alert container for information*/
+.pmd-alert-container .pmd-alert.information {background:#0288D1; color:#fff;}
+
+/* alert container for warning*/
+.pmd-alert-container .pmd-alert.warning {background:#FFB300; color:#fff;}
+
+/* alert container for success*/
+.pmd-alert-container .pmd-alert.success {background:#229A21; color:#fff;}
+
+/* Alert Action css */
+.pmd-alert a,
+.notification a { float:right; color:#d5e734; position: absolute; right: 18px; color: #5ca9ea; }
+.pmd-alert a:before { content: ""; position: absolute; right: -10px; top: 0; bottom: 0; margin: auto; left: -10px; }
+
+@-webkit-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}
+.fadeIn { -webkit-animation-name: fadeIn; animation-name: fadeIn; }
+
+@-webkit-keyframes fadeOut { from { opacity: 1; } to { opacity: 0; }}
+@keyframes fadeOut { from { opacity: 1; } to { opacity: 0; }}
+.fadeOut { -webkit-animation-name: fadeOut; animation-name: fadeOut; }
+
+@-webkit-keyframes fadeOutDown { from { opacity: 1; }  to { opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); } }
+@keyframes fadeOutDown { from { opacity: 1; } to { opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); }}
+.fadeOutDown { -webkit-animation-name: fadeOutDown; animation-name: fadeOutDown;}
+
+@-webkit-keyframes fadeInDown { from { opacity: 0; -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); } to { opacity: 1; -webkit-transform: none; transform: none; }}
+@keyframes fadeInDown { from { opacity: 0; -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); } to { opacity: 1; -webkit-transform: none; transform: none; }}
+.fadeInDown { -webkit-animation-name: fadeInDown; animation-name: fadeInDown; }
+
+@-webkit-keyframes fadeInUp { from { opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); } to { opacity: 1; -webkit-transform: none; transform: none; }}
+@keyframes fadeInUp { from { opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); } to { opacity: 1; -webkit-transform: none; transform: none; }}
+.fadeInUp { -webkit-animation-name: fadeInUp; animation-name: fadeInUp; }

@@ -1,0 +1,24 @@
+<!--Tab with Dropdown example -->
+<div class="pmd-card pmd-z-depth dropdown-tab"> 
+	<div class="pmd-tabs pmd-tabs-bg">
+		<div class="pmd-tab-active-bar"></div>
+		<ul class="nav nav-tabs" role="tablist">
+			<li role="presentation" class="active"><a href="#home-dropdown" aria-controls="home" role="tab" data-toggle="tab">Default</a></li>
+			<li role="presentation"><a href="#about-dropdown" aria-controls="about" role="tab" data-toggle="tab">Fixed</a></li>
+			<li role="presentation"><a href="#work-dropdown" aria-controls="work" role="tab" data-toggle="tab">Scrollable</a></li>
+			<li class="dropdown pmd-dropdown" role="presentation"> <a aria-expanded="false" role="button" href="javascript:void(0);" data-toggle="dropdown" class="dropdown-toggle"> More <span class="caret"></span> </a>
+				<ul role="menu" class="dropdown-menu">
+					<li><a href="javascript:void(0);">Profile</a></li>
+					<li><a href="javascript:void(0);">Messages</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="pmd-card-body">
+		<div class="tab-content">
+			<div role="tabpanel" class="tab-pane active" id="home-dropdown">A tab provides the affordance for displaying grouped content. A tab label succinctly describes the tab’s associated grouping of content.</div>
+			<div role="tabpanel" class="tab-pane" id="about-dropdown">Fixed tabs have equal width, calculated either as the view width divided by the number of tabs, or based on the widest tab label. To navigate between fixed tabs, touch the tab or swipe the content area left or right.</div>
+			<div role="tabpanel" class="tab-pane" id="work-dropdown">To navigate between scrollable tabs, touch the tab or swipe the content area left or right. To scroll the tabs without navigating, swipe the tabs left or right.</div>
+		</div>
+	</div>
+</div> <!--Tab with Dropdown example end-->

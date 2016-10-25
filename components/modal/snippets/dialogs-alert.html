@@ -1,0 +1,48 @@
+<!-- Simple alert -->
+<button data-target="#simple-dialog" data-toggle="modal" class="btn pmd-ripple-effect btn-primary pmd-z-depth" type="button">Alert</button>
+
+<div tabindex="-1" class="modal fade" id="simple-dialog" style="display: none;" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body">
+				<p>Alerts inform the user about a situation or action that requires their confirmation or acknowledgement before proceeding.
+				They differ slightly in appearance based upon the severity and impact of the message conveyed.</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Alert with title bar -->
+<button data-target="#complete-dialog" data-toggle="modal" class="btn pmd-ripple-effect btn-primary pmd-z-depth" type="button">Alert with title bar</button>
+
+<div tabindex="-1" class="modal fade" id="complete-dialog" style="display: none;" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 class="pmd-card-title-text">Use Google's location service?</h2>
+			</div>
+			<div class="modal-body">
+				<p>Let Google help apps determine location. This means sending anonymous location data to Google, even when no apps are running. </p>
+			</div>
+			<div class="pmd-modal-action pmd-modal-bordered text-right">
+				<button data-dismiss="modal" class="btn pmd-btn-flat pmd-ripple-effect btn-primary" type="button">Disagree</button>
+				<button data-dismiss="modal" type="button" class="btn pmd-btn-flat pmd-ripple-effect btn-default">Agree</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Alert without title bar -->
+<button data-target="#alert-dialog" data-toggle="modal" class="btn pmd-ripple-effect btn-primary pmd-z-depth" type="button">Alert without title bar</button>
+
+<div tabindex="-1" class="modal fade" id="alert-dialog" style="display: none;" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-body"> Would you like to proceed? </div>
+			<div class="pmd-modal-action text-right">
+				<button data-dismiss="modal"  class="btn pmd-ripple-effect btn-primary pmd-btn-flat" type="button">Save changes</button>
+				<button data-dismiss="modal"  class="btn pmd-ripple-effect btn-default pmd-btn-flat" type="button">Discard</button>
+			</div>
+		</div>
+	</div>
+</div>
