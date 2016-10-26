@@ -175,22 +175,8 @@
 .pmd-btn-outline.btn-link{ border: solid 1px #333; background-color:transparent;}
 .pmd-btn-outline.btn-link:hover, .pmd-btn-outline.btn-link:focus { border: solid 1px #23527c; background-color:#23527c; color:#fff;}
 
-@keyframes ripple {
-  100% { opacity: 0; transform: scale(2.5);}
-}
-
-@-webkit-keyframes ripple {
-  100% { opacity: 0;  -webkit-transform: scale(2.5); transform: scale(2.5);}
-}
-
-@-moz-keyframes ripple {
-  100% { opacity: 0; -moz-transform: scale(2.5); transform: scale(2.5);}
-}
-
-@-ms-keyframes ripple {
-  100% { opacity: 0; -ms-transform: scale(2.5); transform: scale(2.5);}
-}
-
-@-o-keyframes ripple {
-  100% { opacity: 0; -o-transform: scale(2.5); transform: scale(2.5);}
-}
+@keyframes ripple {100% { opacity: 0; transform: scale(2.5);}}
+@-webkit-keyframes ripple { 100% { opacity: 0;  -webkit-transform: scale(2.5); transform: scale(2.5);}}
+@-moz-keyframes ripple { 100% { opacity: 0; -moz-transform: scale(2.5); transform: scale(2.5);}}
+@-ms-keyframes ripple { 100% { opacity: 0; -ms-transform: scale(2.5); transform: scale(2.5);}}
+@-o-keyframes ripple { 100% { opacity: 0; -o-transform: scale(2.5); transform: scale(2.5);}}

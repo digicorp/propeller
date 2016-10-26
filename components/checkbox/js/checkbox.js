@@ -8,7 +8,7 @@
 $( document ).ready(function() {
 	$('.pmd-checkbox input').after('<span class="pmd-checkbox-label">&nbsp;</span>');
 	// Ripple Effect //
-	$(".pmd-checkbox-pmd-ripple-effect").on('mousedown', function(e) {
+	$(".pmd-checkbox-ripple-effect").on('mousedown', function(e) {
 		var rippler = $(this);
 		$('.ink').remove();
 		// create .ink element if it doesn't exist

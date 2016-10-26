@@ -1,0 +1,1916 @@
+<!doctype html>
+<html lang="">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Petpooja_App_Marketplace">
+<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
+<title>Propeller Admin Dashboard</title>
+<link rel="shortcut icon" type="image/x-icon" href="themes/images/favicon.ico">
+
+<!-- Google icon -->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!-- Bootstrap css -->
+<link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
+<!-- Propeller css -->
+<link rel="stylesheet" type="text/css" href="../../assets/css/propeller.min.css">
+
+<!-- DataTables css-->
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.1.0/css/responsive.bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.2.0/css/select.dataTables.min.css">
+<!-- Propeller dataTables css-->
+<link rel="stylesheet" type="text/css" href="../../components/data-table/css/pmd-datatable.css">
+
+<!-- Propeller theme css-->
+<link rel="stylesheet" type="text/css" href="themes/css/propeller-theme.css" />
+
+<!-- Propeller admin theme css-->
+<link rel="stylesheet" type="text/css" href="themes/css/propeller-admin.css">
+
+    <!--Google Analytics code-->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    
+      ga('create', 'UA-124615-22', 'auto');
+      ga('send', 'pageview');
+    </script>
+</head>
+
+<!-- Styles Ends -->
+</head>
+
+<body>
+<!-- Header Starts -->
+<!--Start Nav bar -->
+<nav class="navbar navbar-inverse navbar-fixed-top pmd-navbar pmd-z-depth">
+
+	<div class="container-fluid">
+		<div class="pmd-navbar-right-icon pull-right navigation">
+
+			
+			<!-- Notifications -->
+            <div class="dropdown notification icons pmd-dropdown">
+			
+				<a href="javascript:void(0)" title="Notification" class="dropdown-toggle pmd-ripple-effect"  data-toggle="dropdown" role="button" aria-expanded="true">
+					<div data-badge="3" class="material-icons md-light pmd-sm pmd-badge  pmd-badge-overlap">notifications_none</div>
+				</a>
+			
+				<div class="dropdown-menu dropdown-menu-right pmd-card pmd-card-default pmd-z-depth" role="menu">
+					<!-- Card header -->
+					<div class="pmd-card-title">
+						<div class="media-body media-middle">
+							<a href="notifications.html" class="pull-right">3 new notifications</a>
+							<h3 class="pmd-card-title-text">Notifications</h3>
+						</div>
+					</div>
+					
+					<!-- Notifications list -->
+					<ul class="list-group pmd-list-avatar pmd-card-list">
+						<li class="list-group-item hidden">
+							<p class="notification-blank">
+								<span class="dic dic-notifications-none"></span> 
+								<span>You don´t have any notifications</span>
+							</p>
+						</li>
+						<li class="list-group-item unread">
+							<a href="javascript:void(0)">
+								<div class="media-left">
+									<span class="avatar-list-img40x40">
+										<img alt="40x40" data-src="holder.js/40x40" class="img-responsive" src="themes/images/profile-1.png" data-holder-rendered="true">
+									</span>
+								</div>
+								<div class="media-body">
+									<span class="list-group-item-heading"><span>Prathit</span> posted a new challanegs</span>
+									<span class="list-group-item-text">5 Minutes ago</span>
+								</div>
+							</a>
+						</li>
+						<li class="list-group-item">
+							<a href="javascript:void(0)">
+								<div class="media-left">
+									<span class="avatar-list-img40x40">
+										<img alt="40x40" data-src="holder.js/40x40" class="img-responsive" src="themes/images/profile-2.png" data-holder-rendered="true">
+									</span>
+								</div>
+								<div class="media-body">
+									<span class="list-group-item-heading"><span>Keel</span> Cloned 2 challenges.</span>
+									<span class="list-group-item-text">15 Minutes ago</span>
+								</div>
+							</a>
+						</li>
+						<li class="list-group-item unread">
+							<a href="javascript:void(0)">
+								<div class="media-left">
+									<span class="avatar-list-img40x40">
+										<img alt="40x40" data-src="holder.js/40x40" class="img-responsive" src="themes/images/profile-3.png" data-holder-rendered="true">
+									</span>
+								</div>
+							
+								<div class="media-body">
+									<span class="list-group-item-heading"><span>John</span> posted new collection.</span>
+									<span class="list-group-item-text">25 Minutes ago</span>
+								</div>
+							</a>
+						</li>
+						<li class="list-group-item unread">
+							<a href="javascript:void(0)">
+								<div class="media-left">
+									<span class="avatar-list-img40x40">
+										<img alt="40x40" data-src="holder.js/40x40" class="img-responsive" src="themes/images/profile-4.png" data-holder-rendered="true">
+									</span>
+								</div>
+								<div class="media-body">
+									<span class="list-group-item-heading"><span>Valerii</span> Shared 5 collection.</span>
+									<span class="list-group-item-text">30 Minutes ago</span>
+								</div>
+							</a>
+						</li>
+					</ul><!-- End notifications list -->
+
+				</div>
+				
+				
+            </div> <!-- End notifications -->
+		</div>
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect pull-left margin-r8 pmd-sidebar-toggle"><i class="material-icons">menu</i></a>	
+		  <a href="index.html" class="navbar-brand">
+		  	<img src="themes/images/propeller-logo.png" alt="Propeller Logo" title="Propeller - Develop more, Code less.">
+		  </a>
+		</div>
+	</div>
+
+</nav><!--End Nav bar -->
+<!-- Header Ends -->
+
+<!-- Sidebar Starts -->
+<div class="pmd-sidebar-overlay"></div>
+
+<!-- Left sidebar -->
+<aside class="pmd-sidebar sidebar-default pmd-sidebar-slide-push pmd-sidebar-left pmd-sidebar-open bg-fill-darkblue sidebar-with-icons" role="navigation">
+	<ul class="nav pmd-sidebar-nav">
+		
+		<!-- User info -->
+		<li class="dropdown pmd-dropdown pmd-user-info visible-xs visible-md visible-sm visible-lg">
+			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" aria-expandedhref="javascript:void(0);">
+				<div class="media-left">
+					<img src="themes/images/user-icon.png" alt="New User">
+				</div>
+				<div class="media-body media-middle">Propeller Admin</div>
+				<div class="media-right media-middle"><i class="dic-more-vert dic"></i></div>
+			</a>
+			<ul class="dropdown-menu">
+				<li><a href="login.html">Logout</a></li>
+			</ul>
+		</li><!-- End user info -->
+		
+		<li> 
+			<a class="pmd-ripple-effect" href="index.html">	
+				<i class="media-left media-middle"><svg version="1.1" x="0px" y="0px" width="19.83px" height="18px" viewBox="287.725 407.535 19.83 18" enable-background="new 287.725 407.535 19.83 18"
+	 xml:space="preserve">
+<g>
+	<path fill="#C9C8C8" d="M307.555,407.535h-9.108v10.264h9.108V407.535z M287.725,407.535v6.232h9.109v-6.232H287.725z
+		 M296.834,415.271h-9.109v10.264h9.109V415.271z M307.555,419.303h-9.108v6.232h9.108V419.303z"/>
+</g>
+</svg></i>
+				<span class="media-body">Dashboard</span>
+			</a> 
+		</li>
+		
+		<li class="dropdown pmd-dropdown"> 
+			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" href="javascript:void(0);">	
+				<i class="media-left media-middle"><svg version="1.1" x="0px" y="0px" width="18px" height="18.001px" viewBox="0 0 18 18.001" enable-background="new 0 0 18 18.001" xml:space="preserve">
+<path fill="#C9C8C8" d="M6.188,0.001C5.232,0.001,4.5,0.732,4.5,1.688c0,0.394,0.166,0.739,0.334,1.02L5.45,3.71
+	c0.113,0.113,0.176,0.341,0.176,0.51v0.281c0,0.619-0.506,1.125-1.125,1.125H0.282c-0.169,0-0.281,0.112-0.281,0.281V17.72
+	c0,0.168,0.112,0.281,0.281,0.281h4.219c0.619,0,1.125-0.506,1.125-1.125v-0.281c0-0.168-0.063-0.397-0.176-0.509
+	c0,0-0.615-0.946-0.615-1.002C4.666,14.802,4.5,14.457,4.5,14.063c0-0.956,0.731-1.688,1.688-1.688s1.688,0.731,1.688,1.688
+	c0,0.394-0.166,0.739-0.334,1.02l-0.616,1.002c-0.056,0.112-0.176,0.341-0.176,0.509v0.281c0,0.619,0.506,1.125,1.125,1.125h4.219
+	c0.168,0,0.281-0.113,0.281-0.281V13.5c0-0.619,0.506-1.125,1.125-1.125h0.281c0.169,0,0.396,0.063,0.51,0.176
+	c0,0,0.945,0.616,1.002,0.616c0.337,0.168,0.626,0.334,1.02,0.334c0.956,0,1.687-0.731,1.687-1.687c0-0.957-0.731-1.688-1.687-1.688
+	c-0.394,0-0.738,0.166-1.02,0.334l-1.002,0.616c-0.113,0.056-0.341,0.176-0.51,0.176H13.5c-0.619,0-1.125-0.506-1.125-1.125V5.908
+	c0-0.168-0.113-0.281-0.281-0.281H7.875c-0.619,0-1.125-0.506-1.125-1.125V4.221c0-0.168,0.063-0.397,0.176-0.51
+	c0,0,0.616-0.945,0.616-1.001c0.168-0.281,0.334-0.626,0.334-1.02C7.875,0.733,7.144,0.002,6.188,0.001L6.188,0.001z"/>
+</svg></i> 
+				<span class="media-body">UI Elements</span>
+				<div class="media-right media-bottom"><i class="dic-more-vert dic"></i></div>
+			</a> 
+			<ul class="dropdown-menu">
+				<li><a href="typography.html">Typography</a></li>
+				<li><a href="icons.html">Icons</a></li>
+				<li><a href="shadow.html">Shadow</a></li>
+				<li><a href="accordion.html">Accordion</a></li>
+				<li><a href="alert.html">Alert</a></li>
+				<li><a href="badge.html">Badge</a></li>
+				<li><a href="button.html">Button</a></li>
+				<li><a href="modal.html">Modal</a></li>
+				<li><a href="dropdown.html">Dropdown</a></li>
+				<li><a href="list.html">List</a></li>
+				<li><a href="navbar.html">Navbar</a></li>
+				<li><a href="popover.html">Popover</a></li>
+				<li><a href="progressbar.html">Progressbar</a></li>
+				<!--<li><a href="sidebar.html">Sidebar</a></li> -->
+				<li><a href="tab.html">Tab</a></li>
+				<li><a href="tooltip.html">Tooltip</a></li>
+				<li><a href="card.html">Card</a></li>
+				<li><a href="floating-button.html">Floating Action Button</a></li>
+			</ul>
+		</li>
+		<li class="dropdown pmd-dropdown"> 
+			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" href="javascript:void(0);">	
+				<i class="media-left media-middle"><svg version="1.1" x="0px" y="0px" width="14.187px" height="18px" viewBox="0 0 14.187 18" enable-background="new 0 0 14.187 18" xml:space="preserve">
+<path fill="#C9C8C8" d="M0,0v18h14.187V0H0z M3.121,3.293h2.023v4.767H3.121V3.293z M11.211,14.764H2.948v-2.022h8.263V14.764
+	L11.211,14.764z M11.211,11.585H2.948V9.563h8.263V11.585L11.211,11.585z M11.211,8.407H7.455V6.385h3.756V8.407z M11.211,5.229
+	H7.455V3.207h3.756V5.229z"/>
+</svg></i> 
+				<span class="media-body">Third Party Elements</span>
+				<div class="media-right media-bottom"><i class="dic-more-vert dic"></i></div>
+			</a> 
+			<ul class="dropdown-menu">
+				<li><a href="custom-scroll.html">Custom Scrollbar</a></li>
+				<li><a href="datetimepicker.html">Datetimepicker</a></li>
+				<li><a href="range-slider.html">Range Slider</a></li>
+				<li><a href="select2.html">Select2</a></li>
+			</ul>
+		</li>
+		
+		<li class="dropdown pmd-dropdown"> 
+			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" href="javascript:void(0);">	
+				<i class="media-left media-middle"><svg version="1.1" x="0px" y="0px" width="14.187px" height="18px" viewBox="0 0 14.187 18" enable-background="new 0 0 14.187 18" xml:space="preserve">
+<path fill="#C9C8C8" d="M0,0v18h14.187V0H0z M3.121,3.293h2.023v4.767H3.121V3.293z M11.211,14.764H2.948v-2.022h8.263V14.764
+	L11.211,14.764z M11.211,11.585H2.948V9.563h8.263V11.585L11.211,11.585z M11.211,8.407H7.455V6.385h3.756V8.407z M11.211,5.229
+	H7.455V3.207h3.756V5.229z"/>
+</svg></i> 
+				<span class="media-body">Form</span>
+				<div class="media-right media-bottom"><i class="dic-more-vert dic"></i></div>
+			</a> 
+			<ul class="dropdown-menu">
+				<li><a href="form-element.html">Form Elements</a></li>
+				<li><a href="form.html">Form Examples</a></li>
+			</ul>
+		</li>
+		<li class="dropdown pmd-dropdown"> 
+			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" href="javascript:void(0);">	
+				<i class="media-left media-middle"><svg version="1.1" x="0px" y="0px" width="18px" height="12.706px" viewBox="0 0 18 12.706" enable-background="new 0 0 18 12.706" xml:space="preserve">
+<path fill="#C9C8C8" d="M0,0v12.706h18V0H0z M12.706,4.235v3.176H9.108V4.235H12.706z M8.049,4.235v3.176h-6.99V4.235H8.049z
+	 M1.059,8.47h6.99v3.177h-6.99V8.47z M9.108,11.647V8.47h3.599v3.177H9.108z M13.766,11.647V8.47h3.176v3.177H13.766z M16.942,7.412
+	h-3.176V4.235h3.176V7.412L16.942,7.412z"/>
+</svg></i> 
+				<span class="media-body">Table</span>
+				<div class="media-right media-bottom"><i class="dic-more-vert dic"></i></div>
+			</a> 
+			<ul class="dropdown-menu">
+				<li><a href="table.html">Normal Table</a></li>
+				<li><a href="data-table.html">Data Table</a></li>
+				<li><a href="table-with-expand-collapse.html">Table with Expand/Collapse</a></li>
+			</ul>
+		</li>
+
+		<li class="dropdown pmd-dropdown"> 
+			<a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" href="javascript:void(0);">	
+				<i class="media-left media-middle">
+				<svg x="0px" y="0px" width="18px" height="18px" viewBox="288.64 337.535 18 18" enable-background="new 288.64 337.535 18 18" xml:space="preserve">
+					<title>022-layout view</title>
+					<desc>Created with Sketch.</desc>
+					<g>
+						<g>
+							<path fill="#C9C8C8" d="M298.765,353.285v-2.25h3.375v-3.375h2.25v5.625H298.765z M290.89,347.66h2.25v3.375h3.375v2.25h-5.625
+								V347.66z M296.515,339.785v2.25h-3.375v3.375h-2.25v-5.625H296.515z M295.39,348.785h4.5v-4.5h-4.5V348.785z M304.39,345.41h-2.25
+								v-3.375h-3.375v-2.25h5.625V345.41z M288.64,355.535h18v-18h-18V355.535z"/>
+						</g>
+					</g>
+					<text transform="matrix(1 0 0 1 -0.0154 1202.2578)" font-family="'HelveticaNeue-Bold'" font-size="186.0251">Created by Richard Wearn</text>
+					<text transform="matrix(1 0 0 1 -0.0154 1388.2891)" font-family="'HelveticaNeue-Bold'" font-size="186.0251">from the Noun Project</text>
+				</svg></i> 
+				<span class="media-body">Pages</span>
+				<div class="media-right media-bottom"><i class="dic-more-vert dic"></i></div>
+			</a> 
+			<ul class="dropdown-menu">
+				<li><a href="about.html">About</a></li>
+				<li><a href="contact.html">Contact</a></li>
+				<li><a href="404.html">404</a></li>
+				<li><a href="blank.html">Blank</a></li>
+				<li><a href="profile.html">Profile</a></li>
+			</ul>
+		</li>
+		<li> 
+			<a class="pmd-ripple-effect" href="login.html">	
+				<i class="media-left media-middle">
+				<svg version="1.1" id="Layer_1" x="0px" y="0px" width="18px" height="18px" viewBox="288.64 337.535 18 18" enable-background="new 288.64 337.535 18 18" xml:space="preserve">
+				<path fill="#C9C8C8" d="M295.39,337.535v2.25h9v13.5h-9v2.25h11.25v-18H295.39z M297.64,342.035v3.375h-9v2.25h9v3.375l3.375-3.375
+					l1.125-1.125l-1.125-1.125L297.64,342.035z"/>
+				</svg></i> 
+				<span class="media-body">Login</span>
+			</a> 
+		</li>
+		<li> 
+			<a class="pmd-ripple-effect" href="inbox.html">	
+				<i class="media-left media-middle">
+				<svg version="1.1" x="0px" y="0px" width="18px" height="12.479px" viewBox="288.64 363.118 18 12.479" enable-background="new 288.64 363.118 18 12.479" xml:space="preserve">
+					<g transform="translate(641.29613,1096.2351)">
+						<path fill="#C9C8C8" d="M-352.656-726.466v-5.828l4.484,4.484c2.467,2.466,4.499,4.484,4.516,4.484s2.049-2.018,4.516-4.484
+							l4.484-4.484v5.828v5.828h-9h-9V-726.466z M-347.854-728.929l-4.188-4.188h8.385h8.386l-4.188,4.188
+							c-2.304,2.303-4.192,4.188-4.198,4.188S-345.551-726.626-347.854-728.929z"/>
+					</g>
+				</svg></i> 
+				<span class="media-body">Inbox</span>
+			</a> 
+		</li>
+		<li> 
+			<a class="pmd-ripple-effect" href="notifications.html">	
+				<i class="media-left media-middle">
+				<svg version="1.1" id="Layer_1" x="0px" y="0px" width="15.3px" height="18px" viewBox="289.99 337.535 15.3 18" enable-background="new 289.99 337.535 15.3 18" xml:space="preserve">
+					<g>
+						<g>
+							<path fill="#C9C8C8" d="M297.64,355.535c0.99,0,1.8-0.81,1.8-1.8h-3.6C295.84,354.725,296.65,355.535,297.64,355.535z
+								 M303.49,350.135v-4.95c0-2.79-1.891-5.041-4.501-5.67v-0.63c0-0.72-0.63-1.35-1.35-1.35c-0.72,0-1.35,0.63-1.35,1.35v0.63
+								c-2.61,0.629-4.5,2.88-4.5,5.67v4.95l-1.8,1.8v0.9h15.3v-0.9L303.49,350.135z"/>
+						</g>
+					</g>
+				</svg></i> 
+				<span class="media-body">Notifications</span>
+			</a> 
+		</li>
+		
+	</ul>
+</aside><!-- End Left sidebar -->
+<!-- Sidebar Ends -->
+
+<!--content area start-->
+<div id="content" class="pmd-content inner-page">
+
+<!--tab start-->
+<div class="container-fluid full-width-container data-tables">
+		<!-- Title -->
+		<h1 class="section-title" id="services">
+			<span>Data Table</span>
+		</h1><!-- End Title -->
+	
+		<!--breadcrum start-->
+		<ol class="breadcrumb text-left">
+		  <li><a href="index.html">Dashboard</a></li>
+		  <li class="active">Data Table</li>
+		</ol><!--breadcrum end-->
+	
+		<!-- table card -->
+		<section class="row component-section">
+		
+			<!-- table card title and description -->
+			<div class="col-md-3">
+				<div id="card">
+					<h2>Propeller Data table</h2>
+				</div>
+				<p>In its simplest form, a data table contains a top row of column names, and rows for data. Checkboxes should accompany each row if the user needs to select or manipulate data.</p>
+			</div> <!-- table card title and description end -->
+			
+			<!-- table card code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- table card example -->
+					<div  class="pmd-card pmd-z-depth pmd-card-custom-view">
+						<div class="table-responsive">
+						<table id="example-checkbox" class="table pmd-table table-hover table-striped display responsive nowrap" cellspacing="0" width="100%">
+						<thead>
+							<tr>
+								<th></th>
+								<th>First name</th>
+								<th>Last name</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Age</th>
+								<th>Start date</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td></td>
+								<td>Tiger</td>
+								<td>Nixon</td>
+								<td>System Architect</td>
+								<td>Edinburgh</td>
+								<td>61</td>
+								<td>2011/04/25</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Garrett</td>
+								<td>Winters</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>63</td>
+								<td>2011/07/25</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Ashton</td>
+								<td>Cox</td>
+								<td>Junior Technical Author</td>
+								<td>San Francisco</td>
+								<td>66</td>
+								<td>2009/01/12</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Cedric</td>
+								<td>Kelly</td>
+								<td>Senior Javascript Developer</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2012/03/29</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Airi</td>
+								<td>Satou</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>33</td>
+								<td>2008/11/28</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Brielle</td>
+								<td>Williamson</td>
+								<td>Integration Specialist</td>
+								<td>New York</td>
+								<td>61</td>
+								<td>2012/12/02</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Herrod</td>
+								<td>Chandler</td>
+								<td>Sales Assistant</td>
+								<td>San Francisco</td>
+								<td>59</td>
+								<td>2012/08/06</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Airi</td>
+								<td>Satou</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>33</td>
+								<td>2008/11/28</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Brielle</td>
+								<td>Williamson</td>
+								<td>Integration Specialist</td>
+								<td>New York</td>
+								<td>61</td>
+								<td>2012/12/02</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Herrod</td>
+								<td>Chandler</td>
+								<td>Sales Assistant</td>
+								<td>San Francisco</td>
+								<td>59</td>
+								<td>2012/08/06</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Airi</td>
+								<td>Satou</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>33</td>
+								<td>2008/11/28</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Brielle</td>
+								<td>Williamson</td>
+								<td>Integration Specialist</td>
+								<td>New York</td>
+								<td>61</td>
+								<td>2012/12/02</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Herrod</td>
+								<td>Chandler</td>
+								<td>Sales Assistant</td>
+								<td>San Francisco</td>
+								<td>59</td>
+								<td>2012/08/06</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Airi</td>
+								<td>Satou</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>33</td>
+								<td>2008/11/28</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Brielle</td>
+								<td>Williamson</td>
+								<td>Integration Specialist</td>
+								<td>New York</td>
+								<td>61</td>
+								<td>2012/12/02</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Herrod</td>
+								<td>Chandler</td>
+								<td>Sales Assistant</td>
+								<td>San Francisco</td>
+								<td>59</td>
+								<td>2012/08/06</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Airi</td>
+								<td>Satou</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>33</td>
+								<td>2008/11/28</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Brielle</td>
+								<td>Williamson</td>
+								<td>Integration Specialist</td>
+								<td>New York</td>
+								<td>61</td>
+								<td>2012/12/02</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td>Herrod</td>
+								<td>Chandler</td>
+								<td>Sales Assistant</td>
+								<td>San Francisco</td>
+								<td>59</td>
+								<td>2012/08/06</td>
+							</tr>
+						</tbody>
+					</table>
+						</div>
+					</div> <!-- table card example end -->
+				
+				</div>
+			</div> <!-- table card code and example end -->
+		</section> <!-- table card end -->
+		
+		<!-- Responsive table -->
+		<section class="row component-section">
+		
+			<!-- responsive table title and description -->
+			<div class="col-md-3">
+				<div id="responsive">
+					<h2>Responsive Data table</h2>
+				</div>
+				<p>Some table cards may require headers with actions instead of titles. Two possible approaches to this are to display persistent actions, or a contextual header that activates when items are selected. Create basic table with responsive by simply adding <code>.table-responsive</code> class in your code. </p>
+			</div> <!-- responsive table title and description end -->
+			
+			<!-- responsive table code and example -->
+			<div class="col-md-9">
+				<!-- responsive table example -->
+				<div class="pmd-card pmd-z-depth pmd-card-custom-view">
+					<table id="example" class="table pmd-table table-hover table-striped display responsive nowrap" cellspacing="0" width="100%">
+						<thead>
+							<tr>
+								<th>First name</th>
+								<th>Last name</th>
+								<th>Position</th>
+								<th>Office</th>
+								<th>Age</th>
+								<th>Start date</th>
+								<th>Salary</th>
+								<th>Extn.</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Tiger</td>
+								<td>Nixon</td>
+								<td>System Architect</td>
+								<td>Edinburgh</td>
+								<td>61</td>
+								<td>2011/04/25</td>
+								<td>$320,800</td>
+								<td>5421</td>
+							</tr>
+							<tr>
+								<td>Garrett</td>
+								<td>Winters</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>63</td>
+								<td>2011/07/25</td>
+								<td>$170,750</td>
+								<td>8422</td>
+							</tr>
+							<tr>
+								<td>Ashton</td>
+								<td>Cox</td>
+								<td>Junior Technical Author</td>
+								<td>San Francisco</td>
+								<td>66</td>
+								<td>2009/01/12</td>
+								<td>$86,000</td>
+								<td>1562</td>
+							</tr>
+							<tr>
+								<td>Cedric</td>
+								<td>Kelly</td>
+								<td>Senior Javascript Developer</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2012/03/29</td>
+								<td>$433,060</td>
+								<td>6224</td>
+							</tr>
+							<tr>
+								<td>Tiger</td>
+								<td>Nixon</td>
+								<td>System Architect</td>
+								<td>Edinburgh</td>
+								<td>61</td>
+								<td>2011/04/25</td>
+								<td>$320,800</td>
+								<td>5421</td>
+							</tr>
+							<tr>
+								<td>Garrett</td>
+								<td>Winters</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>63</td>
+								<td>2011/07/25</td>
+								<td>$170,750</td>
+								<td>8422</td>
+							</tr>
+							<tr>
+								<td>Ashton</td>
+								<td>Cox</td>
+								<td>Junior Technical Author</td>
+								<td>San Francisco</td>
+								<td>66</td>
+								<td>2009/01/12</td>
+								<td>$86,000</td>
+								<td>1562</td>
+							</tr>
+							<tr>
+								<td>Cedric</td>
+								<td>Kelly</td>
+								<td>Senior Javascript Developer</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2012/03/29</td>
+								<td>$433,060</td>
+								<td>6224</td>
+							</tr>
+							<tr>
+								<td>Tiger</td>
+								<td>Nixon</td>
+								<td>System Architect</td>
+								<td>Edinburgh</td>
+								<td>61</td>
+								<td>2011/04/25</td>
+								<td>$320,800</td>
+								<td>5421</td>
+							</tr>
+							<tr>
+								<td>Garrett</td>
+								<td>Winters</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>63</td>
+								<td>2011/07/25</td>
+								<td>$170,750</td>
+								<td>8422</td>
+							</tr>
+							<tr>
+								<td>Ashton</td>
+								<td>Cox</td>
+								<td>Junior Technical Author</td>
+								<td>San Francisco</td>
+								<td>66</td>
+								<td>2009/01/12</td>
+								<td>$86,000</td>
+								<td>1562</td>
+							</tr>
+							<tr>
+								<td>Cedric</td>
+								<td>Kelly</td>
+								<td>Senior Javascript Developer</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2012/03/29</td>
+								<td>$433,060</td>
+								<td>6224</td>
+							</tr>
+							<tr>
+								<td>Tiger</td>
+								<td>Nixon</td>
+								<td>System Architect</td>
+								<td>Edinburgh</td>
+								<td>61</td>
+								<td>2011/04/25</td>
+								<td>$320,800</td>
+								<td>5421</td>
+							</tr>
+							<tr>
+								<td>Garrett</td>
+								<td>Winters</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>63</td>
+								<td>2011/07/25</td>
+								<td>$170,750</td>
+								<td>8422</td>
+							</tr>
+							<tr>
+								<td>Ashton</td>
+								<td>Cox</td>
+								<td>Junior Technical Author</td>
+								<td>San Francisco</td>
+								<td>66</td>
+								<td>2009/01/12</td>
+								<td>$86,000</td>
+								<td>1562</td>
+							</tr>
+							<tr>
+								<td>Cedric</td>
+								<td>Kelly</td>
+								<td>Senior Javascript Developer</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2012/03/29</td>
+								<td>$433,060</td>
+								<td>6224</td>
+							</tr>
+							<tr>
+								<td>Tiger</td>
+								<td>Nixon</td>
+								<td>System Architect</td>
+								<td>Edinburgh</td>
+								<td>61</td>
+								<td>2011/04/25</td>
+								<td>$320,800</td>
+								<td>5421</td>
+							</tr>
+							<tr>
+								<td>Garrett</td>
+								<td>Winters</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>63</td>
+								<td>2011/07/25</td>
+								<td>$170,750</td>
+								<td>8422</td>
+							</tr>
+							<tr>
+								<td>Ashton</td>
+								<td>Cox</td>
+								<td>Junior Technical Author</td>
+								<td>San Francisco</td>
+								<td>66</td>
+								<td>2009/01/12</td>
+								<td>$86,000</td>
+								<td>1562</td>
+							</tr>
+							<tr>
+								<td>Cedric</td>
+								<td>Kelly</td>
+								<td>Senior Javascript Developer</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2012/03/29</td>
+								<td>$433,060</td>
+								<td>6224</td>
+							</tr>
+							<tr>
+								<td>Tiger</td>
+								<td>Nixon</td>
+								<td>System Architect</td>
+								<td>Edinburgh</td>
+								<td>61</td>
+								<td>2011/04/25</td>
+								<td>$320,800</td>
+								<td>5421</td>
+							</tr>
+							<tr>
+								<td>Garrett</td>
+								<td>Winters</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>63</td>
+								<td>2011/07/25</td>
+								<td>$170,750</td>
+								<td>8422</td>
+							</tr>
+							<tr>
+								<td>Ashton</td>
+								<td>Cox</td>
+								<td>Junior Technical Author</td>
+								<td>San Francisco</td>
+								<td>66</td>
+								<td>2009/01/12</td>
+								<td>$86,000</td>
+								<td>1562</td>
+							</tr>
+							<tr>
+								<td>Cedric</td>
+								<td>Kelly</td>
+								<td>Senior Javascript Developer</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2012/03/29</td>
+								<td>$433,060</td>
+								<td>6224</td>
+							</tr>
+							<tr>
+								<td>Tiger</td>
+								<td>Nixon</td>
+								<td>System Architect</td>
+								<td>Edinburgh</td>
+								<td>61</td>
+								<td>2011/04/25</td>
+								<td>$320,800</td>
+								<td>5421</td>
+							</tr>
+							<tr>
+								<td>Garrett</td>
+								<td>Winters</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>63</td>
+								<td>2011/07/25</td>
+								<td>$170,750</td>
+								<td>8422</td>
+							</tr>
+							<tr>
+								<td>Ashton</td>
+								<td>Cox</td>
+								<td>Junior Technical Author</td>
+								<td>San Francisco</td>
+								<td>66</td>
+								<td>2009/01/12</td>
+								<td>$86,000</td>
+								<td>1562</td>
+							</tr>
+							<tr>
+								<td>Cedric</td>
+								<td>Kelly</td>
+								<td>Senior Javascript Developer</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2012/03/29</td>
+								<td>$433,060</td>
+								<td>6224</td>
+							</tr>
+							<tr>
+								<td>Tiger</td>
+								<td>Nixon</td>
+								<td>System Architect</td>
+								<td>Edinburgh</td>
+								<td>61</td>
+								<td>2011/04/25</td>
+								<td>$320,800</td>
+								<td>5421</td>
+							</tr>
+							<tr>
+								<td>Garrett</td>
+								<td>Winters</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>63</td>
+								<td>2011/07/25</td>
+								<td>$170,750</td>
+								<td>8422</td>
+							</tr>
+							<tr>
+								<td>Ashton</td>
+								<td>Cox</td>
+								<td>Junior Technical Author</td>
+								<td>San Francisco</td>
+								<td>66</td>
+								<td>2009/01/12</td>
+								<td>$86,000</td>
+								<td>1562</td>
+							</tr>
+							<tr>
+								<td>Cedric</td>
+								<td>Kelly</td>
+								<td>Senior Javascript Developer</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2012/03/29</td>
+								<td>$433,060</td>
+								<td>6224</td>
+							</tr>
+							<tr>
+								<td>Tiger</td>
+								<td>Nixon</td>
+								<td>System Architect</td>
+								<td>Edinburgh</td>
+								<td>61</td>
+								<td>2011/04/25</td>
+								<td>$320,800</td>
+								<td>5421</td>
+							</tr>
+							<tr>
+								<td>Garrett</td>
+								<td>Winters</td>
+								<td>Accountant</td>
+								<td>Tokyo</td>
+								<td>63</td>
+								<td>2011/07/25</td>
+								<td>$170,750</td>
+								<td>8422</td>
+							</tr>
+							<tr>
+								<td>Ashton</td>
+								<td>Cox</td>
+								<td>Junior Technical Author</td>
+								<td>San Francisco</td>
+								<td>66</td>
+								<td>2009/01/12</td>
+								<td>$86,000</td>
+								<td>1562</td>
+							</tr>
+							<tr>
+								<td>Cedric</td>
+								<td>Kelly</td>
+								<td>Senior Javascript Developer</td>
+								<td>Edinburgh</td>
+								<td>22</td>
+								<td>2012/03/29</td>
+								<td>$433,060</td>
+								<td>6224</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+							<tr>
+								<td>Shad</td>
+								<td>Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+								<td>6373</td>
+							</tr>
+							<tr>
+								<td>Michael</td>
+								<td>Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+								<td>5384</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+							<tr>
+								<td>Shad</td>
+								<td>Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+								<td>6373</td>
+							</tr>
+							<tr>
+								<td>Michael</td>
+								<td>Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+								<td>5384</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+							<tr>
+								<td>Shad</td>
+								<td>Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+								<td>6373</td>
+							</tr>
+							<tr>
+								<td>Michael</td>
+								<td>Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+								<td>5384</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+							<tr>
+								<td>Shad</td>
+								<td>Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+								<td>6373</td>
+							</tr>
+							<tr>
+								<td>Michael</td>
+								<td>Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+								<td>5384</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+							<tr>
+								<td>Shad</td>
+								<td>Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+								<td>6373</td>
+							</tr>
+							<tr>
+								<td>Michael</td>
+								<td>Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+								<td>5384</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+							<tr>
+								<td>Shad</td>
+								<td>Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+								<td>6373</td>
+							</tr>
+							<tr>
+								<td>Michael</td>
+								<td>Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+								<td>5384</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+							<tr>
+								<td>Shad</td>
+								<td>Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+								<td>6373</td>
+							</tr>
+							<tr>
+								<td>Michael</td>
+								<td>Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+								<td>5384</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+							<tr>
+								<td>Shad</td>
+								<td>Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+								<td>6373</td>
+							</tr>
+							<tr>
+								<td>Michael</td>
+								<td>Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+								<td>5384</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+							<tr>
+								<td>Shad</td>
+								<td>Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+								<td>6373</td>
+							</tr>
+							<tr>
+								<td>Michael</td>
+								<td>Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+								<td>5384</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+							<tr>
+								<td>Shad</td>
+								<td>Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+								<td>6373</td>
+							</tr>
+							<tr>
+								<td>Michael</td>
+								<td>Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+								<td>5384</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+							<tr>
+								<td>Shad</td>
+								<td>Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+								<td>6373</td>
+							</tr>
+							<tr>
+								<td>Michael</td>
+								<td>Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+								<td>5384</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+							<tr>
+								<td>Shad</td>
+								<td>Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+								<td>6373</td>
+							</tr>
+							<tr>
+								<td>Michael</td>
+								<td>Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+								<td>5384</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+							<tr>
+								<td>Shad</td>
+								<td>Decker</td>
+								<td>Regional Director</td>
+								<td>Edinburgh</td>
+								<td>51</td>
+								<td>2008/11/13</td>
+								<td>$183,000</td>
+								<td>6373</td>
+							</tr>
+							<tr>
+								<td>Michael</td>
+								<td>Bruce</td>
+								<td>Javascript Developer</td>
+								<td>Singapore</td>
+								<td>29</td>
+								<td>2011/06/27</td>
+								<td>$183,000</td>
+								<td>5384</td>
+							</tr>
+							<tr>
+								<td>Donna</td>
+								<td>Snider</td>
+								<td>Customer Support</td>
+								<td>New York</td>
+								<td>27</td>
+								<td>2011/01/25</td>
+								<td>$112,000</td>
+								<td>4226</td>
+							</tr>
+						</tbody>
+					</table>
+				</div> <!-- responsive table example end -->
+				
+			</div> <!-- responsive table code and example end-->
+		</section> <!-- Responsive table end -->
+		
+		<!-- Inverse table -->
+		<section class="row component-section">
+		
+			<!-- inverse table title and description -->
+			<div class="col-md-3">
+				<div id="inverse">
+					<h2>Inverse Table</h2>
+				</div>
+				<p>Create Inverse Table by adding <code>.table-inverse</code> class in your code.</p>
+			</div> <!-- inverse table title and description end -->
+			
+			<!-- inverse table code and example -->
+			<div class="col-md-9">
+				<div class="component-box">
+					<!-- inverse table example -->
+					<div class="pmd-card pmd-z-depth pmd-card-custom-view">
+						<div class="pmd-card-inverse">
+							<table id="tableInverse" class="table pmd-table table-hover table-striped table-inverse display responsive nowrap" cellspacing="0" width="100%">
+							<thead>
+								<tr>
+									<th></th>
+									<th>First name</th>
+									<th>Position</th>
+									<th>Office</th>
+									<th>Age</th>
+									<th>Start date</th>
+									<th>Salary</th>
+									<th>Extn.</th>
+									<th>E-mail</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td></td>
+									<td>Tiger</td>
+									<td>System Architect</td>
+									<td>Edinburgh</td>
+									<td>61</td>
+									<td>2011/04/25</td>
+									<td>$320,800</td>
+									<td>5421</td>
+									<td>t.nixon@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Garrett</td>
+									<td>Accountant</td>
+									<td>Tokyo</td>
+									<td>63</td>
+									<td>2011/07/25</td>
+									<td>$170,750</td>
+									<td>8422</td>
+									<td>g.winters@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Ashton</td>
+									<td>Junior Technical Author</td>
+									<td>San Francisco</td>
+									<td>66</td>
+									<td>2009/01/12</td>
+									<td>$86,000</td>
+									<td>1562</td>
+									<td>a.cox@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Cedric</td>
+									<td>Senior Javascript Developer</td>
+									<td>Edinburgh</td>
+									<td>22</td>
+									<td>2012/03/29</td>
+									<td>$433,060</td>
+									<td>6224</td>
+									<td>c.kelly@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Airi</td>
+									<td>Accountant</td>
+									<td>Tokyo</td>
+									<td>33</td>
+									<td>2008/11/28</td>
+									<td>$162,700</td>
+									<td>5407</td>
+									<td>a.satou@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Brielle</td>
+									<td>Integration Specialist</td>
+									<td>New York</td>
+									<td>61</td>
+									<td>2012/12/02</td>
+									<td>$372,000</td>
+									<td>4804</td>
+									<td>b.williamson@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Herrod</td>
+									<td>Sales Assistant</td>
+									<td>San Francisco</td>
+									<td>59</td>
+									<td>2012/08/06</td>
+									<td>$137,500</td>
+									<td>9608</td>
+									<td>h.chandler@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Airi</td>
+									<td>Accountant</td>
+									<td>Tokyo</td>
+									<td>33</td>
+									<td>2008/11/28</td>
+									<td>$162,700</td>
+									<td>5407</td>
+									<td>a.satou@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Brielle</td>
+									<td>Integration Specialist</td>
+									<td>New York</td>
+									<td>61</td>
+									<td>2012/12/02</td>
+									<td>$372,000</td>
+									<td>4804</td>
+									<td>b.williamson@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Herrod</td>
+									<td>Sales Assistant</td>
+									<td>San Francisco</td>
+									<td>59</td>
+									<td>2012/08/06</td>
+									<td>$137,500</td>
+									<td>9608</td>
+									<td>h.chandler@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Airi</td>
+									<td>Accountant</td>
+									<td>Tokyo</td>
+									<td>33</td>
+									<td>2008/11/28</td>
+									<td>$162,700</td>
+									<td>5407</td>
+									<td>a.satou@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Brielle</td>
+									<td>Integration Specialist</td>
+									<td>New York</td>
+									<td>61</td>
+									<td>2012/12/02</td>
+									<td>$372,000</td>
+									<td>4804</td>
+									<td>b.williamson@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Herrod</td>
+									<td>Sales Assistant</td>
+									<td>San Francisco</td>
+									<td>59</td>
+									<td>2012/08/06</td>
+									<td>$137,500</td>
+									<td>9608</td>
+									<td>h.chandler@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Airi</td>
+									<td>Accountant</td>
+									<td>Tokyo</td>
+									<td>33</td>
+									<td>2008/11/28</td>
+									<td>$162,700</td>
+									<td>5407</td>
+									<td>a.satou@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Brielle</td>
+									<td>Integration Specialist</td>
+									<td>New York</td>
+									<td>61</td>
+									<td>2012/12/02</td>
+									<td>$372,000</td>
+									<td>4804</td>
+									<td>b.williamson@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Herrod</td>
+									<td>Sales Assistant</td>
+									<td>San Francisco</td>
+									<td>59</td>
+									<td>2012/08/06</td>
+									<td>$137,500</td>
+									<td>9608</td>
+									<td>h.chandler@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Airi</td>
+									<td>Accountant</td>
+									<td>Tokyo</td>
+									<td>33</td>
+									<td>2008/11/28</td>
+									<td>$162,700</td>
+									<td>5407</td>
+									<td>a.satou@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Brielle</td>
+									<td>Integration Specialist</td>
+									<td>New York</td>
+									<td>61</td>
+									<td>2012/12/02</td>
+									<td>$372,000</td>
+									<td>4804</td>
+									<td>b.williamson@datatables.net</td>
+								</tr>
+								<tr>
+									<td></td>
+									<td>Herrod</td>
+									<td>Sales Assistant</td>
+									<td>San Francisco</td>
+									<td>59</td>
+									<td>2012/08/06</td>
+									<td>$137,500</td>
+									<td>9608</td>
+									<td>h.chandler@datatables.net</td>
+								</tr>
+							</tbody>
+						</table>
+						</div>
+					</div> <!-- inverse table example end-->
+					
+				</div>
+			</div> <!-- inverse table code and example end-->
+		</section> <!-- Inverse table end-->
+	
+	</div>
+<!--tab start-->
+
+<!--content area end-->
+
+</div>
+
+<!-- Footer Starts -->
+<!--footer start-->
+<footer class="admin-footer">
+ <div class="container-fluid">
+     <div class="row">
+	 	<div class="col-lg-8 col-md-6 col-sm-4 col-xs-12 copyright-text">
+            <span class="media-body media-middle">
+                <span class="pmd-card-subtitle-text">Propeller &copy; 2016. All Rights Reserved.</span>
+                <h3 class="pmd-card-subtitle-text">Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license.</a></h3>
+            </span>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+			<a onClick="downloadPMDadmintemplate()" href="../../archive/pmd-admin-template-1.0.0.zip">
+           		 <span class="media-left media-middle">
+                  <svg x="0px" y="0px" width="38px" height="32px" viewBox="0 0 38 32" enable-background="new 0 0 38 32" xml:space="preserve">
+<g>
+	<path fill="#A5A4A4" d="M13.906,26.652l4.045,4.043c0.001,0,0.002,0.002,0.003,0.004l1.047,1.047l1.047-1.049
+		c0.001,0,0.001,0,0.001,0l4.044-4.045c0.579-0.58,0.579-1.518,0-2.098c-0.579-0.578-1.519-0.578-2.096,0l-1.514,1.514V16.22
+		c0-0.818-0.664-1.482-1.483-1.482c-0.818,0-1.482,0.664-1.482,1.482v9.85l-1.515-1.516c-0.29-0.289-0.669-0.434-1.048-0.434
+		c-0.38,0-0.759,0.145-1.049,0.434C13.327,25.133,13.327,26.072,13.906,26.652z"/>
+	<g>
+		<g>
+			<path fill="#A5A4A4" d="M8.453,26.363c-0.032,0-0.065,0-0.099-0.002C3.67,26.053,0,22.137,0,17.443
+				c0-4.434,3.242-8.124,7.48-8.825c0.3-4.663,4.188-8.364,8.926-8.364c2.249,0,4.393,0.844,6.032,2.346
+				c4.602-1.86,9.527-0.766,12.266,2.831c1.808,2.375,2.399,5.513,1.671,8.719C37.416,15.412,38,17.008,38,18.65
+				c0,3.902-3.176,7.076-7.077,7.076c-1.221,0-2.428-0.32-3.492-0.926c-0.712-0.404-0.961-1.311-0.556-2.021
+				c0.404-0.713,1.312-0.963,2.021-0.557c0.619,0.352,1.319,0.539,2.027,0.539c2.267,0,4.111-1.844,4.111-4.111
+				c0-1.146-0.467-2.212-1.312-3.001l-0.673-0.627l0.264-0.881c0.769-2.574,0.416-5.094-0.969-6.913
+				c-2.061-2.706-5.997-3.332-9.577-1.522l-1.045,0.528L20.966,5.34c-1.139-1.347-2.802-2.12-4.56-2.12
+				c-3.297,0-5.979,2.683-5.979,5.979c0,0.21,0.01,0.416,0.033,0.619l0.186,1.648l-1.784-0.004
+				c-3.215,0.003-5.896,2.685-5.896,5.983c0,3.135,2.453,5.752,5.584,5.957c0.817,0.055,1.436,0.76,1.382,1.576
+				C9.88,25.762,9.228,26.363,8.453,26.363z"/>
+		</g>
+	</g>
+</g>
+</svg>
+           		 </span>
+            	 <span class="media-body media-middle">
+              	 <span class="pmd-card-subtitle-text">Version- 1.0.0</span>
+              	 <h3 class="pmd-card-title-text">Download Now</h3>
+            	</span>
+			</a>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
+			<a href="mailto:support@propeller.in">
+          		<span class="media-left media-middle">
+					 <svg x="0px" y="0px" width="38px" height="38px" viewBox="0 0 38 38" enable-background="new 0 0 38 38">
+	<g>
+		<path fill="#A5A4A4" d="M25.621,21.085c-0.642-0.682-1.483-0.682-2.165,0c-0.521,0.521-1.003,1.002-1.524,1.523
+			c-0.16,0.16-0.24,0.16-0.44,0.08c-0.321-0.2-0.683-0.32-1.003-0.521c-1.483-0.922-2.726-2.125-3.809-3.488
+			c-0.521-0.681-1.002-1.402-1.363-2.205c-0.04-0.16-0.04-0.24,0.08-0.4c0.521-0.481,1.002-1.003,1.524-1.483
+			c0.721-0.722,0.721-1.524,0-2.246c-0.441-0.44-0.842-0.842-1.203-1.202c-0.441-0.441-0.842-0.842-1.243-1.243
+			c-0.642-0.642-1.483-0.642-2.165,0c-0.521,0.521-1.002,1.002-1.524,1.523c-0.481,0.481-0.722,1.043-0.802,1.685
+			c-0.08,1.042,0.16,2.085,0.521,3.047c0.762,2.085,1.925,3.849,3.328,5.532c1.884,2.286,4.17,4.05,6.815,5.333
+			c1.203,0.562,2.406,1.002,3.729,1.123c0.922,0.04,1.724-0.201,2.365-0.923c0.441-0.521,0.923-0.922,1.403-1.403
+			c0.682-0.722,0.682-1.563,0-2.245C27.265,22.729,26.423,21.927,25.621,21.085z"/>
+		<path fill="#A5A4A4" d="M32.437,5.568C28.869,2,24.098-0.005,19.005-0.005S9.182,2,5.573,5.568C2.005,9.177,0,13.908,0,19
+			s1.965,9.823,5.573,13.432c3.568,3.568,8.34,5.573,13.432,5.573s9.823-1.965,13.431-5.573
+			C39.854,25.014,39.854,12.985,32.437,5.568z M30.299,30.294c-3.003,3.045-7.021,4.695-11.293,4.695
+			c-4.272,0-8.291-1.65-11.294-4.695C4.666,27.29,3.016,23.271,3.016,19c0-4.272,1.649-8.291,4.695-11.294
+			c3.003-3.003,7.022-4.695,11.294-4.695c4.272,0,8.291,1.649,11.293,4.695C36.56,13.924,36.56,24.075,30.299,30.294z"/>
+	</g>
+	</svg>
+            	</span>
+            	<span class="media-body media-middle">
+              <span class="pmd-card-subtitle-text">For Support</span>
+              <h3 class="pmd-card-title-text">support@propeller.in</h3>
+            </span>
+            </a>
+        </div>
+     </div>
+ </div>
+</footer>
+<!--footer end-->
+<!-- Footer Ends -->
+
+<!-- Scripts Starts -->
+<script src="../../assets/js/jquery-1.12.2.min.js"></script>
+<script src="../../assets/js/bootstrap.min.js"></script>
+<script src="../../assets/js/propeller.min.js"></script>
+<script>
+	$(document).ready(function() {
+		var sPath=window.location.pathname;
+		var sPage = sPath.substring(sPath.lastIndexOf('/') + 1);
+		$(".pmd-sidebar-nav").each(function(){
+			$(this).find("a[href='"+sPage+"']").parents(".dropdown").addClass("open");
+			$(this).find("a[href='"+sPage+"']").parents(".dropdown").find('.dropdown-menu').css("display", "block");
+			$(this).find("a[href='"+sPage+"']").parents(".dropdown").find('a.dropdown-toggle').addClass("active");
+			$(this).find("a[href='"+sPage+"']").addClass("active");
+		});
+	});
+</script> 
+
+<!-- Scripts Ends -->
+
+
+<!-- Datatable js -->
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+
+<!-- Datatable Bootstrap -->
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
+
+<!-- Datatable responsive js-->
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.1.0/js/dataTables.responsive.min.js"></script>
+
+<!-- Datatable select js-->
+<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/select/1.2.0/js/dataTables.select.min.js"></script>
+
+<!-- Propeller Data table js-->
+<script>
+//Propeller Customised Javascript code 
+$(document).ready(function() {
+	$('#example-checkbox').DataTable({
+		responsive: false,
+		columnDefs: [ {
+			orderable: false,
+			className: 'select-checkbox',
+			targets:0,
+		} ],
+		select: {
+			style: 'multi',
+			selector: 'td:first-child'
+		},
+		order: [ 1, 'asc' ],
+		bFilter: true,
+		bLengthChange: true,
+		pagingType: "simple",
+		"paging": true,
+		"searching": true,
+		"language": {
+			"info": " _START_ - _END_ of _TOTAL_ ",
+			"sLengthMenu": "<span class='custom-select-title'>Rows per page:</span> <span class='custom-select'> _MENU_ </span>",
+			"sSearch": "",
+			"sSearchPlaceholder": "Search",
+			"paginate": {
+				"sNext": " ",
+				"sPrevious": " "
+			},
+		},
+		dom:
+			"<'pmd-card-title'<'data-table-title'><'search-paper pmd-textfield'f>>" +
+			"<'custom-select-info'<'custom-select-item'><'custom-select-action'>>" +
+			"<'row'<'col-sm-12'tr>>" +
+			"<'pmd-card-footer' <'pmd-datatable-pagination' l i p>>",
+	});
+	
+	/// Select value
+	$('.custom-select-info').hide();
+	
+	$('#example-checkbox tbody').on( 'click', 'tr', function () {
+		if ( $(this).hasClass('selected') ) {
+			var rowinfo = $(this).closest('.dataTables_wrapper').find('.select-info').text();
+			$(this).closest('.dataTables_wrapper').find('.custom-select-info .custom-select-item').text(rowinfo);
+			if ($(this).closest('.dataTables_wrapper').find('.custom-select-info .custom-select-item').text() != null){
+				$(this).closest('.dataTables_wrapper').find('.custom-select-info').show();
+				//show delet button
+			} else{
+				$(this).closest('.dataTables_wrapper').find('.custom-select-info').hide();
+			}
+		}
+		else {
+			var rowinfo = $(this).closest('.dataTables_wrapper').find('.select-info').text();
+			$(this).closest('.dataTables_wrapper').find('.custom-select-info .custom-select-item').text(rowinfo);
+		}
+		if($('#example-checkbox').find('.selected').length == 0){
+			$(this).closest('.dataTables_wrapper').find('.custom-select-info').hide();
+		}
+	} );
+	$("div.data-table-title").html('<h2 class="pmd-card-title-text">Propeller Data table</h2>');
+	$(".custom-select-action").html('<button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary" type="button"><i class="material-icons pmd-sm">delete</i></button><button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary" type="button"><i class="material-icons pmd-sm">more_vert</button>');
+	
+} );
+</script>
+
+<!-- Responsive Data table js-->
+<script>
+//Propeller  Customised Javascript code 
+$(document).ready(function() {
+	var exampleDatatable = $('#example').DataTable({
+		responsive: {
+			details: {
+				type: 'column',
+				target: 'tr'
+			}
+		},
+		columnDefs: [ {
+			className: 'control',
+			orderable: false,
+			targets:   1
+		} ],
+		order: [ 1, 'asc' ],
+		bFilter: true,
+		bLengthChange: true,
+		pagingType: "simple",
+		"paging": true,
+		"searching": true,
+		"language": {
+			"info": " _START_ - _END_ of _TOTAL_ ",
+			"sLengthMenu": "<span class='custom-select-title'>Rows per page:</span> <span class='custom-select'> _MENU_ </span>",
+			"sSearch": "",
+			"sSearchPlaceholder": "Search",
+			"paginate": {
+				"sNext": " ",
+				"sPrevious": " "
+			},
+		},
+		dom:
+			"<'pmd-card-title'<'data-table-responsive pull-left'><'search-paper pmd-textfield'f>>" +
+			"<'row'<'col-sm-12'tr>>" +
+			"<'pmd-card-footer' <'pmd-datatable-pagination' l i p>>",
+	});
+	
+	/// Select value
+	$('.custom-select-info').hide();
+	
+	$(".data-table-responsive").html('<h2 class="pmd-card-title-text">Responsive Data table</h2>');
+	$(".custom-select-action").html('<button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary" type="button"><i class="material-icons pmd-sm">delete</i></button><button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary" type="button"><i class="material-icons pmd-sm">more_vert</i></button>');
+		
+} );
+</script>
+
+<!-- Inverse Table js-->
+<script>
+//Propeller  Customised Javascript code 
+$(document).ready(function() {
+	$('#tableInverse').DataTable({
+		responsive: {
+			details: {
+				type: 'column',
+				target: 'tr'
+			}
+		},
+		columnDefs: [ {
+			orderable: false,
+			className: 'select-checkbox',
+			targets:0,
+		} ],
+		select: {
+			style: 'multi',
+			selector: 'td:first-child'
+		},
+		order: [ 1, 'asc' ],
+		bFilter: true,
+		bLengthChange: true,
+		//pagingType: "simple",
+		"paging": true,
+		"searching": true,
+		"language": {
+			"info": " _START_ - _END_ of _TOTAL_ ",
+			"sLengthMenu": "<span class='custom-select-title'>Rows per page:</span> <span class='custom-select'> _MENU_ </span>",
+			"sSearch": "",
+			"sSearchPlaceholder": "Search",
+			"paginate": {
+				"sNext": " ",
+				"sPrevious": " "
+			},
+		},
+		dom:
+			"<'pmd-card-title'<'data-table-inverse'><'search-paper pmd-textfield'f>>" +
+			"<'custom-select-info'<'custom-select-item'><'custom-select-action'>>" +
+			"<'row'<'col-sm-12'tr>>" +
+			"<'pmd-card-footer' <'pmd-datatable-pagination' l i p>>",
+	});
+	
+	/// Select value
+	$('.custom-select-info').hide();
+	  
+	$('#tableInverse tbody').on( 'click', 'tr', function () {
+		if ( $(this).hasClass('selected') ) {
+			var rowinfo = $(this).closest('.dataTables_wrapper').find('.select-info').text();
+			$(this).closest('.dataTables_wrapper').find('.custom-select-info .custom-select-item').text(rowinfo);
+			if ($(this).closest('.dataTables_wrapper').find('.custom-select-info .custom-select-item').text() != null){
+				$(this).closest('.dataTables_wrapper').find('.custom-select-info').show();
+				//show delet button
+			} else{
+				$(this).closest('.dataTables_wrapper').find('.custom-select-info').hide();
+			}
+		}
+		else {
+			var rowinfo = $(this).closest('.dataTables_wrapper').find('.select-info').text();
+			$(this).closest('.dataTables_wrapper').find('.custom-select-info .custom-select-item').text(rowinfo);
+		}
+		if($('#tableInverse').find('.selected').length == 0){
+			$(this).closest('.dataTables_wrapper').find('.custom-select-info').hide();
+		}
+	});
+	$("div.data-table-inverse").html('<h2 class="pmd-card-title-text">Inverse Table</h2>');
+	$(".custom-select-action").html('<button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary" type="button"><i class="material-icons pmd-sm">delete</i></button><button class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect btn-primary" type="button"><i class="material-icons pmd-sm">more_vert</i></button>');
+	
+} );
+</script>
+
+</body>
+</html>

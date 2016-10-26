@@ -4,9 +4,9 @@
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
-$( document ).ready(function() {
-	
-	// Propeller Textfield component js function --------------------------------//
+$( document ).ready(function() { 
+
+	// ------- Propeller Textfield component js function ------- // 
 	// paper input
 	$(".pmd-textfield-focused").remove();
 	$(".pmd-textfield .form-control").after('<span class="pmd-textfield-focused"></span>');
@@ -33,11 +33,10 @@ $( document ).ready(function() {
       	}
 		$(this).closest('.pmd-textfield').removeClass("pmd-textfield-floating-label-active");
     });
-	
-	// Propeller Checkbox component js function --------------------------------//
-	// custam check box
+
+	// ------- Propeller Checkbox component js function ------- //
 	$('.pmd-checkbox input').after('<span class="pmd-checkbox-label">&nbsp;</span>');
-	//-- Checkbox Ripple Effect --//
+	// Ripple Effect //
 	$(".pmd-checkbox-ripple-effect").on('mousedown', function(e) {
 		var rippler = $(this);
 		$('.ink').remove();
@@ -67,10 +66,8 @@ $( document ).ready(function() {
 		}, 1500);
 	})
 	
-	// Propeller Radio component js function --------------------------------//
-	// custam radio
+	// ------- Propeller Radio component js function ------- //
 	$('.pmd-radio input').after('<span class="pmd-radio-label">&nbsp;</span>');
-	
 	//-- Radio Ripple Effect --//
 	$(".pmd-radio-ripple-effect").on('mousedown', function(e) {
 		var rippler = $(this);
@@ -101,7 +98,7 @@ $( document ).ready(function() {
 		}, 1500);
 	})
 	
-	// Propeller Dropdown component js function --------------------------------//
+	// ------- Propeller Dropdown component js function ------- //
 	$('.pmd-dropdown .dropdown-menu').wrap( "<div class='pmd-dropdown-menu-container'></div>" );
 	$('.pmd-dropdown .dropdown-menu').before('<div class="pmd-dropdown-menu-bg"></div>');
 	var dropdown = $('.pmd-dropdown');
@@ -179,6 +176,7 @@ $( document ).ready(function() {
 				var h = that.outerHeight();
 				var dcdmc = that.closest('.pmd-dropdown-menu-container');
 				var dcdmbg = dcdmc.find('.pmd-dropdown-menu-bg');
+				
 				if (hassidebar) {
 					that.first().stop(true, true).slideDown();
 				} else if ( dropdowncenter ) {
@@ -215,15 +213,14 @@ $( document ).ready(function() {
 				// $('.dropdown-menu').removeAttr('style');
 				var hassidebar = $(this).closest('.pmd-sidebar').hasClass('pmd-sidebar');
 				var that = $(this).find('.dropdown-menu');
-
 				if (hassidebar && !$(this).hasClass("open")) {
 					dropdown.removeClass("open");
 					$('.dropdown-menu').slideUp(300);
 				//	 $(this).addClass("open");
 				}else if($(this).parents("aside").hasClass("pmd-sidebar")){
-					
 					$('.dropdown-menu').slideUp(300);
 				}
+				
 				this.closable = true; 
 			});
 			// Add slideup animation to dropdown
@@ -272,7 +269,7 @@ $( document ).ready(function() {
 		pmdsidebardropdown();
 	});
 	
-	// Propeller Ripple Effect component js function --------------------------------//
+	// ------- Propeller Ripple Effect component js function ------- //
 	$(".pmd-ripple-effect").on('mousedown touchstart', function(e) {
 		var rippler = $(this);
 		$('.ink').remove();
@@ -303,7 +300,7 @@ $( document ).ready(function() {
 		}, 1500);
 	})
 	
-	// Propeller Modal component js function --------------------------------//
+	// ------- Propeller Modal component js function ------- //
 	function reposition() {
 		var modal = $(this),
 			dialog = modal.find('.modal-dialog');
@@ -311,13 +308,12 @@ $( document ).ready(function() {
 			dialog.css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 2));
 			$(".modal .actions").css("margin-top", Math.max(0, ($(window).height() - dialog.height()) / 2));
 	}
-	// Reposition when a modal is shown
 	$('.modal').on('show.bs.modal', reposition);
 	$(window).on('resize', function() {
 		$('.modal:visible').each(reposition);
 	});
 	
-	// Propeller Accordion component js function --------------------------------//
+	// ------- Propeller Accordion component js function ------- //
 	//custom function to add and remove active class
 	$(function () {			
 		$(".collapse.in").parents(".panel").addClass("active");
@@ -360,7 +356,7 @@ $( document ).ready(function() {
 			}
 		});
 				
-		// custom function for expand all and collapse all button 
+		//  custom function for expand all and collapse all button 
 		$('#expandAll').on('click',function(){
 			var GetID = $(this).attr("data-target");
 			$('#' + GetID +' '+'a[data-toggle="collapse"]').each(function(){
@@ -385,7 +381,7 @@ $( document ).ready(function() {
 	});
 	
 	
-	// Propeller Alert component js function --------------------------------//
+	// ------- Propeller Alert component js function ------- //
 	$(".pmd-alert-toggle").click(function(){
 		$positionX = $(this).attr("data-positionX");
 		$positionY = $(this).attr("data-positionY");
@@ -462,7 +458,7 @@ $( document ).ready(function() {
 		$(this).parents(".pmd-alert").slideUp(function(){$(this).removeClass("visible" +" "+ $dataEffect).remove();});	
 	});
 	
-	// Propeller Popover component js function --------------------------------//
+	// ------- Propeller Popover component js function ------- //
 	$('.popover-html[data-toggle="popover"]').popover({
 		html: true,
 		content : function(){
@@ -544,7 +540,7 @@ $( document ).ready(function() {
 	});
 	
 });
-	// Propeller Tab component js function --------------------------------//
+	// ------- Propeller Tab component js function ------- //
 	(function($) {
 		$.fn.pmdTab = function( options ){
 			// Establish our default settings
@@ -731,7 +727,7 @@ $( document ).ready(function() {
 		};
 	}(jQuery));
 	
-	// Propeller Sidebar component js function --------------------------------//
+	// ------- Propeller Sidebar component js function ------- //
 	var overlay = $('.pmd-sidebar-overlay');
 	var sidebar = $('.pmd-sidebar');
 	var lsidebar = $('.pmd-sidebar-left');
@@ -742,8 +738,11 @@ $( document ).ready(function() {
 	var sidebarImg = sidebarHeader.css('background-image');
 	var toggleButtons = $('.pmd-sidebar-toggle');
 	var pmdtopbartoggle = $('.topbar-fixed');
+	
 	$(document).ready(function() {
+	
 		// toggleButtons.css('display', 'none');
+	
 		// Left Sidebar
 		$('.pmd-sidebar-toggle').on( 'click', function(e) {
 			lsidebar.toggleClass('pmd-sidebar-open');

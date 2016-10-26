@@ -103,7 +103,7 @@ h2.typo-fill-secondary{ color:rgba(77, 87, 93, 0.68); font-size:22px;}
 }
 
 /*===================== marketplace card css new ============================*/
-.advertising-info{ min-height:271px;}
+.advertising-info{ min-height:262px;}
 @media (max-width: 1360px) {
 .advertising-info .pmd-display2{ font-size:20px;}
 }
@@ -553,7 +553,7 @@ h2.typo-fill-secondary{ color:rgba(77, 87, 93, 0.68); font-size:22px;}
 }
 .table-title-top-action{ margin-top:20px;}
 .table-title-top-action a.btn{ margin-left:20px;}
-.pmd-table-row-action{width:150px;}
+.pmd-table-row-action{width:156px;}
 .pmd-table-row-action a{ margin:-8px 0;}
 .direct-expand i::before{ content: "\e148"; font-family: "Material icons";}
 .direct-expand.child-table-collapse i::before{content: "\e15D";}
