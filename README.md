@@ -1,16 +1,34 @@
-Propeller is a front-end responsive framework based on Google's Material Design Standards & Bootstrap. [http://www.propeller.in/](http://www.propeller.in/)
+# Propeller Material Design
+
+Propeller is a front-end responsive framework 
+based on Google's Material Design Standards & Bootstrap.
+It makes your website more attractive, consistent, and functionally powerful.
 
 
-Propeller is the combination of Material design and Bootstrap that makes your website more attractive, consistent, and functionally powerful.
+## Key Features
 
-# Key Features:
-1) Responsive Component Library which contains 25 UI elements.
-2) Ready to use templates which speed up the Development process .
-3) Detailed User Manual which provided step by step usage of propeller UI elements.
+- Responsive Component Library which contains 25 UI elements
 
-# Browser Support
+- Ready to use templates which speed up the Development process 
 
-1) Firefox, Chrome, Safari Mac
-2) IE 9+
-3) Android 4.4+, Chrome for Android 44+
-4) iOS Safari 7+
+- Detailed User Manual which provided step by step usage of propeller UI elements.
+
+
+## Propeller Guideline
+
+Follow our [Guideline](http://propeller.in/docs/index.php) and get familiar with the basic setup and structure of Propeller.
+
+
+## Browser Support
+
+- Firefox, Chrome, Safari Mac
+- IE 9+
+- Android 4.4+, Chrome for Android 44+
+- iOS Safari 7+
+
+
+## License
+
+Propeller v1.0.0 (http://propeller.in)
+© 2016-2017 Digicorp, Inc.
+Licensed under [MIT](https://github.com/digicorp/propeller)
