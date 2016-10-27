@@ -3,8 +3,8 @@
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
 */
-.pmd-checkbox-pmd-ripple-effect {-webkit-transform: translateZ(0px); -moz-transform: translateZ(0px); -o-transform: translateZ(0px);-ms-transform: translateZ(0px); transform: translateZ(0px);}
-.checkbox .pmd-checkbox-pmd-ripple-effect{padding-left:0;}
+.pmd-checkbox-ripple-effect {-webkit-transform: translateZ(0px); -moz-transform: translateZ(0px); -o-transform: translateZ(0px);-ms-transform: translateZ(0px); transform: translateZ(0px);}
+.checkbox .pmd-checkbox-ripple-effect{padding-left:0;}
 .checkbox .pmd-checkbox{ padding-left:0;}
 .pmd-checkbox [type="checkbox"]:not(:checked),
 .pmd-checkbox [type="checkbox"]:checked { position: absolute; left: -9999px;}
@@ -33,10 +33,10 @@
 
 /* hover style just for information */
 .pmd-checkbox label:hover:before { border: 1px solid #4778d9!important;}
-.pmd-checkbox.pmd-checkbox-pmd-ripple-effect{ position:relative;}
+.pmd-checkbox.pmd-checkbox-ripple-effect{ position:relative;}
 .pmd-checkbox .pmd-checkboxwrap{ position:absolute; z-index:-1; height:40px; width:40px; border-radius:50%; overflow:hidden; top:-8px; left:-11px;}
 .checkbox-inline.pmd-checkbox{padding-left: 0;}
-.pmd-checkbox-pmd-ripple-effect .ink{ background-color:rgba(0, 0, 0, 0.2);}
+.pmd-checkbox-ripple-effect .ink{ background-color:rgba(0, 0, 0, 0.2);}
 
 /* card inverse disabled checkbox */
 .pmd-card-inverse .pmd-checkbox [type="checkbox"]:not(:checked) + .pmd-checkbox-label:before,

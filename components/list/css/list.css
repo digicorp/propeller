@@ -34,4 +34,4 @@
 .material-icons.media-right{padding-left:32px; vertical-align:top; display:table-cell;}
 .material-icons.media-middle{ vertical-align:middle; display:table-cell;}
 .media-left, .media > .pull-left {  padding-right: 16px;}
-.media-body{ word-break: break-all; word-wrap: break-word;}
+.media-body.pmd-word-break{ word-break: break-all; word-wrap: break-word;}

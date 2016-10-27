@@ -142,7 +142,6 @@ Propeller Table
 .pmd-table.table > thead > tr > td,
 .pmd-table.table > tbody > tr > td,
 .pmd-table.table > tfoot > tr > td{ vertical-align:middle;}
-.pmd-table-card.pmd-z-depth{ box-shadow:none; background-color:transparent;}
 .pmd-table-card .pmd-table.table { margin-bottom:0;}
 .pmd-table.table > thead > tr,
 .pmd-table.table > tbody > tr,
@@ -212,6 +211,7 @@ Table Card Inverse
 .pmd-table-card > .pmd-table.table-striped.table-inverse > tbody > tr > td:nth-child(odd) { background-color:#373a3c; }
 .pmd-table.table-bordered th,
 .pmd-table.table-bordered.table-inverse td{border-color:#55595c;}
+.pmd-table-card.pmd-z-depth{ box-shadow:none; background-color:transparent;}
 }
 
 /* -------------------------------------

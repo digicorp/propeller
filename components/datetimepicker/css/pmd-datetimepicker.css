@@ -5,10 +5,7 @@
 */
 
 /*Font CSS*/
- @import url(http://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900,100italic,300italic,400italic,500italic,700italic,900italic);
-
-body { font-family: 'Roboto'; font-size: 14px; line-height: 1.42857143;  color: #333;}
-
+.bootstrap-datetimepicker-widget { font-family: 'Roboto'; font-size: 14px; line-height: 1.42857143;  color: #333;}
 .bootstrap-datetimepicker-widget table td.day:hover,
 .bootstrap-datetimepicker-widget table td.hour:hover,
 .bootstrap-datetimepicker-widget table td.minute:hover,
