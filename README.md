@@ -30,7 +30,7 @@ Follow our [Guidelines](http://propeller.in/docs/index.php) and get familiar wit
 ## License
 
 Propeller v1.0.0 (http://propeller.in)
-© 2016-2017 Digicorp, Inc.
+© 2016-2017 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
 Licensed under [MIT](https://github.com/digicorp/propeller)
 
 
