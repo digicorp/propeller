@@ -9,14 +9,14 @@ It makes your website more attractive, consistent, and functionally powerful.
 
 - Responsive Component Library which contains 25 UI elements
 
-- Ready to use templates which speed up the Development process 
+- Ready to use template which speeds up the Development process 
 
-- Detailed User Manual which provided step by step usage of propeller UI elements.
+- Detailed User Manual which provides step by step usage of propeller UI elements.
 
 
 ## Propeller Guideline
 
-Follow our [Guideline](http://propeller.in/docs/index.php) and get familiar with the basic setup and structure of Propeller.
+Follow our [Guidelines](http://propeller.in/docs/index.php) and get familiar with the basic setup and structure of Propeller.
 
 
 ## Browser Support
@@ -32,3 +32,8 @@ Follow our [Guideline](http://propeller.in/docs/index.php) and get familiar with
 Propeller v1.0.0 (http://propeller.in)
 © 2016-2017 Digicorp, Inc.
 Licensed under [MIT](https://github.com/digicorp/propeller)
+
+
+## Author
+
+Developed and maintained at [Digicorp](https://www.digi-corp.com/).
