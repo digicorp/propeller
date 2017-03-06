@@ -1,12 +1,13 @@
+
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.0.0 (http://propeller.in): dropdown.css
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
 /* Dropdown container */
 .pmd-dropdown-menu-container{position: absolute; z-index: 999;}
-.pmd-dropdown-menu-bg{background-color: hsl(0, 0%, 100%); border: 1px solid hsl(0, 0%, 100%); border-radius: 0; -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .175); box-shadow: 0 0 5px rgba(0, 0, 0, .175);}
+.pmd-dropdown-menu-bg{background-color: hsl(0, 0%, 100%); border: 1px solid hsl(0, 0%, 100%); border-radius: 0; -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .175); box-shadow: 0 0 5px rgba(0, 0, 0, .175); border:none;}
 .pmd-dropdown-menu-bg{background-color: #fff; transform: scale(0); transform-origin:left top;  transition:transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s, opacity 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s; will-change: transform; position: absolute;}
 .pmd-dropdown .dropdown-menu { background-color:transparent; top:0; border: none; border-radius: 0; -webkit-box-shadow: none; box-shadow:none; opacity:0; -webkit-transition: all 0.3s ease-out; -moz-transition: all 0.3s ease-out; transition: all 0.3s ease-out; clip:rect(0 0 0 0);}
 
