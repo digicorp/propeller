@@ -1001,11 +1001,61 @@
                         //    component.find('span').toggleClass(options.icons.time + ' ' + options.icons.date);
                         //}
                     }
+					
+					/*********************************************/
+					currentActiveTime();
+		
+					function currentActiveTime() {
+						var currentActiveTm =  widget.find(".timepicker-hour").text();
+						var currentActiveMnt =  widget.find(".timepicker-minute").text();
+						var currentActiveScn =  widget.find(".timepicker-second").text();
+						widget.find(".hour").removeClass("acitve");
+						widget.find(".minute").removeClass("acitve");
+						widget.find(".second").removeClass("acitve");
+					
+						//alert(currentActiveTm);
+						widget.find(".minute").each(function(){
+							if($(this).text() == currentActiveMnt){
+								$(this).addClass("active");
+							}
+						});
+						widget.find(".hour").each(function(){
+							if($(this).text() == currentActiveTm){
+								$(this).addClass("active");
+							}
+						});
+						widget.find(".second").each(function(){
+							if($(this).text() == currentActiveScn){
+								$(this).addClass("active");
+							}
+						});
+						activeTimeAnimation()
+					}
+				
+					function activeTimeAnimation(){
+						var activeChildTm = widget.find(".hour.active").text();
+						var activeChildHr = widget.find(".minute.active").text();
+						var activeChildSc = widget.find(".second.active").text();
+						var currentActiveMnt =  widget.find(".timepicker-minute").text();
+						var currentActiveScn =  widget.find(".timepicker-second").text();
+						
+						widget.find(".hourHnad").addClass("hourHnad-"+activeChildTm);
+						widget.find(".secondHnad").addClass("secondHnad-"+currentActiveScn);
+						
+						if(widget.find(".minute").hasClass("active")){
+							widget.find(".minuteHnad").addClass("minuteHnad-"+activeChildHr);	
+						}
+						else {
+							widget.find(".minuteHnad").addClass("minuteHnad-"+currentActiveMnt);	
+						}
+					}
+					/**********************************************/
                 },
 
                 showPicker: function () {
                     widget.find('.timepicker > div:not(.timepicker-picker)').hide();
                     widget.find('.timepicker .timepicker-picker').show();
+
                 },
 
                 showHours: function () {
@@ -1015,6 +1065,55 @@
 				    widget.find('.timepicker .timepicker-hours').show();
 					$(".timepicker-minute, .timepicker-second").removeClass("active");
 					$(".timepicker-hour").addClass("active");
+
+					/*********************************************/
+					currentActiveTime();
+		
+					function currentActiveTime() {
+						var currentActiveTm =  widget.find(".timepicker-hour").text();
+						var currentActiveMnt =  widget.find(".timepicker-minute").text();
+						var currentActiveScn =  widget.find(".timepicker-second").text();
+						widget.find(".hour").removeClass("acitve");
+						widget.find(".minute").removeClass("acitve");
+						widget.find(".second").removeClass("acitve");
+					
+						//alert(currentActiveTm);
+						widget.find(".minute").each(function(){
+							if($(this).text() == currentActiveMnt){
+								$(this).addClass("active");
+							}
+						});
+						widget.find(".hour").each(function(){
+							if($(this).text() == currentActiveTm){
+								$(this).addClass("active");
+							}
+						});
+						widget.find(".second").each(function(){
+							if($(this).text() == currentActiveScn){
+								$(this).addClass("active");
+							}
+						});
+						activeTimeAnimation()
+					}
+				
+					function activeTimeAnimation(){
+						var activeChildTm = widget.find(".hour.active").text();
+						var activeChildHr = widget.find(".minute.active").text();
+						var activeChildSc = widget.find(".second.active").text();
+						var currentActiveMnt =  widget.find(".timepicker-minute").text();
+						var currentActiveScn =  widget.find(".timepicker-second").text();
+						
+						widget.find(".hourHnad").addClass("hourHnad-"+activeChildTm);
+						widget.find(".secondHnad").addClass("secondHnad-"+currentActiveScn);
+						
+						if(widget.find(".minute").hasClass("active")){
+							widget.find(".minuteHnad").addClass("minuteHnad-"+activeChildHr);	
+						}
+						else {
+							widget.find(".minuteHnad").addClass("minuteHnad-"+currentActiveMnt);	
+						}
+					}
+					/**********************************************/
 
 				},
 
@@ -1027,6 +1126,54 @@
 					$(".timepicker-hour, .timepicker-second").removeClass("active");
 					$(".timepicker-minute").addClass("active");
 					
+					/*********************************************/
+					currentActiveTime();
+		
+					function currentActiveTime() {
+						var currentActiveTm =  widget.find(".timepicker-hour").text();
+						var currentActiveMnt =  widget.find(".timepicker-minute").text();
+						var currentActiveScn =  widget.find(".timepicker-second").text();
+						widget.find(".hour").removeClass("acitve");
+						widget.find(".minute").removeClass("acitve");
+						widget.find(".second").removeClass("acitve");
+					
+						//alert(currentActiveTm);
+						widget.find(".minute").each(function(){
+							if($(this).text() == currentActiveMnt){
+								$(this).addClass("active");
+							}
+						});
+						widget.find(".hour").each(function(){
+							if($(this).text() == currentActiveTm){
+								$(this).addClass("active");
+							}
+						});
+						widget.find(".second").each(function(){
+							if($(this).text() == currentActiveScn){
+								$(this).addClass("active");
+							}
+						});
+						activeTimeAnimation()
+					}
+				
+					function activeTimeAnimation(){
+						var activeChildTm = widget.find(".hour.active").text();
+						var activeChildHr = widget.find(".minute.active").text();
+						var activeChildSc = widget.find(".second.active").text();
+						var currentActiveMnt =  widget.find(".timepicker-minute").text();
+						var currentActiveScn =  widget.find(".timepicker-second").text();
+						
+						widget.find(".hourHnad").addClass("hourHnad-"+activeChildTm);
+						widget.find(".secondHnad").addClass("secondHnad-"+currentActiveScn);
+						
+						if(widget.find(".minute").hasClass("active")){
+							widget.find(".minuteHnad").addClass("minuteHnad-"+activeChildHr);	
+						}
+						else {
+							widget.find(".minuteHnad").addClass("minuteHnad-"+currentActiveMnt);	
+						}
+					}
+					/**********************************************/
 					
                 },
 
@@ -1037,6 +1184,55 @@
                     widget.find('.timepicker .timepicker-seconds').show();
 					$(".timepicker-minute, .timepicker-hour").removeClass("active");
 					$(".timepicker-second").addClass("active");
+
+					/*********************************************/
+					currentActiveTime();
+		
+					function currentActiveTime() {
+						var currentActiveTm =  widget.find(".timepicker-hour").text();
+						var currentActiveMnt =  widget.find(".timepicker-minute").text();
+						var currentActiveScn =  widget.find(".timepicker-second").text();
+						widget.find(".hour").removeClass("acitve");
+						widget.find(".minute").removeClass("acitve");
+						widget.find(".second").removeClass("acitve");
+					
+						//alert(currentActiveTm);
+						widget.find(".minute").each(function(){
+							if($(this).text() == currentActiveMnt){
+								$(this).addClass("active");
+							}
+						});
+						widget.find(".hour").each(function(){
+							if($(this).text() == currentActiveTm){
+								$(this).addClass("active");
+							}
+						});
+						widget.find(".second").each(function(){
+							if($(this).text() == currentActiveScn){
+								$(this).addClass("active");
+							}
+						});
+						activeTimeAnimation()
+					}
+				
+					function activeTimeAnimation(){
+						var activeChildTm = widget.find(".hour.active").text();
+						var activeChildHr = widget.find(".minute.active").text();
+						var activeChildSc = widget.find(".second.active").text();
+						var currentActiveMnt =  widget.find(".timepicker-minute").text();
+						var currentActiveScn =  widget.find(".timepicker-second").text();
+						
+						widget.find(".hourHnad").addClass("hourHnad-"+activeChildTm);
+						widget.find(".secondHnad").addClass("secondHnad-"+currentActiveScn);
+						
+						if(widget.find(".minute").hasClass("active")){
+							widget.find(".minuteHnad").addClass("minuteHnad-"+activeChildHr);	
+						}
+						else {
+							widget.find(".minuteHnad").addClass("minuteHnad-"+currentActiveMnt);	
+						}
+					}
+					/**********************************************/
                 },
 
                 selectHour: function (e) {
@@ -1061,7 +1257,8 @@
                     }*/
 					
 					/*********************************************/
-					currentActiveTime();
+					
+					
 		
 					function currentActiveTime() {
 						var currentActiveTm =  widget.find(".timepicker-hour").text();
@@ -1252,9 +1449,17 @@
 				});
 				
 				/*********************************************/
-					currentActiveTime();
+/*				 	var currentFormat = ["DD","MM","YYYY","DD/MM","DD/YYYY","MM/YYYY","DD/MM/YYYY","","","","","","","","","","","","","","",];
+					var pickerFormat = picker.format();
+					if(!pickerFormat == currentFormat){
+//					if(!pickerFormat == "DD" || !pickerFormat == "MM" || !pickerFormat == "YYYY" || !pickerFormat == "DD/MM" || !pickerFormat == "DD/YYYY" || !pickerFormat == "MM/YYYY" || !pickerFormat == "DD/MM/YYYY"){
+						alert(pickerFormat);
+						currentActiveTime();
+					}*/
 		
-					function currentActiveTime() {
+					/*function currentActiveTime() {
+//						var abc = widget.find(".timepicker-hour").text();
+						
 						var currentActiveTm =  widget.find(".timepicker-hour").text();
 						var currentActiveMnt =  widget.find(".timepicker-minute").text();
 						var currentActiveScn =  widget.find(".timepicker-second").text();
