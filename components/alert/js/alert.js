@@ -1,28 +1,31 @@
+
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.0.0 (http://propeller.in): alert.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
 $(document).ready(function() {
 	$(".pmd-alert-toggle").click(function(){
-		$positionX = $(this).attr("data-positionX");
-		$positionY = $(this).attr("data-positionY");
-		$dataEffect = $(this).attr("data-effect");
-		$dataRevert = $(this).attr("data-revert");
-		$dataMessage = $(this).attr("data-message");
-		$dataType = $(this).attr("data-type");
-		$actionText = $(this).attr("data-action-text");
-		$action = $(this).attr("data-action");		
+		var $positionX = $(this).attr("data-positionX"),
+			$positionY = $(this).attr("data-positionY"),
+			$dataEffect = $(this).attr("data-effect"),
+			$dataMessage = $(this).attr("data-message"),
+			$dataType = $(this).attr("data-type"),
+			$actionText = $(this).attr("data-action-text"),
+			$action = $(this).attr("data-action");	
+			
+		if($(window).width() < 768){
+			$positionX = "center";
+		}else {
+			$positionX = $positionX;
+		}		
 
 		if(!$(".pmd-alert-container."+ $positionX +"."+ $positionY).length){
 			$('body').append("<div class='pmd-alert-container "+$positionX+" "+$positionY+"'></div>");
 		}
 			
-		$currentPath = $(".pmd-alert-container."+ $positionX +"."+ $positionY);
-		
-		$notification = notificationValue();
-		
+		var $currentPath = $(".pmd-alert-container."+ $positionX +"."+ $positionY);
 		function notificationValue(){
 			if($action == "true"){
 				if($actionText == null){
@@ -40,8 +43,14 @@ $(document).ready(function() {
 				return $notification;
 			}
 		}
-		
+		var $notification = notificationValue();
 		var boxLength = $(".pmd-alert-container."+ $positionX +"."+ $positionY + " .pmd-alert").length;
+		
+		if($(this).attr("data-duration") !== undefined){
+			var duration = $(this).attr("data-duration");
+		}else {
+			var duration = 3000;
+		}
 		
 		if (boxLength > 0) {
 			if ($positionY == 'top') {
@@ -54,7 +63,7 @@ $(document).ready(function() {
 			if($action == "true"){
 				$currentPath.children("[data-action='true']").addClass("visible" +" "+ $dataEffect);	
 			}else{
-				$currentPath.children("[data-action='false']").addClass("visible" +" "+ $dataEffect).delay(3000).slideUp(
+				$currentPath.children("[data-action='false']").addClass("visible" +" "+ $dataEffect).delay(duration).slideUp(
 					function(){
 						$(this).removeClass("visible" +" "+ $dataEffect).remove();
 					});	
@@ -66,18 +75,19 @@ $(document).ready(function() {
 			if($action == "true"){
 				$currentPath.children("[data-action='true']").addClass("visible" +" "+ $dataEffect);	
 			}else{
-				$currentPath.children("[data-action='false']").addClass("visible" +" "+ $dataEffect).delay(3000).slideUp(
+				$currentPath.children("[data-action='false']").addClass("visible" +" "+ $dataEffect).delay(duration).slideUp(
 					function(){
 						$(this).removeClass("visible" +" "+ $dataEffect).remove();
 					});	
 			}
 			$currentPath.children(".pmd-alert").eq(boxLength).addClass($dataType);
 		}
-		$middle = $(".pmd-alert").outerWidth() / 2;  
+		var $middle = $(".pmd-alert").outerWidth() / 2;  
 		$(".pmd-alert-container.center").css("marginLeft","-" + $middle+"px");
 	});
 	
 	$(document).on("click",".pmd-alert-close",function(){
+		var $dataEffect = $(this).attr("data-effect");
 		$(this).parents(".pmd-alert").slideUp(function(){$(this).removeClass("visible" +" "+ $dataEffect).remove();});	
 	});
 });
