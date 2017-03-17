@@ -13,7 +13,8 @@ $(document).ready(function() {
 			$dataMessage = $(this).attr("data-message"),
 			$dataType = $(this).attr("data-type"),
 			$actionText = $(this).attr("data-action-text"),
-			$action = $(this).attr("data-action");	
+			$action = $(this).attr("data-action"),
+			$duration;	
 			
 		if($(window).width() < 768){
 			$positionX = "center";
@@ -47,9 +48,9 @@ $(document).ready(function() {
 		var boxLength = $(".pmd-alert-container."+ $positionX +"."+ $positionY + " .pmd-alert").length;
 		
 		if($(this).attr("data-duration") !== undefined){
-			var duration = $(this).attr("data-duration");
+			$duration = $(this).attr("data-duration");
 		}else {
-			var duration = 3000;
+			$duration = 3000;
 		}
 		
 		if (boxLength > 0) {
@@ -63,7 +64,7 @@ $(document).ready(function() {
 			if($action == "true"){
 				$currentPath.children("[data-action='true']").addClass("visible" +" "+ $dataEffect);	
 			}else{
-				$currentPath.children("[data-action='false']").addClass("visible" +" "+ $dataEffect).delay(duration).slideUp(
+				$currentPath.children("[data-action='false']").addClass("visible" +" "+ $dataEffect).delay($duration).slideUp(
 					function(){
 						$(this).removeClass("visible" +" "+ $dataEffect).remove();
 					});	
@@ -75,7 +76,7 @@ $(document).ready(function() {
 			if($action == "true"){
 				$currentPath.children("[data-action='true']").addClass("visible" +" "+ $dataEffect);	
 			}else{
-				$currentPath.children("[data-action='false']").addClass("visible" +" "+ $dataEffect).delay(duration).slideUp(
+				$currentPath.children("[data-action='false']").addClass("visible" +" "+ $dataEffect).delay($duration).slideUp(
 					function(){
 						$(this).removeClass("visible" +" "+ $dataEffect).remove();
 					});	
