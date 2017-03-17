@@ -1,5 +1,6 @@
+
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.0.0 (http://propeller.in): radio.css
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -10,9 +11,9 @@
 /*Custamize Radio*/
 .pmd-radio > span.pmd-radio-label {display: inline-block; position: relative;	margin-right:8px;	padding-left: 16px;	cursor: pointer;}
 .pmd-radio > span.pmd-radio-label:before {content: ""; display: block; position: absolute; width: 18px; height: 18px; left: 0; top:2px; border: 2px solid rgba(0, 0, 0, 0.54);	border-radius: 18px;}
-.pmd-radio > span.pmd-radio-label:after {content: "";	display: block;	position: absolute;	top: 12px; background: rgba(0, 0, 0, 0.54); border-radius: 4px;	transition: .2s ease-in-out; height:8px; width:8px; margin-top:-5px; left:5px; transform:scale(0)}
+.pmd-radio > span.pmd-radio-label:after {content: "";	display: block;	position: absolute;	top: 12px; background: rgba(0, 0, 0, 0.54); border-radius: 4px;	transition: .2s ease-in-out; height:8px; width:8px; margin-top:-5px; left:5px; -ms-transform:scale(0); transform:scale(0)}
 /*Select Radio*/
-.pmd-radio :checked + span.pmd-radio-label:after {transform:scale(1)}
+.pmd-radio :checked + span.pmd-radio-label:after {-ms-transform:scale(1);transform:scale(1)}
 /*Radio Layput*/
 .radio-inline.pmd-radio {padding-left: 0;}
 .pmd-radio .ink { background-color: rgba(0, 0, 0, 0.2);}

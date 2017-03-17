@@ -1,5 +1,11 @@
+
+/*!
+ * Propeller v1.0.0 (http://propeller.in): popover.js
+ * Copyright 2016-2017 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
 $(document).ready(function(){
-	
 		$('.popover-html[data-toggle="popover"]').popover({
 			html: true,
 			content : function(){

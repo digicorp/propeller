@@ -11,13 +11,12 @@
 .modal-header h2.pmd-card-title-text{font-weight:500;}
 .pmd-modal-list{ margin-bottom:16px; margin-top:16px;}
 .modal-body{color: rgba(0, 0, 0, 0.84);margin-bottom:16px;margin-top:16px;padding:0 16px;}
-.modal-body .list-group-item{}
 .modal-body > p:last-child{margin-bottom:0;}
 .modal-footer{padding:16px;}
 .pmd-modal-action{padding:8px 4px;}
 .pmd-modal-action .btn.pmd-btn-fab {padding: 0;}
 .pmd-modal-action.pmd-modal-bordered {border-top:1px solid #e5e5e5;}
-.pmd-modal-action .btn {min-width: inherit;padding: 10px 8px;margin-bottom: 8px;margin-left: 4px;margin-right: 4px;margin-top:8px;}
+.pmd-modal-action .btn {min-width:inherit; padding: 10px 8px; margin:8px 4px;}
 .pmd-modal-action .btn:first-child {margin-left: 12px;}
 .pmd-modal-action .btn.pmd-btn-flat:first-child{margin-left: 4px;}
 .pmd-modal-action .pmd-btn-flat{margin:0 4px 0 0;}
@@ -30,6 +29,6 @@
 .form-horizontal .form-group{ margin-left:0; margin-right:0;}
 
 /* Modal center */
-.pmd-modal-center { text-align:center; padding:0 !important;}
+.pmd-modal-center { text-align:center;}
 .pmd-modal-center:before { content: ''; display:inline-block; height: 100%; vertical-align: middle; margin-right: -4px;}
 .pmd-modal-center .modal-dialog { display:inline-block; text-align:left; vertical-align:middle;}

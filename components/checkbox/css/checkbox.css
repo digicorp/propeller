@@ -1,9 +1,11 @@
+
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.0.0 (http://propeller.in): card.css
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
 */
-.pmd-checkbox-ripple-effect {-webkit-transform: translateZ(0px); -moz-transform: translateZ(0px); -o-transform: translateZ(0px);-ms-transform: translateZ(0px); transform: translateZ(0px);}
+
+.pmd-checkbox-ripple-effect {-ms-transform: translateZ(0px); transform: translateZ(0px);}
 .checkbox .pmd-checkbox-ripple-effect{padding-left:0;}
 .checkbox .pmd-checkbox{ padding-left:0;}
 .pmd-checkbox [type="checkbox"]:not(:checked),
@@ -32,7 +34,7 @@
 .checkbox.disabled label.pmd-checkbox, fieldset[disabled] .checkbox label.pmd-checkbox { color:rgba(0, 0, 0, 0.26);}
 
 /* hover style just for information */
-.pmd-checkbox label:hover:before { border: 1px solid #4778d9!important;}
+.pmd-checkbox label:hover:before { border: 1px solid #4778d9;}
 .pmd-checkbox.pmd-checkbox-ripple-effect{ position:relative;}
 .pmd-checkbox .pmd-checkboxwrap{ position:absolute; z-index:-1; height:40px; width:40px; border-radius:50%; overflow:hidden; top:-8px; left:-11px;}
 .checkbox-inline.pmd-checkbox{padding-left: 0;}

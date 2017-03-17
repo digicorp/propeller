@@ -1,16 +1,16 @@
+
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.0.0 (http://propeller.in): button.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
-// Ripple Effect -----------------------------------------------------------------//
 $( document ).ready(function() {
 	$(".pmd-ripple-effect").on('mousedown touchstart', function(e) {
 		var rippler = $(this);
 		$('.ink').remove();
 		// create .ink element if it doesn't exist
-		if(rippler.find(".ink").length == 0) {
+		if(rippler.find(".ink").length === 0) {
 			rippler.append("<span class='ink'></span>");
 		}
 		var ink = rippler.find(".ink");

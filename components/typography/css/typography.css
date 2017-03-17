@@ -1,5 +1,6 @@
+
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.0.0 (http://propeller.in): typography.css
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -7,7 +8,7 @@
 html { font-size: 16px; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}
 body { font-family: 'Roboto'; font-size: 0.875rem; line-height: 1.6; color: #333; background-color: #ededed;}
 a{ color: #337ab7; text-decoration: none; outline:none;}
-a:focus, a:hover { outline: none; outline: none; outline-offset:-2px; text-decoration:none;}
+a:focus, a:hover { outline: none; outline-offset:-2px; text-decoration:none;}
 
 /* Headings */
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 { font-weight: normal;}

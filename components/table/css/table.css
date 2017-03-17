@@ -1,5 +1,6 @@
+
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.0.0 (http://propeller.in): table.css
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -145,13 +146,13 @@ Propeller Table
 .pmd-table-card .pmd-table.table { margin-bottom:0;}
 .pmd-table.table > thead > tr,
 .pmd-table.table > tbody > tr,
-.pmd-table.table > tfoot > tr { -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease;}
+.pmd-table.table > tfoot > tr { transition: all 0.3s ease;}
 .pmd-table.table > thead > tr > th,
 .pmd-table.table > tbody > tr > th,
 .pmd-table.table > tfoot > tr > th,
 .pmd-table.table > thead > tr > td,
 .pmd-table.table > tbody > tr > td,
-.pmd-table.table > tfoot > tr > td { text-align: left; -webkit-transition: all 0.3s ease; -o-transition: all 0.3s ease; transition: all 0.3s ease;}
+.pmd-table.table > tfoot > tr > td { text-align: left; transition: all 0.3s ease;}
 .pmd-table.table > thead > tr > th {font-weight: 400; color:rgba(0, 0, 0, 0.54); border-top:none; border-bottom-width: 1px; font-size:0.8rem; line-height: 1.5;}
 
 
@@ -181,8 +182,8 @@ Table Card
 .pmd-table-card .table.pmd-table tbody tr td { background-color: #ffffff; display: block; vertical-align: middle; text-align: right;}
 .pmd-table-card .table.pmd-table tbody tr td[data-title]:before { content: attr(data-title); float: left; font-size: inherit; font-weight: 400; color: #757575;}
 
-.pmd-table-card.shadow-z-1 {-webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none;}
-.pmd-table-card.shadow-z-1 .table tbody tr {border: none; -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);}
+.pmd-table-card.shadow-z-1 { box-shadow: none;}
+.pmd-table-card.shadow-z-1 .table tbody tr {border: none; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);}
 
 /* -------------------------------------
 Bordered Table Card */

@@ -1,10 +1,10 @@
+
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.0.0 (http://propeller.in): checkbox.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
-// Checkbox -----------------------------------------------------------------//
 $( document ).ready(function() {
 	$('.pmd-checkbox input').after('<span class="pmd-checkbox-label">&nbsp;</span>');
 	// Ripple Effect //
@@ -12,7 +12,7 @@ $( document ).ready(function() {
 		var rippler = $(this);
 		$('.ink').remove();
 		// create .ink element if it doesn't exist
-		if(rippler.find(".ink").length == 0) {
+		if(rippler.find(".ink").length === 0) {
 			rippler.append('<span class="ink"></span>');
 		}
 		var ink = rippler.find(".ink");
@@ -21,7 +21,7 @@ $( document ).ready(function() {
 		// set .ink diametr
 		if(!ink.height() && !ink.width())
 		{
-			var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+		//	var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
 			ink.css({height: 20, width: 20});
 		}
 		// get click coordinates
