@@ -21,9 +21,12 @@
 				});
 				return itemsWidth;
 			};
-			
 			var appendulwidth = function(){
-				$this.find('ul.nav-tabs').width(widthOfList())
+				if($this.find('ul.nav-tabs').hasClass("nav-justified")){
+					$this.find('ul.nav-tabs').width("100%")
+				}else {
+					$this.find('ul.nav-tabs').width(widthOfList())
+				}
 			};
 			
 			var getLeftPosi = function(){
