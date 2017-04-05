@@ -1,0 +1,31 @@
+{
+  "name": "propellerkit-range-slider",
+  "version": "0.0.4",
+  "description": "propellerkit-range-slider is a front-end responsive component based on Google's Material Design Standards & Bootstrap.",
+  "homepage": "http://propeller.in/",
+  "author": "Digicorp, Inc",
+  "license": "MIT",
+  "main":"css/pmd-datatable.css",
+  "scripts": {
+    "test": "npm install propellerkit-range-slider"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digicorp/propeller/tree/master/components/range-slider"
+  },
+  "keywords": [
+   "css",
+   "js",
+   "mobile-first",
+   "responsive",
+   "front-end",
+   "framework",
+   "web",
+   "range-slider"
+  ],
+  "dependencies": {
+   "propellerkit":"*.*.*",
+   "nouislider": "^8.5.1",
+   "wnumb": "1.1.0"
+  }
+}
