@@ -1,0 +1,30 @@
+{
+  "name": "propellerkit-custom-scrollbar",
+  "version": "0.0.3",
+  "description": "propellerkit-custom-scrollbar is a front-end responsive component based on Google's Material Design Standards & Bootstrap.",
+  "homepage": "http://propeller.in/",
+  "author": "Digicorp, Inc",
+  "license": "MIT",
+  "main":"css/pmd-scrollbar.css",
+  "scripts": {
+    "test": "npm install propellerkit-custom-scrollbar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digicorp/propeller/tree/master/components/custom-scrollbar"
+  },
+  "keywords": [
+   "css",
+   "js",
+   "mobile-first",
+   "responsive",
+   "front-end",
+   "framework",
+   "web",
+   "custom-scrollbar"
+  ],
+  "dependencies": {
+    "propellerkit":"*.*.*",
+    "malihu-custom-scrollbar-plugin": "^3.0.9"
+  }
+}
