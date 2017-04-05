@@ -1,0 +1,30 @@
+{
+  "name": "propellerkit-datetimepicker",
+  "version": "0.0.2",
+  "description": "propellerkit-datetimepicker is a front-end responsive component based on Google's Material Design Standards & Bootstrap.",
+  "homepage": "http://propeller.in/",
+  "author": "Digicorp, Inc",
+  "license": "MIT",
+  "main":"css/pmd-datatable.css",
+  "scripts": {
+    "test": "npm install propellerkit-datetimepicker"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digicorp/propeller/tree/master/components/datetimepicker"
+  },
+  "keywords": [
+   "css",
+   "js",
+   "mobile-first",
+   "responsive",
+   "front-end",
+   "framework",
+   "web",
+   "datetimepicker"
+  ],
+  "dependencies": {
+    "propellerkit":"*.*.*",
+    "moment": "^2.9.0"
+  }
+}
