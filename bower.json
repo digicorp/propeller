@@ -1,26 +1,32 @@
 {
   "name": "propeller",
-  "version": "0.0.4",
+  "description": "Propeller is a front-end responsive framework based on Google's Material Design Standards & Bootstrap.",
+  "keywords": [
+  	"css",
+  	"js",
+  	"mobile-first",
+  	"responsive",
+  	"front-end",
+  	"framework",
+  	"web"
+  ],
+  "version": "0.0.5",
   "homepage": "http://propeller.in/",
   "authors": [
     "Digicorp, Inc"
   ],
-  "description": "Propeller is a front-end responsive framework based on Google's Material Design Standards & Bootstrap.",
-  "main": "dist\\js\\propeller.js",
-  "keywords": [
-   "css",
-  "js",
-  "mobile-first",
-  "responsive",
-  "front-end",
-  "framework",
-  "web"
+  "main": [
+    "dist/css/propeller.css",
+    "dist/js/propeller.js"
   ],
   "license": "MIT",
   "ignore": [
     "archive",
+	"assets",
+	".gitignore",
+	".npmignore",
     "templates",
-	   "components/*/snippets/**"
+	"components/*/snippets/**"
   ],
   "dependencies": {
     "bootstrap": "^3.0.0",
