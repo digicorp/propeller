@@ -1,6 +1,6 @@
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): floating-action-button.css
+ * Propeller v1.1.0 (http://propeller.in): floating-action-button.css
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -17,7 +17,7 @@
 .pmd-floating-action-btn:not(:last-child):nth-last-child(4) { transition-delay: 200ms;}
 .pmd-floating-action-btn:not(:last-child):nth-last-child(5) { transition-delay: 250ms;}
 .pmd-floating-action-btn:not(:last-child):nth-last-child(6) { transition-delay: 300ms;}
-.pmd-floating-action:hover .pmd-floating-action-btn, .menu--floating--open .pmd-floating-action-btn { opacity: 1; -ms-transform: none; transform: none; position:relative; bottom:auto;}
+.pmd-floating-action:hover .pmd-floating-action-btn, .menu--floating--open .pmd-floating-action-btn { opacity: 1; -ms-transform: none; transform: none;/* position:relative; bottom:auto; */}
 .pmd-floating-action:hover .pmd-floating-action-btn:before, .menu--floating--open .pmd-floating-action-btn:before { opacity: 1;}
 .pmd-floating-hidden{ display:none;}
 .pmd-floating-action-btn.btn:hover{ overflow:visible;}

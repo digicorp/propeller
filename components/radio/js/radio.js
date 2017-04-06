@@ -1,6 +1,6 @@
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): radio.js
+ * Propeller v1.1.0 (http://propeller.in): radio.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */

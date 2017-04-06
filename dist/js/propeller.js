@@ -1,7 +1,7 @@
 "use strict";
 
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.1.0 (http://propeller.in)
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -37,7 +37,7 @@ $(document).ready(function () {
 });
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): checkbox.js
+ * Propeller v1.1.0 (http://propeller.in): checkbox.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -75,7 +75,7 @@ $(document).ready(function () {
 });
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): radio.js
+ * Propeller v1.1.0 (http://propeller.in): radio.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -113,7 +113,7 @@ $(document).ready(function () {
 });
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): button.js
+ * Propeller v1.1.0 (http://propeller.in): button.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -150,7 +150,7 @@ $(document).ready(function () {
 });
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): dropdown.js
+ * Propeller v1.1.0 (http://propeller.in): dropdown.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -344,7 +344,7 @@ $(document).ready(function () {
 });
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): accordion.js
+ * Propeller v1.1.0 (http://propeller.in): accordion.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -409,7 +409,7 @@ $(document).ready(function () {
 });
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): alert.js
+ * Propeller v1.1.0 (http://propeller.in): alert.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -502,12 +502,13 @@ $(document).ready(function () {
 });
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): popover.js
+ * Propeller v1.1.0 (http://propeller.in): popover.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
 $(document).ready(function () {
+
 	$('.popover-html[data-toggle="popover"]').popover({
 		html: true,
 		content: function content() {
@@ -573,6 +574,7 @@ $(document).ready(function () {
 			}
 		}
 	};
+
 	$('[data-toggle="popover"]').popover(options);
 
 	$('[data-toggle="popover"]').on('shown.bs.popover', function () {
@@ -585,7 +587,7 @@ $(document).ready(function () {
 });
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): tab.js
+ * Propeller v1.1.0 (http://propeller.in): tab.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -608,9 +610,14 @@ $(document).ready(function () {
 				return itemsWidth;
 			};
 			var appendulwidth = function appendulwidth() {
+
+				var hasclass = $this.attr("class");
+				$("." + hasclass + ":hidden").not("script").addClass("notVisible");
+				$this.parents(":hidden").not("script").find("ul.nav-tabs").addClass("notVisible");
+
 				if ($this.find('ul.nav-tabs').hasClass("nav-justified")) {
 					$this.find('ul.nav-tabs').width("100%");
-				} else {
+				} else if ($this.hasClass("notVisible")) {} else {
 					$this.find('ul.nav-tabs').width(widthOfList());
 				}
 			};
@@ -798,7 +805,7 @@ $(document).ready(function () {
 })(jQuery);
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): sidebar.js
+ * Propeller v1.1.0 (http://propeller.in): sidebar.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */

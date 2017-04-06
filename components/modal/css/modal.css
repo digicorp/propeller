@@ -1,6 +1,6 @@
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): modal.css
+ * Propeller v1.1.0 (http://propeller.in): modal.css
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -29,6 +29,6 @@
 .form-horizontal .form-group{ margin-left:0; margin-right:0;}
 
 /* Modal center */
-.pmd-modal-center { text-align:center;}
-.pmd-modal-center:before { content: ''; display:inline-block; height: 100%; vertical-align: middle; margin-right: -4px;}
-.pmd-modal-center .modal-dialog { display:inline-block; text-align:left; vertical-align:middle;}
+.modal { text-align:center;}
+.modal:before { content: ''; display:inline-block; height: 100%; vertical-align: middle; margin-right: -4px;}
+.modal .modal-dialog { display:inline-block; text-align:left; vertical-align:middle;}

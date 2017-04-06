@@ -1257,10 +1257,11 @@
                     }*/
 					
 					/*********************************************/
-					
-					
+
+					currentActiveTime();
 		
 					function currentActiveTime() {
+
 						var currentActiveTm =  widget.find(".timepicker-hour").text();
 						var currentActiveMnt =  widget.find(".timepicker-minute").text();
 						var currentActiveScn =  widget.find(".timepicker-second").text();
@@ -1314,7 +1315,7 @@
 					
 					/*********************************************/
 					currentActiveTime();
-		
+
 					function currentActiveTime() {
 						var currentActiveTm =  widget.find(".timepicker-hour").text();
 						var currentActiveMnt =  widget.find(".timepicker-minute").text();
@@ -1449,16 +1450,8 @@
 				});
 				
 				/*********************************************/
-/*				 	var currentFormat = ["DD","MM","YYYY","DD/MM","DD/YYYY","MM/YYYY","DD/MM/YYYY","","","","","","","","","","","","","","",];
-					var pickerFormat = picker.format();
-					if(!pickerFormat == currentFormat){
-//					if(!pickerFormat == "DD" || !pickerFormat == "MM" || !pickerFormat == "YYYY" || !pickerFormat == "DD/MM" || !pickerFormat == "DD/YYYY" || !pickerFormat == "MM/YYYY" || !pickerFormat == "DD/MM/YYYY"){
-						alert(pickerFormat);
-						currentActiveTime();
-					}*/
-		
-					/*function currentActiveTime() {
-//						var abc = widget.find(".timepicker-hour").text();
+					/*currentActiveTime();
+					function currentActiveTime(){
 						
 						var currentActiveTm =  widget.find(".timepicker-hour").text();
 						var currentActiveMnt =  widget.find(".timepicker-minute").text();

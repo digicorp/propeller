@@ -1,6 +1,6 @@
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): tab.js
+ * Propeller v1.1.0 (http://propeller.in): tab.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -22,10 +22,16 @@
 				return itemsWidth;
 			};
 			var appendulwidth = function(){
+
+				var hasclass = $this.attr("class");
+				$("."+hasclass+":hidden").not("script").addClass("notVisible");
+				$this.parents(":hidden").not("script").find("ul.nav-tabs").addClass("notVisible");
+				
 				if($this.find('ul.nav-tabs').hasClass("nav-justified")){
 					$this.find('ul.nav-tabs').width("100%")
+				} else if ($this.hasClass("notVisible")){
 				}else {
-					$this.find('ul.nav-tabs').width(widthOfList())
+					$this.find('ul.nav-tabs').width(widthOfList());	
 				}
 			};
 			
