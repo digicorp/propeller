@@ -1,10 +1,10 @@
+
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.0.0 (http://propeller.in): list.css
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
-/*Propeller*/
 .pmd-card-list{ padding-bottom: 8px; padding-top: 8px; margin-bottom:0; background-color:#fff;}
 .list-group-item { padding-top:16px; padding-bottom:18px; margin-bottom: -1px; border: inherit; line-height:1.4;}
 .list-group-item-heading {margin-top: 0; margin-bottom: 0; display:block; line-height:1.4;}
@@ -20,9 +20,6 @@
 
 /*Icon textlist twoline*/
 .pmd-list-twoline .list-group-item{ padding-bottom:12px; padding-top:12px;}
-
-/*Icon iconlist twoline*/
-.pmd-list-icon .list-group-item{}
 
 /*Icon list*/
 .pmd-list-avatar{ padding:8px 0;}

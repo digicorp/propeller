@@ -94,7 +94,7 @@
                 });
             });
 
-            function openDropdown(event) {
+            function openDropdown() {
                 if($this.parents(".navbar").find(".navbar-toggle").is(":visible")) {
                     // If we're inside a navbar, don't do anything when the
                     // navbar is collapsed, as it makes the navbar pretty unusable.

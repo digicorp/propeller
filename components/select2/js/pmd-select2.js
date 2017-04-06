@@ -10,7 +10,7 @@ $( document ).ready(function() {
 	$eventSelect.on("select2:close", function () {
 		$(".pmd-textfield").removeClass("pmd-textfield-floating-label-active"); 
 		var selected_value = $(this).val();
-   		if (selected_value==0 || selected_value=='') {
+   		if (selected_value==0 || selected_value=='' || selected_value==undefined) {
 			$(this).closest('.pmd-textfield').removeClass("pmd-textfield-floating-label-completed");
    		} else {
 			$(this).closest('.pmd-textfield').addClass("pmd-textfield-floating-label-completed");
@@ -18,7 +18,7 @@ $( document ).ready(function() {
 	});
 	$eventSelect.each(function(){
 		var selected_value = $(this).val();
-   		if (selected_value==0 || selected_value=='') {
+   		if (selected_value==0 || selected_value=='' || selected_value==undefined) {
 			$(this).closest('.pmd-textfield').removeClass("pmd-textfield-floating-label-completed");
    		} else {
 			$(this).closest('.pmd-textfield').addClass("pmd-textfield-floating-label-completed");

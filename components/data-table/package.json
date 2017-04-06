@@ -1,0 +1,34 @@
+{
+  "name": "propellerkit-datatables",
+  "version": "0.0.4",
+  "description": "propellerkit-datatables is a front-end responsive component based on Google's Material Design Standards & Bootstrap.",
+  "homepage": "http://propeller.in/",
+  "author": "Digicorp, Inc",
+  "license": "MIT",
+  "main":"css/pmd-datatable.css",
+  "scripts": {
+    "test": "npm install propellerkit-datatables"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digicorp/propeller/tree/master/components/data-table"
+  },
+  "keywords": [
+   "css",
+   "js",
+   "mobile-first",
+   "responsive",
+   "front-end",
+   "framework",
+   "web",
+   "datatable"
+  ],
+  "dependencies": {
+	"propellerkit": "*.*.*",
+	"datatables.net":"1.10.12",  
+	"datatables.net-bs":"1.10.12",  
+    "datatables.net-responsive-bs":"2.1.0",
+	"datatables.net-select":"1.2.0",  
+    "datatables.net-select-dt":"1.2.0"
+  }
+}

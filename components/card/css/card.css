@@ -1,17 +1,19 @@
+
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.0.0 (http://propeller.in): card.css
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
 */
-.pmd-z-depth{ -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
-.pmd-z-depth-1{ -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); -moz-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
-.pmd-z-depth-2 { -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); -moz-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);}
-.pmd-z-depth-3 { -webkit-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); -moz-box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
-.pmd-z-depth-4 { -webkit-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); -moz-box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22); box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);}
-.pmd-z-depth-5 { -webkit-box-shadow: 0 24px 48px rgba(0,0,0,0.30), 0 20px 14px rgba(0,0,0,0.22); -moz-box-shadow: 0 24px 48px rgba(0,0,0,0.30), 0 20px 14px rgba(0,0,0,0.22); box-shadow: 0 24px 48px rgba(0,0,0,0.30), 0 20px 14px rgba(0,0,0,0.22);}
+
+.pmd-z-depth{ box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);}
+.pmd-z-depth-1{ box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);}
+.pmd-z-depth-2 { box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);}
+.pmd-z-depth-3 { box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);}
+.pmd-z-depth-4 { box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);}
+.pmd-z-depth-5 { box-shadow: 0 24px 48px rgba(0,0,0,0.30), 0 20px 14px rgba(0,0,0,0.22);}
 
 .pmd-card .form-horizontal .form-group{ margin-left:inherit; margin-right:inherit}
-.pmd-card { background-color:#fff; border-radius:2px; margin-bottom:30px; background-color:#fff; padding:1px 0;}
+.pmd-card { border-radius:2px; margin-bottom:30px; background-color:#fff; padding:1px 0;}
 .pmd-card-body { padding-left:16px; padding-right:16px; margin-top:16px; margin-bottom:16px; color:rgba(0, 0, 0, 0.84)}
 .pmd-card-title { padding: 16px 16px 0 16px; margin-bottom:16px; border-bottom: 1px solid transparent; border-top-left-radius: 3px; border-top-right-radius: 3px;}
 
@@ -38,7 +40,7 @@ h2.pmd-card-title-text{ font-size:1.5rem; font-weight:400; margin-bottom:2px;}
 .pmd-card-list{ padding-top:8px; padding-bottom:8px; background-color:#fff;}
 
 /* Propeller Card */
-.panel { margin-bottom: 20px;  background-color: #fff;  border: 1px solid transparent;  border-radius: 4px;  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);         box-shadow: 0 1px 1px rgba(0, 0, 0, .05);}
+.panel { margin-bottom: 20px;  background-color: #fff;  border: 1px solid transparent;  border-radius: 4px;         box-shadow: 0 1px 1px rgba(0, 0, 0, .05);}
 .panel-body { padding: 15px;}
 .panel-heading { padding: 10px 15px; border-bottom: 1px solid transparent; border-top-left-radius: 3px; border-top-right-radius: 3px;}
 .panel-heading > .dropdown .dropdown-toggle { color: inherit;}

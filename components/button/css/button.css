@@ -1,22 +1,22 @@
+
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.0.0 (http://propeller.in): button.css
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
 */
-/* ------------------------------- Buttons css ------------------------------------ */
-.btn { display: inline-block; padding: 6px 12px; margin-bottom: 0; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px; font-size: 14px; font-weight: 400; line-height: 1.1; text-transform: uppercase;letter-spacing: inherit; color: rgba(255, 255, 255, 0.87);}
+
+.btn { display: inline-block; padding: 6px 12px; margin-bottom: 0; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px; font-size: 14px; font-weight: 400; line-height: 1.1; text-transform: uppercase; letter-spacing: inherit; color: rgba(255, 255, 255, 0.87);}
 .btn-default, .btn-link { color: rgba(0, 0, 0, 0.87);}
 
-/* ------------------------------ Buttons style ------------------------------------ */
+/* -- Buttons style ------------------------------------ */
 .btn { outline: 0; outline-offset: 0; border: 0; border-radius: 2px; transition: all 0.15s ease-in-out; -o-transition: all 0.15s ease-in-out; -moz-transition: all 0.15s ease-in-out; -webkit-transition: all 0.15s ease-in-out;}
-.btn:focus,.btn:active,.btn.active,.btn:active:focus,.btn.active:focus { outline: 0; outline-offset: 0; box-shadow: none;-moz-box-shadow: none; -webkit-box-shadow: none;}
+.btn:focus,.btn:active,.btn.active,.btn:active:focus,.btn.active:focus { outline: 0; outline-offset: 0; box-shadow: none;}
 
-/* ----------------------------------- Buttons varients -------------------------------- */
-
+/* -- Buttons varients -------------------------------- */
 /* -- Buttons raised --*/
-.pmd-btn-raised { -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24); box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);}
-.pmd-btn-raised:active,.pmd-btn-raised.active,.pmd-btn-raised:active:focus,.pmd-btn-raised.active:focus { -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);}
-.pmd-btn-raised:focus { -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);}
+.pmd-btn-raised { box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);}
+.pmd-btn-raised:active,.pmd-btn-raised.active,.pmd-btn-raised:active:focus,.pmd-btn-raised.active:focus { box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);}
+.pmd-btn-raised:focus { box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);}
 
 /* -- Buttons circle --*/
 .btn.pmd-btn-fab { padding: 0; border-radius: 50%;}
@@ -42,7 +42,7 @@
 .pmd-btn-flat.btn-default .ink { background-color: #808080;}
 
 /* -- Buttons Default outline --*/
-.btn-default.pmd-btn-outline{border:solid 1px #333;}
+.btn-default.pmd-btn-outline{border:solid 1px #333333;}
 
 /* -- Buttons Primary --*/
 .btn-primary,.dropdown-toggle.btn-primary{ background-color: #4285f4;}
@@ -161,22 +161,18 @@
 
 /*---------------------------------- Button groups --------------------------------- */
 .btn-group .btn { border-radius: 2px;}
-.btn-group.open .dropdown-toggle { outline: 0; outline-offset: 0; box-shadow: none; -moz-box-shadow: none; -webkit-box-shadow: none;}
+.btn-group.open .dropdown-toggle { outline: 0; outline-offset: 0; box-shadow: none;}
 .btn-group .btn + .btn,.btn-group .btn + .btn-group,.btn-group .btn-group + .btn,.btn-group .btn-group + .btn-group { margin-left: 0;}
 .btn-group > .btn:hover,.btn-group-vertical > .btn:hover { z-index: 0;}
 .btn-group > .btn:focus:hover,.btn-group-vertical > .btn:focus:hover,.btn-group > .btn:active:hover,.btn-group-vertical > .btn:active:hover,.btn-group > .btn.active:hover,.btn-group-vertical > .btn.active:hover { z-index: 2;}
 
 /* --------------------------------- Ripple effect -------------------------------- */
 .pmd-ripple-effect { position: relative; overflow: hidden; -webkit-transform: translate3d(0, 0, 0);}
-.ink { display: block; position: absolute; pointer-events: none; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; -o-border-radius: 50%; -ms-border-radius: 50%; -webkit-transform: scale(0); -moz-transform: scale(0); -ms-transform: scale(0); -o-transform: scale(0); transform: scale(0); background: #fff; opacity: 1;}
-.ink.animate { -webkit-animation: ripple .5s linear ; -moz-animation: ripple .5s linear; -ms-animation: ripple .5s linear; -o-animation: ripple .5s linear; animation: ripple .5s linear;}
+.ink { display: block; position: absolute; pointer-events: none; border-radius: 50%; -ms-transform: scale(0); transform: scale(0); background: #fff; opacity: 1;}
+.ink.animate { animation: ripple .5s linear;}
 
 /*-- Button link outline --*/
 .pmd-btn-outline.btn-link{ border: solid 1px #333; background-color:transparent;}
 .pmd-btn-outline.btn-link:hover, .pmd-btn-outline.btn-link:focus { border: solid 1px #23527c; background-color:#23527c; color:#fff;}
 
 @keyframes ripple {100% { opacity: 0; transform: scale(2.5);}}
-@-webkit-keyframes ripple { 100% { opacity: 0;  -webkit-transform: scale(2.5); transform: scale(2.5);}}
-@-moz-keyframes ripple { 100% { opacity: 0; -moz-transform: scale(2.5); transform: scale(2.5);}}
-@-ms-keyframes ripple { 100% { opacity: 0; -ms-transform: scale(2.5); transform: scale(2.5);}}
-@-o-keyframes ripple { 100% { opacity: 0; -o-transform: scale(2.5); transform: scale(2.5);}}

@@ -1,11 +1,10 @@
+
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.0.0 (http://propeller.in): modal.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
-// Modal -----------------------------------------------------------------//
-// Reposition when a modal is shown
 function reposition() {
 	var modal = $(this),
 		dialog = modal.find('.modal-dialog');

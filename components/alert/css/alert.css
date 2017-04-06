@@ -14,7 +14,7 @@
 .pmd-alert-container.center { left:50%; }
 
 /* ------------ alert container for alert varients ------------------*/
-.pmd-alert-container .pmd-alert  {  position:relative; margin-bottom:5px; text-align:left; vertical-align:middle;  background:#000; padding:9px 24px; color:#fff; width:360px; z-index:1000; clear:both;  margin-bottom:5px; border-radius:3px; -webkit-animation-duration: 1s; -moz-animation-duration: 1s; -o-animation-duration: 1s;animation-duration: 1s;	-webkit-animation-fill-mode: both;-moz-animation-fill-mode: both; -o-animation-fill-mode: both; animation-fill-mode: both;}
+.pmd-alert-container .pmd-alert  {  position:relative; margin-bottom:5px; text-align:left; vertical-align:middle;  background:#000; padding:9px 24px; color:#fff; width:360px; z-index:1000; clear:both;  border-radius:3px;animation-duration: 1s; animation-fill-mode: both;}
 
 /* alert container for error*/
 .pmd-alert-container .pmd-alert.error { background:#FE5722; color:#fff;}
@@ -30,25 +30,21 @@
 
 /* Alert Action css */
 .pmd-alert a,
-.notification a { float:right; color:#d5e734; position: absolute; right: 18px; color: #5ca9ea; }
+.notification a { float:right; position: absolute; right: 18px; color: #5ca9ea; }
 .pmd-alert a:before { content: ""; position: absolute; right: -10px; top: 0; bottom: 0; margin: auto; left: -10px; }
-
-@-webkit-keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}
-.fadeIn { -webkit-animation-name: fadeIn; animation-name: fadeIn; }
-
-@-webkit-keyframes fadeOut { from { opacity: 1; } to { opacity: 0; }}
+.fadeIn { animation-name: fadeIn; }
 @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; }}
-.fadeOut { -webkit-animation-name: fadeOut; animation-name: fadeOut; }
+.fadeOut { animation-name: fadeOut; }
+@keyframes fadeOutDown { from { opacity: 1; } to { opacity: 0; transform: translate3d(0, 100%, 0); }}
+.fadeOutDown { animation-name: fadeOutDown;}
+@keyframes fadeInDown { from { opacity: 0; transform: translate3d(0, -100%, 0); } to { opacity: 1; transform: none; }}
+.fadeInDown { animation-name: fadeInDown; }
+@keyframes fadeInUp { from { opacity: 0; transform: translate3d(0, 100%, 0); } to { opacity: 1; transform: none; }}
+.fadeInUp { animation-name: fadeInUp; }
 
-@-webkit-keyframes fadeOutDown { from { opacity: 1; }  to { opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); } }
-@keyframes fadeOutDown { from { opacity: 1; } to { opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); }}
-.fadeOutDown { -webkit-animation-name: fadeOutDown; animation-name: fadeOutDown;}
+@media screen and (max-width:767px){
+	.pmd-alert-container.left { left:50%;}
+	.pmd-alert-container.right { right:50%;}
 
-@-webkit-keyframes fadeInDown { from { opacity: 0; -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); } to { opacity: 1; -webkit-transform: none; transform: none; }}
-@keyframes fadeInDown { from { opacity: 0; -webkit-transform: translate3d(0, -100%, 0); transform: translate3d(0, -100%, 0); } to { opacity: 1; -webkit-transform: none; transform: none; }}
-.fadeInDown { -webkit-animation-name: fadeInDown; animation-name: fadeInDown; }
-
-@-webkit-keyframes fadeInUp { from { opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); } to { opacity: 1; -webkit-transform: none; transform: none; }}
-@keyframes fadeInUp { from { opacity: 0; -webkit-transform: translate3d(0, 100%, 0); transform: translate3d(0, 100%, 0); } to { opacity: 1; -webkit-transform: none; transform: none; }}
-.fadeInUp { -webkit-animation-name: fadeInUp; animation-name: fadeInUp; }
+}

@@ -1,10 +1,12 @@
+
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.0.0 (http://propeller.in): badge.css
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
 */
+
 /* Badge css */
-.badge { padding: 3px 7px; font-size: 12.025px; font-weight: bold; white-space: nowrap; color: #ffffff; background-color: #999999; -webkit-border-radius: 9px; -moz-border-radius: 9px; border-radius: 9px; display: inline-block; vertical-align: baseline;}
+.badge { padding: 3px 7px; font-size: 12.025px; font-weight: bold; white-space: nowrap; color: #ffffff; background-color: #999999; border-radius: 9px; display: inline-block; vertical-align: baseline;}
 .badge:hover { color: #ffffff; text-decoration: none; cursor: pointer;}
 .badge-error { background-color: #b94a48;}
 .badge-error:hover { background-color: #953b39;}
@@ -19,7 +21,7 @@
 
 /* Notification Badge css */
 .pmd-badge{ display:inline-block; text-align:left; position:relative; font-size:32px;}
-.pmd-badge[data-badge]::after {font-family:"Roboto"; align-content: center; align-items: center; background: #6292F8; border-radius: 50%; color: rgb(255, 255, 255); content: attr(data-badge); display: flex; flex-flow: row wrap; font-size: 12px; font-weight: 600; height: 22px; justify-content: center; position: absolute; right: -24px; top: -10px; width: 22px;}
+.pmd-badge[data-badge]::after {font-family:"Roboto"; -ms-flex-line-pack: center; align-content: center; -ms-flex-align: center; align-items: center; background: #6292F8; border-radius: 50%; color: rgb(255, 255, 255); content: attr(data-badge); display: -ms-flexbox; display: flex; -ms-flex-flow: row wrap; flex-flow: row wrap; font-size: 12px; font-weight: 600; height: 22px; -ms-flex-pack: center; justify-content: center; position: absolute; right: -24px; top: -10px; width: 22px;}
 .pmd-badge.pmd-badge-overlap::after {right: -10px;}
 
 /* Chips Badge css */

@@ -1,0 +1,31 @@
+{
+  "name": "propellerkit-select2",
+  "version": "0.0.3",
+  "description": "propellerkit-select2 is a front-end responsive component based on Google's Material Design Standards & Bootstrap.",
+  "homepage": "http://propeller.in/",
+  "author": "Digicorp, Inc",
+  "license": "MIT",
+  "main":"css/pmd-datatable.css",
+  "scripts": {
+    "test": "npm install propellerkit-select2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digicorp/propeller/tree/master/components/select2"
+  },
+  "keywords": [
+   "css",
+   "js",
+   "mobile-first",
+   "responsive",
+   "front-end",
+   "framework",
+   "web",
+   "select2"
+  ],
+  "dependencies": {
+    "propellerkit":"*.*.*",
+    "select2": "^4.0.2",
+    "select2-bootstrap-theme":"^0.1.0-beta.4"
+  }
+}
