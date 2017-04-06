@@ -25,13 +25,12 @@ module.exports = function(grunt) {
 	  archive: 'archive',
 	  assets: ['assets/css/propeller.css', 'assets/css/propeller.min.css' , 'assets/js/propeller.js', 'assets/js/propeller.min.js'],
     },
-	
-	jshint: {
+	concat: {
       options: {
-        jshintrc: 'grunt/.jshintrc'
+        stripBanners: false
       },
-      core: {
-        src: [
+      propellerJs: {
+		src: [
 			'components/textfield/js/textfield.js',
 			'components/checkbox/js/checkbox.js',
 			'components/radio/js/radio.js',
@@ -41,17 +40,9 @@ module.exports = function(grunt) {
 			'components/alert/js/alert.js',
 			'components/popover/js/popover.js',
 			'components/tab/js/tab-scrollable.js',
-			'components/sidebar/js/sidebar.js',
-		]
-      }
-    },
-	concat: {
-      options: {
-        stripBanners: false
-      },
-      propellerJs: {
-		src: '<%= jshint.core.src %>',
-		dest: 'dist/js/<%= `pkg.grunt_name` %>.js'
+			'components/sidebar/js/sidebar.js'
+		],
+		dest: 'dist/js/<%= pkg.grunt_name %>.js'
       },
       propellerCss: {
 		src: [
@@ -83,36 +74,22 @@ module.exports = function(grunt) {
 		dest: 'dist/css/<%= pkg.grunt_name %>.css'
       }
     },
+	jshint: {
+      options: {
+        jshintrc: 'grunt/.jshintrc'
+      },
+      core: {
+		src: '<%= concat.propellerJs.src %>',  
+      }
+    },  
 	autoprefixer: {
 		options: {
 		  browsers: ['last 2 versions', 'ie 9']
 		},
 		dist: {
 			files: {
-				'assets/css/propeller-roboto.css': 'assets/css/propeller-roboto.css',
-				'components/typography/css/typography.css': 'components/typography/css/typography.css',
-				'components/icons/css/google-icons.css':' components/icons/css/google-icons.css',
-				'components/card/css/card.css': 'components/card/css/card.css',
-				'components/accordion/css/accordion.css': 'components/accordion/css/accordion.css',
-				'components/alert/css/alert.css': 'components/alert/css/alert.css',
-				'components/badge/css/badge.css': 'components/badge/css/badge.css',
-				'components/button/css/button.css': 'components/button/css/button.css',
-				'components/modal/css/modal.css': 'components/modal/css/modal.css',
-				'components/dropdown/css/dropdown.css': 'components/dropdown/css/dropdown.css',
-				'components/textfield/css/textfield.css': 'components/textfield/css/textfield.css',
-				'components/checkbox/css/checkbox.css': 'components/checkbox/css/checkbox.css',
-				'components/radio/css/radio.css': 'components/radio/css/radio.css',
-				'components/toggle-switch/css/toggle-switch.css': 'components/toggle-switch/css/toggle-switch.css',
-				'components/list/css/list.css': 'components/list/css/list.css',
-				'components/navbar/css/navbar.css': 'components/navbar/css/navbar.css',
-				'components/popover/css/popover.css': 'components/popover/css/popover.css',
-				'components/progressbar/css/progressbar.css': 'components/progressbar/css/progressbar.css',
-				'components/sidebar/css/sidebar.css': 'components/sidebar/css/sidebar.css',
-				'components/tab/css/tab.css': 'components/tab/css/tab.css',
-				'components/table/css/table.css': 'components/table/css/table.css',
-				'components/tooltip/css/tooltip.css': 'components/tooltip/css/tooltip.css',
-				'components/floating-action-button/css/floating-action-button.css': 'components/floating-action-button/css/floating-action-button.css',
-				'components/utilities/css/utilities.css': 'components/utilities/css/utilities.css'
+				'dist/css/propeller.css': 'dist/css/propeller.css',
+				'dist/css/propeller.min.css': 'dist/css/propeller.min.css'
 			}
 		}
 	},
@@ -179,7 +156,7 @@ module.exports = function(grunt) {
 			files: {
 				src: '<%= cssmin.propellerMinCss.dest %>'
 			}
-		},
+		}
 	},
 	csscomb: {
       options: {
@@ -192,7 +169,6 @@ module.exports = function(grunt) {
         dest: 'dist/css/'
       }
     },
-	
 	copy: {
       fonts: {
 	    expand: true,
@@ -223,7 +199,6 @@ module.exports = function(grunt) {
 			dest: 'archive/pmd-admin-template-<%= pkg.version %>/',
 	  }
 	},
-	
 	processhtml: {
 	  dist:{
 		options: {
@@ -232,15 +207,14 @@ module.exports = function(grunt) {
 		files: [
 		{
 		  expand: true,
-		  cwd: 'archive/pmd-admin-template-1.0.0/',
+		  cwd: 'archive/pmd-admin-template-1.1.0/',
 		  src: ['*.html'],
-		  dest: 'archive/pmd-admin-template-1.0.0/',
+		  dest: 'archive/pmd-admin-template-1.1.0/',
 		  ext: '.html'
 		},
 		],
 	  }
 	},
-	
 	compress: {
       distzip: {
         options: {
@@ -319,12 +293,12 @@ module.exports = function(grunt) {
   // make sure you have run npm install so our app can find these
   
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks("grunt-jscs");
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-csslint');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-concat-css');
