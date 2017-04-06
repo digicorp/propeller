@@ -1,11 +1,12 @@
 
 /*!
- * Propeller v1.0.0 (http://propeller.in): popover.js
+ * Propeller v1.1.0 (http://propeller.in): popover.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
 $(document).ready(function(){
+		
 		$('.popover-html[data-toggle="popover"]').popover({
 			html: true,
 			content : function(){
@@ -75,8 +76,9 @@ $(document).ready(function(){
 				}
 			}
 		};
+	
 		$('[data-toggle="popover"]').popover(options);
-		
+	
 		$('[data-toggle="popover"]').on('shown.bs.popover', function () {
 			var colorClass = $(this).attr("data-color");
 			$(".popover").addClass(colorClass);
