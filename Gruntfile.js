@@ -10,7 +10,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
 
     // get the configuration info from package.json ----------------------------
-    // this way we can use things like name and version (pkg.name)
+    // this way we can use things like name and version (pkg.grunt_name)
     pkg: grunt.file.readJSON('package.json'),
 	
 	banner: '/*!\n' +
@@ -51,7 +51,7 @@ module.exports = function(grunt) {
       },
       propellerJs: {
 		src: '<%= jshint.core.src %>',
-		dest: 'dist/js/<%= pkg.name %>.js'
+		dest: 'dist/js/<%= `pkg.grunt_name` %>.js'
       },
       propellerCss: {
 		src: [
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 			'components/floating-action-button/css/floating-action-button.css',
 			'components/utilities/css/utilities.css'
 		],
-		dest: 'dist/css/<%= pkg.name %>.css'
+		dest: 'dist/css/<%= pkg.grunt_name %>.css'
       }
     },
 	autoprefixer: {
@@ -142,7 +142,7 @@ module.exports = function(grunt) {
       },
 	  propellerMinCss: {
 	    src: '<%= concat.propellerCss.dest %>',
-        dest: 'dist/css/<%= pkg.name %>.min.css'
+        dest: 'dist/css/<%= pkg.grunt_name %>.min.css'
       }
     },
 	babel: {
@@ -167,7 +167,7 @@ module.exports = function(grunt) {
 			preserveComments:'some'
 		  },
 		src: '<%= concat.propellerJs.dest %>',
-        dest: 'dist/js/<%= pkg.name %>.min.js'
+        dest: 'dist/js/<%= pkg.grunt_name %>.min.js'
 		
       }
     },  
