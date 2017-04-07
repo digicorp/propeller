@@ -5,7 +5,7 @@
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
-.pmd-floating-action { bottom: 0; position: fixed;  margin:1em;  right: 0; }
+.pmd-floating-action { bottom: 0; position: fixed;  margin:1em;  right: 0; z-index:1000;}
 .pmd-floating-action-btn { display:block; position: relative; transition: all .2s ease-out;}
 .pmd-floating-action-btn:before { bottom: 10%; content: attr(data-title); opacity: 0; position: absolute; right: 100%; transition: all .2s ease-out .5s;  white-space: nowrap; background-color:#fff; padding:6px 12px; border-radius:2px; color:#333; font-size:12px; margin-right:5px; display:inline-block; box-shadow: 0px 2px 3px -2px rgba(0, 0, 0, 0.18), 0px 2px 2px -7px rgba(0, 0, 0, 0.15);}
 .pmd-floating-action-btn:last-child:before { font-size: 14px; bottom: 25%;}
@@ -17,7 +17,7 @@
 .pmd-floating-action-btn:not(:last-child):nth-last-child(4) { transition-delay: 200ms;}
 .pmd-floating-action-btn:not(:last-child):nth-last-child(5) { transition-delay: 250ms;}
 .pmd-floating-action-btn:not(:last-child):nth-last-child(6) { transition-delay: 300ms;}
-.pmd-floating-action:hover .pmd-floating-action-btn, .menu--floating--open .pmd-floating-action-btn { opacity: 1; -ms-transform: none; transform: none;/* position:relative; bottom:auto; */}
+.pmd-floating-action:hover .pmd-floating-action-btn, .menu--floating--open .pmd-floating-action-btn { opacity: 1; -ms-transform: none; transform: none; position:relative; bottom:auto; }
 .pmd-floating-action:hover .pmd-floating-action-btn:before, .menu--floating--open .pmd-floating-action-btn:before { opacity: 1;}
 .pmd-floating-hidden{ display:none;}
 .pmd-floating-action-btn.btn:hover{ overflow:visible;}
