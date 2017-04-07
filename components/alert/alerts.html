@@ -20,10 +20,10 @@
 	<link href="http://propeller.in/docs/css/example-docs.css" type="text/css" rel="stylesheet" />
 	
 	<!-- Propeller typography -->
-	<link href="http://propeller.in/components/typography/css/typography.css" type="text/css" rel="stylesheet" />
+	<link href="css/typography.css" type="text/css" rel="stylesheet" />
 
 	<!-- Propeller Button -->
-	<link href="http://propeller.in/components/button/css/button.css" type="text/css" rel="stylesheet" />
+	<link href="css/button.css" type="text/css" rel="stylesheet" />
 	
 	<!-- Propeller Accordion -->
 	<link href="css/alert.css" type="text/css" rel="stylesheet" /> 
@@ -140,7 +140,7 @@
 				</div>
                 <p>Unlike other Propeller components Alert component is independent of Bootstrap HTML structure.</p>
                 <p>In Marterial Design language alert is known as <a href="https://material.google.com/components/snackbars-toasts.html#snackbars-toasts-usage" target="_blank">Snackbar and Toast</a>.</p>
-				<p>To specify the position of alert component use <strong>data-positionX</strong> (x-axis positioning with <code>left</code>, <code>right</code>, and <code>center</code> as values.) and <strong>data-positionY</strong> (y-axis positioning with <code>top</code> and <code>bottom</code> as values.) attributes.</p>
+				<p>To specify the position of alert component use <strong>data-positionX</strong> (x-axis positioning with <code>left</code>, <code>right</code>, and <code>center</code> as values.) and <strong>data-positionY</strong> (y-axis positioning with <code>top</code> and <code>bottom</code> as values.) attributes. To customize the visibility time of alert on screen use <strong>data-duration</strong> attribute with a numeric value.</p>
 			</div> <!-- Propeller Alert title and description end -->
 			
 			<div class="col-md-9"> 
@@ -179,7 +179,7 @@
 					
 				</div> <!-- alert code and example end-->
 			</div>
-		</section> <!-- Propeller Alert end -->
+		</section><!-- Propeller Alert end -->
 		
 		<!-- Propeller alert with action -->
 		<section class="row component-section">
@@ -215,7 +215,7 @@
 							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
 								<div class="pmd-card-body text-center alert-custom"> 
 									<!--Alert Bottom Left -->
-									<button type="button" data-positionX="left" data-positionY="bottom" data-effect="fadeInDown" data-duration="3000" data-action="true" data-message="You have 4 messages" class="btn pmd-ripple-effect btn-default pmd-btn-raised pmd-alert-toggle">Bottom Left</button>
+									<button type="button" data-positionX="left" data-positionY="bottom" data-effect="fadeInDown" data-action="true" data-duration="3000" data-message="You have 4 messages" class="btn pmd-ripple-effect btn-default pmd-btn-raised pmd-alert-toggle">Bottom Left</button>
 									<!--Alert Bottom Center -->
 									<button type="button" data-positionX="center" data-positionY="bottom" data-effect="fadeInDown" data-action="true" data-duration="3000" data-message="You have 5 messages" class="btn pmd-ripple-effect btn-default pmd-btn-raised pmd-alert-toggle">Bottom Center</button>
 									<!--Alert Bottom Right -->
@@ -318,6 +318,11 @@
 									<td data-title="HTML Attributes"><code>data-action-text</code></td>
 									<td data-title="Effect">Defines the action that needs to be performed.</td>
 									<td data-title="Value">Close, Refresh, Ok, etc.</td>
+								</tr>
+								<tr>
+									<td data-title="HTML Attributes"><code>data-duration</code></td>
+									<td data-title="Effect">Customize the visibility time of alert on the screen.</td>
+									<td data-title="Value">Numeric value</td>
 								</tr>
 							</tbody>
 						</table>
