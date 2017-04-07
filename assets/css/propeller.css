@@ -3609,8 +3609,9 @@ Ttable Reflow
 
 .pmd-floating-action {
   position: fixed;
-  right: 0; 
+  right: 0;
   bottom: 0;
+  z-index: 1000;
   margin: 1em;
 }
 .pmd-floating-action-btn {
@@ -3670,9 +3671,11 @@ Ttable Reflow
   transition-delay: 300ms;
 }
 .pmd-floating-action:hover .pmd-floating-action-btn, .menu--floating--open .pmd-floating-action-btn {
+  position: relative;
+  bottom: auto; 
   opacity: 1;
   -ms-transform: none;
-      transform: none;/* position:relative; bottom:auto; */
+      transform: none;
 }
 .pmd-floating-action:hover .pmd-floating-action-btn:before, .menu--floating--open .pmd-floating-action-btn:before {
   opacity: 1;
