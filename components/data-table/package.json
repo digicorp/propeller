@@ -1,7 +1,7 @@
 {
   "name": "propellerkit-datatables",
-  "version": "0.0.4",
-  "description": "propellerkit-datatables is a front-end responsive component based on Google's Material Design Standards & Bootstrap.",
+  "version": "1.0.2",
+  "description": "Data table refers to a matrix of information, like an excel spreadsheet with columns, rows, and data. It is used to present raw data sets, and usually appear in desktop enterprise products. We have used Bootstrap Data table as a reference which we have then customized based on our Propeller theme.",
   "homepage": "http://propeller.in/",
   "author": "Digicorp, Inc",
   "license": "MIT",

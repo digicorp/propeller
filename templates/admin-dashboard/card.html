@@ -3,18 +3,23 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Propeller is a front-end responsive framework based on Material design & Bootstrap.">
+<meta name="description" content="Card | Propeller - Admin Dashboard">
 <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-<title>Propeller Admin - Develop more, Code less.</title>
+<title>Card | Propeller - Admin Dashboard</title>
 <link rel="shortcut icon" type="image/x-icon" href="themes/images/favicon.ico">
 
 <!-- Google icon -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- Bootstrap css -->
+<!-- build:[href] assets/css/ -->
 <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
+<!-- /build -->
+
 <!-- Propeller css -->
+<!-- build:[href] assets/css/ -->
 <link rel="stylesheet" type="text/css" href="../../assets/css/propeller.min.css">
+<!-- /build -->
 
 <!-- Propeller theme css-->
 <link rel="stylesheet" type="text/css" href="themes/css/propeller-theme.css" />
@@ -477,7 +482,7 @@
 			<div class="col-md-4 col-sm-6">
 				<h3 class="text-muted">List with icon</h3>
 				<div class="pmd-card pmd-z-depth">
-					<ul class="list-group pmd-z-depth pmd-list pmd-card-list">
+					<ul class="list-group pmd-list pmd-card-list">
 						<li class="list-group-item"> 
 							<i class="material-icons media-left pmd-sm">mood</i> <span class="media-body">Cras justo odio</span> </li>
 						<li class="list-group-item"><i class="material-icons media-left media-middle">notifications</i>
@@ -507,7 +512,7 @@
 							<div class="media-body">
 								<h3 class="pmd-card-title-text">Two-line item</h3>
 								<span class="pmd-card-subtitle-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. </span> </div>
-							<i class="material-icons media-left">check_box</i> </li>
+							<i class="material-icons media-right">check_box</i> </li>
 						<li class="list-group-item">
 							<div class="media-left"> <a href="javascript:void(0);" class="avatar-list-img"> <img alt="40x40" data-src="holder.js/40x40" class="img-responsive" src="http://propeller.in/components/list/img/40x40.png" data-holder-rendered="true"> </a> </div>
 							<div class="media-body">
@@ -831,11 +836,11 @@
  <div class="container-fluid">
  	<ul class="list-unstyled list-inline">
 	 	<li>
-			<span class="pmd-card-subtitle-text">Propeller &copy; 2016. All Rights Reserved.</span>
+			<span class="pmd-card-subtitle-text">Propeller &copy; <span class="auto-update-year"></span>. All Rights Reserved.</span>
 			<h3 class="pmd-card-subtitle-text">Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license.</a></h3>
         </li>
         <li class="pull-right download-now">
-			<a onClick="downloadPMDadmintemplate()" href="../../archive/pmd-admin-template-1.0.0.zip">
+			<a onClick="downloadPMDadmintemplate()" href="../../archive/pmd-admin-template-1.1.0.zip">
            		 <div>
                   <svg x="0px" y="0px" width="38px" height="32px" viewBox="0 0 38 32" enable-background="new 0 0 38 32" xml:space="preserve">
 <g>
@@ -861,7 +866,7 @@
 </svg>
            		 </div>
             	 <div>
-              	 	<span class="pmd-card-subtitle-text">Version- 1.0.0</span>
+              	 	<span class="pmd-card-subtitle-text">Version- 1.1.0</span>
               	 	<h3 class="pmd-card-title-text">Download Now</h3>
             	</div>
 			</a>
@@ -897,9 +902,11 @@
 <!-- Footer Ends -->
 
 <!-- Scripts Starts -->
+<!-- build:[src] assets/js/ -->
 <script src="../../assets/js/jquery-1.12.2.min.js"></script>
 <script src="../../assets/js/bootstrap.min.js"></script>
 <script src="../../assets/js/propeller.min.js"></script>
+<!-- /build -->
 <script>
 	$(document).ready(function() {
 		var sPath=window.location.pathname;
@@ -910,6 +917,7 @@
 			$(this).find("a[href='"+sPage+"']").parents(".dropdown").find('a.dropdown-toggle').addClass("active");
 			$(this).find("a[href='"+sPage+"']").addClass("active");
 		});
+		$(".auto-update-year").html(new Date().getFullYear());
 	});
 </script> 
 

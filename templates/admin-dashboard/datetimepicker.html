@@ -3,25 +3,32 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Propeller is a front-end responsive framework based on Material design & Bootstrap.">
+<meta name="description" content="Datetimepicker | Propeller - Admin Dashboard">
 <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
-<title>Propeller Admin - Develop more, Code less.</title>
+<title>Datetimepicker | Propeller - Admin Dashboard</title>
 <link rel="shortcut icon" type="image/x-icon" href="themes/images/favicon.ico">
 
 <!-- Google icon -->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- Bootstrap css -->
+<!-- build:[href] assets/css/ -->
 <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
+<!-- /build -->
+
 <!-- Propeller css -->
+<!-- build:[href] assets/css/ -->
 <link rel="stylesheet" type="text/css" href="../../assets/css/propeller.min.css">
+<!-- /build -->
 
 <!-- Propeller theme css-->
 <link rel="stylesheet" type="text/css" href="themes/css/propeller-theme.css" />
 
 <!-- Propeller date time picker css-->
+<!-- build:[href] components/datetimepicker/css/ -->
 <link rel="stylesheet" type="text/css" href="../../components/datetimepicker/css/bootstrap-datetimepicker.css" />
 <link rel="stylesheet" type="text/css" href="../../components/datetimepicker/css/pmd-datetimepicker.css" />
+<!-- /build -->
 
 <!-- Propeller admin theme css-->
 <link rel="stylesheet" type="text/css" href="themes/css/propeller-admin.css">
@@ -744,11 +751,11 @@
  <div class="container-fluid">
  	<ul class="list-unstyled list-inline">
 	 	<li>
-			<span class="pmd-card-subtitle-text">Propeller &copy; 2016. All Rights Reserved.</span>
+			<span class="pmd-card-subtitle-text">Propeller &copy; <span class="auto-update-year"></span>. All Rights Reserved.</span>
 			<h3 class="pmd-card-subtitle-text">Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license.</a></h3>
         </li>
         <li class="pull-right download-now">
-			<a onClick="downloadPMDadmintemplate()" href="../../archive/pmd-admin-template-1.0.0.zip">
+			<a onClick="downloadPMDadmintemplate()" href="../../archive/pmd-admin-template-1.1.0.zip">
            		 <div>
                   <svg x="0px" y="0px" width="38px" height="32px" viewBox="0 0 38 32" enable-background="new 0 0 38 32" xml:space="preserve">
 <g>
@@ -774,7 +781,7 @@
 </svg>
            		 </div>
             	 <div>
-              	 	<span class="pmd-card-subtitle-text">Version- 1.0.0</span>
+              	 	<span class="pmd-card-subtitle-text">Version- 1.1.0</span>
               	 	<h3 class="pmd-card-title-text">Download Now</h3>
             	</div>
 			</a>
@@ -810,9 +817,11 @@
 <!-- Footer Ends -->
 
 <!-- Scripts Starts -->
+<!-- build:[src] assets/js/ -->
 <script src="../../assets/js/jquery-1.12.2.min.js"></script>
 <script src="../../assets/js/bootstrap.min.js"></script>
 <script src="../../assets/js/propeller.min.js"></script>
+<!-- /build -->
 <script>
 	$(document).ready(function() {
 		var sPath=window.location.pathname;
@@ -823,13 +832,16 @@
 			$(this).find("a[href='"+sPage+"']").parents(".dropdown").find('a.dropdown-toggle').addClass("active");
 			$(this).find("a[href='"+sPage+"']").addClass("active");
 		});
+		$(".auto-update-year").html(new Date().getFullYear());
 	});
 </script> 
 
 <!-- Scripts Ends -->
 <!-- Javascript for Datepicker -->
+<!-- build:[src] components/datetimepicker/js/ -->
 <script type="text/javascript" language="javascript" src="../../components/datetimepicker/js/moment-with-locales.js"></script>
 <script type="text/javascript" language="javascript" src="../../components/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<!-- /build -->
 
 <script>
 	// Default date and time picker

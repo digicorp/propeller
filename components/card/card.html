@@ -15,7 +15,7 @@
 	
 	<!-- Google Icon Font -->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link href="http://propeller.in/components/icons/css/google-icons.css" type="text/css" rel="stylesheet" />
+	<link href="css/google-icons.css" type="text/css" rel="stylesheet" />
 	
 	<!-- Propeller typography -->
 	<link href="http://propeller.in/components/typography/css/typography.css" type="text/css" rel="stylesheet" />
@@ -41,7 +41,7 @@
 			<div class="col-md-4 col-sm-6">
 				<h3 class="text-muted">List with icon</h3>
 				<div class="pmd-card pmd-z-depth">
-					<ul class="list-group pmd-z-depth pmd-list pmd-card-list">
+					<ul class="list-group pmd-list pmd-card-list">
 						<li class="list-group-item"> 
 							<i class="material-icons media-left pmd-sm">mood</i> <span class="media-body">Cras justo odio</span> </li>
 						<li class="list-group-item"><i class="material-icons media-left media-middle">notifications</i>
@@ -390,6 +390,7 @@
 </div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="http://propeller.in/assets/js/propeller.js" language="javascript" type="text/javascript"></script>
 <script src="js/jquery.masonry.min.js" language="javascript" type="text/javascript"></script>
 <script>
@@ -423,7 +424,7 @@
 				//isAnimated: true,
 			});
 			$('#card-masonry').css({"opacity":"1"});
-			}, 1000);};
+			}, 300);};
 		$(window).resize(function(){
 			$('#card-masonry').masonry({
 				itemSelector: '#card-masonry > div',

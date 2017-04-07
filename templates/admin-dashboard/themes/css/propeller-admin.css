@@ -1,5 +1,5 @@
 /*!
- * Propeller v1.0.0 (http://propeller.in)
+ * Propeller v1.1.0 (http://propeller.in)
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -520,6 +520,8 @@ h2.typo-fill-secondary{ color:rgba(77, 87, 93, 0.68); font-size:22px;}
 .component-section h2{ margin-top:0;}
 .component-box{ margin-bottom: 20px;}
 .component-desc{ font-size:14px; margin-top:4px;}
+
+.component-box .pmd-card.pmd-card-inverse h3 { color:#fff; text-transform:capitalize; line-height:1.4;}
 @media (max-width: 767px) {
 .component-section{ margin-top:0;}
 }

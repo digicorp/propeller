@@ -7,8 +7,7 @@
 
   <p align="center">
     A front-end responsive framework 
-    based on Google's Material Design Standards & Bootstrap.
-    It makes your website more attractive, consistent, and functionally powerful.
+    based on Google's Material Design Standards & Bootstrap.  
     <br>
     <a href="http://propeller.in/"><strong>Visit Propeller &raquo;</strong></a>
   </p>
@@ -31,35 +30,39 @@
 
 ## Key Features
 
-- Responsive Component Library which contains 25 UI elements
+- Library with 25 Responsive UI Components
 
 - Ready to use template which speeds up the Development process 
 
-- Detailed User Manual which provides step by step usage of propeller UI elements.
+- Detailed User Manual which provides step by step usage for every Propeller component.
 
 
 ## Quick start
 
-Several quick start options are available:
+There are different ways you can start using Propeller,
 
 - [Download the latest release.](https://github.com/digicorp/propeller/blob/master/archive/pmd-1.1.0.zip)
 - Clone the repo: `git clone https://github.com/propeller.git`
 - Install with Bower: `bower install propeller`
 - Install with npm: `npm install propellerkit`
+
+Using third party components:
+
 - Install Select2 with npm: `npm install propellerkit-select2`
 - Install range slider with npm: `npm install propellerkit-range-slider`
 - Install datetimepicker with npm: `npm install propellerkit-datetimepicker`
 - Install datatables with npm: `npm install propellerkit-datatables`
+- Install datatables with npm: `npm install propellerkit-custom-scrollbar`
 
 
-## Propeller Guideline
+## Propeller Guidelines
 
-Follow our [Guidelines](http://propeller.in/docs/index.php) and get familiar with the basic setup and structure of Propeller.
+Follow our [Guidelines](http://propeller.in/docs/index.php) and get familiar with the basic setup and structure.
 
 
 ## What's included
 
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
+ The downloaded folder will have following directories and files, with a logical grouping of common assets including both compiled and minified versions.
 
 ```
 Propeller/
@@ -92,13 +95,13 @@ Just copy the compiled CSS and JS files and the font files(created for icons) fr
 
 ## Bugs and feature requests
 
-Came over any bug or issue? Post them on [GITHUB](https://github.com/digicorp/propeller/issues).
+Found any bug or issue? Post them on [GITHUB](https://github.com/digicorp/propeller/issues).
 Have feedback, suggestions or Questions? Join [GITTER CHAT ROOM](https://gitter.im/Propeller-Material-Design-Bootstrap-Framework/Support).
 
 
 ## Community
 
-Get updates on Propeller's development and chat with the project maintainers and community members.
+Get updates on Propeller's development. Chat with the Product team and community members using Propeller.
 
 - Follow [@propellerkit on Twitter](https://twitter.com/PropellerKit).
 - Chat with fellow members on [GITTER](https://gitter.im/Propeller-Material-Design-Bootstrap-Framework/Support).
@@ -113,9 +116,9 @@ See [the Releases section of our GitHub project](https://github.com/digicorp/pro
 
 ## License
 
-Propeller v1.0.0 (http://propeller.in)
+Propeller v1.1.0 (http://propeller.in)
 © 2016-2017 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
-Licensed under [MIT](https://github.com/digicorp/propeller)
+Licensed under [MIT](https://github.com/digicorp/propeller/blob/master/LICENSE)
 
 
 ## Author

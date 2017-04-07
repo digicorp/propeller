@@ -1,11 +1,11 @@
 {
   "name": "propellerkit-select2",
-  "version": "0.0.3",
-  "description": "propellerkit-select2 is a front-end responsive component based on Google's Material Design Standards & Bootstrap.",
+  "version": "1.1.0",
+  "description": "Select2 gives a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options. We have used Select2 plugin as a reference which we have then customized based on our Propeller theme.",
   "homepage": "http://propeller.in/",
   "author": "Digicorp, Inc",
   "license": "MIT",
-  "main":"css/pmd-datatable.css",
+  "main":"js/pmd-select2.js",
   "scripts": {
     "test": "npm install propellerkit-select2"
   },

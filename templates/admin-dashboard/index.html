@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="description" content="Propeller_Admin_Dashboard">
+<meta name="description" content="Propeller Admin Dashboard">
 <meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
 
 <title>Propeller Admin Dashboard</title>
@@ -13,27 +13,34 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <!-- Bootstrap css -->
+<!-- build:[href] assets/css/ -->
 <link rel="stylesheet" type="text/css" href="../../assets/css/bootstrap.min.css">
+<!-- /build -->
 
 <!-- Propeller css -->
+<!-- build:[href] assets/css/ -->
+<!-- build:[href] assets/css/ -->
 <link rel="stylesheet" type="text/css" href="../../assets/css/propeller.min.css">
+<!-- /build -->
+<!-- /build -->
 
 <!-- Propeller date time picker css-->
+<!-- build:[href] components/datetimepicker/css/ -->
 <link rel="stylesheet" type="text/css" href="../../components/datetimepicker/css/bootstrap-datetimepicker.css" />
 <link rel="stylesheet" type="text/css" href="../../components/datetimepicker/css/pmd-datetimepicker.css" />
+<!-- /build -->
 
 <!-- Propeller theme css-->
 <link rel="stylesheet" type="text/css" href="themes/css/propeller-theme.css" />
 
 <!-- Propeller admin theme css-->
 <link rel="stylesheet" type="text/css" href="themes/css/propeller-admin.css">
-    <!--Google Analytics code-->
+	<!--Google Analytics code-->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    
       ga('create', 'UA-124615-22', 'auto');
       ga('send', 'pageview');
     </script>
@@ -1143,11 +1150,11 @@
  <div class="container-fluid">
  	<ul class="list-unstyled list-inline">
 	 	<li>
-			<span class="pmd-card-subtitle-text">Propeller &copy; 2016. All Rights Reserved.</span>
+			<span class="pmd-card-subtitle-text">Propeller &copy; <span class="auto-update-year"></span>. All Rights Reserved.</span>
 			<h3 class="pmd-card-subtitle-text">Licensed under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT license.</a></h3>
         </li>
         <li class="pull-right download-now">
-			<a onClick="downloadPMDadmintemplate()" href="../../archive/pmd-admin-template-1.0.0.zip">
+			<a onClick="downloadPMDadmintemplate()" href="../../archive/pmd-admin-template-1.1.0.zip">
            		 <div>
                   <svg x="0px" y="0px" width="38px" height="32px" viewBox="0 0 38 32" enable-background="new 0 0 38 32" xml:space="preserve">
 <g>
@@ -1173,7 +1180,7 @@
 </svg>
            		 </div>
             	 <div>
-              	 	<span class="pmd-card-subtitle-text">Version- 1.0.0</span>
+              	 	<span class="pmd-card-subtitle-text">Version- 1.1.0</span>
               	 	<h3 class="pmd-card-title-text">Download Now</h3>
             	</div>
 			</a>
@@ -1210,8 +1217,10 @@
 <!-- Footer Ends -->
 
 <!-- Scripts Starts -->
+<!-- build:[src] assets/js/ -->
 <script src="../../assets/js/jquery-1.12.2.min.js"></script>
 <script src="../../assets/js/bootstrap.min.js"></script>
+<!-- /build -->
 <script>
 	$(document).ready(function() {
 		var sPath=window.location.pathname;
@@ -1242,7 +1251,9 @@
 })();
 </script>
 
+<!-- build:[src] assets/js/ -->
 <script src="../../assets/js/propeller.min.js"></script> 
+<!-- /build -->
 
 <!-- Javascript for revenue progressbar animation effect-->
 <script>
@@ -1267,8 +1278,7 @@
 		var colors = [
 			['#dfe3e7', '#f79332'], ['#dfe3e7', '#f79332'], ['#dfe3e7', '#f79332'], ['#dfe3e7', '#2ab7ee'], ['#dfe3e7', '#00719d']
 		], circles = [];
-
-		for (var i = 1; i <= 5; i++) {
+		for (var i = 1; i <= 3; i++) {
 			var child = document.getElementById('circles-' + i),
 				percentage = 10 + (i * 8);
 
@@ -1309,7 +1319,6 @@ $(function paymentChart(){
         },
         yAxis: {
             min: 0,
-			
 			title: {
 					text: "Amount"
 			},
@@ -1528,12 +1537,17 @@ $( function smsChart() {
 </script>
 <!-- Scripts Ends -->
 <!-- Javascript for Datepicker -->
+<!-- build:[src] components/datetimepicker/js/ -->
 <script type="text/javascript" language="javascript" src="../../components/datetimepicker/js/moment-with-locales.js"></script>
 <script type="text/javascript" language="javascript" src="../../components/datetimepicker/js/bootstrap-datetimepicker.js"></script>
+<!-- /build -->
 <script>
 	// Linked date and time picker 
 	// start date date and time picker 
 	$('#datepicker-default').datetimepicker();
+	$(".auto-update-year").html(new Date().getFullYear());
+</script> 
+
 </script>
 
 </body>
