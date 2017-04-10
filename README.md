@@ -52,7 +52,7 @@ Using third party components:
 - Install range slider with npm: `npm install propellerkit-range-slider`
 - Install datetimepicker with npm: `npm install propellerkit-datetimepicker`
 - Install datatables with npm: `npm install propellerkit-datatables`
-- Install datatables with npm: `npm install propellerkit-custom-scrollbar`
+- Install custom scrollbar with npm: `npm install propellerkit-custom-scrollbar`
 
 
 ## Propeller Guidelines
