@@ -10,13 +10,13 @@ $( document ).ready(function() {
 	$(".pmd-textfield-focused").remove();
 	$(".pmd-textfield .form-control").after('<span class="pmd-textfield-focused"></span>');
 	// floating label
-	$('.pmd-textfield input.form-control').each(function () {
+	$('.pmd-textfield input.form-control, .pmd-textfield textarea.form-control').each(function () {
 		if($(this).val() !== ""){
 			$(this).closest('.pmd-textfield').addClass("pmd-textfield-floating-label-completed");
 	  	}
 	});
 	// floating change label
-	$(".pmd-textfield input.form-control").on('change', function() {
+	$(".pmd-textfield input.form-control, .pmd-textfield textarea.form-control").on('change', function() {
         if($(this).val() !== ""){
             $(this).closest('.pmd-textfield').addClass("pmd-textfield-floating-label-completed");
         }
