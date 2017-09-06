@@ -6,7 +6,7 @@
  */
 
 $( document ).ready(function() {
-	$(".pmd-ripple-effect").on('mousedown touchstart', function(e) {
+	$("body").on('mousedown touchstart', '.pmd-ripple-effect', function (e) {
 		var rippler = $(this);
 		$('.ink').remove();
 		// create .ink element if it doesn't exist
