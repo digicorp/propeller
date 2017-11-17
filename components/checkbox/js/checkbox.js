@@ -1,7 +1,7 @@
 
 /**
  * --------------------------------------------------------------------------
- * Propeller v1.1.0 (http://propeller.in): checkbox.js
+ * Propeller v1.2.0 (http://propeller.in): checkbox.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * --------------------------------------------------------------------------
@@ -12,19 +12,18 @@ var pmdCheckBox = function ($) {
 	
 	/**
 	* ------------------------------------------------------------------------
-	* Constants
+	* Variables
 	* ------------------------------------------------------------------------
 	*/
 
 	var NAME = 'pmdCheckBox';
-	var VERSION = '1.0.0';
 	var JQUERY_NO_CONFLICT = $.fn[NAME];
 
 	var ClassName = {
 		ANIMATE: 'animate',
 		PMD_CHECKBOX: 'pmd-checkbox',
 		TEXTFIELD_FOCUS: 'pmd-textfield-focused'
-	}
+	};
 
 	var Selector = {
 		PARENT_SELECTOR: '',
@@ -37,17 +36,17 @@ var pmdCheckBox = function ($) {
 	var Template = {
 		CHECK_BOX_LABEL: '<span class="pmd-checkbox-label">&nbsp;</span>',
 		SPAN_LINK: '<span class="ink"></span>'
-	}
+	};
 
 	var Event = {
 		CLICK: 'click',
 		MOUSE_DOWN: 'mousedown'
-	}
+	};
 
 	
 	/**
 	* ------------------------------------------------------------------------
-	* Class Definition
+	* Functions
 	* ------------------------------------------------------------------------
 	*/
 
@@ -86,7 +85,7 @@ var pmdCheckBox = function ($) {
 	
 	/**
 	* ------------------------------------------------------------------------
-	* Data Api implementation
+	* Initialization
 	* ------------------------------------------------------------------------
 	*/
 	
@@ -98,7 +97,7 @@ var pmdCheckBox = function ($) {
 			$(finalSelector).find(Selector.INPUT).addClass("pm-ini");
 		}
 		return pmdCheckBox;
-	} ()
+	} ();
 
 
 	/**
@@ -111,13 +110,10 @@ var pmdCheckBox = function ($) {
 		if (this.selector !== "") {
 		  Selector.PARENT_SELECTOR = this.selector;
 		}
-		new pmdCheckBox()
-	}
-	
+		new pmdCheckBox();
+	};
 	$(document).on(Event.MOUSE_DOWN, Selector.RIPPLE, onMouseDown);
+	$.fn[NAME] = plugInFunction;
+	return pmdCheckBox;
 	
-	$.fn[NAME] = plugInFunction
-	
-	return pmdCheckBox
-	
-} (jQuery)()
+} (jQuery)();
