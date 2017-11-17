@@ -17,7 +17,7 @@
 .pmd-sidebar-overlay.pmd-sidebar-overlay-active{ opacity: 0.5; visibility: visible; transition-delay: 0;}
 
 /* -- Sidebar --------------------------------------- */
-.pmd-sidebar {position: relative; display: block; min-height: 100%; overflow-y: auto; overflow-x: hidden; border: none; transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1); padding-top:64px; background:#fff; width: 280px; transform: translate3d(-280px, 0, 0);}
+.pmd-sidebar {position: relative; display: block; min-height: 100%; overflow-y: auto; overflow-x: hidden; border: none; transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1); padding-top:64px; background:#fff; width: 280px;}
 .pmd-sidebar:before, .pmd-sidebar:after { content: " "; display: table;}
 .pmd-sidebar:after { clear: both;}
 .pmd-sidebar::-webkit-scrollbar-track { border-radius: 2px;}
@@ -41,7 +41,7 @@ body.pmd-body-open { overflow: hidden;}
 }
 
 /*-- Sidebar Stacked--*/
-.pmd-sidebar-slide-push { left: 0;}
+.pmd-sidebar-slide-push { left: 0; transform: translate3d(-280px, 0, 0);}
 .pmd-sidebar-slide-push.pmd-sidebar-open ~ .wrapper .constructor,
 .pmd-sidebar-slide-push.pmd-sidebar-open ~ .pmd-content{ margin-left: 280px;}
 
@@ -55,8 +55,8 @@ body.pmd-body-open { overflow: hidden;}
 .pmd-sidebar-left-fixed,
 .pmd-sidebar-right-fixed,
 .pmd-sidebar-slide-push {position: fixed; top: 0; bottom: 0; z-index:999;}
-.pmd-sidebar-left-fixed { left: 0; box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35);}
-.pmd-sidebar-right-fixed { right: 0;transform: translate3d(280px, 0, 0);}
+.pmd-sidebar-left-fixed { left: 0; box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35); transform: translate3d(-280px, 0, 0);}
+.pmd-sidebar-right-fixed { right: 0; transform: translate3d(280px, 0, 0);}
 .pmd-sidebar-right-fixed.pmd-sidebar-open { transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0);}
 
 /* -- Sidebar nav --*/
