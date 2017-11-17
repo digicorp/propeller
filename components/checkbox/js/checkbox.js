@@ -1,39 +1,123 @@
 
-/*!
+/**
+ * --------------------------------------------------------------------------
  * Propeller v1.1.0 (http://propeller.in): checkbox.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
+ * --------------------------------------------------------------------------
  */
 
-$( document ).ready(function() {
-	$('.pmd-checkbox input').after('<span class="pmd-checkbox-label">&nbsp;</span>');
-	// Ripple Effect //
-	$(".pmd-checkbox-ripple-effect").on('mousedown', function(e) {
-		var rippler = $(this);
-		$('.ink').remove();
+var pmdCheckBox = function ($) {
+	
+	
+	/**
+	* ------------------------------------------------------------------------
+	* Constants
+	* ------------------------------------------------------------------------
+	*/
+
+	var NAME = 'pmdCheckBox';
+	var VERSION = '1.0.0';
+	var JQUERY_NO_CONFLICT = $.fn[NAME];
+
+	var ClassName = {
+		ANIMATE: 'animate',
+		PMD_CHECKBOX: 'pmd-checkbox',
+		TEXTFIELD_FOCUS: 'pmd-textfield-focused'
+	}
+
+	var Selector = {
+		PARENT_SELECTOR: '',
+		PMD_CHECKBOX: '.' + ClassName.PMD_CHECKBOX,
+		INPUT: 'input:checkbox:not(.pm-ini)',
+		RIPPLE: '.pmd-checkbox-ripple-effect',
+		INK: '.ink'
+	};
+
+	var Template = {
+		CHECK_BOX_LABEL: '<span class="pmd-checkbox-label">&nbsp;</span>',
+		SPAN_LINK: '<span class="ink"></span>'
+	}
+
+	var Event = {
+		CLICK: 'click',
+		MOUSE_DOWN: 'mousedown'
+	}
+
+	
+	/**
+	* ------------------------------------------------------------------------
+	* Class Definition
+	* ------------------------------------------------------------------------
+	*/
+
+	function onMouseDown(e) {
+		var $this = $(e.target);
+		var rippler = $this;
+		$(Selector.INK).remove();
 		// create .ink element if it doesn't exist
-		if(rippler.find(".ink").length === 0) {
-			rippler.append('<span class="ink"></span>');
+		if (rippler.find(Selector.INK).length === 0) {
+			rippler.append(Template.SPAN_LINK);
 		}
-		var ink = rippler.find(".ink");
+		var ink = rippler.find(Selector.INK);
 		// prevent quick double clicks
-		ink.removeClass("animate");
+		ink.removeClass(ClassName.ANIMATE);
 		// set .ink diametr
-		if(!ink.height() && !ink.width())
-		{
-		//	var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
-			ink.css({height: 20, width: 20});
+		if (!ink.height() && !ink.width()) {
+			var d = Math.max(rippler.outerWidth(), rippler.outerHeight());
+				ink.css({
+				height: 20,
+				width: 20
+			});
 		}
 		// get click coordinates
-		var x = e.pageX - rippler.offset().left - ink.width()/2;
-		var y = e.pageY - rippler.offset().top - ink.height()/2;
+		var x = e.pageX - rippler.offset().left - ink.width() / 2;
+		var y = e.pageY - rippler.offset().top - ink.height() / 2;
 		// set .ink position and add class .animate
 		ink.css({
-		  top: y+'px',
-		  left:x+'px'
-		}).addClass("animate");
-		setTimeout(function(){ 
+			top: y + 'px',
+			left: x + 'px'
+		}).addClass(ClassName.ANIMATE);
+		setTimeout(function () {
 			ink.remove();
 		}, 1500);
-	})
-})	
+	}
+
+	
+	/**
+	* ------------------------------------------------------------------------
+	* Data Api implementation
+	* ------------------------------------------------------------------------
+	*/
+	
+	var pmdCheckBox = function () {
+		_inherits(pmdCheckBox, commons);
+		function pmdCheckBox() {
+			var finalSelector = pmdCheckBox.prototype.attachParentSelector(Selector.PARENT_SELECTOR, Selector.PMD_CHECKBOX);
+			$(finalSelector).find(Selector.INPUT).after(Template.CHECK_BOX_LABEL);
+			$(finalSelector).find(Selector.INPUT).addClass("pm-ini");
+		}
+		return pmdCheckBox;
+	} ()
+
+
+	/**
+	* ------------------------------------------------------------------------
+	* jQuery
+	* ------------------------------------------------------------------------
+	*/
+	
+	var plugInFunction = function () {
+		if (this.selector !== "") {
+		  Selector.PARENT_SELECTOR = this.selector;
+		}
+		new pmdCheckBox()
+	}
+	
+	$(document).on(Event.MOUSE_DOWN, Selector.RIPPLE, onMouseDown);
+	
+	$.fn[NAME] = plugInFunction
+	
+	return pmdCheckBox
+	
+} (jQuery)()
