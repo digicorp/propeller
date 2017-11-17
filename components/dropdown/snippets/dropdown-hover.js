@@ -9,12 +9,3 @@
 
 <!-- Propeller dropdown js -->
 <script type="text/javascript" src="http://propeller.in/components/dropdown/js/dropdown.js"></script>
-
-<!-- Propeller Dropdown hover js -->
-<script src="http://propeller.in/components/dropdown/js/bootstrap-hover-dropdown.js"></script>
-<script>
-	// very simple to use!
-	$(document).ready(function() {
-		$('.pmd-dropdown-hover').dropdownHover().dropdown();
-	});
-</script>
