@@ -165,6 +165,12 @@
 					</div> <!-- dropdown types example end -->
 				
 				</div>
+				
+				<div id="adddropdown"></div>
+				
+				<br>
+				<button class="btn btn-default pmd-btn-raised" onclick="addDropdown()">Add Dropdown</button>
+				
 			</div> <!--Dropdown types code and example end -->
 			
 		</section> <!-- Propeller Dropdown end -->
@@ -429,19 +435,64 @@
 <!-- Bootstrap js -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<!-- Propeller ripple effect js -->
-<script type="text/javascript" src="js/ripple-effect.js"></script>
+<!-- Propeller Global js --> 
+<script src="../global/js/global.js"></script>
 
 <!-- Propeller dropdown js -->
 <script type="text/javascript" src="js/dropdown.js"></script>
 
-<!-- Propeller Dropdown hover js -->
-<script src="js/bootstrap-hover-dropdown.js"></script>
 <script>
-	// very simple to use!
-	$(document).ready(function() {
-		$('.pmd-dropdown-hover').dropdownHover().dropdown();
-	});
+
+	function addDropdown(){
+		$("#adddropdown").append('<div class="component-box"> \
+			<div class="row">\
+				<div class="col-md-12">\
+					<div class="pmd-card pmd-z-depth pmd-card-custom-view"> \
+						<div class="pmd-card-body">\
+							<div class="row">\
+								<div class="col-md-4">\
+									<span class="dropdown pmd-dropdown clearfix">\
+										<button class="btn pmd-ripple-effect btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown"\ aria-expanded="true">Dropdown with Header <span class="caret"></span></button>\
+										<ul aria-labelledby="dropdownMenu2" role="menu" class="dropdown-menu">\
+											<li class="dropdown-header" role="presentation">Dropdown header</li>\
+											<li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Action</a></li>\
+											<li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Another action</a></li>\
+											<li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Something else here</a></li>\
+											<li class="dropdown-header" role="presentation">Dropdown header</li>\
+											<li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Separated link</a></li>\
+										</ul>\
+									</span>\
+								</div>\
+								<div class="col-md-4">\
+									<span class="dropdown pmd-dropdown clearfix">\
+										<button class="btn pmd-ripple-effect btn-primary dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-expanded="true">Dropdown With Divider <span class="caret"></span></button>\
+										<ul aria-labelledby="dropdownMenuDivider" role="menu" class="dropdown-menu">\
+											<li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Action</a></li>\
+											<li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Another action</a></li>\
+											<li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Something else here</a></li>\
+											<li class="divider" role="presentation"></li>\
+											<li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Separated link</a></li>\
+										</ul>\
+									</span>\
+								 </div>\
+								<div class="col-md-4">\
+									<span class="dropdown pmd-dropdown clearfix">\
+										<button class="btn pmd-ripple-effect btn-primary dropdown-toggle" type="button" id="dropdownMenu3" data-toggle="dropdown" aria-expanded="true">Dropdown with disabled link <span class="caret"></span></button>\
+										<ul aria-labelledby="dropdownMenu3" role="menu" class="dropdown-menu">\
+											<li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Regular link</a></li>\
+											<li class="disabled" role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Disabled link</a></li>\
+											<li role="presentation"><a href="javascript:void(0);" tabindex="-1" role="menuitem">Another link</a></li>\
+										</ul>\
+									</span>\
+								</div>\
+							</div>\
+						</div>\
+					</div>\
+				</div>\
+			</div>\
+		</div>\
+		');
+	}
 </script>
 
 </html>
