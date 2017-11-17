@@ -17,7 +17,6 @@ var pmdAlert = function ($) {
      */
 
     var NAME = 'pmdAlert';
-    var VERSION = '1.1.0';
     var JQUERY_NO_CONFLICT = $.fn[NAME];
     var positionX = 'left';
     var positionY = 'top';
