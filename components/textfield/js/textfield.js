@@ -1,16 +1,19 @@
 
-/*!
- * Propeller v1.1.0 (http://propeller.in): pmdTextfield.js
+/**
+ * --------------------------------------------------------------------------
+ * Propeller v1.2.0 (http://propeller.in): textfield.js
  * Copyright 2016-2017 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
+ * --------------------------------------------------------------------------
  */
+
 
 var pmdTextfield = function ($) {
 	
 	
   /**
    * ------------------------------------------------------------------------
-   * Constants
+   * Variables
    * ------------------------------------------------------------------------
    */
 
@@ -45,7 +48,7 @@ var pmdTextfield = function ($) {
 	
 	/**
 	* ------------------------------------------------------------------------
-	* Class Definition
+	* Functions
 	* ------------------------------------------------------------------------
 	*/
 
@@ -72,7 +75,7 @@ var pmdTextfield = function ($) {
 	
 	/**
 	* ------------------------------------------------------------------------
-	* Data Api implementation
+	* Initialization
 	* ------------------------------------------------------------------------
 	*/
 
@@ -98,18 +101,15 @@ var pmdTextfield = function ($) {
 	*/
 	
 	var plugInFunction = function () {
-	if (this.selector !== "") {
-	  Selector.PARENT_SELECTOR = this.selector;
-	}
-	new pmdTextfield()
-	}
-
+		if (this.selector !== "") {
+		  Selector.PARENT_SELECTOR = this.selector;
+		}
+		new pmdTextfield();
+	};
 	$(document).on(Event.CHANGE, Selector.PMD_TEXTFIELD + " " + Selector.INPUT, onChange);
 	$(document).on(Event.FOCUS, Selector.PMD_TEXTFIELD + " " + Selector.INPUT, onFocus);
 	$(document).on(Event.FOCUSOUT, Selector.PMD_TEXTFIELD + " " + Selector.INPUT, onFocusOut);
-
-	$.fn[NAME] = plugInFunction
-
-	return pmdTextfield
+	$.fn[NAME] = plugInFunction;
+	return pmdTextfield;
   
-} (jQuery)()
+} (jQuery)();
