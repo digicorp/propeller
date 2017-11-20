@@ -8,7 +8,7 @@
  */
 
 var pmdTab = function ($) {
-
+	
 	
    /**
     * ------------------------------------------------------------------------
@@ -274,7 +274,6 @@ var pmdTab = function ($) {
                 if ($this.attr("scroll") !== undefined && $this.attr("scroll").toLowerCase() == "true") {
                     $this.addClass(ClassName.SCROLL);
                 }
-                
                 if ($this.attr("class").split(" ").indexOf(ClassName.SCROLL) > -1) {
                     if ($this.find(".nav.nav-tabs").parent().attr("class").split(" ").indexOf(ClassName.SCROLL_CONTAINER) < 0) {
                         $this.find(".nav.nav-tabs").wrap(Template.SCROLL_CONTAINER);

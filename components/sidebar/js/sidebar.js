@@ -10,11 +10,11 @@
 var pmdSidebar = function ($) {
 	
 	
-    /**
-     * ------------------------------------------------------------------------
-     * Variables
-     * ------------------------------------------------------------------------
-     */
+   /**
+	* ------------------------------------------------------------------------
+	* Variables
+	* ------------------------------------------------------------------------
+	*/
 	
     var NAME = 'pmdSidebar';
     var JQUERY_NO_CONFLICT = $.fn[NAME];
@@ -96,7 +96,7 @@ var pmdSidebar = function ($) {
         $this.removeClass(ClassName.OVERLAY_ACTIVE);
         $(Selector.SIDEBAR).removeClass(ClassName.OPEN);
         $(Selector.NAVBAR_SIDEBAR).removeClass(ClassName.OPEN);
-        $(Selector.BODY).removeClass(ClassName.BODY_OPEN)
+        $(Selector.BODY).removeClass(ClassName.BODY_OPEN);
         event.stopPropagation();
     }
 
@@ -245,19 +245,19 @@ var pmdSidebar = function ($) {
     } ();
 
 	
-    /**
-     * ------------------------------------------------------------------------
-     * jQuery
-     * ------------------------------------------------------------------------
-     */
+   /**
+	* ------------------------------------------------------------------------
+	* jQuery
+	* ------------------------------------------------------------------------
+	*/
 	
-    var plugInFunction = function (arg) {
-        if (this.selector !== "") {
-            Selector.PARENT_SELECTOR = this.selector;
-        }
-        new pmdSidebar(arg);
-    };
-    $.fn[NAME] = plugInFunction;
-    return pmdSidebar;
+	var plugInFunction = function (arg) {
+		if (this.selector !== "") {
+			Selector.PARENT_SELECTOR = this.selector;
+		}
+		new pmdSidebar(arg);
+	};
+	$.fn[NAME] = plugInFunction;
+	return pmdSidebar;
 
 } (jQuery)();
