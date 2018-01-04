@@ -2,7 +2,7 @@
 /*!
  * --------------------------------------------------------------------------
  * Propeller v1.2.0 (http://propeller.in): dropdown.js
- * Copyright 2016-2017 Digicorp, Inc.
+ * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * -------------------------------------------------------------------------- 
  */
@@ -68,23 +68,23 @@ var pmdDropdown = function ($) {
 	*/
 	
     function showDropdown(that) {
-        var dcdmc = that.closest(Selector.CONTAINER);
-        var dcdmbg = dcdmc.find(Selector.BG);
-        var w = that.outerWidth();
-        var h = that.outerHeight();
-        dcdmc.css({ 'width': w + 'px', 'height': h + 'px' });
-        dcdmbg.css({ 'width': w + 'px', 'height': h + 'px' });
-        setTimeout(function () {
-            that.css("clip", "rect(0 " + w + "px " + h + "px 0)");
-        }, 10);
+		var dcdmc = that.closest(Selector.CONTAINER);
+		var dcdmbg = dcdmc.find(Selector.BG);
+		var w = that.outerWidth();
+		var h = that.outerHeight();
+		dcdmc.css({ 'width': w + 'px', 'height': h + 'px' });
+		dcdmbg.css({ 'width': w + 'px', 'height': h + 'px' });
+		setTimeout(function () {
+			that.css("clip", "rect(0 " + w + "px " + h + "px 0)");
+		}, 10);
         if (that.hasClass(ClassName.RIGHT)) {
-            dcdmbg.addClass(ClassName.BG_RIGHT);
-            dcdmc.css({ "right": "0", "left": "auto" });
+			dcdmbg.addClass(ClassName.BG_RIGHT);
+			dcdmc.css({ "right": "0", "left": "auto" });
         } else if (that.hasClass(ClassName.TOP_LEFT)) {
-            dcdmbg.addClass(ClassName.BG_BOTTOM_LEFT);
+			dcdmbg.addClass(ClassName.BG_BOTTOM_LEFT);
         } else if (that.hasClass(ClassName.TOP_RIGHT)) {
-            dcdmbg.addClass(ClassName.BG_BOTTOM_RIGHT);
-            dcdmc.css({ "right": "0", "left": "auto" });
+			dcdmbg.addClass(ClassName.BG_BOTTOM_RIGHT);
+			dcdmc.css({ "right": "0", "left": "auto" });
         }
     }
 
@@ -93,14 +93,13 @@ var pmdDropdown = function ($) {
         var dropdowncenter = $(e.target).find(Selector.DROPDOWN_MENU).hasClass(ClassName.CENTER);
         var that = $(e.target).find(Selector.DROPDOWN_MENU);
         var $dataSidebar = $(e.target).find(Selector.DROPDOWN_TOGGLE).attr("data-sidebar");
-        
 		if ($(window).width() < minimumSize) {
             if ($dataSidebar === 'true') {
-                that.first().stop(true, true).slideDown(300);
-                $(e.target).addClass(ClassName.PMD_SIDEBAR_DROPDOWN);
-            }
-            $(".pmd-navbar").addClass("minSizeClass");
-        } else {
+				that.first().stop(true, true).slideDown(300);
+				$(e.target).addClass(ClassName.PMD_SIDEBAR_DROPDOWN);
+			}
+			$(".pmd-navbar").addClass("minSizeClass");
+		} else {
 			if (hassidebar) {
 				that.first().stop(true, true).slideDown();
 			} else if (dropdowncenter) {
@@ -135,15 +134,15 @@ var pmdDropdown = function ($) {
 
     function hideBsDropdownDesktop(e) {
         if ($(e.target).parents("aside").hasClass(ClassName.PMD_SIDEBAR)) {
-            return e.target.closable;
+        	return e.target.closable;
         }
         else {
-            var hassidebar = $(e.target).closest(Selector.PMD_SIDEBAR).hasClass(ClassName.PMD_SIDEBAR);
-            var dropdowncenter = $(e.target).find(Selector.DROPDOWN_MENU).hasClass(ClassName.CENTER);
-            var that = $(e.target).find(Selector.DROPDOWN_MENU);
-            if ($(window).width() < minimumSize) {
+        	var hassidebar = $(e.target).closest(Selector.PMD_SIDEBAR).hasClass(ClassName.PMD_SIDEBAR);
+			var dropdowncenter = $(e.target).find(Selector.DROPDOWN_MENU).hasClass(ClassName.CENTER);
+			var that = $(e.target).find(Selector.DROPDOWN_MENU);
+			if ($(window).width() < minimumSize) {
 				var $dataSidebar = $(e.target).find(Selector.DROPDOWN_TOGGLE).attr("data-sidebar");
-				if ($dataSidebar == 'true') {
+				if ($dataSidebar === 'true') {
 					that.first().stop(true, true).slideUp(300);
 				}
 				$(".pmd-navbar").addClass("minSizeClass");
@@ -191,7 +190,9 @@ var pmdDropdown = function ($) {
         if ($(window).width() > minimumSize) {
             dropdown.off(Event.CLICK);
             dropdown.on(Event.CLICK, onClickDropdown);
-        }
+		} else {
+			dropdown.find(Selector.DROPDOWN_MENU).removeAttr('style');
+		}
         if ($(window).width() < minimumSize) {
             $(".pmd-navbar").addClass("minSizeClass");
         } else {
@@ -210,12 +211,12 @@ var pmdDropdown = function ($) {
         _inherits(pmdDropdown, commons);
         function pmdDropdown(options) {
 			var pmddropdowntest  = pmdDropdown.prototype.attachParentSelector(Selector.PARENT_SELECTOR, Selector.PMD_DROPDOWN);
-			var finalSelector = $(pmddropdowntest).find(Selector.DROPDOWN_MENU + ":not(." + ClassName.PM_INI + ")")
+			var finalSelector = $(pmddropdowntest).find(Selector.DROPDOWN_MENU + ":not(." + ClassName.PM_INI + ")");
             $(finalSelector).wrap(Template.CONTAINER);
             $(finalSelector).before(Template.BG);
             $(finalSelector).addClass(ClassName.PM_INI);
 			var dataTrigger = $(finalSelector).prev("button").attr("data-trigger");
-            if (dataTrigger != undefined && dataTrigger.toLowerCase() == "hover") {
+            if (dataTrigger !== undefined && dataTrigger.toLowerCase() === "hover") {
                 $(finalSelector).prev("button").addClass("pmd-dropdown-hover");
             }
             //Hover event fot mouse over

@@ -2,7 +2,7 @@
 /**
  * --------------------------------------------------------------------------
  * Propeller v1.2.0 (http://propeller.in): popover.js
- * Copyright 2016-2017 Digicorp, Inc.
+ * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -53,16 +53,16 @@ var pmdPopover = function ($) {
 		var curPosLeft = elLeft;
 		var curPosRight = winWidth - curPosLeft - elWidth;
 		var curPosBottom = winHeight - curPosTop - elHeight;
-		if (curPlacement == "left" && curPosLeft <= range) {
+		if (curPlacement === "left" && curPosLeft <= range) {
 			return 'right';
 		}
-		else if (curPlacement == "right" && curPosRight <= range) {
+		else if (curPlacement === "right" && curPosRight <= range) {
 			return 'left';
 		}
-		else if (curPlacement == "top" && curPosTop <= range) {
+		else if (curPlacement === "top" && curPosTop <= range) {
 			return 'bottom';
 		}
-		if (curPlacement == "bottom" && curPosBottom <= range) {
+		if (curPlacement === "bottom" && curPosBottom <= range) {
 			return 'top';
 		} else {
 			return curPlacement;
@@ -71,7 +71,7 @@ var pmdPopover = function ($) {
 	
     var popoverHtmlDataToggleOptions = {
         html: true,
-        content: function (e) {
+        content: function () {
             var currentID = $(this).attr("data-id");
             var currentHTML = $(currentID).html();
             return currentHTML;

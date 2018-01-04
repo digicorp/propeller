@@ -1,17 +1,22 @@
 
 /*!
  * Propeller v1.2.0 (http://propeller.in)
- * Copyright 2016-2017 Digicorp, Inc.
+ * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
+"use strict";
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 // Attach Parent Selector
 var commons = function () {
+	
 	function commons() {}
 	commons.attachParentSelector = function (parentSelector, defaultSelector) {
 		var customSelector = defaultSelector;
 		if (parentSelector !== '' && parentSelector.length > 0) {
-			if (parentSelector == defaultSelector) {
+			if (parentSelector === defaultSelector) {
 				customSelector = defaultSelector;
 			} else if ($(parentSelector).hasClass(defaultSelector)) {
 				customSelector = parentSelector + "" + defaultSelector;
@@ -20,7 +25,7 @@ var commons = function () {
 			}
 		}
 		return customSelector;
-	}
+	};
 	return commons;
 };
 
@@ -91,6 +96,7 @@ var observeDOM = (function () {
 
 $(document).ready(function () {
 	observeDOM(document.querySelector('body'), function (mutations) {
+		
 		processMutation(0);
 		
 		function processMutation(index) {
@@ -101,11 +107,11 @@ $(document).ready(function () {
 			var nodes = mutation.addedNodes;
 			processNodes(nodes, function () {
 				processMutation(index + 1);
-			})
+			});
 		}
 		
 		function processNodes(nodes, callback) {
-			if (nodes.length == 0) {
+			if (nodes.length === 0) {
 				callback();
 				return;
 			}
@@ -121,11 +127,11 @@ $(document).ready(function () {
 			}
 			var node = nodes[index];
 			if (containsPmdClassPrefix(node)) {
-				if ($(node).attr("data-toggle") != undefined && $(node).attr("data-toggle").toLowerCase() == "popover") {
+				if ($(node).attr("data-toggle") !== undefined && $(node).attr("data-toggle").toLowerCase() === "popover") {
 					$().pmdPopover();
 				}
 				var classes = $(node).attr('class');
-				if (classes == undefined) {
+				if (classes === undefined) {
 					callback();
 					return;
 				}
@@ -142,7 +148,7 @@ $(document).ready(function () {
 				});
 			} else {
 
-				var childNodes = node.childNodes
+				var childNodes = node.childNodes;
 				processNodes(childNodes, function() {
 					processNode(nodes, index+1, function() {
 						callback();
@@ -152,7 +158,7 @@ $(document).ready(function () {
 		}
 
 		function containsPmdClassPrefix(ele) {
-			if ($(ele).attr('class') == undefined) {
+			if ($(ele).attr('class') === undefined) {
 				return false;
 			}
 			var classes = $(ele).attr('class').split(' ');

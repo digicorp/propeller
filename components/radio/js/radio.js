@@ -2,7 +2,7 @@
 /**
  * --------------------------------------------------------------------------
  * Propeller v1.2.0 (http://propeller.in): radio.js
- * Copyright 2016-2017 Digicorp, Inc.
+ * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * --------------------------------------------------------------------------
  */

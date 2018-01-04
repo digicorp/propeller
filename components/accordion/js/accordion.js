@@ -1,7 +1,7 @@
 
 /*!
  * Propeller v1.2.0 (http://propeller.in): accordion.js
- * Copyright 2016-2017 Digicorp, Inc.
+ * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
@@ -116,7 +116,7 @@ var pmdAccordion = function ($) {
             $(pmdAccordion.prototype.attachParentSelector(Selector.PARENT_SELECTOR, Selector.COLLAPSEALL)).on(Event.CLICK, collapseAll);
         }
         return pmdAccordion;
-    } ()
+    } ();
 
 
 	/**
@@ -130,8 +130,8 @@ var pmdAccordion = function ($) {
             Selector.PARENT_SELECTOR = this.selector;
         }
         new pmdAccordion();
-    }
+    };
     $.fn[NAME] = plugInFunction;
     return pmdAccordion;
 
-} (jQuery)()
+} (jQuery)();

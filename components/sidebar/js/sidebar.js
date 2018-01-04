@@ -2,7 +2,7 @@
 /**
  * --------------------------------------------------------------------------
  * Propeller v1.2.0 (http://propeller.in): sidebar.js
- * Copyright 2016-2017 Digicorp, Inc.
+ * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -67,14 +67,14 @@ var pmdSidebar = function ($) {
 	
     // Left sidebar toggle
     function onSidebarToggle(e) {
-        var dataTarget = "#" + $(e.currentTarget).attr("data-target");
-        $(dataTarget).toggleClass(ClassName.OPEN);
-        if (($(dataTarget ).hasClass(ClassName.LEFT_FIXED) || $(dataTarget ).hasClass(ClassName.RIGHT_FIXED)) && $(dataTarget).hasClass(ClassName.OPEN)) {
-            $(Selector.OVERLAY).addClass(ClassName.OVERLAY_ACTIVE);
-            $(Selector.BODY).addClass(ClassName.BODY_OPEN);
+		var dataTarget = "#" + $(e.currentTarget).attr("data-target");
+		$(dataTarget).toggleClass(ClassName.OPEN);
+        if (($(dataTarget).hasClass(ClassName.LEFT_FIXED) || $(dataTarget).hasClass(ClassName.RIGHT_FIXED)) && $(dataTarget).hasClass(ClassName.OPEN)) {
+			$(Selector.OVERLAY).addClass(ClassName.OVERLAY_ACTIVE);
+			$(Selector.BODY).addClass(ClassName.BODY_OPEN);
         } else {
-            $(Selector.OVERLAY).removeClass(ClassName.OVERLAY_ACTIVE);
-            $(Selector.BODY).removeClass(ClassName.BODY_OPEN);
+			$(Selector.OVERLAY).removeClass(ClassName.OVERLAY_ACTIVE);
+			$(Selector.BODY).removeClass(ClassName.BODY_OPEN);
         }
     }
 
@@ -102,7 +102,7 @@ var pmdSidebar = function ($) {
 
 	// On Window Resize
     function onResizeWindow(e) {
-        var options = e.data.param1;
+		var options = e.data.param1;
 		var sideBarSelector=Selector.SIDEBAR;
 		$(sideBarSelector).each(function () {
 			var $this = $(this);
@@ -124,8 +124,8 @@ var pmdSidebar = function ($) {
 				}
 			}
 		});
-	    $(pmdSidebar.prototype.attachParentSelector(Selector.PARENT_SELECTOR, Selector.OVERLAY)).removeClass(ClassName.OVERLAY_ACTIVE);
-        $(Selector.BODY).removeClass(ClassName.BODY_OPEN);
+		$(pmdSidebar.prototype.attachParentSelector(Selector.PARENT_SELECTOR, Selector.OVERLAY)).removeClass(ClassName.OVERLAY_ACTIVE);
+		$(Selector.BODY).removeClass(ClassName.BODY_OPEN);
     }
 
 	
@@ -139,11 +139,9 @@ var pmdSidebar = function ($) {
         _inherits(pmdSidebar, commons);
         function pmdSidebar(options) {
             var sideBarSelector=Selector.TOGGLE;
-			
-            if(Selector.PARENT_SELECTOR!="" &&Selector.PARENT_SELECTOR !=undefined){
-                sideBarSelector= Selector.TOGGLE + "[data-target="+Selector.PARENT_SELECTOR.substr(1,Selector.PARENT_SELECTOR.length)+"]";
+            if(Selector.PARENT_SELECTOR!=="" && Selector.PARENT_SELECTOR !==undefined){
+				sideBarSelector= Selector.TOGGLE + "[data-target="+Selector.PARENT_SELECTOR.substr(1,Selector.PARENT_SELECTOR.length)+"]";
             }
-          
             $(sideBarSelector).each(function () {
                 var $this = $(this);
                 var dataTarget = "#" + $this.attr("data-target");
@@ -151,41 +149,41 @@ var pmdSidebar = function ($) {
                 var dataPosition = $this.attr("data-position");
 				var isopen = $this.attr("is-open");
 				var minsize = $this.attr("minsize");
-                
 				dataPlacement=dataPlacement || "";
 				dataPosition=dataPosition || "";
-				
-				if (dataPlacement.toLowerCase() == "left") {
+				if( $(sideBarSelector).attr("data-target") === undefined){
+					console.warn("You need to defined 'data-target' attribute in the action button. The value of the 'data-target' attribute will be the id of the tag 'aside' to be called. For example, If  data-target='basicSidebar' is added in the anchor tag - <a href='javascript:void(0);' data-target='basicSidebar></a>, the same id='basicSidebar' needs to be added in the sidebar container div <aside id='basicSidebar' class='pmd-sidebar'>.");
+				}
+				if ($(Selector.SIDEBAR).attr("id") === undefined){
+					console.warn("You needs to be added id='"+$this.attr("data-target")+"'in the sidebar container div like as <aside id='" + $this.attr("data-target") + "'class='pmd-sidebar'>");
+				}
+				if (dataPlacement.toLowerCase() === "left") {
 					$(dataTarget).addClass(ClassName.LEFT);
-				} else if (dataPlacement.toLowerCase() == "right") {
+				} else if (dataPlacement.toLowerCase() === "right") {
 					$(dataTarget).addClass(ClassName.RIGHT_FIXED);
 				} else {
 					$(dataTarget).addClass(ClassName.LEFT);
 				}
-				
-				if (dataPlacement.toLowerCase() == "left" && dataPosition.toLowerCase() == "slidepush") {
+				if (dataPlacement.toLowerCase() === "left" && dataPosition.toLowerCase() === "slidepush") {
 					$(dataTarget).addClass(ClassName.SLIDE_PUSH);
-				} else if (dataPlacement.toLowerCase() == "left" && dataPosition.toLowerCase() == "fixed") {
+				} else if (dataPlacement.toLowerCase() === "left" && dataPosition.toLowerCase() === "fixed") {
 					$(dataTarget).addClass(ClassName.LEFT_FIXED);
-				} else if (dataPlacement.toLowerCase() == "right" && dataPosition.toLowerCase() == "slidepush") {
+				} else if (dataPlacement.toLowerCase() === "right" && dataPosition.toLowerCase() === "slidepush") {
 					
-				} else if (dataPlacement.toLowerCase() == "right" && dataPosition.toLowerCase() == "fixed") {
+				} else if (dataPlacement.toLowerCase() === "right" && dataPosition.toLowerCase() === "fixed") {
 					$(dataTarget).addClass(ClassName.RIGHT_FIXED);
 				} else {
 					$(dataTarget).addClass(ClassName.LEFT_FIXED);
 				}
-				
-				if (isopen !== undefined && isopen !== null && (isopen == true || isopen == "true")){
+				if (isopen !== undefined && isopen !== null && (isopen === true || isopen === "true")){
                     $(dataTarget).addClass(ClassName.OPEN);
                 } else {
                     $(dataTarget).removeClass(ClassName.OPEN);
                 }
-				
                 $(dataTarget + ' ' + Selector.SIDEBAR_DROPDOWN).off();
                 $(dataTarget + ' ' + Selector.SIDEBAR_DROPDOWN).on(Event.CLICK, function (event) {
 					event.stopPropagation(); 
 				});
-				
                 $(pmdSidebar.prototype.attachParentSelector(Selector.PARENT_SELECTOR, Selector.TOPBAR_TOGGLE)).off(Event.CLICK);
                 $(pmdSidebar.prototype.attachParentSelector(Selector.PARENT_SELECTOR, Selector.TOPBAR_TOGGLE)).on(Event.CLICK, function (e) { $(Selector.TOPBAR_FIXED).toggleClass(ClassName.OPEN); });
                 $(pmdSidebar.prototype.attachParentSelector(Selector.PARENT_SELECTOR, Selector.TOPBAR_CLOSE)).off(Event.CLICK);

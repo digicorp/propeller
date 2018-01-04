@@ -2,7 +2,7 @@
 /**
  * --------------------------------------------------------------------------
  * Propeller v1.2.0 (http://propeller.in): button.js
- * Copyright 2016-2017 Digicorp, Inc.
+ * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * -------------------------------------------------------------------------- 
  */
@@ -86,7 +86,7 @@ var pmdButton = function ($) {
 			$(pmdButton.prototype.attachParentSelector(Selector.PARENT_SELECTOR, Selector.PMD_RIPPLE_EFFECT)).on(Event.MOUSEDOWN+" "+Event.TOUCHSTART, onMouseDown);
         }
         return pmdButton;
-    }()
+    }();
 
 	
   /**
@@ -100,8 +100,8 @@ var pmdButton = function ($) {
 			Selector.PARENT_SELECTOR = this.selector;
 		}
 		new pmdButton();
-    }
-    $.fn[NAME] = plugInFunction
-    return pmdButton
+    };
+    $.fn[NAME] = plugInFunction;
+    return pmdButton;
 
-} (jQuery)()
+} (jQuery)();

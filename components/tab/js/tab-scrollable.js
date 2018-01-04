@@ -2,7 +2,7 @@
 /**
  * --------------------------------------------------------------------------
  * Propeller v1.2.0 (http://propeller.in): tab-scrollable.js
- * Copyright 2016-2017 Digicorp, Inc.
+ * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -53,7 +53,7 @@ var pmdTab = function ($) {
         ACTIVE_BAR_DIV: "<div class='pmd-tab-active-bar'></div>",
         SCROLL_LEFT: "<div class='pmd-tabs-scroll-left'><i class='material-icons pmd-sm'>chevron_left</i></div>",
         SCROLL_RIGHT: "<div class='pmd-tabs-scroll-right'><i class='material-icons pmd-sm'>chevron_right</i></div>",
-        SCROLL_CONTAINER: "<div class='pmd-tabs-scroll-container pmd-z-depth' style='cursor: grab;'></div>"
+        SCROLL_CONTAINER: "<div class='pmd-tabs-scroll-container'></div>"
     };
 
 	
@@ -257,11 +257,11 @@ var pmdTab = function ($) {
             $(window).unbind("resize");
 			$(pmdTab.prototype.attachParentSelector(Selector.PARENT_SELECTOR, Selector.PMD_TAB)).each(function () {
                 var $this = $(this);
-                if (options !== undefined && options.scroll !== null && (options.scroll == true || options.scroll == "true")) {
+                if (options !== undefined && options.scroll !== null && (options.scroll === true || options.scroll === "true")) {
                     $this.addClass(ClassName.SCROLL);
                 } else {
                     $this.removeClass(ClassName.SCROLL);
-                    if (options !== undefined && $this.attr("scroll") !== undefined && $this.attr("scroll").toLowerCase() == "true") {
+                    if (options !== undefined && $this.attr("scroll") !== undefined && $this.attr("scroll").toLowerCase() === "true") {
                         $this.attr("scroll", "false");
                     }
                     if ($this.find(".nav.nav-tabs").parent().attr("class").split(" ").indexOf(ClassName.SCROLL_CONTAINER) > -1) {
@@ -271,7 +271,7 @@ var pmdTab = function ($) {
                         $this.find(Selector.SCROLL_RIGHT).remove();
                     }
                 }
-                if ($this.attr("scroll") !== undefined && $this.attr("scroll").toLowerCase() == "true") {
+                if ($this.attr("scroll") !== undefined && $this.attr("scroll").toLowerCase() === "true") {
                     $this.addClass(ClassName.SCROLL);
                 }
                 if ($this.attr("class").split(" ").indexOf(ClassName.SCROLL) > -1) {
@@ -282,7 +282,7 @@ var pmdTab = function ($) {
                         $this.append(Template.SCROLL_RIGHT);
                     }
                 } else {
-                    if ($this.find(Selector.ACTIVE_BAR).length == 0) {
+                    if ($this.find(Selector.ACTIVE_BAR).length === 0) {
                         $this.find(".nav.nav-tabs").before(Template.ACTIVE_BAR_DIV);
                     }
                 }

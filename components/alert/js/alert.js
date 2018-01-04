@@ -2,7 +2,7 @@
 /*!
  * --------------------------------------------------------------------------
  * Propeller v1.2.0 (http://propeller.in): alert.js
- * Copyright 2016-2017 Digicorp, Inc.
+ * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * -------------------------------------------------------------------------- 
  */
@@ -57,14 +57,14 @@ var pmdAlert = function ($) {
      */
 
     function getNotificationValue() {
-        if (action == "true") {
-            if (actionText == null) {
+        if (action === "true") {
+            if (actionText === null) {
                 return "<div class='pmd-alert' data-action='true'>" + dataMessage + "<a href='javascript:void(0)' class='pmd-alert-close' onclick='(" + actionCallback + ")()'>×</a></div>";
             } else {
                 return "<div class='pmd-alert' data-action='true'>" + dataMessage + "<a href='javascript:void(0)' class='pmd-alert-close' onclick='(" + actionCallback + ")()'>" + actionText + "</a></div>";
             }
         } else {
-            if (actionText == null) {
+            if (actionText === null) {
                 return "<div class='pmd-alert' data-action='false'>" + dataMessage + "</div>";
             } else {
                 return "<div class='pmd-alert' data-action='true'>" + dataMessage + "<a href='javascript:void(0)' class='pmd-alert-close'>" + actionText + "</a></div>";
@@ -97,7 +97,7 @@ var pmdAlert = function ($) {
 				actionText = $(this).attr("data-action-text");
 				action = $(this).attr("data-action");
 				actionCallback = (function () { return; })();
-				actionCallback = $(this).attr("data-action-event") != undefined && $(this).attr("data-action-event") != "" ? $(this).attr("data-action-event") : actionCallback;
+				actionCallback = $(this).attr("data-action-event") !== undefined && $(this).attr("data-action-event") !== "" ? $(this).attr("data-action-event") : actionCallback;
 				if ($(window).width() < 768) {
 					positionX = "center";
 				}
@@ -113,13 +113,13 @@ var pmdAlert = function ($) {
 				if (options !== undefined && options.dataDuration !== null) {
 					duration = parseFloat(options.dataDuration);
 				} 
-				if (boxLength > 0 && positionY != 'top') {
+				if (boxLength > 0 && positionY !== 'top') {
 					currentPath.prepend(notification);
 				} else {
 					currentPath.append(notification);
 				}
 				currentPath.width($(Selector.CONTAINER).outerWidth());
-				if (action == "true") {
+				if (action === "true") {
 					currentPath.children("[data-action='true']").addClass(ClassName.VISIBLE + " " + dataEffect);
 				} else {
 					currentPath.children("[data-action='false']").addClass(ClassName.VISIBLE + " " + dataEffect).delay(duration).slideUp( function () {
@@ -133,7 +133,7 @@ var pmdAlert = function ($) {
 			});
 		}
         return pmdAlert;
-    } ()
+    } ();
 	
 	
 	/**
@@ -147,8 +147,8 @@ var pmdAlert = function ($) {
             Selector.PARENT_SELECTOR = this.selector;
         }
         new pmdAlert(options);
-    }
+    };
     $.fn[NAME] = plugInFunction;
     return pmdAlert;
 
-} (jQuery)()
+} (jQuery)();
