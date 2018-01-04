@@ -152,10 +152,10 @@ var pmdSidebar = function ($) {
 				dataPlacement=dataPlacement || "";
 				dataPosition=dataPosition || "";
 				if( $(sideBarSelector).attr("data-target") === undefined){
-					console.warn("You need to defined 'data-target' attribute in the action button. The value of the 'data-target' attribute will be the id of the tag 'aside' to be called. For example, If  data-target='basicSidebar' is added in the anchor tag - <a href='javascript:void(0);' data-target='basicSidebar></a>, the same id='basicSidebar' needs to be added in the sidebar container div <aside id='basicSidebar' class='pmd-sidebar'>.");
+					console.warn("You need to define 'data-target' attribute in the action button.");
 				}
 				if ($(Selector.SIDEBAR).attr("id") === undefined){
-					console.warn("You needs to be added id='"+$this.attr("data-target")+"'in the sidebar container div like as <aside id='" + $this.attr("data-target") + "'class='pmd-sidebar'>");
+					console.warn("You need to add id='"+$this.attr("data-target")+"'in the sidebar container div like <aside id='" + $this.attr("data-target") + "'class='pmd-sidebar'>");
 				}
 				if (dataPlacement.toLowerCase() === "left") {
 					$(dataTarget).addClass(ClassName.LEFT);
