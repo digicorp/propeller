@@ -52,7 +52,7 @@ Using third party components:
 - Install range slider with npm: `npm install propellerkit-range-slider`
 - Install datetimepicker with npm: `npm install propellerkit-datetimepicker`
 - Install datatables with npm: `npm install propellerkit-datatables`
-- Install datatables with npm: `npm install propellerkit-custom-scrollbar`
+- Install custom scrollbar with npm: `npm install propellerkit-custom-scrollbar`
 
 
 ## Propeller Guidelines
@@ -116,7 +116,7 @@ See [the Releases section of our GitHub project](https://github.com/digicorp/pro
 
 ## License
 
-Propeller v1.1.0 (http://propeller.in)
+Propeller v1.2.0 (http://propeller.in)
 © 2016-2017 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
 Licensed under [MIT](https://github.com/digicorp/propeller/blob/master/LICENSE)
 
