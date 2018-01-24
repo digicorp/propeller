@@ -127,7 +127,7 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
-								<div class="pmd-card-body"> 
+								<div class="pmd-card-body" id="addTextField"> 
 									<!-- Regular Input -->
 									<div class="form-group pmd-textfield">
 										<label for="regular1" class="control-label">Regular Input</label>
@@ -147,6 +147,8 @@
 								</div>
 							</div>
 							<p class="component-desc">Basic elements</p>
+							<br>
+							<button class="btn btn-default pmd-btn-raised" onclick="addTextField()">Add Text Field</button>
 						</div>
 						<div class="col-md-6">
 							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
@@ -155,12 +157,13 @@
 									<div class="form-group pmd-textfield pmd-textfield-floating-label">
 										<label for="regular1" class="control-label">Regular Input</label>
 										<input type="text" id="regular1" class="form-control">
-										</div>
+										
+									</div>
 									<!-- Password Floating Input -->
 									<div class="form-group pmd-textfield pmd-textfield-floating-label">
 										<label for="password1" class="control-label">Password</label>
 										<input id="password1" class="form-control" type="password">
-										</div>
+									</div>
 									<!--Help Text Floating Input -->
 									<div class="form-group pmd-textfield pmd-textfield-floating-label">
 										<label for="help1">Input with help text</label>
@@ -174,6 +177,7 @@
 					</div><!-- end Text fields example -->
 
 				</div>
+				
 			</div><!--end Text fields code, example -->
 		</section><!-- text fields end --> 
 		
@@ -452,12 +456,14 @@
 									<!-- Floating Textarea -->
 									<div class="form-group pmd-textfield pmd-textfield-floating-label">
 										<label class="control-label">Text Area</label>
-										<textarea required class="form-control"></textarea>
+										<textarea required class="form-control">Text Area</textarea>
 									</div>
 								</div>
 							</div>
 							<p class="component-desc">Floating Textarea</p>
 						</div>
+						
+						
 					</div> <!-- text area example end -->
 				</div>
 			</div> <!-- text area code and example end -->
@@ -471,13 +477,20 @@
 <!-- Jquery js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-<!-- Propeller checkbox js -->
-<script type="text/javascript" src="http://propeller.in/components/checkbox/js/checkbox.js"></script>
+<!-- Propeller Global js --> 
+<script src="../global/js/global.js"></script>
 
 <!-- Propeller checkbox js -->
 <script type="text/javascript" src="js/textfield.js"></script>
 
-<!-- Propeller checkbox js -->
-<script type="text/javascript" src="http://propeller.in/components/radio/js/radio.js"></script>
+<script>
+	function addTextField(){
+		$("#addTextField").append('<div class="form-group pmd-textfield pmd-textfield-floating-label">\
+										<label for="help1">Input with help text</label>\
+										<input type="text" id="help1" class="form-control">\
+										<p class="help-block">Help text</p>\
+									</div>\ ');
+		}
+</script>
 
 </html>

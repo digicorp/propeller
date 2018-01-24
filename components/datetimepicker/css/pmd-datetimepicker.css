@@ -1,6 +1,6 @@
 /*!
  * Propeller v1.1.0 (http://propeller.in)
- * Copyright 2016-2017 Digicorp, Inc.
+ * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
 */
 
@@ -19,20 +19,15 @@
 .bootstrap-datetimepicker-widget .accordion-toggle a { color: #fff; display:inline-block; padding:3px 0; cursor:pointer;}
 .bootstrap-datetimepicker-widget .accordion-toggle a:hover { background:none; color:#fff;} 
 .bootstrap-datetimepicker-widget table th.picker-switch { width: 145px; font-weight: bold; color: #000; }
-
-
 .bootstrap-datetimepicker-widget table td span { display: inline-block; width: 70px; height: 70px; line-height: 70px; }
-
 .bootstrap-datetimepicker-widget .timepicker-hour,
 .bootstrap-datetimepicker-widget .timepicker-minute,
 .bootstrap-datetimepicker-widget .timepicker-second { font-weight:normal; font-size: 3.5rem;}
-
 .bootstrap-datetimepicker-widget { position:relative; transition:none;}
 .bootstrap-datetimepicker-widget.dropdown-menu {  position:absolute; display: block; visibility: visible; opacity: 1; clip: auto; width:300px; padding:0; margin:0;}
 .bootstrap-datetimepicker-widget.dropdown-menu:after,
 .bootstrap-datetimepicker-widget.dropdown-menu:before { display:none;}
 .bootstrap-datetimepicker-widget .datepicker > div { display:table; width:100%;}
-
 .pmd-navbar-left .bootstrap-datetimepicker-widget { width:530px;}
 .pmd-navbar-left .bootstrap-datetimepicker-widget .timepicker { display:table; width:100%;}
 .pmd-navbar-left .bootstrap-datetimepicker-widget .timepicker .timepicker-picker,
@@ -182,7 +177,7 @@
 .datepicker-modal .datepicker-tab li { float:left; width:50%; display:table-cell; vertical-align:middle;}
 .datepicker-modal .datepicker-tab li a { display:block; font-size:18px; border-bottom:5px solid #444444; color:#b2b2b2; height:60px; line-height:60px; position:relative;} 
 .datepicker-modal .datepicker-tab li a.active { color:#fff; border-color:#fff;}
-.datepicker-modal .datepicker-tab li a.active:before { content:""; width:100%; z-index:10; height:5px; background:url(../../datetimepicker/images/shadow-repeat.png) left bottom repeat-x; position:absolute; left:0; bottom:-5px; }
+.datepicker-modal .datepicker-tab li a.active:before { content:""; width:100%; z-index:10; height:5px; position:absolute; left:0; bottom:-5px; }
 
 .timepicker .downarrow .btn, 
 .timepicker .timeview .btn,

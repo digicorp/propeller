@@ -202,11 +202,11 @@
 							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
 								<div class="pmd-card-body text-center alert-custom"> 
 									<!--Alert Top Left -->
-									<button type="button"  data-positionX="left" data-positionY="top" data-effect="fadeInUp" data-action="true" data-action-text="Close" data-duration="3000" data-message="You have 1 messages" class="btn pmd-ripple-effect btn-default pmd-btn-raised pmd-alert-toggle">Top Left</button>
+									<button type="button"  data-positionX="left" data-positionY="top" data-effect="fadeInUp" data-action="true" data-action-text="Close" data-action-event="CloseAlert()" data-message="You have 1 messages" class="btn pmd-ripple-effect btn-default pmd-btn-raised pmd-alert-toggle">Top Left</button>
 									<!--Alert Top Center -->
-									<button type="button" data-positionX="center" data-positionY="top" data-effect="fadeInUp" data-action="true" data-action-text="Refresh" data-duration="3000" data-message="You have 2 messages" class="btn pmd-ripple-effect btn-default pmd-btn-raised pmd-alert-toggle">Top Center</button>
+									<button type="button" data-positionX="center" data-positionY="top" data-effect="fadeInUp" data-action="true" data-action-text="Refresh" data-action-event="RefreshAlert()" data-message="You have 2 messages" class="btn pmd-ripple-effect btn-default pmd-btn-raised pmd-alert-toggle">Top Center</button>
 									<!--Alert Top Right -->
-									<button type="button" data-positionX="right" data-positionY="top" data-effect="fadeInUp" data-action="true" data-action-text="Ok" data-duration="3000" data-message="You have 3 messages" class="btn pmd-ripple-effect btn-default pmd-btn-raised pmd-alert-toggle"> Top Right</button>
+									<button type="button" data-positionX="right" data-positionY="top" data-effect="fadeInUp" data-action="true" data-action-text="Ok" data-message="You have 3 messages" class="btn pmd-ripple-effect btn-default pmd-btn-raised pmd-alert-toggle"> Top Right</button>
 								</div>
 							</div>
 							<p class="component-desc">Alert Top</p>
@@ -250,7 +250,7 @@
 					<div class="row">
 						<div class="col-md-12"> 
 							<div class="pmd-card pmd-z-depth">
-								<div class="pmd-card-body text-center alert-custom"> 
+								<div class="pmd-card-body text-center alert-custom" id="addAlert">
 									<!--Information Alett-->
 									<button type="button" data-positionX="left" data-positionY="top" data-duration="5000" data-effect="fadeInUp" data-message="Heads up! This alert needs your attention, but it's not super important." data-type="information"  data-revert="fadeOutUp" class="btn pmd-ripple-effect btn-info pmd-btn-raised pmd-alert-toggle">Alert Information</button>
 									<!--Warning Alett-->
@@ -258,14 +258,22 @@
 									<!--Success Alett-->
 									<button type="button"  data-positionX="right" data-positionY="top"  data-duration="10000" data-effect="fadeInUp" data-message="Well done! You successfully read this important alert message." data-type="success" class="btn pmd-ripple-effect btn-success pmd-z-depth pmd-alert-toggle">Alert Success</button>
 									<!--Error Alert -->
-									<button type="button"  data-positionX="right" data-positionY="top" data-effect="fadeInUp" data-message="Oh snap! Change a few things up and try submitting again." data-type="error" class="btn pmd-ripple-effect btn-danger pmd-z-depth pmd-alert-toggle">Alert Error</button>
+									<!--<button type="button"  data-positionX="right" data-positionY="top" data-effect="fadeInUp" data-message="Oh snap! Change a few things up and try submitting again." data-type="error" class="btn pmd-ripple-effect btn-danger pmd-z-depth pmd-alert-toggle">Alert Error</button>-->
 								</div>
 							</div>
 						</div>
 					</div> <!-- alert types example end -->
-					
+					<br>
+					<div class="row">
+						<div class="col-sm-12">
+							<button class="btn btn-default pmd-btn-raised" onclick="addAlert()">Add Alert</button>
+						</div>
+					</div>
 				</div> <!--alert type code and example end -->
 			</div>
+			
+			
+			
 		</section> <!-- Propeller alert with basic notification end -->
 		
 		<!-- Configuration starts-->		
@@ -375,11 +383,23 @@
 <!-- Bootstrap js -->
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<!-- Propeller ripple effect js -->
-<script type="text/javascript" src="http://propeller.in/components/button/js/ripple-effect.js"></script>
+<!-- Propeller Global js --> 
+<script src="../global/js/global.js"></script>
 
 <!-- Propeller alerts js -->
 <script type="text/javascript" src="js/alert.js"></script>
+
+<script>
+	function CloseAlert(e){
+		alert("Clicked on action");
+	}
+</script>
+
+<script>
+	function addAlert(){
+		$("#addAlert").append('<button type="button" data-positionX="right" data-positionY="top" data-effect="fadeInUp" data-message="Oh snap! Change a few things up and try submitting again." data-type="error" class="btn pmd-ripple-effect btn-danger pmd-z-depth pmd-alert pmd-alert-toggle">Alert Error</button>');
+	}
+</script>
 
 </body>
 </html>

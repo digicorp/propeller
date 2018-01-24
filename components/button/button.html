@@ -142,6 +142,13 @@
 					</div> <!--default button example end-->
 					
 				</div> <!-- Default button code and example end --> 
+				
+				<div id="addButton">
+					
+				</div>
+				
+				<button class="btn btn-default pmd-btn-raised" onclick="addButton()">Add Button</button>
+				
 			</div>
 		</section> <!-- Propeller button end --> 		
 		
@@ -610,8 +617,30 @@
 <!-- jquery js -->
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+<!-- Propeller Global js --> 
+<script src="../global/js/global.js"></script>
+
 <!-- Propeller ripple effect js -->
-<script type="text/javascript" src="http://propeller.in/components/button/js/ripple-effect.js"></script>
+<script type="text/javascript" src="js/ripple-effect.js"></script>
+
+<script>
+	function addButton(){
+		$("#addButton").append('<div class="component-box">\
+					<div class="pmd-card pmd-z-depth card-custom-view">\
+						<div class="pmd-card-body"> \
+							<button type="button" class="btn pmd-ripple-effect btn-default"> Default </button >\
+							<button type="button" class="btn pmd-ripple-effect btn-primary"> Primary </button >\
+							<button type="button" class="btn pmd-ripple-effect btn-success"> Success </button >\
+							<button type="button" class="btn pmd-ripple-effect btn-info"> Info </button >\
+							<button type="button" class="btn pmd-ripple-effect btn-warning"> Warning </button >\
+							<button type="button" class="btn pmd-ripple-effect btn-danger"> Danger </button >\
+							<button type="button" class="btn pmd-ripple-effect btn-link"> Link </button >\
+						</div>\
+					</div>\
+				</div>\
+');
+	}
+</script>
 
 </body>
 </html>

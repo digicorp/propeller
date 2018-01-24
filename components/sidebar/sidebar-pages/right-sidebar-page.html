@@ -58,7 +58,7 @@
         <div class="pmd-navbar-right-icon pull-right"> 
             <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect"><i class="material-icons pmd-sm md-light">search</i></a>
             <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect topbar-toggle visible-xs-inline-block" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><i class="material-icons pmd-sm">more_vert</i></a>
-            <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect pmd-sidebar-toggle-right"><i class="material-icons md-light">more_horiz</i></a>   
+            <a href="javascript:void(0);" data-target="basicSidebar" data-placement="right" data-position="fixed" is-open="true" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect pmd-sidebar-toggle"><i class="material-icons md-light">more_horiz</i></a>   
         </div> 
         <!-- /.navbar-collapse --> 
         </div>
@@ -74,7 +74,7 @@
       </div>
     
       <!-- Right sidebar -->
-      <aside class="pmd-sidebar sidebar-default pmd-sidebar-right-fixed pmd-z-depth" role="navigation"> 
+      <aside id="basicSidebar" class="pmd-sidebar sidebar-default pmd-z-depth" role="navigation"> 
           <!-- Sidebar navigation -->
           <ul class="nav pmd-sidebar-nav">
               <li> <a class="pmd-ripple-effect" href="javascript:void(0);"> Trash</a> </li>
@@ -99,7 +99,14 @@
 <!-- Propeller ripple effect js -->
 <script type="text/javascript" language="javascript" src="http://propeller.in/components/button/js/ripple-effect.js"></script>
 
+<!-- Propeller Global js --> 
+<script src="../../global/js/global.js"></script>
+
 <!-- Propeller Sidebar js -->
 <script type="text/javascript" language="javascript" src="../js/sidebar.js"></script>
+
+<!-- Propeller Dropdown js -->
+<script type="text/javascript" language="javascript" src="../../dropdown/js/dropdown.js"></script>
+
 
 </html>

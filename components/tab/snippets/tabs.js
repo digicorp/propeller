@@ -6,8 +6,3 @@
 
 <!-- Propeller tabs js -->
 <script type="text/javascript" language="javascript" src="http://propeller.in/components/tab/js/tab-scrollable.js"></script>
-<script type="text/javascript">
-	$(document).ready( function() {
-		$('.pmd-tabs').pmdTab();
-	});
-</script>

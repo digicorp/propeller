@@ -71,7 +71,6 @@
 						<div class="col-md-12"> 
 							<div class="pmd-card pmd-z-depth pmd-card-custom-form">
 								<div class="pmd-card-body text-center"> 
-									
 									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" data-toggle="popover" data-placement="left" data-content="Popover Left">Left</button>
 									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" data-toggle="popover" data-placement="top" data-content="Popover top">Top</button>
 									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" data-toggle="popover" data-placement="bottom" data-content="Popover Bottom">Bottom</button>
@@ -101,6 +100,13 @@
 					
 				</div><!-- On Click popover with Title end -->
                 <p class="component-desc"><strong>Popover on Click with Title</strong>. Use attribute <code>title</code> to add title to the Popover.</p>
+                
+                <div id="addPopover">
+					
+				</div>
+				
+				<button class="btn btn-default pmd-btn-raised" onclick="addPopover()">Add Button</button>
+                
 			</div> <!-- On Click popover code and example end -->
 		</section> <!-- On Click popover end -->
 		
@@ -359,9 +365,32 @@
 <!-- Propeller ripple effect js -->
 <script type="text/javascript" src="http://propeller.in/components/button/js/ripple-effect.js"></script>
 
+<!-- Propeller Global js --> 
+<script src="../global/js/global.js"></script>
+
 <!-- Propeller popover js -->
 <script type="text/javascript" src="js/popover.js"></script>
 
+<script>
+	function addPopover(){
+		$("#addPopover").append('<div class="component-box">\
+					<!-- buttons for popover -->\
+					<div class="row">\
+						<div class="col-md-12"> \
+							<div class="pmd-card pmd-z-depth pmd-card-custom-form">\
+								<div class="pmd-card-body text-center"> \
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" data-toggle="popover" data-placement="left" data-content="Popover Left">Left</button>\
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" data-toggle="popover" data-placement="top" data-content="Popover top">Top</button>\
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" data-toggle="popover" data-placement="bottom" data-content="Popover Bottom">Bottom</button>\
+									<button type="button" class="btn pmd-ripple-effect btn-default pmd-btn-raised" data-trigger="click" data-toggle="popover" data-placement="right" data-content="Popover Right">Right</button>\
+								</div>\
+							</div>\
+						</div>\
+					</div> <!-- buttons for popover end -->\
+				</div>\
+	');
+}
+</script>
 
 </body>
 </html>
