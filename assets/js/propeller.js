@@ -1116,14 +1116,14 @@ var pmdAlert = function ($) {
      */
 
     function getNotificationValue() {
-        if (action === "true") {
-            if (actionText === null) {
+        if (action == "true") {
+            if (actionText == null) {
                 return "<div class='pmd-alert' data-action='true'>" + dataMessage + "<a href='javascript:void(0)' class='pmd-alert-close' onclick='(" + actionCallback + ")()'>×</a></div>";
             } else {
                 return "<div class='pmd-alert' data-action='true'>" + dataMessage + "<a href='javascript:void(0)' class='pmd-alert-close' onclick='(" + actionCallback + ")()'>" + actionText + "</a></div>";
             }
         } else {
-            if (actionText === null) {
+            if (actionText == null) {
                 return "<div class='pmd-alert' data-action='false'>" + dataMessage + "</div>";
             } else {
                 return "<div class='pmd-alert' data-action='true'>" + dataMessage + "<a href='javascript:void(0)' class='pmd-alert-close'>" + actionText + "</a></div>";
