@@ -49,7 +49,7 @@ $( document ).ready(function() {
 	});
 	
 	$eventSelectTag.each(function(){
-		var selected_tag = $(this).closest('.pmd-textfield').find('.select2-selection__choice').hasClass('select2-selection__choice');
+		var selected_tag = $(this).find(':selected').length;
 		if (selected_tag) {
 			$(this).closest('.pmd-textfield').addClass("pmd-textfield-floating-label-completed");
 		} else {
