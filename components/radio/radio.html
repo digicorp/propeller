@@ -26,18 +26,12 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="http://propeller.in/components/icons/css/google-icons.css" type="text/css" rel="stylesheet" />
 	
-	<!-- Propeller Checkbox -->
-    <link href="http://propeller.in/components/checkbox/css/checkbox.css" type="text/css" rel="stylesheet" />
-
-	<!-- Propeller textfield -->
-    <link href="http://propeller.in/components/textfield/css/textfield.css" type="text/css" rel="stylesheet" />
-    
+	<!-- Propeller Button -->
+    <link href="http://propeller.in/components/button/css/button.css" type="text/css" rel="stylesheet" />
+	
 	<!-- Propeller Radio -->
-    <link href="http://propeller.in/components/radio/css/radio.css" type="text/css" rel="stylesheet" />
+    <link href="css/radio.css" type="text/css" rel="stylesheet" />
     
-	<!-- Propeller Toggle -->
-    <link href="http://propeller.in/components/toggle-switch/css/toggle-switch.css" type="text/css" rel="stylesheet" />
-
 </head>
 <body>
 
@@ -79,7 +73,7 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="pmd-card pmd-z-depth">
-								<div class="pmd-card-body"> 
+								<div class="pmd-card-body" id="addRadio"> 
 									<!-- Simple radio with label -->
 
 									<div class="radio">
@@ -127,10 +121,15 @@
 							</div>
 						</div>
 					</div> <!-- radio example end -->
+					<br>
+					<div class="row">
+						<div class="col-sm-12">
+							<button class="btn btn-default pmd-btn-raised" onclick="addRadio()">Add Radio</button>
+						</div>
+					</div>
 				</div>
 			</div> <!-- radio code and example end -->
 		</section> <!-- Radio end --> 
-		 
 	</div> <!--container end --> 
 	
 </div> <!--Form-->
@@ -139,13 +138,19 @@
 <!-- Jquery js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-<!-- Propeller checkbox js -->
-<script type="text/javascript" src="http://propeller.in/components/checkbox/js/checkbox.js"></script>
+<!-- Propeller Global js --> 
+<script src="http://propeller.in/components/global/js/global.js"></script>
 
 <!-- Propeller checkbox js -->
-<script type="text/javascript" src="http://propeller.in/components/textfield/js/textfield.js"></script>
+<script type="text/javascript" src="js/radio.js"></script>
 
-<!-- Propeller checkbox js -->
-<script type="text/javascript" src="http://propeller.in/components/radio/js/radio.js"></script>
+<script>
+	function addRadio(){
+		$("#addRadio").append('<div class="radio1"><div class="radio1"><div class="radio"><label id="test" class="pmd-radio pmd-radio-ripple-effect">\
+			<input type="radio" name="optionsRadios" id="click" value="option1">\
+			<span for="click">Option one is this and that&mdash;be sure to include why its great</span> </label></div></div></div>\
+		');
+	}
+</script>
 
 </html>

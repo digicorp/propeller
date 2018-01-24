@@ -1,0 +1,1 @@
+$('.pmd-accordion').pmdAccordion();

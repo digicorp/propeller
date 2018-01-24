@@ -1,10 +1,13 @@
 <br>
 <p align="left">
-  <a href="http://propeller.in/">
+  <a href="http://propeller.in/" target="_blank">
     <img height="40" src="http://propeller.in/assets/images/propeller-logo.png" />
   </a>
 	 <p align="left">
-Custom Scrollbar is used to get rid of browser default scroll bar by utilizing jQuery UI, the feature-rich jQuery Custom Scrollbar plugin. It allows you to customize scrollbars exactly as you need them. It features vertical/horizontal scrolling, mouse-wheel support, scroll easing, adjustable scrollbar height/width and more.</p>
+Propeller’s custom scrollbar is used to get rid of browser default scroll bar by utilizing  the feature-rich <a href="http://manos.malihu.gr/jquery-custom-content-scroller/" target="_blank">jQuery custom content scroller</a> plugin. It allows you to customize scrollbars exactly as you need them. It features vertical/horizontal scrolling, mouse-wheel support, scroll easing, adjustable scrollbar height/width and more.
+
+<a href="http://propeller.in/" target="_blank">Propeller</a> is a front-end responsive framework based on Google's Material Design Standards & Bootstrap. It is an open source library created at <a href="https://www.digi-corp.com/" target="_blank">Digicorp.</a>
+</p>
 </p>
 
 ## Installation

@@ -4,9 +4,9 @@
     <img height="40" src="http://propeller.in/assets/images/propeller-logo.png" />
   </a>
 	 <p align="left">
-Range Slider let the user select a range of values by moving the slider thumb. The smallest value is to the left, the largest to the right.
+Propeller’s range slider lets the user select a range of values by moving the slider thumb. The smallest value is to the left, the largest to the right. We have used <a href="https://refreshless.com/nouislider/" target="_blank">noUISlider</a> plugin as a base and customized it by applying material design principles to it. 
 
-We have used noUISlider plugin as a reference which we have then customized based on our Propeller theme.
+<a href="http://propeller.in/" target="_blank">Propeller</a> is a front-end responsive framework based on Google's Material Design Standards & Bootstrap. It is an open source library created at <a href="https://www.digi-corp.com/" target="_blank">Digicorp.</a>
 	</p>
 </p>
 

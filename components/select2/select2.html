@@ -23,7 +23,7 @@
 	<link href="http://propeller.in/components/typography/css/typography.css" type="text/css" rel="stylesheet" />
 	
 	<!-- Propeller textbox -->
-	<link href="http://propeller.in/components/typography/css/textfield.css" type="text/css" rel="stylesheet"/>
+	<link href="http://propeller.in/components/textfield/css/textfield.css" type="text/css" rel="stylesheet"/>
 
 	<!-- Select2 css -->
 	<link href="css/select2.min.css" type="text/css" rel="stylesheet"/>
@@ -129,7 +129,7 @@
 										<label>Simple Select with Search</label>
 										<select class="select-with-search pmd-select2 form-control">
 											<!--<option></option> -->
-											<option>Dallas Cowboys</option>
+											<option selected="selected">Dallas Cowboys</option>
 											<option>New York Giants</option>
 											<option>Philadelphia Eagles</option>
 											<option>Washington Redskins</option>
@@ -184,7 +184,7 @@
 								<div class="form-group pmd-textfield pmd-textfield-floating-label">
 									<label>Select Multiple Tags</label>
 									<select class="form-control select-tags pmd-select2-tags" multiple>
-										<option>Dallas Cowboys</option>
+										<option selected="123">Dallas Cowboys</option>
 										<option>New York Giants</option>
 										<option>Philadelphia Eagles</option>
 										<option>Washington Redskins</option>
@@ -242,8 +242,8 @@
 								<div class="form-group pmd-textfield pmd-textfield-floating-label">
 									<label>Select &amp; Add Multiple Tags</label>
 									<select class="form-control select-add-tags pmd-select2-tags" multiple>
-										<option>Dallas Cowboys</option>
-										<option>New York Giants</option>
+										<option selected="">Dallas Cowboys</option>
+										<option selected="selected">New York Giants</option>
 										<option>Philadelphia Eagles</option>
 										<option>Washington Redskins</option>
 										<option>Chicago Bears</option>
@@ -340,6 +340,9 @@
 <script type="text/javascript" src="js/select2.full.js"></script>
 
 <!-- Propeller Select2 -->
+<script type="text/javascript" src="js/pmd-select2.js"></script>	
+	
+<!-- Propeller Select2 -->
 <script type="text/javascript">
 	$(document).ready(function() {
 		<!-- Select Multiple Tags -->
@@ -354,18 +357,17 @@
 		});
 		<!-- Selectbox with search -->
 		$(".select-with-search").select2({
-			theme: "bootstrap"
+			theme: "bootstrap",
 		});
 		<!-- Select & Add Multiple Tags -->
 		$(".select-add-tags").select2({
 			tags: true,
 			theme: "bootstrap",
 		})
+//		$(".select-tags").val(['Dallas Cowboys','2','5']).trigger('change');
+
 	});
 </script>
-
-<!-- Propeller Select2 -->
-<script type="text/javascript" src="js/pmd-select2.js"></script>
 
 </body>
 
