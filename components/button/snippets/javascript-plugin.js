@@ -1,0 +1,1 @@
+$('.pmd-ripple-effect').pmdButton();
