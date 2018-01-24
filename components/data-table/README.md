@@ -1,12 +1,12 @@
 <br>
 <p align="left">
-  <a href="http://propeller.in/">
+  <a href="http://propeller.in/" target="_blank">
     <img height="40" src="http://propeller.in/assets/images/propeller-logo.png" />
   </a>
 	 <p align="left">
-Data table refers to a matrix of information, like an excel spreadsheet with columns, rows, and data. It is used to present raw data sets, and usually appear in desktop enterprise products.
+Propeller’s data tables refers to a matrix of information, like an excel spreadsheet with columns, rows, and data. It is used to present raw data sets, and usually appears in desktop enterprise products. We have used <a href="https://datatables.net/examples/styling/bootstrap.html" target="_blank">Bootstrap Data table</a> as base and customized it by applying material design principles to it. 
 
-We have used Bootstrap Data table as a reference which we have then customized based on our Propeller theme.	</p>
+<a href="http://propeller.in/" target="_blank">Propeller</a> is a front-end responsive framework based on Google's Material Design Standards & Bootstrap. It is an open source library created at <a href="https://www.digi-corp.com/" target="_blank">Digicorp.</a></p>
 </p>
 
 ## Installation

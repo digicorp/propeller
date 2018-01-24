@@ -1,0 +1,1 @@
+$('.pmd-alert-toggle').pmdAlert();

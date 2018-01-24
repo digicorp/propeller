@@ -1,12 +1,12 @@
 <br>
 <p align="left">
-  <a href="http://propeller.in/">
+  <a href="http://propeller.in/" target="_blank">
     <img height="40" src="http://propeller.in/assets/images/propeller-logo.png" />
   </a>
 	 <p align="left">
-The Datetimepicker widget allows the user to select a value from a calendar or a time drop-down list as well as direct input. You can find a wide variety of date and time pickers here.
+Propeller’s datetimepicker component allows user to select a date from a calendar and time from a visual analog clock; it also accepts values via direct input. You can find a wide variety of date and time pickers here. We have used <a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="_blank">Bootstraps’ datetimepicker</a> and applied material design principles to it.
 
-We have used Bootstrap Datetimepicker as a reference which we have then customized based on our Propeller theme.</p>
+<a href="http://propeller.in/" target="_blank">Propeller</a> is a front-end responsive framework based on Google's Material Design Standards & Bootstrap. It is an open source library created at <a href="https://www.digi-corp.com/" target="_blank">Digicorp.</a></p>
 </p>
 
 ## Installation

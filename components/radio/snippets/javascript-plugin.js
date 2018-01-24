@@ -1,0 +1,1 @@
+$('.pmd-radio').pmdRadio();

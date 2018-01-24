@@ -31,6 +31,7 @@ module.exports = function(grunt) {
       },
       propellerJs: {
 		src: [
+			'components/global/js/global.js',
 			'components/textfield/js/textfield.js',
 			'components/checkbox/js/checkbox.js',
 			'components/radio/js/radio.js',
@@ -79,7 +80,7 @@ module.exports = function(grunt) {
         jshintrc: 'grunt/.jshintrc'
       },
       core: {
-		src: '<%= concat.propellerJs.src %>',  
+		src: '<%= concat.propellerJs.dest %>',  
       }
     },  
 	autoprefixer: {
@@ -194,24 +195,84 @@ module.exports = function(grunt) {
 	   },
 	   admintemplate: {
 			expand: true,
-			cwd: 'templates/admin-dashboard/', 
+			cwd: 'templates/html/propeller-admin/', 
 			src: ['**'], 
 			dest: 'archive/pmd-admin-template-<%= pkg.version %>/',
+	  },
+	   amplify: {
+			expand: true,
+		    cwd: 'templates/html/amplify/',
+			src: ['**','!pmd-color-settings/**','!assets/css/propeller-topbar.css','!assets/js/propeller-topbar.js'],
+			dest: 'archive/pmd-amplify-theme-1.0.0/',
+	  },
+	   quantify: {
+			expand: true,
+		    cwd: 'templates/html/quantify/',
+			src: ['**','!assets/css/propeller-topbar.css','!assets/js/propeller-topbar.js'],
+			dest: 'archive/pmd-quantify-theme-1.0.0/',
+	  },
+	   big_wave: {
+			expand: true,
+		    cwd: 'templates/html/big-wave/',
+			src: ['**','!pmd-color-settings/**','!assets/css/propeller-topbar.css','!assets/js/propeller-topbar.js'],
+			dest: 'archive/pmd-big-wave-theme-1.0.0/',
 	  }
 	},
 	processhtml: {
-	  dist:{
+	  admin:{
 		options: {
 		  process: true,
 		},
 		files: [
-		{
-		  expand: true,
-		  cwd: 'archive/pmd-admin-template-1.1.0/',
-		  src: ['*.html'],
-		  dest: 'archive/pmd-admin-template-1.1.0/',
-		  ext: '.html'
+			{
+			  expand: true,
+			  cwd: 'archive/pmd-admin-template-1.1.0/',
+			  src: '*.html',
+			  dest:'archive/pmd-admin-template-1.1.0/',
+			  ext: '.html'
+			},
+		],
+	  },
+	  amplify:{
+		options: {
+		  process: true,
 		},
+		files: [
+			{
+			  expand: true,
+			  cwd: 'archive/pmd-amplify-theme-1.0.0/',
+			  src: '*.html',
+			  dest: 'archive/pmd-amplify-theme-1.0.0/',
+			  ext: '.html'
+			},
+		],
+	  },
+	  quantify:{
+		options: {
+		  process: true,
+		},
+		files: [
+			{
+			  expand: true,
+			  cwd: 'archive/pmd-quantify-theme-1.0.0/',
+			  src: '*.html',
+			  dest: 'archive/pmd-quantify-theme-1.0.0/',
+			  ext: '.html'
+			},
+		],
+	  },
+	  big_wave:{
+		options: {
+		  process: true,
+		},
+		files: [
+			{
+			  expand: true,
+			  cwd: 'archive/pmd-big-wave-theme-1.0.0/',
+			  src: '*.html',
+			  dest: 'archive/pmd-big-wave-theme-1.0.0/',
+			  ext: '.html'
+			},
 		],
 	  }
 	},
@@ -245,10 +306,11 @@ module.exports = function(grunt) {
             src: [
 				'components/**/*',
 				'!components/*/snippets/**',
+				'!components/index.php',
 				'assets/**/*',
 				'!assets/landing-page/**',
 				'dist/**/*',
-				'templates/**/*'
+				'templates/admin-dashboard/**/*'
 			],
             dest: '/'
           }
@@ -267,6 +329,54 @@ module.exports = function(grunt) {
 			cwd: 'archive/pmd-admin-template-<%= pkg.version %>',
             src: ['**'],
             dest: 'pmd-admin-template-<%= pkg.version %>'
+          }
+        ]
+      },
+	  amplify: {
+        options: {
+          archive: 'archive/pmd-amplify-theme-1.0.0.zip',
+          mode: 'zip',
+          level: 9,
+          pretty: true
+        },
+        files: [
+          {
+            expand: true,
+			cwd: 'archive/pmd-amplify-theme-1.0.0',
+            src: ['**'],
+            dest: 'pmd-amplify-theme-1.0.0'
+          }
+        ]
+      },
+	  quantify: {
+        options: {
+          archive: 'archive/pmd-quantify-theme-1.0.0.zip',
+          mode: 'zip',
+          level: 9,
+          pretty: true
+        },
+        files: [
+          {
+            expand: true,
+			cwd: 'archive/pmd-quantify-theme-1.0.0',
+            src: ['**'],
+            dest: 'pmd-quantify-theme-1.0.0'
+          }
+        ]
+      },
+	  big_wave: {
+        options: {
+          archive: 'archive/pmd-big-wave-theme-1.0.0.zip',
+          mode: 'zip',
+          level: 9,
+          pretty: true
+        },
+        files: [
+          {
+            expand: true,
+			cwd: 'archive/pmd-big-wave-theme-1.0.0',
+            src: ['**'],
+            dest: 'pmd-big-wave-theme-1.0.0'
           }
         ]
       }

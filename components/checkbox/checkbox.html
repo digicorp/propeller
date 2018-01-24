@@ -26,18 +26,12 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="http://propeller.in/components/icons/css/google-icons.css" type="text/css" rel="stylesheet" />
 	
+    <!-- Propeller Button -->
+    <link href="http://propeller.in/components/button/css/button.css" type="text/css" rel="stylesheet" />
+    
 	<!-- Propeller Checkbox -->
     <link href="css/checkbox.css" type="text/css" rel="stylesheet" />
-
-	<!-- Propeller textfield -->
-    <link href="http://propeller.in/components/textfield/css/textfield.css" type="text/css" rel="stylesheet" />
-    
-	<!-- Propeller Radio -->
-    <link href="http://propeller.in/components/radio/css/radio.css" type="text/css" rel="stylesheet" />
-    
-	<!-- Propeller Toggle -->
-    <link href="http://propeller.in/components/toggle-switch/css/toggle-switch.css" type="text/css" rel="stylesheet" />
-
+	
 </head>
 <body>
 
@@ -78,7 +72,7 @@
 					<div class="row">
 						<div class="col-md-6">
 							<div class="pmd-card pmd-z-depth">
-								<div class="pmd-card-body"> 
+								<div class="pmd-card-body" id="addpmdCheckBox"> 
 									<!-- Simple checkbox with label, checked -->
 									<div class="checkbox pmd-default-theme">
 										<label class="pmd-checkbox pmd-checkbox-ripple-effect">
@@ -170,6 +164,12 @@
 							</div>
 						</div>
 					</div> <!-- checkbox example end-->
+					<br>
+					<div class="row">
+						<div class="col-sm-12">
+							<button class="btn btn-default pmd-btn-raised" onclick="addCheckBox()">Add Checkboxe</button>
+						</div>
+					</div>
 				</div>
 			</div> <!-- Inline checkbox code and example end-->
 			
@@ -184,13 +184,21 @@
 <!-- Jquery js -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+<!-- Propeller Global js --> 
+<script src="http://propeller.in/components/global/js/global.js"></script>
+
 <!-- Propeller checkbox js -->
 <script type="text/javascript" src="js/checkbox.js"></script>
 
-<!-- Propeller checkbox js -->
-<script type="text/javascript" src="http://propeller.in/components/textfield/js/textfield.js"></script>
-
-<!-- Propeller checkbox js -->
-<script type="text/javascript" src="http://propeller.in/components/radio/js/radio.js"></script>
+<script>
+	function addCheckBox(){
+		$("#addpmdCheckBox").append('<div class="checkbox pmd-default-theme disabled">\
+										<label class="pmd-checkbox pmd-checkbox-ripple-effect">\
+										<input type="checkbox" value="" disabled>\
+										<span>Option two is disabled</span> </label>\
+									</div>\
+		');
+	}
+</script>
 
 </html>

@@ -7,6 +7,7 @@
 	<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport">
     <title>Navbar - Propeller Components</title>
     
+    
 	<!-- favicon --> 
 	<link rel="icon" href="http://propeller.in/assets/images/favicon.ico" type="image/x-icon">
 	
@@ -46,12 +47,13 @@
 <body>
 
     <nav class="navbar navbar-inverse pmd-navbar navbar-fixed-top pmd-z-depth" style="position:absolute;">
-      <div class="container-fluid"> 
+      <div class="container-fluid">
+		  
           <!-- Sidebar Toggle Button-->
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
-              <a href="javascript:void(0);" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect pull-left margin-r8 pmd-sidebar-toggle"><i class="material-icons md-light">menu</i></a>
-              <a class="navbar-brand" href="javascript:void(0);">Brand</a> 
+             <a href="javascript:void(0);" data-target="basicSidebar" data-placement="left" data-position="slidepush" is-open="true" is-open-width="1000" class="btn btn-sm pmd-btn-fab pmd-btn-flat pmd-ripple-effect pull-left margin-r8 pmd-sidebar-toggle"><i class="material-icons md-light">menu</i></a>
+             <a class="navbar-brand" href="javascript:void(0);">Brand</a> 
           </div>
           
           <!-- Navbar Right icon -->		
@@ -65,7 +67,7 @@
     </nav>
     <section id="pmd-main">
         <!-- Left sidebar -->
-        <aside class="pmd-sidebar sidebar-default pmd-sidebar-slide-push pmd-sidebar-left pmd-z-depth" role="navigation">
+        <aside id="basicSidebar" class="pmd-sidebar sidebar-default pmd-z-depth" role="navigation">
             <ul class="nav pmd-sidebar-nav">
                 <!-- My Account -->
                 <li class="dropdown pmd-dropdown pmd-user-info">
@@ -87,15 +89,14 @@
                 <li> <a class="pmd-ripple-effect" href="javascript:void(0);"><i class="material-icons media-left media-middle">notifications</i> <span class="media-body">Follow Up</span></a> </li>
             </ul>
         </aside>
-    
         <!-- Start Content -->
         <div class="pmd-content custom-pmd-content" id="content">
             <h2 class="headline">Sidebar Constructor</h2>
             <p>This structure shows a permanent app bar with a floating action button. The app bar absorbs elements from the tablet and mobile bottom bars.</p>
             <p style="margin-bottom:0;">An optional bottom bar can be added for additional functionality or action overflow. A side nav overlays all other structural elements. A right nav menu can be accessed temporarily or pinned for permanent display.<br><br></p>
         </div>
-        
         <div class="pmd-sidebar-overlay"></div>
+        
     </section>
 
 </body>
@@ -106,14 +107,13 @@
 <!-- Bootstrap js -->
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-<!-- Propeller Dropdown js -->
-<script type="text/javascript" language="javascript" src="http://propeller.in/components/dropdown/js/dropdown.js"></script>
-
-<!-- Propeller ripple effect js -->
-<script type="text/javascript" language="javascript" src=
-"http://propeller.in/components/button/js/ripple-effect.js"></script>
-
+<!-- Propeller Global js --> 
+<script src="http://propeller.in/components/global/js/global.js"></script>
+	
 <!-- Propeller Sidebar js -->
 <script type="text/javascript" language="javascript" src="../js/sidebar.js"></script>
+
+<!-- Propeller Dropdown js -->
+<script type="text/javascript" language="javascript" src="http://propeller.in/components/dropdown/js/dropdown.js"></script>
 
 </html>
