@@ -609,6 +609,9 @@ h2.pmd-card-title-text {
 }
 
 @media screen and (max-width:767px) {
+  .pmd-alert-container .pmd-alert {
+    width: 300px;
+  }
   .pmd-alert-container.left {
     left: 50%;
   }

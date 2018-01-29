@@ -44,7 +44,7 @@
 .fadeInUp { animation-name: fadeInUp; }
 
 @media screen and (max-width:767px){
+	.pmd-alert-container .pmd-alert  {width:300px;}
 	.pmd-alert-container.left { left:50%;}
 	.pmd-alert-container.right { right:50%;}
-
 }
