@@ -854,21 +854,22 @@ var pmdDropdown = function ($) {
             if (dataTrigger !== undefined && dataTrigger.toLowerCase() === "hover") {
                 $(finalSelector).prev("button").addClass("pmd-dropdown-hover");
             }
-            //Hover event fot mouse over
+			//Hover event fot mouse over
             var mainTimeout;
             $(Selector.PMD_DROPDOWN_HOVER).hover(function (event) {
+				if('ontouchstart' in document) return $this;
                 window.clearTimeout(mainTimeout);
                 var parent = $(event.target).parent();
-                 var $this = $(this);
+                var $this = $(this);
                 if (parent.hasClass('open') && parent.is(event.target)) {
                     // stop this event, stop executing any code
                     // in this callback but continue to propagate
                     return true;
                 }
                 $this.attr('aria-expanded', 'true');
-                parent.addClass('open');
-                $this.parent().trigger(Event.SHOW_BS_DROPDOWN);
-            }, function (event) {
+					parent.addClass('open');
+					$this.parent().trigger(Event.SHOW_BS_DROPDOWN);
+				}, function (event) {
                 var $this = $(this);
                 mainTimeout = window.setTimeout(function () {
                     var parent = $(event.target).parent();
@@ -879,10 +880,9 @@ var pmdDropdown = function ($) {
                     parent.removeClass('open');
                     $this.parent().trigger(Event.HIDE_BS_DROPDOWN);
                 }, 10);
-
             });
             $(Selector.PMD_DROPDOWN_HOVER).parent().find('.dropdown-menu').each(function () {
-                var $this = $(this);
+			    var $this = $(this);
                 var subTimeout;
                 $this.hover(function () {
                     window.clearTimeout(subTimeout);
@@ -896,7 +896,6 @@ var pmdDropdown = function ($) {
                         $this.parent().parent().trigger(Event.HIDE_BS_DROPDOWN);
                     }, 10);
                 });
-
             });
             if (options !== undefined && options.minimumSize !== null) {
                 minimumSize = parseFloat(options.minimumSize);
