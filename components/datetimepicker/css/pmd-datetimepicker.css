@@ -178,7 +178,6 @@
 .datepicker-modal .datepicker-tab li a { display:block; font-size:18px; border-bottom:5px solid #444444; color:#b2b2b2; height:60px; line-height:60px; position:relative;} 
 .datepicker-modal .datepicker-tab li a.active { color:#fff; border-color:#fff;}
 .datepicker-modal .datepicker-tab li a.active:before { content:""; width:100%; z-index:10; height:5px; position:absolute; left:0; bottom:-5px; }
-
 .timepicker .downarrow .btn, 
 .timepicker .timeview .btn,
 .timepicker .uparrow .btn { display:none;}
