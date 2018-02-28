@@ -1,0 +1,6 @@
+// Generate button modifier classes
+@each $color, $value in $theme-colors {
+  .btn-#{$color} {
+	@include button-variant($value, $value);
+  }
+}
