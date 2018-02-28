@@ -1,5 +1,4 @@
 // Gruntfile.js
-
 // our wrapper function (required by grunt and its plugins)
 // all configuration goes inside this function
 module.exports = function(grunt) {
@@ -27,10 +26,10 @@ module.exports = function(grunt) {
     },
 	concat: {
       options: {
-        stripBanners: false
+		  stripBanners: false
       },
       propellerJs: {
-		src: [
+		  src: [
 			'components/global/js/global.js',
 			'components/textfield/js/textfield.js',
 			'components/checkbox/js/checkbox.js',
@@ -42,50 +41,79 @@ module.exports = function(grunt) {
 			'components/popover/js/popover.js',
 			'components/tab/js/tab-scrollable.js',
 			'components/sidebar/js/sidebar.js'
-		],
-		dest: 'dist/js/<%= pkg.grunt_name %>.js'
-      },
-      propellerCss: {
-		src: [
-			'assets/css/propeller-roboto.css',
-			'components/typography/css/typography.css',
-			'components/icons/css/google-icons.css',
-			'components/card/css/card.css',
-			'components/accordion/css/accordion.css',
-			'components/alert/css/alert.css',
-			'components/badge/css/badge.css',
-			'components/button/css/button.css',
-			'components/modal/css/modal.css',
-			'components/dropdown/css/dropdown.css',
-			'components/textfield/css/textfield.css',
-			'components/checkbox/css/checkbox.css',
-			'components/radio/css/radio.css',
-			'components/toggle-switch/css/toggle-switch.css',
-			'components/list/css/list.css',
-			'components/navbar/css/navbar.css',
-			'components/popover/css/popover.css',
-			'components/progressbar/css/progressbar.css',
-			'components/sidebar/css/sidebar.css',
-			'components/tab/css/tab.css',
-			'components/table/css/table.css',
-			'components/tooltip/css/tooltip.css',
-			'components/floating-action-button/css/floating-action-button.css',
-			'components/utilities/css/utilities.css'
-		],
-		dest: 'dist/css/<%= pkg.grunt_name %>.css'
+		  ],
+		  dest: 'dist/js/<%= pkg.grunt_name %>.js'
       }
     },
 	jshint: {
       options: {
-        jshintrc: 'grunt/.jshintrc'
+      	jshintrc: 'grunt/.jshintrc'
       },
       core: {
-		src: '<%= concat.propellerJs.dest %>',  
+	  	src: '<%= concat.propellerJs.dest %>',  
+      }
+    },
+	babel: {
+        options: {
+            sourceMap: true,
+            presets: ['babel-preset-es2015']
+		},
+        dist: {
+            files: {
+			  '<%= concat.propellerJs.dest %>' : '<%= concat.propellerJs.dest %>'
+			}
+        }
+    },
+	uglify: {
+      propellerMinJs: {
+		  options: {
+			banner: '<%= banner %>',
+			compress: {
+			  warnings: false
+			},
+			mangle: true,
+			preserveComments:'some'
+		  },
+		src: '<%= concat.propellerJs.dest %>',
+        dest: 'dist/js/<%= pkg.grunt_name %>.min.js'
+		
+      }
+    },
+	cssmin: {
+      options: {
+  	    compatibility: 'ie8',
+        keepSpecialComments: 0,
+        sourceMap: true,
+        advanced: false
+      },
+	  propellerMinCss: {
+	    src: 'scss/propeller.css',
+        dest: 'dist/css/<%= pkg.grunt_name %>.min.css'
       }
     },  
+	copy: {
+      fonts: {
+	    expand: true,
+		cwd: 'assets/fonts/',
+		src: '**',
+		dest: 'dist/fonts/'
+	  },
+	  css: {
+	    expand: true,
+		cwd: 'scss/',
+		src: ['*.css', '*.css.map'],
+		dest: 'dist/css/'
+	  },
+	  cssjs: {
+	    expand: true,
+		cwd: 'dist/',
+		src: ['**', '!fonts/**'],
+		dest: 'assets/'
+	  }
+	},
 	autoprefixer: {
 		options: {
-		  browsers: ['last 2 versions', 'ie 9']
+			browsers: ['last 2 versions', 'ie 9']
 		},
 		dist: {
 			files: {
@@ -100,54 +128,16 @@ module.exports = function(grunt) {
 	  },	
 	  strict: {
 		options: {
-		  import: false
+			import: false
 		},
-		src: ['<%= concat.propellerCss.src %>']
+		src: ['dist/css/propeller.css']
 	  }
 	},
 	watch: {
 		styles: {
-			files: ['<%= concat.propellerCss.src %>'],
+			files: ['dist/css/propeller.css'],
 			tasks: ['autoprefixer']
 		}
-    },
-	cssmin: {
-      options: {
-  	    compatibility: 'ie8',
-        keepSpecialComments: 0,
-        sourceMap: true,
-        advanced: false
-      },
-	  propellerMinCss: {
-	    src: '<%= concat.propellerCss.dest %>',
-        dest: 'dist/css/<%= pkg.grunt_name %>.min.css'
-      }
-    },
-	babel: {
-        options: {
-            sourceMap: true,
-            presets: ['babel-preset-es2015']
-        },
-        dist: {
-            files: {
-			  '<%= concat.propellerJs.dest %>' : '<%= concat.propellerJs.dest %>'
-			}
-        }
-    },
-	uglify: {
-      propellerMinJs: {
-		  options: {
-			banner: '<%= banner %>',  
-			compress: {
-			  warnings: false
-			},
-			mangle: true,
-			preserveComments:'some'
-		  },
-		src: '<%= concat.propellerJs.dest %>',
-        dest: 'dist/js/<%= pkg.grunt_name %>.min.js'
-		
-      }
     },  
 	stamp: {
 		yourTarget: {
@@ -170,112 +160,6 @@ module.exports = function(grunt) {
         dest: 'dist/css/'
       }
     },
-	copy: {
-      fonts: {
-	    expand: true,
-		cwd: 'assets/fonts/',
-		src: '**',
-		dest: 'dist/fonts/',
-	  },
-	  cssjs: {
-	    expand: true,
-		cwd: 'dist/',
-		src: ['**', '!fonts/**'],
-		dest: 'assets/'
-	  },
-	  core: {
-		expand: true,
-		src: [
-			'components/**/*',
-			'assets/**/*',
-			'!components/*/snippets/**',
-			'!assets/landing-page/**',
-		],
-		dest: 'archive/pmd-admin-template-<%= pkg.version %>/'
-	   },
-	   admintemplate: {
-			expand: true,
-			cwd: 'templates/html/propeller-admin/', 
-			src: ['**'], 
-			dest: 'archive/pmd-admin-template-<%= pkg.version %>/',
-	  },
-	   amplify: {
-			expand: true,
-		    cwd: 'templates/html/amplify/',
-			src: ['**','!pmd-color-settings/**','!assets/css/propeller-topbar.css','!assets/js/propeller-topbar.js'],
-			dest: 'archive/pmd-amplify-theme-1.0.0/',
-	  },
-	   quantify: {
-			expand: true,
-		    cwd: 'templates/html/quantify/',
-			src: ['**','!assets/css/propeller-topbar.css','!assets/js/propeller-topbar.js'],
-			dest: 'archive/pmd-quantify-theme-1.0.0/',
-	  },
-	   big_wave: {
-			expand: true,
-		    cwd: 'templates/html/big-wave/',
-			src: ['**','!pmd-color-settings/**','!assets/css/propeller-topbar.css','!assets/js/propeller-topbar.js'],
-			dest: 'archive/pmd-big-wave-theme-1.0.0/',
-	  }
-	},
-	processhtml: {
-	  admin:{
-		options: {
-		  process: true,
-		},
-		files: [
-			{
-			  expand: true,
-			  cwd: 'archive/pmd-admin-template-1.1.0/',
-			  src: '*.html',
-			  dest:'archive/pmd-admin-template-1.1.0/',
-			  ext: '.html'
-			},
-		],
-	  },
-	  amplify:{
-		options: {
-		  process: true,
-		},
-		files: [
-			{
-			  expand: true,
-			  cwd: 'archive/pmd-amplify-theme-1.0.0/',
-			  src: '*.html',
-			  dest: 'archive/pmd-amplify-theme-1.0.0/',
-			  ext: '.html'
-			},
-		],
-	  },
-	  quantify:{
-		options: {
-		  process: true,
-		},
-		files: [
-			{
-			  expand: true,
-			  cwd: 'archive/pmd-quantify-theme-1.0.0/',
-			  src: '*.html',
-			  dest: 'archive/pmd-quantify-theme-1.0.0/',
-			  ext: '.html'
-			},
-		],
-	  },
-	  big_wave:{
-		options: {
-		  process: true,
-		},
-		files: [
-			{
-			  expand: true,
-			  cwd: 'archive/pmd-big-wave-theme-1.0.0/',
-			  src: '*.html',
-			  dest: 'archive/pmd-big-wave-theme-1.0.0/',
-			  ext: '.html'
-			},
-		],
-	  }
-	},
 	compress: {
       distzip: {
         options: {
@@ -315,70 +199,6 @@ module.exports = function(grunt) {
             dest: '/'
           }
         ]
-      },
-	  admin: {
-        options: {
-          archive: 'archive/pmd-admin-template-<%= pkg.version %>.zip',
-          mode: 'zip',
-          level: 9,
-          pretty: true
-        },
-        files: [
-          {
-            expand: true,
-			cwd: 'archive/pmd-admin-template-<%= pkg.version %>',
-            src: ['**'],
-            dest: 'pmd-admin-template-<%= pkg.version %>'
-          }
-        ]
-      },
-	  amplify: {
-        options: {
-          archive: 'archive/pmd-amplify-theme-1.0.0.zip',
-          mode: 'zip',
-          level: 9,
-          pretty: true
-        },
-        files: [
-          {
-            expand: true,
-			cwd: 'archive/pmd-amplify-theme-1.0.0',
-            src: ['**'],
-            dest: 'pmd-amplify-theme-1.0.0'
-          }
-        ]
-      },
-	  quantify: {
-        options: {
-          archive: 'archive/pmd-quantify-theme-1.0.0.zip',
-          mode: 'zip',
-          level: 9,
-          pretty: true
-        },
-        files: [
-          {
-            expand: true,
-			cwd: 'archive/pmd-quantify-theme-1.0.0',
-            src: ['**'],
-            dest: 'pmd-quantify-theme-1.0.0'
-          }
-        ]
-      },
-	  big_wave: {
-        options: {
-          archive: 'archive/pmd-big-wave-theme-1.0.0.zip',
-          mode: 'zip',
-          level: 9,
-          pretty: true
-        },
-        files: [
-          {
-            expand: true,
-			cwd: 'archive/pmd-big-wave-theme-1.0.0',
-            src: ['**'],
-            dest: 'pmd-big-wave-theme-1.0.0'
-          }
-        ]
       }
     },
   });
@@ -387,7 +207,7 @@ module.exports = function(grunt) {
   grunt.util.linefeed = '\n';
   
   // this default task will go through all configuration (dev and production) in each task 
-  grunt.registerTask('default', ['clean', 'concat', 'autoprefixer', 'csslint', 'babel', 'uglify', 'jshint', 'cssmin', 'csscomb', 'stamp', 'copy', 'processhtml', 'compress']);
+  grunt.registerTask('default', ['clean', 'concat', 'uglify', 'cssmin', 'copy', 'autoprefixer', 'csslint', 'csscomb', 'stamp', 'compress']);
 
   // this task will only run for JS and CSS
   grunt.registerTask('jscss', ['clean', 'concat', 'babel', 'uglify', 'jshint', 'concat_css', 'cssmin']);
