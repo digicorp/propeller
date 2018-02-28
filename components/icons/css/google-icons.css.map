@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;;;GAIG;AAGH,6CAA8C;EAC7C,SAAS,ECuNa,IAAI;;;ADrN3B,6CAA8C;EAC7C,SAAS,ECqNa,IAAI;;;ADnN3B,6CAA6C;EAC5C,SAAS,ECmNa,IAAI;;;ADjN3B,6CAA6C;EAC5C,SAAS,ECiNa,IAAI;;;AD7M3B,uBAAwB;EACvB,KAAK,EC4T6B,OAAS;;;AD1T5C,mCAAoC;EACnC,KAAK,EC4MgC,sBAAoB;;;ADxM1D,wBAAyB;EACxB,KAAK,ECyiB4B,IAAM;;;ADviBxC,oCAAqC;EACpC,KAAK,ECsMgC,yBAAiB",
+"sources": ["../../../scss/_google-icons.scss","../../../scss/_variables.scss"],
+"names": [],
+"file": "google-icons.css"
+}

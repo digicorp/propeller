@@ -1,0 +1,107 @@
+/*!
+ * Propeller v1.3.0 (http://propeller.in): modal.css
+ * Copyright 2016-2018 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+.modal-content{ 
+	border-radius:$modal-border-radius;
+}
+.modal-header { 
+	border-bottom: $modal-header-border-width solid rgba(0, 0, 0, 0);
+	border-top-left-radius: $modal-border-radius;
+	border-top-right-radius: $modal-border-radius;
+	margin-bottom: $modal-spacer-y;
+	padding: $modal-header-padding-y $modal-header-padding-x 0;
+	&.pmd-modal-bordered{
+		border-bottom:$modal-header-border-width solid $modal-header-border-color;
+		padding-bottom:$modal-header-padding-y;
+	}
+	h2 {
+		&.pmd-card-title-text{
+			font-weight:$modal-header-title-font-weight;
+		}
+	}
+}
+.pmd-modal-list { 
+	margin-bottom:$modal-spacer-y; 
+	margin-top:$modal-spacer-y;
+}
+.modal-body { 
+	color: rgba(0, 0, 0, 0.84);
+	margin-bottom:$modal-spacer-y;
+	margin-top:$modal-spacer-y;
+	padding:0 $modal-spacer-x;
+	> p:last-child{
+		margin-bottom:0;
+	}
+}
+.modal-footer {
+	padding:$modal-spacer;
+}
+.pmd-modal-action {
+	padding:$modal-actions-spacer-y $modal-actions-spacer-x;
+	.btn.pmd-btn-fab {
+		padding: 0;
+	}
+	&.pmd-modal-bordered {
+		border-top:$modal-action-border-width solid $modal-action-border-color;
+	}
+	.btn {
+		min-width:inherit;
+		padding: $modal-actions-btn-padding-y $modal-actions-btn-padding-x;
+		margin:$modal-actions-btn-spacer-y $modal-actions-btn-spacer-x;
+		&:first-child {
+			margin-left: $modal-actions-btn-margin-left;
+		}
+		&.pmd-btn-flat:first-child{
+			margin-left: $modal-actions-btn-flat-spacer-x;
+		}
+	}
+	.pmd-btn-flat{
+		margin:0 $modal-actions-btn-flat-spacer-x 0 0;
+	}
+}
+.modal{
+	.radio,
+	.checkbox{
+		margin:$modal-radio-checkbox-spacer-y 0;
+	}
+	.radio-options {
+		> label{
+			padding-left:32px;
+		}
+	}
+	.list-group.pmd-list-avatar{
+		margin-bottom:$modal-list-avatar-margin-bottom;
+		padding:0
+	}
+	&.list-group{
+		&:last-child{
+			margin-bottom:0;
+		}
+	}
+}
+/* Form css */
+.form-horizontal {
+	.form-group{
+		margin-left:0;
+		margin-right:0;
+	}
+}
+/* Modal center */
+.modal{
+	text-align:center;
+	&:before { 
+		content:'';
+		display:inline-block;
+		height: 100%;
+		vertical-align: middle;
+		margin-right: -4px;
+	}
+	.modal-dialog {
+		display:inline-block;
+		text-align:left;
+		vertical-align:middle;
+	}
+}

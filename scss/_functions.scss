@@ -1,0 +1,38 @@
+// Color contrast
+@function color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
+
+  @if ($yiq >= $yiq-contrasted-threshold) {
+    @return $yiq-text-dark;
+  } @else {
+    @return $yiq-text-light;
+  }
+}
+
+// Retrieve color Sass maps
+@function theme-color($key: "default") {
+  @return map-get($theme-colors, $key);
+}
+
+// Request a theme color level
+@function theme-color-level($color-name: "default", $level: 0) {
+  $color: theme-color($color-name);
+  $color-base: if($level > 0, $black, $white);
+  $level: abs($level);
+  @return mix($color-base, $color, $level * $theme-color-interval);
+}
+
+// Request box shadow depth
+@function box-shadow($depth) {
+  $primary-offset-1: nth(1 3 10 14 19, $depth) * 1px;
+  $primary-offset-2: nth(1 3 6 10 15, $depth) * 1px;
+  $blur-1: nth(3 6 20 28 38, $depth) * 1px;
+  $blur-2: nth(2 6 6 10 12, $depth) * 1px;
+  $color-1: rgba($black, nth(0.12 0.16 0.19 0.25 0.3, $depth));
+  $color-2: rgba($black, nth(0.24 0.23 0.23 0.22 0.22, $depth));
+  @return 0 $primary-offset-1 $blur-1 $color-1 , 0 $primary-offset-2 $blur-2 $color-2;
+}

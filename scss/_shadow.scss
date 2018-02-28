@@ -1,0 +1,24 @@
+/*!
+ * Propeller v1.3.0 (http://propeller.in/)
+ * Copyright 2016-2018 Digicorp, Inc
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+.pmd-z-depth {
+	@include box-shadow-depth(1);
+}
+.pmd-z-depth-1 {
+	@include box-shadow-depth(2);
+}
+.pmd-z-depth-2 {
+	@include box-shadow-depth(3);
+}
+.pmd-z-depth-3 {
+	@include box-shadow-depth(4);
+}
+.pmd-z-depth-4 {
+	@include box-shadow-depth(5);
+}
+.pmd-z-depth-5 {
+	@include box-shadow-depth(5);
+}

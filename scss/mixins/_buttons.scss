@@ -1,0 +1,63 @@
+// Button variants
+@mixin button-variant($background, $border, $hover-background: darken($background, 7.5%), $hover-border: darken($border, 10%), $active-background: darken($background, 10%), $active-border: darken($border, 12.5%)) {
+	color: color-yiq($background);
+	background-color: $background;
+	@include hover {
+		color: color-yiq($hover-background);
+		background-color: $hover-background;
+	}
+	&:focus,
+	&.focus,
+	&:active,
+	&.active,
+	&.active.focus, 
+  	&.active:focus, 
+	&:active.focus, 
+  	&:active:focus,
+  	{
+		color: color-yiq($hover-background);
+		background-color: $hover-background;
+	}
+	.ink{
+		background-color: $active-background;
+	}
+	&.pmd-btn-flat{
+		color: $background;
+		background-color: transparent;
+		&:hover { background-color: #e5e5e5;}
+		&:active,
+		&.active,
+		&:focus {color: $background; background-color: #cccccc;}
+		.ink{ 
+			background-color: #808080;
+		}
+	}
+	&.pmd-btn-outline{
+		border-color: $border; background-color:transparent; color:$background;
+		&:hover, 
+		&:focus { 
+			border-color:$hover-border; 
+			background-color:$hover-background; 
+			color:color-yiq($hover-background);
+		}
+	}
+}
+
+// Button sizes
+@mixin button-size($padding-y, $padding-x, $font-size, $line-height, $border-radius) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}
+
+// Fab button sizes
+@mixin fab-button-size($size) {
+  width:$size; 
+  height:$size; 
+  min-width: $size;
+  span, 
+  i { 
+	line-height: $size;
+  }
+}

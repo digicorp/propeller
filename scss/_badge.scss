@@ -1,0 +1,91 @@
+/*!
+ * Propeller v1.3.0 (http://propeller.in/): badge.css
+ * Copyright 2016-2018 Digicorp, Inc
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+.badge { color: $badge-color; background-color: $badge-bg; display: inline-block; vertical-align: baseline;}
+.badge:hover { color: $badge-color; text-decoration: none; cursor: pointer;}
+
+// Colors
+@each $color, $value in $badge-theme-colors {
+  .badge-#{$color} {
+    @include badge-variant($value);
+  }
+}
+
+// Notification Badge css
+.pmd-badge{ 
+	display:inline-block; 
+	text-align:left; 
+	position:relative;
+	font-size: $notification-icon-size;
+	&[data-badge]::after {
+		background: $notification-badge-bg; 
+		color: $notification-badge-color; 
+		font-family: $notification-badge-font; 
+		font-size: $notification-badge-font-size; 
+		font-weight: $notification-badge-font-weight; 
+		height: $notification-badge-size;
+		width: $notification-badge-size;
+		line-height: $notification-badge-size;
+		border-radius: 50%; 
+		right: -24px; 
+		top: -10px; 
+		content: attr(data-badge); 
+		position: absolute; 
+		text-align: center;
+	}
+	&.pmd-badge-overlap::after {
+		right: -10px;
+	}
+}
+
+// Chips Badge css 
+.pmd-chip { 
+	border-radius: $chip-border-radius;
+	box-sizing: border-box; 
+	line-height:$chip-line-height;
+	padding: 0 $chip-spacer-right 0 $chip-spacer-left;
+	text-transform:capitalize; 
+	background:$chip-bg; 
+	color:$chip-color; 
+	display:inline-block; 
+	cursor:default;
+	@include hover-focus {
+		background-color: darken($chip-bg, 0%);
+	}
+	&.pmd-chip-inverse {
+		background:$chip-inverse-bg; 
+		color:$chip-inverse-color;
+		@include hover-focus {
+			background-color: darken($chip-inverse-bg, 0%);
+		}
+	}
+}
+.pmd-chip-action{
+	display: inline-block;
+	vertical-align: middle;
+	i{ 
+		font-size:$chip-action-font-size;
+		color:$chip-action-color;
+		background-color: $chip-action-bg;
+		border-radius:50%; 
+		padding:1px 2px 2px 2px; 
+		margin-left:5px;
+	}
+	.material-icons{ 
+		&:hover{
+			background-color: darken($chip-action-bg, 10%);
+		}
+	}
+} 
+.pmd-chip-contact { 
+	padding-left:0;
+	img { 
+		margin-right: 5px; 
+		width: $chip-contact-size; 
+		margin-top:-3px; 
+		border-radius:50%;
+	}
+}

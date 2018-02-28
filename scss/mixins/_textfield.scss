@@ -1,0 +1,18 @@
+@mixin textfield-validation-state($color) {
+	color:$color;
+	border-color:$color;
+	~ .pmd-textfield-focused {
+		background-color:$color;
+	}
+	~ .has-error-text { 
+		color:$color; 
+		display:block;
+	}
+	&:focus{
+		box-shadow:none;
+	}
+}
+
+@mixin textfield-floating-label-validation-state($color) {
+	color:$color;
+}

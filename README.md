@@ -1,19 +1,15 @@
-<p align="center">
+<br>
+<p align="left">
   <a href="http://propeller.in/">
-    <img src="http://propeller.in/assets/landing-page/images/banner-propeller-logo.png" />
+    <img height="40" src="https://demophp.digi-corp.com/CreativeZone/Websites/Propeller/HTML/assets/images/propeller-logo.png" />
   </a>
-
-  <h3 align="center">Propeller</h3>
-
-  <p align="center">
+  <p align="left">
     A front-end responsive framework 
     based on Google's Material Design Standards & Bootstrap.  
     <br>
     <a href="http://propeller.in/"><strong>Visit Propeller &raquo;</strong></a>
   </p>
 </p>
-
-<br>
 
 ## Table of contents
 
@@ -116,8 +112,8 @@ See [the Releases section of our GitHub project](https://github.com/digicorp/pro
 
 ## License
 
-Propeller v1.2.0 (http://propeller.in)
-© 2016-2017 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
+Propeller v1.3.0 (http://propeller.in)
+© 2016-2018 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
 Licensed under [MIT](https://github.com/digicorp/propeller/blob/master/LICENSE)
 
 

@@ -1,0 +1,8 @@
+@mixin badge-variant($bg) {
+  color: color-yiq($bg);
+  background-color: $bg;
+  @include hover-focus {
+    color: color-yiq($bg);
+  	background-color: darken($bg, 10%);
+  }
+}

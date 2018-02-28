@@ -1,9 +1,17 @@
-
 /*!
- * Propeller v1.2.0 (http://propeller.in): progressbar.css
+ * Propeller v1.3.0 (http://propeller.in): progressbar.css
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
+.pmd-progress {
+  background: none repeat scroll 0 0 #ced4da;
+  border-radius: 0;
+  box-shadow: none;
+  height: 4px;
+}
 
-.pmd-progress {background: none repeat scroll 0 0 #c8c8c8; border-radius: 0; box-shadow: none; height: 4px;}
-.progress-bar{box-shadow:none;}
+.progress-bar {
+  box-shadow: none;
+}
+
+/*# sourceMappingURL=progressbar.css.map */

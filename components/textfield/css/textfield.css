@@ -1,78 +1,235 @@
-
 /*!
- * Propeller v1.2.0 (http://propeller.in): textfield.css
+ * Propeller v1.3.0 (http://propeller.in): textfield.css
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
+.pmd-textfield-focused {
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  width: 100%;
+  height: 2px;
+  display: block;
+  top: -1px;
+  background-color: #4285f4;
+  -ms-transform: scaleX(0);
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  position: relative;
+  z-index: 2;
+}
 
-/* Propeller css for text fields */
-.pmd-textfield-focused{ transition-duration: 0.2s; -ms-transition-duration: 0.2s; -webkit-transition-duration: 0.2s; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); -ms-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);}
+.pmd-textfield.pmd-textfield-floating-label-active .pmd-textfield-focused {
+  -ms-transform: scaleX(1);
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
 
-/*input focus bar*/
-.pmd-textfield-focused{ width: 100%; height:2px; display:block; top:-1px;  background-color:#4285f4; transform:scaleX(0); -ms-transform: scaleX(0); -webkit-transform: scaleX(0); position:relative; z-index:2;}
-.pmd-textfield.pmd-textfield-floating-label-active .pmd-textfield-focused { transform: scaleX(1); -ms-transform: scaleX(1); -webkit-transform: scaleX(1);}
+.form-group.pmd-textfield {
+  margin-bottom: 1rem;
+  line-height: 1.375rem;
+}
 
-/*paper input*/
-.form-group.pmd-textfield{ margin-bottom:16px; line-height:22px;}
-.pmd-textfield .form-control{background: transparent; border: none; border-bottom:solid 1px #e6e6e6; outline: none; box-shadow:none; padding:0; border-radius:0; font-size:16px;}
-.pmd-textfield .form-control{padding-bottom:6px;}
-.pmd-textfield input.form-control{height: inherit;}
-.pmd-textfield textarea.form-control{height: 80px;}
-.pmd-textfield label{font-weight:normal; line-height:1.4; font-size:14px; color:rgba(0, 0, 0, 0.4); margin-bottom: 0;}
+.pmd-textfield .form-control {
+  background: transparent;
+  border: none;
+  border-bottom: solid 1px #e6e6e6;
+  outline: none;
+  box-shadow: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 1rem;
+  padding-bottom: 0.375rem;
+}
+.pmd-textfield input.form-control {
+  height: inherit;
+}
+.pmd-textfield textarea.form-control {
+  height: 80px;
+}
+.pmd-textfield label {
+  font-weight: normal;
+  line-height: 1.4;
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.54);
+  margin-bottom: 0;
+}
 
-/*paper input group*/
-.pmd-input-group-label{ padding-left:40px;}
-.pmd-textfield-floating-label.pmd-textfield-floating-label-completed label.pmd-input-group-label{ font-size:14px; transform: translateY(0px);  -ms-transform: translateY(0px); -webkit-transform: translateY(0px);}
-.pmd-textfield .input-group-addon{ border:none; background-color: transparent;}
-.pmd-textfield .input-group .form-control{ float:inherit; z-index:inherit;}
-.pmd-textfield .input-group .input-group-addon{ padding:0;}
-.pmd-textfield .input-group .input-group-addon:first-child{ padding-right:16px;}
-.pmd-textfield .input-group .input-group-addon:last-child{ padding-left:16px;}
+.pmd-textfield-floating-label {
+  position: relative;
+}
+.pmd-textfield-floating-label label {
+  -ms-transform: translateY(26px);
+  -webkit-transform: translateY(26px);
+  transform: translateY(26px);
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.25rem;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.pmd-textfield-floating-label .form-control {
+  position: relative;
+}
+.pmd-textfield-floating-label.pmd-textfield-floating-label-completed label {
+  -ms-transform: translateY(0px);
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  font-size: 0.875rem;
+  color: rgba(0, 0, 0, 0.54);
+}
 
-/*floating label*/
-.pmd-textfield-floating-label { position: relative;}
-.pmd-textfield-floating-label label { transform: translateY(26px); -webkit-transform:translateY(26px); -ms-transform:translateY(26px); margin:0; font-size: 16px; line-height:24px; transition-duration: 0.2s; transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); margin-bottom:4px;}
-.pmd-textfield-floating-label .form-control{position: relative;}
-.pmd-textfield-floating-label.pmd-textfield-floating-label-completed label {  transform: translateY(0px); -ms-transform: translateY(0px); -webkit-transform: translateY(0px); color:rgba(0, 0, 0, 0.54); font-size:14px;}
+.pmd-textfield.has-success .form-control {
+  color: #259b24;
+  border-color: #259b24;
+}
+.pmd-textfield.has-success .form-control ~ .pmd-textfield-focused {
+  background-color: #259b24;
+}
+.pmd-textfield.has-success .form-control ~ .has-error-text {
+  color: #259b24;
+  display: block;
+}
+.pmd-textfield.has-success .form-control:focus {
+  box-shadow: none;
+}
 
-/*paper input error*/
-.pmd-textfield.has-success .form-control:focus,
-.pmd-textfield.has-warning .form-control:focus,
-.pmd-textfield.has-error .form-control:focus{box-shadow:none;}
-.has-error-text{ display:none;}
+.pmd-textfield-floating-label.pmd-textfield-floating-label-completed.has-success label {
+  color: #259b24;
+}
 
-/*has error*/
-.pmd-textfield.has-error .form-control{color:#a94442; border-color:#a94442;}
-.pmd-textfield.has-error .form-control ~ .pmd-textfield-focused{ background-color:#a94442;}
-.pmd-textfield.has-error .form-control ~ .has-error-text{ color:#a94442; display:block;}
-.pmd-textfield.has-error .form-control:invalid{color:#a94442;}
-.pmd-textfield.has-error .form-control:invalid ~ .pmd-textfield-focused{ background-color:#a94442;}
-.pmd-textfield.has-error .form-control:invalid ~ .has-error-text{ color:#a94442; display:block;}
-.pmd-textfield-floating-label.pmd-textfield-floating-label-completed.has-error label{color:#a94442;}
+.has-success .control-label,
+.has-success .help-block {
+  color: #259b24;
+}
 
-/*has success*/
-.pmd-textfield.has-success .form-control{color:#3c763d; border-color:#3c763d;}
-.pmd-textfield.has-success .form-control ~ .pmd-textfield-focused{ background-color:#3c763d;}
-.pmd-textfield.has-success .form-control ~ .has-error-text{ color:#3c763d; display:block;}
-.pmd-textfield-floating-label.pmd-textfield-floating-label-completed.has-success label{color:#3c763d;}
+.pmd-textfield.has-warning .form-control {
+  color: #ffc107;
+  border-color: #ffc107;
+}
+.pmd-textfield.has-warning .form-control ~ .pmd-textfield-focused {
+  background-color: #ffc107;
+}
+.pmd-textfield.has-warning .form-control ~ .has-error-text {
+  color: #ffc107;
+  display: block;
+}
+.pmd-textfield.has-warning .form-control:focus {
+  box-shadow: none;
+}
 
-/*has warning*/
-.pmd-textfield.has-warning .form-control{color:#8a6d3b; border-color:#8a6d3b;}
-.pmd-textfield.has-warning .form-control ~ .pmd-textfield-focused{ background-color:#8a6d3b;}
-.pmd-textfield.has-warning .form-control ~ .has-error-text{ color:#8a6d3b; display:block;}
-.pmd-textfield-floating-label.pmd-textfield-floating-label-completed.has-warning label{color:#8a6d3b;}
+.pmd-textfield-floating-label.pmd-textfield-floating-label-completed.has-warning label {
+  color: #ffc107;
+}
 
-/*help block*/
-.help-block{ font-size:14px; margin-top:0;}
+.has-warning .control-label,
+.has-warning .help-block {
+  color: #ffc107;
+}
 
-/* Large fields size */
-.form-group-lg.pmd-textfield .form-control{ font-size: 20px; height: 44px; line-height: 1.33333;}
-.form-group-lg.pmd-textfield label{font-size: 16px;}
-.form-group-lg.pmd-textfield-floating-label label{font-size: 20px; transform: translateY(36px); -webkit-transform:translateY(36px); -ms-transform:translateY(36px);}
-.form-group-lg.pmd-textfield-floating-label.pmd-textfield-floating-label-completed label{font-size: 16px; transform: translateY(0); -webkit-transform:translateY(0); -ms-transform:translateY(0);}
+.pmd-textfield.has-error .form-control {
+  color: #ff5722;
+  border-color: #ff5722;
+}
+.pmd-textfield.has-error .form-control ~ .pmd-textfield-focused {
+  background-color: #ff5722;
+}
+.pmd-textfield.has-error .form-control ~ .has-error-text {
+  color: #ff5722;
+  display: block;
+}
+.pmd-textfield.has-error .form-control:focus {
+  box-shadow: none;
+}
 
-/* Small fields size */
-.form-group-sm.pmd-textfield .form-control{ font-size: 14px; height: 30px; line-height: 1.33333;}
-.form-group-sm.pmd-textfield label{font-size: 10px;}
-.form-group-sm.pmd-textfield-floating-label label{font-size: 14px; transform: translateY(28px); -webkit-transform:translateY(28px); -ms-transform:translateY(28px);}
-.form-group-sm.pmd-textfield-floating-label.pmd-textfield-floating-label-completed label{font-size: 10px; transform: translateY(0); -webkit-transform:translateY(0); -ms-transform:translateY(0);}
+.pmd-textfield-floating-label.pmd-textfield-floating-label-completed.has-error label {
+  color: #ff5722;
+}
+
+.has-error .control-label,
+.has-error .help-block {
+  color: #ff5722;
+}
+
+.pmd-textfield.has-error .form-control:invalid {
+  color: form-state-colors("error");
+}
+.pmd-textfield.has-error .form-control:invalid ~ .pmd-textfield-focused {
+  background-color: form-state-colors("error");
+}
+.pmd-textfield.has-error .form-control:invalid ~ .has-error-text {
+  color: form-state-colors("error");
+  display: block;
+}
+
+.help-block {
+  font-size: 14px;
+  margin-top: 0;
+}
+
+.has-error-text {
+  display: none;
+}
+
+.form-group-lg.pmd-textfield .form-control {
+  font-size: 1.25rem;
+  height: 44px;
+  line-height: 1.33333;
+}
+.form-group-lg.pmd-textfield label {
+  font-size: 1rem;
+}
+.form-group-lg.pmd-textfield-floating-label label {
+  font-size: 1.25rem;
+  -ms-transform: translateY(36px);
+  -webkit-transform: translateY(36px);
+  transform: translateY(36px);
+}
+.form-group-lg.pmd-textfield-floating-label.pmd-textfield-floating-label-completed label {
+  font-size: 1rem;
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.form-group-sm.pmd-textfield .form-control {
+  font-size: 0.875rem;
+  height: 30px;
+  line-height: 1.33333;
+}
+.form-group-sm.pmd-textfield label {
+  font-size: 0.625rem;
+}
+.form-group-sm.pmd-textfield-floating-label label {
+  font-size: 0.875rem;
+  -ms-transform: translateY(28px);
+  -webkit-transform: translateY(28px);
+  transform: translateY(28px);
+}
+.form-group-sm.pmd-textfield-floating-label.pmd-textfield-floating-label-completed label {
+  font-size: 0.625rem;
+  -ms-transform: translateY(0);
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+
+.pmd-textfield .input-group-addon {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+.pmd-textfield .input-group-addon:first-child {
+  padding-right: 16px;
+}
+.pmd-textfield .input-group-addon:last-child {
+  padding-left: 16px;
+}
+.pmd-textfield .input-group .form-control {
+  float: inherit;
+  z-index: inherit;
+}
+
+.pmd-input-group-label {
+  padding-left: 40px;
+}
+
+/*# sourceMappingURL=textfield.css.map */

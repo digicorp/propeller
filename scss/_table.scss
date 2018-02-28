@@ -1,0 +1,410 @@
+
+/*!
+ * Propeller v1.3.0 (http://propeller.in): table.css
+ * Copyright 2016-2018 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+.table {
+	width: 100%;
+	max-width: 100%; 
+	margin-bottom: 1rem;
+	> thead > tr > th,
+	> tbody > tr > th,
+	> tfoot > tr > th,
+	> thead > tr > td,
+	> tbody > tr > td,
+	> tfoot > tr > td { 
+		padding: $table-cell-padding; 
+		line-height: $table-cell-line-height;
+		vertical-align: top; 
+		border-top: $table-border-width solid $table-border-color;
+	}
+}
+.pmd-table {
+	&.table {
+		.table {
+			background-color: $table-bg;
+		}
+		thead th {
+			vertical-align: bottom; 
+			border-bottom: 2px solid $table-border-color;
+		}
+		tbody + tbody { 
+			border-top: 2px solid $table-border-color; 
+		}
+	}
+	&.table-sm{
+		th,
+		td {
+			padding: $table-cell-padding-sm;
+		}
+	}
+}
+
+.table-bordered { 
+	border: 1px solid $table-border-color; 
+	th,
+	td { 
+		border: $table-border-width solid $table-border-color; 
+	}
+	thead {
+		th,
+		td {
+			border-bottom-width: 2px;
+		}
+	}
+}
+
+.table-striped {
+	tbody tr:nth-of-type(odd) { 
+		background-color: $table-accent-bg; 
+	}
+}
+
+.table-hover {
+	tbody tr {
+		@include hover {
+			background-color: $table-hover-bg; 
+		}	
+	}
+}
+
+
+@each $color, $value in $theme-colors {
+  @include table-row-variant($color, theme-color-level($color, -10));
+}
+@include table-row-variant(active, $table-active-bg);
+
+.table-responsive {
+	display: block; 
+	width: 100%;
+	overflow-x:auto;
+}
+.table-inverse {
+	color:$table-dark-color;
+	background-color:$table-dark-bg;
+	&.table-bordered {
+		border: 0;
+	}
+	&.table-striped {
+		tbody tr:nth-of-type(odd) {
+		  background-color: $table-dark-accent-bg;
+		}
+	}
+	&.table-hover {
+		tbody tr:hover,
+		tbody tr:nth-of-type(odd):hover {
+			background:$table-dark-hover-bg;
+		}
+	}
+}
+.table{
+	&.table-inverse {
+		> thead > tr,
+		> tbody > tr,
+		> tfoot > tr {
+			> th,
+			> td {
+				border-color:$table-dark-border-color;
+			}
+		}
+	}
+}
+
+.table-reflow {
+	thead { 
+		float: left;
+	}
+	tbody { 
+		display: block; 
+		white-space: nowrap;
+	}
+}
+.table{
+	&.table-reflow {
+		tr { 
+			float: left;
+		}
+		> thead > tr,
+		> tbody > tr,
+		> tfoot > tr {
+			> th,
+			> td {
+				border-top: $table-border-width solid $table-border-color; 
+				border-left: $table-border-width solid $table-border-color;
+				display: block !important; 
+				border: $table-border-width solid $table-border-color;
+				&:last-child{
+					border-right: $table-border-width solid $table-border-color;
+				}
+			}
+		}
+		thead:last-child tr:last-child,
+		tbody:last-child tr:last-child,
+		tfoot:last-child tr:last-child {
+			> th,
+			> td {
+				border-bottom: $table-border-width solid $table-border-color;
+			}
+		}
+	}
+}
+
+// Propeller Table
+.pmd-table { 
+	&.table {
+		> thead > tr,
+		> tbody > tr,
+		> tfoot > tr {
+			@include transition($transition-base);
+			> th,
+			> td {
+				vertical-align:middle;
+				text-align: left;
+				@include transition($transition-base);
+			}
+			> th {
+				font-weight: $table-head-font-weight;
+				color:$table-head-color;
+				border-top:none;
+				border-bottom-width: $table-border-width;
+				font-size:$table-head-font-size;
+			}
+		}
+	}
+	&.table-hover {
+		tbody tr:hover { 
+			background-color: $table-hover-bg;
+		}
+	}
+	// Bordered Table Card 
+	.table-bordered {
+		th,
+		td {
+			border:none; 
+			border-top: $table-border-width solid $table-border-color;
+		}
+	} 
+}
+
+.pmd-table {
+	&.table-inverse {
+		> thead > tr {
+			> th {
+				color:$table-dark-head-color;
+			}
+		}
+	}
+	&.table-striped {
+		&.table-inverse {
+			tbody tr:nth-of-type(odd) {
+				background-color:$table-dark-accent-bg;
+			}
+		}
+	}
+	&.table-hover {
+		&.table-inverse {
+			tbody tr:hover{
+				background-color: $table-dark-hover-bg;
+			}
+		}
+	}
+	&.table-bordered {
+		.table-heading,
+		.table-footer{
+			border: none;
+		}
+	} 
+}
+
+/* -- Table in card-------------- */
+.table-heading { 
+	min-height:64px; 
+	border-bottom:1px solid #ddd; 
+	padding:4px 24px 4px 24px;
+}
+.table-footer { 
+	padding: 8px 24px 8px 24px; 
+	border-top: 1px solid #ddd; 
+	display:inline-block; 
+	width:100%;
+}
+.shoarting{ margin-left:6px;}
+
+@media screen and (max-width: 768px) {
+
+	/* -------------------------------------
+	   Table Card
+	--------------------------------------*/
+	.pmd-table-card {
+		.pmd-table {
+			.table {
+				margin-bottom:0;
+			}
+		}
+		&.pmd-card-main {
+			background-color: transparent;
+			box-shadow:none;
+		}
+		.table {
+			&.pmd-table {
+				thead,
+				tfoot {
+					display: none;
+				}
+				tbody {
+					display: block;
+					tr { 
+						display: block; 
+						 @include border-radius($card-border-radius);
+						margin-bottom:1.25rem; 
+						@include box-shadow-depth(1);
+						td { 
+							background-color: $table-bg; 
+							display: block; 
+							vertical-align: middle; 
+							text-align: right;
+						}
+						td[data-title]:before {
+							content: attr(data-title); 
+							float: left; 
+							font-size: inherit; 
+							font-weight: $table-head-font-weight; 
+							color: $table-head-color;
+						}	
+					}
+				}
+			}
+		}
+		> .pmd-table {
+			// Striped Table Card
+			&.table-striped {
+				> tbody > tr {
+					> td,
+					&:nth-child(odd) {
+						background-color: $table-bg;
+					}
+					> td:nth-child(odd) { 
+						background-color: $table-accent-bg; 
+					}
+				}
+			}
+			&.table-inverse {
+				> tbody > tr {
+					> td[data-title]:before { 
+						color:$table-dark-head-color;
+					}
+				}
+			}
+			&.table-hover {
+				&.table-inverse {
+					> tbody > tr {
+						> td:hover {
+							background-color: $table-dark-hover-bg;
+						}
+					}
+				}
+			}
+			&.table-striped {
+				&.table-inverse {
+					> tbody > tr {
+						> td,
+						&:nth-child(odd) {
+							background-color:$table-dark-bg;
+						}
+						> td:nth-child(odd) {
+							background-color:$table-dark-accent-bg;
+						}
+					}
+				}
+			}
+		}
+		> .table-hover {
+			> tbody > tr > td:hover {
+				background-color:$table-hover-bg;
+			}
+		}
+		&.pmd-z-depth { 
+			background-color:transparent;
+			box-shadow:none;
+		}
+	}
+	.pmd-table {
+		&.table-bordered	{
+			th,
+			&.table-inverse td {
+				border-color:$table-dark-border-color;
+			}
+		}
+	}
+}
+
+/* -------------------------------------
+Child Table
+--------------------------------------*/
+.pmd-table {
+	margin-bottom:0;
+	.child-table {
+		background-color:$child-table-bg;
+		> td {
+			padding:0 !important;
+			.table {
+				> thead > tr {
+					background-color:$table-bg;
+				}
+			}
+		}
+		.table-sm {
+			th,
+			td {
+				padding: $table-cell-padding-sm 0.75rem;
+			}
+		}
+		@media screen and (max-width: 768px) {
+			margin-top:-20px;
+		}
+	}
+}
+
+/* -------------------------------------
+Ttable Reflow
+--------------------------------------*/
+.pmd-table {
+	&.table-reflow {
+		display: block;
+		overflow-x:scroll;
+		thead,
+		tr {
+			display:table-cell;
+			vertical-align:top;
+			float:none;
+		}
+		tr{ 
+			width:130px;
+			background-color: $table-bg;
+		}
+		thead {
+			position:absolute;
+		}
+		tbody{ 
+			margin-left:130px;
+		}
+		> thead > tr {
+			> th {
+				font-size:$body-font-size;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				overflow:hidden; 
+				width: 131px;
+			}
+		}
+		> tbody > tr {
+			> td {
+				border:none;
+				border-left: $table-border-width solid $table-border-color;
+				border-bottom: $table-border-width solid $table-border-color;
+			}
+		}
+	}
+}

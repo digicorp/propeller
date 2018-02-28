@@ -1,50 +1,161 @@
 /*!
- * Propeller v1.2.0 (http://propeller.in)
- * Copyright 2016-2018 Digicorp, Inc.
+ * Propeller v1.3.0 (http://propeller.in/): alert.css
+ * Copyright 2016-2018 Digicorp, Inc
  * Licensed under MIT (http://propeller.in/LICENSE)
-*/
-/* --------------------------- alert container for positions ----------------------*/
-.pmd-alert-container { position:fixed; width:auto; text-align:right; padding:0; z-index:100000000;}
-
-/* alert container for top, bottom, left, right and center positions */
-.pmd-alert-container.top { top:20px;}
-.pmd-alert-container.bottom { bottom:20px;}
-.pmd-alert-container.left { left:20px;}
-.pmd-alert-container.right { right:20px;}
-.pmd-alert-container.center { left:50%; }
-
-/* ------------ alert container for alert varients ------------------*/
-.pmd-alert-container .pmd-alert  {  position:relative; margin-bottom:5px; text-align:left; vertical-align:middle;  background:#000; padding:9px 24px; color:#fff; width:360px; z-index:1000; clear:both;  border-radius:3px;animation-duration: 1s; animation-fill-mode: both;}
-
-/* alert container for error*/
-.pmd-alert-container .pmd-alert.error { background:#FE5722; color:#fff;}
-
-/* alert container for information*/
-.pmd-alert-container .pmd-alert.information {background:#0288D1; color:#fff;}
-
-/* alert container for warning*/
-.pmd-alert-container .pmd-alert.warning {background:#FFB300; color:#fff;}
-
-/* alert container for success*/
-.pmd-alert-container .pmd-alert.success {background:#229A21; color:#fff;}
-
-/* Alert Action css */
-.pmd-alert a,
-.notification a { float:right; position: absolute; right: 18px; color: #5ca9ea; }
-.pmd-alert a:before { content: ""; position: absolute; right: -10px; top: 0; bottom: 0; margin: auto; left: -10px; }
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; }}
-.fadeIn { animation-name: fadeIn; }
-@keyframes fadeOut { from { opacity: 1; } to { opacity: 0; }}
-.fadeOut { animation-name: fadeOut; }
-@keyframes fadeOutDown { from { opacity: 1; } to { opacity: 0; transform: translate3d(0, 100%, 0); }}
-.fadeOutDown { animation-name: fadeOutDown;}
-@keyframes fadeInDown { from { opacity: 0; transform: translate3d(0, -100%, 0); } to { opacity: 1; transform: none; }}
-.fadeInDown { animation-name: fadeInDown; }
-@keyframes fadeInUp { from { opacity: 0; transform: translate3d(0, 100%, 0); } to { opacity: 1; transform: none; }}
-.fadeInUp { animation-name: fadeInUp; }
-
-@media screen and (max-width:767px){
-	.pmd-alert-container .pmd-alert  {width:300px;}
-	.pmd-alert-container.left { left:50%;}
-	.pmd-alert-container.right { right:50%;}
+ */
+.pmd-alert-container {
+  position: fixed;
+  z-index: 100000000;
 }
+.pmd-alert-container.top {
+  top: 20px;
+}
+.pmd-alert-container.bottom {
+  bottom: 20px;
+}
+.pmd-alert-container.left {
+  left: 20px;
+}
+.pmd-alert-container.right {
+  right: 20px;
+}
+.pmd-alert-container.center {
+  left: 50%;
+}
+@media screen and (max-width: 767px) {
+  .pmd-alert-container.left {
+    left: 50%;
+  }
+  .pmd-alert-container.right {
+    right: 50%;
+  }
+}
+.pmd-alert-container .pmd-alert {
+  position: relative;
+  z-index: 1000;
+  margin-bottom: 5px;
+  clear: both;
+  text-align: left;
+  vertical-align: middle;
+  width: 300px;
+  padding: 0.5rem 1.5rem;
+  color: #fff;
+  background: #000;
+  border-radius: 0.125rem;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  font-size: 1rem;
+}
+.pmd-alert-container .pmd-alert a {
+  position: absolute;
+  right: 18px;
+  float: right;
+  color: #4285f4;
+}
+.pmd-alert-container .pmd-alert a:before {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  bottom: 0;
+  left: -10px;
+  margin: auto;
+  content: "";
+}
+.pmd-alert-container .pmd-alert.success {
+  color: #fff;
+  background-color: #259b24;
+}
+.pmd-alert-container .pmd-alert.warning {
+  color: #333333;
+  background-color: #ffc107;
+}
+.pmd-alert-container .pmd-alert.light {
+  color: #333333;
+  background-color: #f8f9fa;
+}
+.pmd-alert-container .pmd-alert.dark {
+  color: #fff;
+  background-color: #343a40;
+}
+.pmd-alert-container .pmd-alert.error {
+  color: #fff;
+  background-color: #ff5722;
+}
+.pmd-alert-container .pmd-alert.information {
+  color: #fff;
+  background-color: #03a9f4;
+}
+
+.notification a {
+  position: absolute;
+  right: 18px;
+  float: right;
+  color: #4285f4;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.fadeOut {
+  animation-name: fadeOut;
+}
+
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+.fadeOutDown {
+  animation-name: fadeOutDown;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInDown {
+  animation-name: fadeInDown;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+/*# sourceMappingURL=alert.css.map */

@@ -1,0 +1,674 @@
+// Variables
+
+//
+// Color system
+//
+
+$white:  #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868e96 !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #333333 !default;
+$black: #000 !default;
+
+$blue:    #4285f4 !default;
+$indigo:  #6610f2 !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #ff5722 !default;
+$yellow:  #ffc107 !default;
+$green:   #259b24 !default;
+$teal:    #20c997 !default;
+$cyan:    #03a9f4 !default;
+
+$space4:  0.25rem !default;
+$space8:  0.5rem  !default;
+$space10: 0.625rem!default;
+$space12: 0.75rem !default;
+$space16: 1rem	  !default;
+$space18: 1.125rem!default;
+$space24: 1.5rem  !default; 
+
+$primary:       $blue !default;
+$secondary:     $yellow !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $orange !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+$default:		#ffffff !default;
+
+$theme-colors: () !default;
+$theme-colors: map-merge((
+  "default":    $white,
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark,
+  "error":      $danger,
+  "inverse":    $dark,
+  "information":$info,
+), $theme-colors);
+
+// Set a specific jump point for requesting color jumps
+$theme-color-interval:      8% !default;
+
+// The yiq lightness value that determines when the lightness of color changes from "dark" to "light". Acceptable values are between 0 and 255.
+$yiq-contrasted-threshold: 150 !default;
+
+// Customize the light and dark text colors for use in our YIQ color contrast function.
+$yiq-text-dark: $gray-900 !default;
+$yiq-text-light: $white !default;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * 1.5),
+  5: ($spacer * 3)
+) !default;
+
+// Body
+$body-bg:       			  $gray-100 !default;
+$body-color:    			  $gray-900 !default;
+$body-font-size: 			  .875rem;
+$body-line-height: 			  1.6;
+
+// Links
+$link-color:            	  theme-color("primary") !default;
+$link-decoration:       	  none !default;
+$link-hover-color:      	  darken($link-color, 15%) !default;
+$link-hover-decoration: 	  underline !default;
+$link-outline:          	  none !default;
+
+// Paragraphs
+$paragraph-margin-bottom: 1rem !default;
+
+// Grid breakpoints
+$media-xs: 					  "767px" !default;
+$media-sm: 					  "991px" !default;
+$media-md: 					  "1024px" !default;
+$media-lg: 					  "1200px" !default;
+
+// Components
+//
+// Define common padding and border radius sizes and more.
+$line-height-lg:         	  1.5 !default;
+$line-height-sm:         	  1.5 !default;
+
+$border-width: 			 	  1px !default;
+$border-color: 			 	  $gray-200 !default;
+
+$border-radius:          	  0.125rem !default;
+$border-radius-lg:       	  .3rem !default;
+$border-radius-sm:       	  .2rem !default;
+
+$component-active-color: 	  $white !default;
+$component-active-bg:    	  theme-color("primary") !default;
+
+$caret-width:            	  .3em !default;
+
+$transition-base:        	  all .2s ease-in-out !default;
+
+// Fonts
+$font-family-sans-serif:       Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace:        "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:             $font-family-sans-serif !default;
+
+$font-family-roboto-thin: 		"RobotoThin";
+$font-family-roboto-light: 	"RobotoLight";
+$font-family-roboto-regular: "Roboto";
+$font-family-roboto-medium: "RobotoMedium";
+$font-family-roboto-bold: "RobotoBold";
+$font-family-roboto-black: "RobotoBlack";
+
+$font-size-base:               1rem !default; 
+$font-size-lg:                 ($font-size-base * 0.25) !default;
+$font-size-sm:                 ($font-size-base * .875) !default;
+
+$font-weight-light:            300 !default;
+$font-weight-normal:           400 !default;
+$font-weight-medium:           500 !default;
+$font-weight-bold:             700 !default;
+
+$font-weight-base:             $font-weight-normal !default;
+$line-height-base:             1.5 !default;
+
+$h1-font-size:                 $font-size-base * 1.5 !default;
+$h2-font-size:                 $font-size-base * 1.25 !default;
+$h3-font-size:                 $font-size-base * 1 !default;
+$h4-font-size:                 $font-size-base * .8125 !default;
+$h5-font-size:                 $font-size-base * .8125 !default;
+$h6-font-size:                 $font-size-base !default;
+
+$h1-font-weight:               $font-weight-normal !default;
+$h2-font-weight:               $font-weight-medium !default;
+$h3-font-weight:               $font-weight-normal !default;
+$h4-font-weight:               $font-weight-medium !default;
+$h5-font-weight:               $font-weight-normal !default;
+
+$headings-margin-bottom:       ($spacer / 2) !default;
+$headings-font-family:         inherit !default;
+$headings-font-weight:         500 !default;
+$headings-line-height:         1.1 !default;
+$headings-color:               inherit !default;
+
+$display1-size:                2.125rem !default;
+$display2-size:                2.8125rem !default;
+$display3-size:                3.5rem !default;
+$display4-size:                7rem !default;
+
+$display-color:                rgba($black,0.54) !default;
+
+$display1-weight:			   400 !default;
+$display2-weight:			   400 !default;
+$display3-weight:			   400 !default;
+$display4-weight:			   300 !default;
+$display-line-height: 		   $headings-line-height !default;
+
+$lead-font-size:               ($font-size-base * 1.25) !default;
+$lead-font-weight:             300 !default;
+
+$small-font-size:              80% !default;
+
+$pmd-caption-font-size :  	   .75rem !default;
+$pmd-caption-letter-spacing:   .02em !default;
+
+// Tables
+$table-cell-padding:            .75rem !default;
+$table-cell-padding-sm:         .25rem !default;
+$table-cell-line-height:	    $line-height-base !default;
+
+$table-bg:                      $white !default;
+$table-accent-bg:               rgba($black,.05) !default;
+$table-hover-bg:                rgba($black,.075) !default;
+$table-active-bg:               $table-hover-bg !default;
+
+$table-border-width:            $border-width !default;
+$table-border-color:            $gray-200 !default; // #eceeef
+
+$table-head-bg:                 $gray-200 !default;
+$table-head-color:              rgba($black, .54) !default; 
+$table-head-font-size:			0.8rem !default;
+$table-head-font-weight:		400 !default;
+
+$table-dark-bg:              	$gray-900 !default;
+$table-dark-accent-bg:       	rgba($white, .02) !default;
+$table-dark-hover-bg:        	rgba($white, .075) !default;
+$table-dark-border-color:    	lighten($gray-900, 7.5%) !default;
+$table-dark-color:           	$body-bg !default;
+$table-dark-head-color:			rgba($white, .54) !default;
+
+$child-table-bg:				$white !default;
+
+// Icons
+$material-icons-xs: 			18px !default;
+$material-icons-sm: 			24px !default;
+$material-icons-md: 			36px !default;
+$material-icons-lg: 			48px !default;
+
+$material-icons-dark-color:				$gray-900 !default;
+$material-icons-dark-inactive-color: 	rgba($gray-900, .25) !default;
+$material-icons-light-color:			$white !default;
+$material-icons-light-inactive-color:	rgba($white, .25)!default;
+
+// Buttons
+$btn-padding-y:               	0.625rem !default;
+$btn-padding-x:               	.75rem !default;
+$btn-line-height:             	1.1 !default;
+
+$btn-padding-y-sm:            	.25rem !default;
+$btn-padding-x-sm:            	.75rem !default;
+$btn-line-height-sm:          	$line-height-sm !default;
+$btn-font-size-sm:			  	0.75rem !default; // New created 
+
+$btn-padding-y-lg:            	.625rem !default;
+$btn-padding-x-lg:            	1rem !default;
+$btn-line-height-lg:          	1.3 !default;
+$btn-font-size-lg:			  	1.125rem !default; //  New created
+$btn-border-width:            	$border-width !default;
+$btn-font-weight:             	$font-weight-normal !default;
+
+$btn-border-radius:           	$border-radius !default;
+$btn-border-radius-lg:        	$border-radius !default;
+$btn-border-radius-sm:        	$border-radius !default;
+
+$btn-fab-size:					56px !default; 
+$btn-fab-size-lg:				78px !default;
+$btn-fab-size-sm:				40px !default;
+$btn-fab-size-xs:				30px !default;
+
+$btn-transition:              	color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
+
+// Textfield
+$form-state-theme-colors: 				map-remove($theme-colors, "default", "primary", "secondary", "info", "danger", "light", "dark", "inverse", "information");
+$textfield-transition:                  transform 0.2s cubic-bezier(0.4, 0, 0.2, 1) 0s !default;
+$textfield-focused-height:				2px !default;
+$textfield-focused-bg:					theme-color("primary") !default;
+
+$textfield-line-height:					1.375rem !default; 			
+$textfield-margin-bottom:				1rem !default;
+
+$textfield-font-size:					$font-size-base !default;
+$textfield-border-height:				$border-width !default;	
+$textfield-border-color:				#e6e6e6 !default;
+$textfield-padding-bottom:				0.375rem !default; 
+	
+$textfield-label-font-weight:			normal !default;
+$textfield-label-line-height:			1.4 !default;
+$textfield-label-font-size:				$font-size-sm !default;
+$textfield-label-color:					rgba($black, .54) !default;	
+$textfield-floating-label-font-size:	$font-size-base !default;
+$textfield-floating-label-line-height:	1.5rem !default;
+$textfield-floating-label-margin-bottom:0.25rem !default;
+
+$textfield-height-lg:					44px !default;
+$textfield-line-height-lg:				1.33333 !default;
+$textfield-font-size-lg:				1.25rem !default;
+$textfield-floating-label-font-size-lg: 1rem !default;
+
+$textfield-height-sm:					30px !default;
+$textfield-line-height-sm:				1.33333 !default;
+$textfield-font-size-sm:				$font-size-sm !default;
+$textfield-floating-label-font-size-sm: 0.625rem !default;
+
+// Checkbox
+$checkbox-gutter:						1.5625rem !default;	
+$checkbox-border-width:					0.125rem !default;
+$checkbox-border-radius:				0.125rem !default;
+$checkbox-border-color:					rgba($black,.54);
+$checkbox-check-size:					0.125rem !default;
+$checkbox-check-color:					#ffffff !default;
+$checkbox-checked-bg:					theme-color("primary") !default;
+$checkbox-checked-border-bg:			$checkbox-checked-bg !default;
+$checkbox-disabled-color:				rgba($black,.26);		
+$checkbox-disabled-border-color:		$checkbox-disabled-color;
+
+$checkbox-inverse-border-color:			rgba($white,.54);
+$checkbox-inverse-checked-bg:			theme-color("primary") !default;
+$checkbox-inverse-checked-border-bg:	$checkbox-inverse-checked-bg !default;
+$checkbox-inverse-disabled-color:		rgba($white,.54);
+
+// Toggle Switch
+$toggle-switch-bar-bg:					rgba($black,.54) !default;
+$toggle-switch-bg:						#f1f1f1 !default;
+$toggle-switch-check-bg:				theme-color("primary") !default;
+$toggle-switch-bar-check-bg:			rgba($toggle-switch-check-bg, .54) !default;
+$toggle-switch-disabled-bg:				rgba($black,.25) !default;
+
+// Radio
+$radio-gutter:							1rem !default;
+$radio-border-width:					0.125rem !default;
+$radio-border-color:					rgba($black,.54) !default;
+$radio-check-color:						theme-color("primary") !default;
+$radio-check-border-color:				$radio-check-color !default;
+$radio-ripple-color:					rgba($black,.2) !default;
+$radio-disabled-color:					rgba($black,.26) !default;
+
+$radio-inverse-disabled-border-color:	rgba($white,.26) !default;
+$radio-inverse-disabled-color:			rgba($white,.54) !default;
+$radio-inverse-border-color:			rgba($white,.87) !default;
+$radio-inverse-checked-bg:				theme-color("primary") !default;
+$radio-inverse-check-border-color:		$radio-inverse-checked-bg !default;
+
+// Dropdowns
+$dropdown-padding-y:             		.5rem !default;
+$dropdown-bg:                    		$white !default;
+$dropdown-box-shadow:            		1 !default;
+$dropdown-transition: 			 		transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) 0s;			
+
+$dropdown-link-color:            		$gray-900 !default;
+$dropdown-link-line-height:		 		1.42857143 !default;
+$dropdown-link-hover-color:      		darken($dropdown-link-color, 5%) !default;
+$dropdown-link-hover-bg:         		$gray-100 !default;
+$dropdown-link-disabled-color:   		$gray-600 !default;
+
+$dropdown-item-padding-y:        		$space12 !default;
+$dropdown-item-padding-x:        		$space16 !default;
+
+$dropdown-header-color:          		$gray-600 !default;
+$dropdown-header-padding-y:		 		$space4 !default;
+$dropdown-header-padding-x:      		$space16 !default;
+
+// Navs
+$nav-tabs-link-color:		            rgba($black,.54) !default;
+$nav-tabs-link-font-size:				$font-size-sm !default;
+$nav-tabs-link-font-weight:				$font-weight-medium !default;
+
+$nav-tabs-link-active-color:            rgba($black, 1) !default;
+$nav-tabs-link-active-bg:               transparent !default;
+$nav-tabs-link-active-bar-bg:           theme-color("secondary") !default;
+$nav-tabs-link-padding-top:				1.125rem !default;	
+$nav-tabs-link-padding-bottom:			1.0625rem !default;
+$nav-tabs-link-padding-x:               1.5rem !default;
+
+$nav-tabs-scroll-arrow-bg:				$white !default;	
+$nav-tabs-scroll-arrow-color:			$gray-600 !default;
+$nav-tabs-scroll-arrow-padding-x:       $nav-tabs-link-padding-x !default;
+$nav-tabs-scroll-arrow-padding-top:		0.75rem !default;
+$nav-tabs-scroll-arrow-padding-bottom:	0.375rem !default;
+
+$nav-tabs-dark-bg:						theme-color("primary") !default;
+$nav-tabs-dark-link-color:				rgba($white,.54) !default;
+$nav-tabs-dark-scroll-arrow-bg:			$nav-tabs-dark-bg !default;
+$nav-tabs-dark-scroll-arrow-color:		$nav-tabs-dark-link-color !default;
+$nav-tabs-dark-link-active-color:		rgba($white,1) !default;
+$nav-tabs-dark-link-active-bg:			$nav-tabs-dark-scroll-arrow-bg !default;	
+
+// Navbar
+$navbar-brand-padding-y:			 	$space8 !default;
+$navbar-brand-padding-left:			 	$space8 !default;
+$navbar-brand-padding-right:		 	$space16 !default;
+$navbar-brand-font-size:             	1.5rem !default;
+$navbar-brand-line-height:			 	48px !default;
+$navbar-brand-mobile-line-height:	 	40px !default;
+
+$navbar-nav-line-height:			 	24px !default;
+$navbar-nav-font-weight:			 	400 !default;
+$navbar-nav-text-transform:			 	uppercase !default;
+$navbar-nav-padding-y:				 	1.25rem !default;
+$navbar-nav-mobile-padding-y:		 	0.75rem !default;
+$navbar-nav-mobile-padding-x:		 	1rem !default;
+
+$navbar-toggler-padding:			 	0.625rem !default;
+$navbar-toggler-size:   	         	40px !default;
+$navbar-toggler-margin-top:			 	12px !default;	
+$navbar-toggler-margin-right:		 	0.5rem !default;
+$navbar-right-icon-margin-left:		 	1rem !default;
+$navbar-right-icon-margin-y:		 	0.75rem !default;
+
+$navbar-mobile-dropdown-padding-y:	 	0.25rem !default;
+$navbar-mobile-dropdown-padding-right:	1rem !default;
+$navbar-mobile-dropdown-padding-left:	2rem !default;
+
+$navbar-toggler-mobile-margin-top:	 	0.5rem !default;
+$navbar-right-icon-mobile-margin-y:	 	0.5rem !default;
+
+$navbar-mobile-spacer-y:			 	0.5rem !default;	
+$navbar-mobile-padding-x:			 	0.5rem !default;	
+
+$navbar-inverse-bg:	                 	#222222 !default;
+$navbar-inverse-color:	             	rgba($white,.75) !default;
+$navbar-inverse-hover-color:		 	rgba($white, 1) !default;
+
+$sidebar-overlay-bg:				 	$black !default;
+$sidebar-overlay-opacity:			 	0.5 !default;
+$navbar-sidebar-bg:					 	$white !default;
+$navbar-sidebar-width:				 	85% !default;
+
+$user-info-margin-right:			 	-15px !default;	
+$user-info-margin-left:				 	1rem !default;	
+$user-info-padding-y:				 	0.75rem !default;
+$user-info-padding-x:				 	0.5rem !default;
+$user-info-mobile-padding-y:		 	0.5rem !default;
+$user-info-mobile-padding-x:		 	1rem !default;
+$user-info-mobile-bg:				 	lighten($navbar-inverse-bg, 10%) !default;
+$user-info-mobile-color:			 	$navbar-inverse-color;
+$user-info-mobile-hover-bg:			 	$user-info-mobile-bg;	
+
+// Sidebar
+$content-padding-top:				 	4.625rem !default;
+$content-padding-x:					 	1.875rem !default;
+$content-padding-x-sm:				 	1rem !default; 	
+
+$sidebar-width:						 	280px !default;
+$sidebar-bg:						 	#ffffff !default;
+$sidebar-padding-top:				 	4rem !default;
+$sidebar-user-info-bg:				 	#333333 !default;
+$sidebar-user-info-color:			 	#ffffff !default;
+$sidebar-transition:				 	all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
+$sidebar-menu-padding-left:			 	1.5rem !default;
+$sidebar-menu-padding-left-sm:		 	1rem !default;
+
+// floating action button
+$floating-action-spacer-right:		 	1rem !default;
+$floating-action-spacer-bottom:		 	1rem !default;
+$floating-action-btn-spacer-bottom:	 	0.9375rem !default;
+$floating-action-btn-spacer-left:	 	0.5rem !default;
+$floating-action-btn-label-bg:		 	#ffffff !default;
+$floating-action-btn-label-padding-y:	0.375rem !default; 
+$floating-action-btn-label-padding-x:	0.75rem !default; 
+$floating-action-btn-label-color:	 	rgba($black, .87) !default;
+$floating-action-btn-label-spacer-right: 0.3125rem !default;
+$floating-action-btn-font-size-sm:	 	0.75rem !default;
+$floating-action-btn-font-size-lg:	 	$font-size-sm !default;
+
+// Cards
+$card-gutter-width:					30px !default; 
+$card-spacer-y:                     $space16 !default;
+$card-spacer-x:                     $space16 !default;
+$card-spacer:						$space16 !default;
+$card-border-radius:                $border-radius !default;
+$card-body-color:                   rgba($black, .87) !default;
+$card-bg:                           $white !default;
+
+$card-title-font-size:				$h1-font-size !default;
+$card-title-font-weight:			$font-weight-base !default;
+$card-subtitle-font-size:			$font-size-sm !default;
+$card-subtitle-line-height:			1.6 !default;
+$card-subtitle-color:				rgba($black, .54) !default;
+
+$card-actions-spacer-y:				$space8 !default;
+$card-actions-spacer-x:				$space4 !default;
+$card-actions-btn-spacer-x:			$space12 !default;
+$card-actions-btn-flat-spacer-x:    $space4 !default;
+
+$card-media-spacer-y:				$space4 !default;
+
+$card-list-bg:						$white !default;
+$card-list-spacer-y:                $card-spacer/2  !default;
+
+$card-inverse-color:				$white !default;
+$card-inverse-bg:					rgba($black, .84) !default;
+$card-inverse-body-color:			rgba($white, .84) !default;
+$card-inverse-subtitle-color:       rgba($white, .54) !default;
+
+// Tooltips
+$tooltip-transition:		  		opacity 0.3s ease-in-out, margin ease-in-out 0.3s  !default;
+$tooltip-color:               		$white !default;
+$tooltip-bg:                  		$black !default;
+$tooltip-opacity:             		.9 !default;
+$tooltip-padding-y:           		0.1875rem !default;
+$tooltip-padding-x:           		0.5rem !default;
+$tooltip-font-size:			  		$font-size-sm !default;
+$tooltip-font-weight:		  		500 !default;
+$tooltip-line-height:		  		1.4 !default;
+
+// Badges
+$badge-theme-colors: 				map-remove($theme-colors, "default", "primary", "secondary", "danger", "light", "dark");
+$badge-bg:							#777777 !default;		
+$badge-color:						$white !default;
+
+$notification-icon-size:			32px !default;
+$notification-badge-size:			22px !default;
+$notification-badge-font:			$font-family-sans-serif	!default;
+$notification-badge-font-size:      0.75rem !default;
+$notification-badge-font-weight:    $font-weight-bold !default;
+$notification-badge-bg:				theme-color("primary") !default;	
+$notification-badge-color:			$white !default;
+
+$chip-border-radius:				1rem !default;
+$chip-line-height:					34px !default;
+$chip-spacer-right:					0.5rem !default;
+$chip-spacer-left:					0.75rem !default;
+$chip-bg:							#E0E0E0 !default;
+$chip-color:						rgba($black, .87) !default;
+$chip-inverse-bg:					rgba($black, .87) !default;
+$chip-inverse-color:				rgba($white, .87) !default;
+$chip-action-color:					rgba($white, .87) !default;
+$chip-action-bg:					darken($chip-bg, 20%) !default;
+$chip-action-font-size:				$font-size-sm !default;
+$chip-contact-size:					2.25rem !default;
+
+// Modals
+$modal-border-radius:				$border-radius !default;
+
+$modal-spacer:						$card-spacer !default;
+$modal-spacer-y:                    $card-spacer-y !default;
+$modal-spacer-x:                    $card-spacer-x !default;
+
+$modal-header-padding-y:			$card-spacer-y !default;
+$modal-header-padding-x:			$card-spacer-x !default;
+$modal-header-margin-bottom:		$card-spacer-y !default;
+$modal-header-border-color:   		$gray-200 !default;
+$modal-header-border-width:   		$border-width !default;
+$modal-header-title-font-weight:	500 !default;
+
+$modal-actions-spacer-y:			$card-actions-spacer-y !default;
+$modal-actions-spacer-x:			$card-actions-spacer-x !default;
+$modal-actions-btn-padding-y:		$space10 !default;
+$modal-actions-btn-padding-x:		$space8 !default;
+$modal-actions-btn-spacer-y:		$space8 !default;
+$modal-actions-btn-spacer-x:		$space4 !default;
+$modal-actions-btn-margin-left:		$space12 !default;
+$modal-actions-btn-flat-spacer-x:   $card-actions-btn-flat-spacer-x !default;
+$modal-action-border-color:   		$modal-header-border-color !default;
+$modal-action-border-width:   		$modal-header-border-width !default;
+
+$modal-radio-checkbox-spacer-y:		$space16 !default;
+$modal-list-avatar-margin-bottom:	$card-spacer-y !default;
+
+// Alerts
+$alert-theme-colors: 				map-remove($theme-colors, "default", "primary", "secondary", "info", "danger", "inverse");
+$alert-padding-y:                   .75rem !default;
+$alert-padding-x:                   1.25rem !default;
+$alert-margin-bottom:               1rem !default;
+$alert-border-radius:               $border-radius !default;
+$alert-link-font-weight:            $font-weight-bold !default;
+$alert-border-width:                $border-width !default;
+
+$alert-bg-level:                    -10 !default;
+$alert-border-level:                -9 !default;
+$alert-color-level:                 6 !default;
+
+$pmd-alert-container-spacing: 		20px !default;
+$pmd-alert-link-color:        		$link-color !default;
+$pmd-alert-font-size:				$font-size-base !default;
+$pmd-alert-width:					300px !default;
+$pmd-alert-bg:						$black !default;
+$pmd-alert-color:					$white !default;
+$pmd-alert-padding-y:				$space8 !default;
+$pmd-alert-padding-x:				$space24 !default;
+$pmd-alert-border-radius:  			$border-radius !default;
+$pmd-alert-text-align:				left !default;
+
+// Progress bars
+$progress-height:               	4px !default;
+$progress-font-size:            	.75rem !default;
+$progress-bg:                   	$gray-400 !default;
+$progress-border-radius:        	0 !default;
+
+// List group
+$card-list-padding-y:				$space8 !default;
+$card-list-bg:						#ffffff !default;
+
+$list-group-bg:                  	$white !default;
+$list-group-border-color:        	rgba($black,.125) !default;
+$list-group-border-width:        	$border-width !default;
+$list-group-border-radius:       	$border-radius !default;
+
+$list-group-item-padding-y:      	$space12 !default;
+$list-group-item-padding-x:      	$space16 !default;
+
+$list-group-item-heading-line-height: 1.4 !default;
+$list-group-item-text-line-height: 	  1.4 !default;
+$list-group-item-text-color:		  rgba($black,.54) !default;
+$list-group-item-text-font-size:	  $font-size-sm !default;
+$list-group-item-media-left:		  1rem !default;
+
+$list-group-avatar-item-padding-y:	  $space8 !default;
+$list-group-avatar-img-size:		  40px !default;
+
+$list-icon-right:					  32px !default;
+$list-icon-left:					  32px !default;
+
+// Accordion
+$accordion-theme-colors: 			map-remove($theme-colors, "default", "primary", "secondary", "light", "dark", "error", "inverse", "information");
+$accordion-panel-margin-y:	  		$space16 !default;
+$accordion-panel-margin-x:	  		0 !default;
+$accordion-heading-padding-y: 		$space12 !default;
+$accordion-heading-padding-x: 		$space16 !default;
+$accordion-heading-line-height: 	$space24 !default;
+$accordion-inbox-padding-y:   		$space8 !default;
+$accordion-inbox-padding-x:	  		-$space8 !default;
+$accordion-inbox-padding-y-xs:		$space16 !default;
+$accordion-inbox-padding-x-xs:		-10px !default;
+$accordion-icon-padding-left:  		32px !default;
+$accordion-icon-padding-right: 		32px !default;
+
+// Datatable
+$datatable-control-bg:				#ffffff !default;
+$datatable-control-color:			#31b131 !default;
+
+$datatable-checkbox-border-color:	$checkbox-border-color !default;
+$datatable-checkbox-border-radius:	$checkbox-border-radius !default;
+$datatable-checkbox-border-width: 	$checkbox-border-width !default;
+$datatable-checkbox-check-color:	$checkbox-check-color !default;
+$datatable-checkbox-check-size:		$checkbox-check-size !default;
+$datatable-checkbox-checked-bg:		$checkbox-checked-bg !default;
+$datatable-checkbox-checked-border-color: $datatable-checkbox-checked-bg !default;
+
+$datatable-active-bg:			    #edf4fd !default;
+$datatable-dark-active-bg:			#313131 !default;
+$datatable-dark-checkbox-border-color: rgba($white,.54);
+
+// Range slider
+$range-slider-height:				2px !default;
+$range-slider-spacer-top:			40px !default;
+$range-slider-spacer-bottom:		6px !default;
+$range-slider-bar-bg:				theme-color("primary") !default;
+$range-slider-bg:					#dedede !default;
+
+$range-slider-marker-horizontal-bg: #000000 !default;
+$range-slider-marker-horizontal-height: 2px !default;
+
+$range-slider-marker-vertical-bg: 	#000000 !default;
+$range-slider-marker-vertical-width: 2px !default;
+
+$range-slider-tooltip-bg:			$range-slider-bar-bg !default;
+$range-slider-tooltip-color:		#ffffff !default;
+$range-slider-tooltip-font-size:	11px !default;
+$range-slider-disabled-bg:			#d0d0d0 !default;
+
+// Datetimepicker
+$datetimepicker-info-bg:			theme-color("primary") !default;
+$datepicker-accordion-toggle-bg:	darken($datetimepicker-info-bg, 15%) !default;
+$datepicker-accordion-toggle-color: #ffffff !default;
+$datepicker-info-color:				#ffffff !default;
+$datepicker-bg:						#ffffff !default;
+$datetimepicker-color:				#333333 !default;
+$datetimepicker-font-size:			14px !default;
+$datetimepicker-width:				300px !default;
+$clockpicker-size: 					270px !default;
+$datetimepicker-font-family: 		$font-family-sans-serif !default;
+$timepicker-info-font-size:			2.8rem !default;
+$datepicker-info-font-size:			2rem !default;
+$clockpicker-bg:					#eceff1 !default;
+$datepicker-year-info-font-size:	1rem !default;
+
+// Select2
+$select2-border-color:				$textfield-border-color !default;
+$select2-border-width:				$textfield-border-height !default;
+$select2-padding-y:					6px !default;
+$select2-color:						#555555 !default;
+$select2-font-family:				$font-family-sans-serif  !default;
+$select2-font-size:					14px !default;
