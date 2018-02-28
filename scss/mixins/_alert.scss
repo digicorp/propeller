@@ -1,0 +1,4 @@
+@mixin alert-variant($background, $color) {
+  color: color-yiq($color);
+  background-color:$background;
+}

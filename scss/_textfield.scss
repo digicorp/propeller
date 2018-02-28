@@ -1,0 +1,193 @@
+/*!
+ * Propeller v1.3.0 (http://propeller.in): textfield.css
+ * Copyright 2016-2018 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+// input focus bar
+.pmd-textfield-focused{ 
+	@include transition($textfield-transition);
+	width: 100%; 
+	height:$textfield-focused-height; 
+	display:block; 
+	top:-1px;  
+	background-color:$textfield-focused-bg; 
+	@include transform-scalex(0);
+	position:relative; 
+	z-index:2;
+}
+.pmd-textfield {
+	&.pmd-textfield-floating-label-active {	
+		.pmd-textfield-focused { 
+			@include transform-scalex(1);
+		}
+	}
+}
+
+// paper input
+.form-group{
+	&.pmd-textfield{ 
+		margin-bottom:$textfield-margin-bottom;
+		line-height:$textfield-line-height;
+	}
+}
+.pmd-textfield {
+	.form-control{ 
+		background: transparent; 
+		border: none; 
+		border-bottom:solid $textfield-border-height $textfield-border-color; 
+		outline: none; 
+		box-shadow:none; 
+		padding:0; 
+		border-radius:0; 
+		font-size:$textfield-font-size;
+		padding-bottom:$textfield-padding-bottom;
+	}
+	input.form-control{
+		height: inherit;
+	}
+	textarea.form-control{
+		height: 80px;
+	}
+	label{
+		font-weight:$textfield-label-font-weight; 
+		line-height:$textfield-label-line-height;
+		font-size:$textfield-label-font-size; 
+		color:$textfield-label-color;
+		margin-bottom: 0;
+	}
+}
+
+// floating label
+.pmd-textfield-floating-label {
+	position: relative;
+	label {
+		@include transform-translateY(26px);
+		margin:0; 
+		font-size: $textfield-floating-label-font-size; 
+		line-height:$textfield-floating-label-line-height; 
+		margin-bottom:$textfield-floating-label-margin-bottom;
+		transition-duration: 0.2s; 
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+	}
+	.form-control{
+		position: relative;
+	}
+	&.pmd-textfield-floating-label-completed {
+		label {
+			@include transform-translateY(0px); 
+			font-size:$textfield-label-font-size; 
+			color:$textfield-label-color;
+		}
+	}
+}
+
+@each $color, $value in $form-state-theme-colors {
+	.pmd-textfield.has-#{$color} .form-control{
+		@include textfield-validation-state($value);
+	 }
+	.pmd-textfield-floating-label{
+		&.pmd-textfield-floating-label-completed.has-#{$color} {
+			label{
+				@include textfield-floating-label-validation-state($value);
+			}
+		}
+	}
+	.has-#{$color} .control-label, 
+	.has-#{$color} .help-block {
+		@include textfield-floating-label-validation-state($value);
+	}
+}
+
+.pmd-textfield.has-error {
+	.form-control:invalid{
+		color:form-state-colors("error");
+		~ .pmd-textfield-focused{ 
+			background-color:form-state-colors("error");
+		}
+		~ .has-error-text{ 
+			color:form-state-colors("error"); 
+			display:block;
+		}
+	}
+}
+
+// help block
+.help-block{ font-size:14px; margin-top:0;}
+.has-error-text{ display:none;}
+
+// Large fields size 
+.form-group-lg{
+	&.pmd-textfield{
+		.form-control{ 
+			font-size: $textfield-font-size-lg; 
+			height: $textfield-height-lg; 
+			line-height: $textfield-line-height-lg;
+		}
+		label{
+			font-size: $textfield-floating-label-font-size-lg;
+		}
+	}
+	&.pmd-textfield-floating-label {
+		label{
+			font-size: $textfield-font-size-lg;  
+			@include transform-translateY(36px);
+		}
+		&.pmd-textfield-floating-label-completed {
+			label{
+				font-size: $textfield-floating-label-font-size-lg;
+				@include transform-translateY(0);
+			}
+		}
+	}
+}
+
+// Small fields size
+.form-group-sm{
+	&.pmd-textfield{
+		.form-control{ 
+			font-size: $textfield-font-size-sm;
+			height: $textfield-height-sm;
+			line-height: $textfield-line-height-sm;
+		}
+		label{
+			font-size: $textfield-floating-label-font-size-sm;
+		}
+	}
+	&.pmd-textfield-floating-label {
+		label{
+			font-size: $textfield-font-size-sm; 
+			@include transform-translateY(28px);
+		}
+		&.pmd-textfield-floating-label-completed {
+			label{
+				font-size: $textfield-floating-label-font-size-sm;
+				@include transform-translateY(0);
+			}
+		}
+	}
+}
+
+// paper input group
+.pmd-textfield{
+	.input-group-addon{ 
+		border:none; 
+		background-color: transparent;
+		padding:0;
+		&:first-child{ 
+			padding-right:16px;
+		}
+		&:last-child{ 
+			padding-left:16px;
+		}
+	}
+	.input-group {
+		.form-control{
+			float:inherit; 
+			z-index:inherit;
+		}
+	}
+}
+.pmd-input-group-label{ 
+	padding-left:40px;
+}

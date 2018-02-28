@@ -1,0 +1,87 @@
+/*!
+ * Propeller v1.3.0 (http://propeller.in): typography.css
+ * Copyright 2016-2018 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+html {
+	font-size: 16px;
+	-webkit-tap-highlight-color: rgba($black, 0);
+}
+body {
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: $body-color;
+	background-color: $body-bg;
+}
+
+// Link
+a {
+	color: $link-color;
+	text-decoration: $link-decoration;
+	outline: $link-outline;
+	&:focus,
+	&:hover {
+		text-decoration: $link-hover-decoration;
+		outline: $link-outline;
+		color:$link-hover-color;
+		outline-offset: -2px;
+	}
+}
+
+// Paragraph 
+p { 
+	margin-bottom: $paragraph-margin-bottom;
+}
+.lead, p.lead {
+	font-size: $lead-font-size;
+	font-weight: $lead-font-weight;
+}
+
+// Headings 
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	margin-bottom: $headings-margin-bottom;
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	line-height: $headings-line-height;
+	color: $headings-color;
+}
+
+// Font size and color according to Google Material 
+h1, .h1 { font-size: $h1-font-size; font-weight: $h1-font-weight;}
+h2, .h2 { font-size: $h2-font-size; font-weight: $h2-font-weight;}
+h3, .h3 { font-size: $h3-font-size; font-weight: $h3-font-weight;}
+h4, .h4 { font-size: $h4-font-size; font-weight: $h4-font-weight;}
+h5, .h5 { font-size: $h5-font-size; font-weight: $h5-font-weight;}
+
+// Type display classes 
+.pmd-display1 {
+  font-size: $display1-size;
+  font-weight: $display1-weight;
+  line-height: $display-line-height;
+  color: $display-color;
+}
+.pmd-display2 {
+  font-size: $display2-size;
+  font-weight:$display2-weight;
+  line-height: $display-line-height;	
+  color: $display-color;
+}
+.pmd-display3 {
+  font-size: $display3-size;
+  font-weight: $display3-weight;
+  line-height: $display-line-height;	
+  color: $display-color;
+}
+.pmd-display4 {
+  font-size: $display4-size;
+  font-weight: $display4-weight;
+  line-height: $display-line-height;	
+  color: $display-color;
+}
+.pmd-caption {
+  font-size: $pmd-caption-font-size;
+  color: $gray-600;
+  letter-spacing: $pmd-caption-letter-spacing;
+}

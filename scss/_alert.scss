@@ -1,0 +1,120 @@
+/*!
+ * Propeller v1.3.0 (http://propeller.in/): alert.css
+ * Copyright 2016-2018 Digicorp, Inc
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+// alert container for positions
+.pmd-alert-container {
+	position: fixed;
+	z-index: 100000000;
+	
+	// alert container for top, bottom, left, right and center positions
+	&.top {
+		top: $pmd-alert-container-spacing;
+	}
+	&.bottom {
+		bottom: $pmd-alert-container-spacing;
+	}
+	&.left {
+		left: $pmd-alert-container-spacing;
+	}
+	&.right {
+		right: $pmd-alert-container-spacing;
+	}
+	&.center {
+		left: 50%;
+	}
+	
+	// Media query start
+	@media screen and (max-width:$media-xs) {
+		&.left {
+			left: 50%;
+		}
+		&.right {
+			right: 50%;
+		}
+	}
+	
+	// alert container for alert varients
+	.pmd-alert {
+		position: relative;
+		z-index: 1000;
+		margin-bottom: 5px;
+		clear: both;
+		text-align: $pmd-alert-text-align;
+		vertical-align: middle;
+		width: $pmd-alert-width;  
+		padding: $pmd-alert-padding-y $pmd-alert-padding-x;
+		color: $pmd-alert-color;
+		background: $pmd-alert-bg;
+		@include border-radius($pmd-alert-border-radius);
+		animation-duration: 1s;
+		animation-fill-mode: both;
+		font-size: $pmd-alert-font-size;
+		a {
+			position: absolute;
+			right: 18px;
+			float: right;
+			color: $pmd-alert-link-color;
+			// Alert Action css
+			&:before {
+				position: absolute;
+				top: 0;
+				right: -10px;
+				bottom: 0;
+				left: -10px;
+				margin: auto;
+				content: "";
+			}
+		}
+		// Alternate styles
+		@each $color, $value in $alert-theme-colors {
+			&.#{$color} {
+				@include alert-variant($value, $value);
+			}
+		}
+	}
+}
+
+.notification a {
+  position: absolute;
+  right: 18px;
+  float: right;
+  color: $pmd-alert-link-color;
+}
+
+// Fade in keyframes
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+.fadeIn { animation-name: fadeIn; }
+
+// Fade out keyframes
+@keyframes fadeOut {
+	from { opacity: 1; }
+	to { opacity: 0; }
+}
+.fadeOut { animation-name: fadeOut; }
+
+// Fade out down keyframes
+@keyframes fadeOutDown {
+	from { opacity: 1; }
+	to { opacity: 0; transform: translate3d(0, 100%, 0); }
+}
+.fadeOutDown { animation-name: fadeOutDown; }
+
+// Fade in down keyframes
+@keyframes fadeInDown {
+	from { opacity: 0; transform: translate3d(0, -100%, 0); }
+	to { opacity: 1; transform: none; }
+}
+.fadeInDown { animation-name: fadeInDown; }
+
+// Fade in up keyframes
+@keyframes fadeInUp {
+	from { opacity: 0; transform: translate3d(0, 100%, 0); }
+	to { opacity: 1; transform: none; }
+}
+.fadeInUp {animation-name: fadeInUp;}

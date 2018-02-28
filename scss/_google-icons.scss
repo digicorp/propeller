@@ -1,0 +1,35 @@
+/*!
+ * Propeller v1.3.0 (http://propeller.in): google-icons.css
+ * Copyright 2016-2018 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+// Rules for sizing the icon
+.material-icons.pmd-xs, .material-icons.md-18 {
+	font-size: $material-icons-xs;
+}
+.material-icons.pmd-sm, .material-icons.md-24 {
+	font-size: $material-icons-sm;
+}
+.material-icons.pmd-md,.material-icons.md-36 {
+	font-size: $material-icons-md;
+}
+.material-icons.pmd-lg,.material-icons.md-48 {
+	font-size: $material-icons-lg;
+}
+
+// Rules for using icons as black on a light background.
+.material-icons.md-dark {
+	color: $material-icons-dark-color;
+}
+.material-icons.md-dark.md-inactive {
+	color: $material-icons-dark-inactive-color;
+}
+
+// Rules for using icons as white on a dark background.
+.material-icons.md-light {
+	color: $material-icons-light-color;
+}
+.material-icons.md-light.md-inactive {
+	color: $material-icons-light-inactive-color;
+}
