@@ -1,34 +1,147 @@
-
 /*!
- * Propeller v1.2.0 (http://propeller.in): badge.css
- * Copyright 2016-2018 Digicorp, Inc.
+ * Propeller v1.3.0 (http://propeller.in/): badge.css
+ * Copyright 2016-2018 Digicorp, Inc
  * Licensed under MIT (http://propeller.in/LICENSE)
-*/
+ */
+.badge {
+  color: #fff;
+  background-color: #777777;
+  display: inline-block;
+  vertical-align: baseline;
+}
 
-/* Badge css */
-.badge { padding: 3px 7px; font-size: 12.025px; font-weight: bold; white-space: nowrap; color: #ffffff; background-color: #999999; border-radius: 9px; display: inline-block; vertical-align: baseline;}
-.badge:hover { color: #ffffff; text-decoration: none; cursor: pointer;}
-.badge-error { background-color: #b94a48;}
-.badge-error:hover { background-color: #953b39;}
-.badge-warning { background-color: #f89406;}
-.badge-warning:hover { background-color: #c67605;}
-.badge-success { background-color: #468847;}
-.badge-success:hover { background-color: #356635;}
-.badge-info { background-color: #3a87ad;}
-.badge-info:hover { background-color: #2d6987;}
-.badge-inverse { background-color: #333333;}
-.badge-inverse:hover { background-color: #1a1a1a;}
+.badge:hover {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
 
-/* Notification Badge css */
-.pmd-badge{ display:inline-block; text-align:left; position:relative; font-size:32px;}
-.pmd-badge[data-badge]::after {font-family:"Roboto"; -ms-flex-line-pack: center; align-content: center; -ms-flex-align: center; align-items: center; background: #6292F8; border-radius: 50%; color: rgb(255, 255, 255); content: attr(data-badge); display: -ms-flexbox; display: flex; -ms-flex-flow: row wrap; flex-flow: row wrap; font-size: 12px; font-weight: 600; height: 22px; -ms-flex-pack: center; justify-content: center; position: absolute; right: -24px; top: -10px; width: 22px;}
-.pmd-badge.pmd-badge-overlap::after {right: -10px;}
+.badge-success {
+  color: #fff;
+  background-color: #259b24;
+}
+.badge-success:hover, .badge-success:focus {
+  color: #fff;
+  background-color: #1b721a;
+}
 
-/* Chips Badge css */
-.pmd-chip { border-radius: 16px; box-sizing: border-box; line-height: 34px; padding: 0 8px 0 12px; text-transform:capitalize; background:#E0E0E0; color:rgb(66, 66, 66); display:inline-block; cursor:default;}
-.pmd-chip.pmd-focused { background: rgb(63, 81, 181); color: rgba(255, 255, 255, 0.87);}
-.pmd-chip-action i{ font-size:14px; color:#E0E0E0; background-color:#A6A6A6; border-radius:50%; padding:1px 2px 2px 2px; margin-left:5px;}
-.pmd-chip.pmd-chip-contact { padding-left:0;}
-.pmd-chip-contact img { margin-right: 5px; width: 36px; margin-top:-3px; border-radius:50%;}
-.pmd-chip:hover{ background:#e3e3e3;}
-.pmd-chip .material-icons:hover{ background:#666;}
+.badge-info {
+  color: #fff;
+  background-color: #03a9f4;
+}
+.badge-info:hover, .badge-info:focus {
+  color: #fff;
+  background-color: #0286c2;
+}
+
+.badge-warning {
+  color: #333333;
+  background-color: #ffc107;
+}
+.badge-warning:hover, .badge-warning:focus {
+  color: #333333;
+  background-color: #d39e00;
+}
+
+.badge-error {
+  color: #fff;
+  background-color: #ff5722;
+}
+.badge-error:hover, .badge-error:focus {
+  color: #fff;
+  background-color: #ee3900;
+}
+
+.badge-inverse {
+  color: #fff;
+  background-color: #343a40;
+}
+.badge-inverse:hover, .badge-inverse:focus {
+  color: #fff;
+  background-color: #1d2124;
+}
+
+.badge-information {
+  color: #fff;
+  background-color: #03a9f4;
+}
+.badge-information:hover, .badge-information:focus {
+  color: #fff;
+  background-color: #0286c2;
+}
+
+.pmd-badge {
+  display: inline-block;
+  text-align: left;
+  position: relative;
+  font-size: 32px;
+}
+.pmd-badge[data-badge]::after {
+  background: #4285f4;
+  color: #fff;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 0.75rem;
+  font-weight: 700;
+  height: 22px;
+  width: 22px;
+  line-height: 22px;
+  border-radius: 50%;
+  right: -24px;
+  top: -10px;
+  content: attr(data-badge);
+  position: absolute;
+  text-align: center;
+}
+.pmd-badge.pmd-badge-overlap::after {
+  right: -10px;
+}
+
+.pmd-chip {
+  border-radius: 1rem;
+  box-sizing: border-box;
+  line-height: 34px;
+  padding: 0 0.5rem 0 0.75rem;
+  text-transform: capitalize;
+  background: #E0E0E0;
+  color: rgba(0, 0, 0, 0.87);
+  display: inline-block;
+  cursor: default;
+}
+.pmd-chip:hover, .pmd-chip:focus {
+  background-color: #e0e0e0;
+}
+.pmd-chip.pmd-chip-inverse {
+  background: rgba(0, 0, 0, 0.87);
+  color: rgba(255, 255, 255, 0.87);
+}
+.pmd-chip.pmd-chip-inverse:hover, .pmd-chip.pmd-chip-inverse:focus {
+  background-color: rgba(0, 0, 0, 0.87);
+}
+
+.pmd-chip-action {
+  display: inline-block;
+  vertical-align: middle;
+}
+.pmd-chip-action i {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #adadad;
+  border-radius: 50%;
+  padding: 1px 2px 2px 2px;
+  margin-left: 5px;
+}
+.pmd-chip-action .material-icons:hover {
+  background-color: #949494;
+}
+
+.pmd-chip-contact {
+  padding-left: 0;
+}
+.pmd-chip-contact img {
+  margin-right: 5px;
+  width: 2.25rem;
+  margin-top: -3px;
+  border-radius: 50%;
+}
+
+/*# sourceMappingURL=badge.css.map */
