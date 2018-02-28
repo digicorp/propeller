@@ -1,0 +1,147 @@
+/*!
+ * Propeller v1.3.0 (http://propeller.in): checkbox.css
+ * Copyright 2016-2018 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+.pmd-checkbox-ripple-effect {
+	@include transform-translateZ(0px)
+}
+.checkbox {
+	.pmd-checkbox-ripple-effect{
+		padding-left:0;
+	}
+	.pmd-checkbox{ 
+		padding-left:0;
+	}
+}
+.pmd-checkbox{
+	[type="checkbox"]{
+		&:not(:checked),
+		&:checked{
+			position: absolute; 
+			left: -9999px;
+			+ .pmd-checkbox-label{
+				position: relative; 
+				padding-left: $checkbox-gutter;
+				cursor: pointer;
+				&:before{
+					content: ''; 
+					position: absolute; 
+					left:0; 
+					top: 1px; 
+					width: 18px; 
+					height: 18px; 
+					border-width:$checkbox-border-width; 
+					border-style:solid;  
+					border-radius: $checkbox-border-radius; 
+					border-color: $checkbox-border-color;
+				}
+				&:after {
+					color: $checkbox-check-color; 
+					border-image: none; 
+					border-style: none solid solid none; 
+					border-width: 0 $checkbox-check-size $checkbox-check-size 0; 
+					content: "";  
+					display: table; 
+					height: 12px; 
+					left: 6px; 
+					position: absolute; 
+					top: 2px; 
+					width: 6px; 
+					transition: all .2s;
+				}
+			}
+		}
+		&:checked{
+			+ .pmd-checkbox-label {
+				&:before {
+					background-color:$checkbox-checked-bg;
+					border-color:$checkbox-checked-border-bg;
+				}
+				&:after{
+					opacity: 1; 
+					@include transform-rotate(45deg);
+				}
+			}
+		}
+		&:not(:checked){
+			+ .pmd-checkbox-label{
+				&:after{
+					opacity: 0; 
+					@include transform-rotate(45deg);
+				}
+			}
+		}
+		/* Disabled checkbox */
+		&:disabled{
+			&:not(:checked),
+			&:checked{
+				+ .pmd-checkbox-label{
+					&:before{
+						box-shadow: none; 
+						border-color: $checkbox-disabled-border-color; 
+						cursor: not-allowed;
+					}
+				}
+			}
+		}
+	}
+}
+.checkbox.disabled,
+fieldset[disabled] .checkbox{
+	label.pmd-checkbox{
+		color:$checkbox-disabled-color;
+	}
+}
+/* hover style just for information */
+.pmd-checkbox label:hover:before { 
+	border: 1px solid #4778d9;
+}
+.pmd-checkbox.pmd-checkbox-ripple-effect{
+	position:relative;
+}
+.pmd-checkbox .pmd-checkboxwrap{ 
+	position:absolute; 
+	z-index:-1; 
+	height:40px; 
+	width:40px; 
+	border-radius:50%; 
+	overflow:hidden; 
+	top:-8px; 
+	left:-11px;
+}
+.checkbox-inline.pmd-checkbox{
+	padding-left: 0;
+}
+.pmd-checkbox-ripple-effect .ink{ 
+	background-color:rgba(0, 0, 0, 0.2);
+}
+// card inverse disabled checkbox 
+.pmd-card-inverse{
+	.pmd-checkbox{
+		[type="checkbox"]{
+			&:not(:checked),
+			:checked{
+				+ .pmd-checkbox-label{
+					&:before{
+						border-color: $checkbox-inverse-border-color; 
+					}
+				}
+			}
+			&:checked{
+				+ .pmd-checkbox-label{
+					&:before{
+						background-color:$checkbox-inverse-checked-bg; 
+					}
+				}
+			}
+		}
+	}
+	.checkbox.disabled,
+	fieldset[disabled] .checkbox{
+		label.pmd-checkbox{
+			color:$checkbox-inverse-disabled-color;
+		}
+	}
+}

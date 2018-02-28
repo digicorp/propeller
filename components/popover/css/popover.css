@@ -1,27 +1,222 @@
-
 /*!
- * Propeller v1.2.0 (http://propeller.in): popover.css
+ * Propeller v1.3.0 (http://propeller.in): popover.css
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
+.popover.default {
+  color: #ffffff;
+  background-color: #fff;
+  border-color: white;
+}
+.popover.default.left > .arrow:after {
+  border-left-color: #fff;
+}
+.popover.default.right > .arrow:after {
+  border-right-color: #fff;
+}
+.popover.default.top > .arrow:after {
+  border-top-color: #fff;
+}
+.popover.default.bottom > .arrow:after {
+  border-bottom-color: #fff;
+}
 
-.popover.primary { color: #fff; background-color: #03a9f4; border-color: #46b8da;}
-.popover.primary.left > .arrow:after { border-left-color:#03a9f4;}
-.popover.primary.right > .arrow:after { border-right-color:#03a9f4;}
-.popover.primary.top > .arrow:after { border-top-color:#03a9f4;}
-.popover.primary.bottom > .arrow:after { border-bottom-color:#03a9f4;}
-.popover.default { color: #fff; background-color: #ffc107;  border-color: #eea236;}
-.popover.default.left > .arrow:after { border-left-color:#ffc107;}
-.popover.default.right > .arrow:after { border-right-color:#ffc107;}
-.popover.default.top > .arrow:after { border-top-color:#ffc107;}
-.popover.default.bottom > .arrow:after { border-bottom-color:#ffc107;}
-.popover.success { color: #fff; background-color: #259b24;  border-color: #4cae4c;}
-.popover.success.left > .arrow:after { border-left-color:#259b24;}
-.popover.success.right > .arrow:after { border-right-color:#259b24;}
-.popover.success.top > .arrow:after { border-top-color:#259b24;}
-.popover.success.bottom > .arrow:after { border-bottom-color:#259b24;}
-.popover.danger { color: #fff; background-color: #ff5722;  border-color: #d43f3a;}
-.popover.danger.left > .arrow:after { border-left-color:#ff5722;}
-.popover.danger.right > .arrow:after { border-right-color:#ff5722;}
-.popover.danger.top > .arrow:after { border-top-color:#ff5722;}
-.popover.danger.bottom > .arrow:after { border-bottom-color:#ff5722;}
+.popover.primary {
+  color: #ffffff;
+  background-color: #4285f4;
+  border-color: #caddfc;
+}
+.popover.primary.left > .arrow:after {
+  border-left-color: #4285f4;
+}
+.popover.primary.right > .arrow:after {
+  border-right-color: #4285f4;
+}
+.popover.primary.top > .arrow:after {
+  border-top-color: #4285f4;
+}
+.popover.primary.bottom > .arrow:after {
+  border-bottom-color: #4285f4;
+}
+
+.popover.secondary {
+  color: #ffffff;
+  background-color: #ffc107;
+  border-color: #ffeeba;
+}
+.popover.secondary.left > .arrow:after {
+  border-left-color: #ffc107;
+}
+.popover.secondary.right > .arrow:after {
+  border-right-color: #ffc107;
+}
+.popover.secondary.top > .arrow:after {
+  border-top-color: #ffc107;
+}
+.popover.secondary.bottom > .arrow:after {
+  border-bottom-color: #ffc107;
+}
+
+.popover.success {
+  color: #ffffff;
+  background-color: #259b24;
+  border-color: #c2e3c2;
+}
+.popover.success.left > .arrow:after {
+  border-left-color: #259b24;
+}
+.popover.success.right > .arrow:after {
+  border-right-color: #259b24;
+}
+.popover.success.top > .arrow:after {
+  border-top-color: #259b24;
+}
+.popover.success.bottom > .arrow:after {
+  border-bottom-color: #259b24;
+}
+
+.popover.info {
+  color: #ffffff;
+  background-color: #03a9f4;
+  border-color: #b8e7fc;
+}
+.popover.info.left > .arrow:after {
+  border-left-color: #03a9f4;
+}
+.popover.info.right > .arrow:after {
+  border-right-color: #03a9f4;
+}
+.popover.info.top > .arrow:after {
+  border-top-color: #03a9f4;
+}
+.popover.info.bottom > .arrow:after {
+  border-bottom-color: #03a9f4;
+}
+
+.popover.warning {
+  color: #ffffff;
+  background-color: #ffc107;
+  border-color: #ffeeba;
+}
+.popover.warning.left > .arrow:after {
+  border-left-color: #ffc107;
+}
+.popover.warning.right > .arrow:after {
+  border-right-color: #ffc107;
+}
+.popover.warning.top > .arrow:after {
+  border-top-color: #ffc107;
+}
+.popover.warning.bottom > .arrow:after {
+  border-bottom-color: #ffc107;
+}
+
+.popover.danger {
+  color: #ffffff;
+  background-color: #ff5722;
+  border-color: #ffd0c1;
+}
+.popover.danger.left > .arrow:after {
+  border-left-color: #ff5722;
+}
+.popover.danger.right > .arrow:after {
+  border-right-color: #ff5722;
+}
+.popover.danger.top > .arrow:after {
+  border-top-color: #ff5722;
+}
+.popover.danger.bottom > .arrow:after {
+  border-bottom-color: #ff5722;
+}
+
+.popover.light {
+  color: #ffffff;
+  background-color: #f8f9fa;
+  border-color: #fdfdfe;
+}
+.popover.light.left > .arrow:after {
+  border-left-color: #f8f9fa;
+}
+.popover.light.right > .arrow:after {
+  border-right-color: #f8f9fa;
+}
+.popover.light.top > .arrow:after {
+  border-top-color: #f8f9fa;
+}
+.popover.light.bottom > .arrow:after {
+  border-bottom-color: #f8f9fa;
+}
+
+.popover.dark {
+  color: #ffffff;
+  background-color: #343a40;
+  border-color: #c6c8ca;
+}
+.popover.dark.left > .arrow:after {
+  border-left-color: #343a40;
+}
+.popover.dark.right > .arrow:after {
+  border-right-color: #343a40;
+}
+.popover.dark.top > .arrow:after {
+  border-top-color: #343a40;
+}
+.popover.dark.bottom > .arrow:after {
+  border-bottom-color: #343a40;
+}
+
+.popover.error {
+  color: #ffffff;
+  background-color: #ff5722;
+  border-color: #ffd0c1;
+}
+.popover.error.left > .arrow:after {
+  border-left-color: #ff5722;
+}
+.popover.error.right > .arrow:after {
+  border-right-color: #ff5722;
+}
+.popover.error.top > .arrow:after {
+  border-top-color: #ff5722;
+}
+.popover.error.bottom > .arrow:after {
+  border-bottom-color: #ff5722;
+}
+
+.popover.inverse {
+  color: #ffffff;
+  background-color: #343a40;
+  border-color: #c6c8ca;
+}
+.popover.inverse.left > .arrow:after {
+  border-left-color: #343a40;
+}
+.popover.inverse.right > .arrow:after {
+  border-right-color: #343a40;
+}
+.popover.inverse.top > .arrow:after {
+  border-top-color: #343a40;
+}
+.popover.inverse.bottom > .arrow:after {
+  border-bottom-color: #343a40;
+}
+
+.popover.information {
+  color: #ffffff;
+  background-color: #03a9f4;
+  border-color: #b8e7fc;
+}
+.popover.information.left > .arrow:after {
+  border-left-color: #03a9f4;
+}
+.popover.information.right > .arrow:after {
+  border-right-color: #03a9f4;
+}
+.popover.information.top > .arrow:after {
+  border-top-color: #03a9f4;
+}
+.popover.information.bottom > .arrow:after {
+  border-bottom-color: #03a9f4;
+}
+
+/*# sourceMappingURL=popover.css.map */

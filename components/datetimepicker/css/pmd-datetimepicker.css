@@ -3,472 +3,1114 @@
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
 */
-
-/*Font CSS*/
-.bootstrap-datetimepicker-widget { font-family: 'Roboto'; font-size: 14px; line-height: 1.42857143;  color: #333;}
-.bootstrap-datetimepicker-widget table td.day:hover,
-.bootstrap-datetimepicker-widget table td.hour:hover,
-.bootstrap-datetimepicker-widget table td.minute:hover,
-.bootstrap-datetimepicker-widget table td.second:hover,
-.bootstrap-datetimepicker-widget table td.active,
-.bootstrap-datetimepicker-widget table td.active:hover { background:none;}
-.bootstrap-datetimepicker-widget table th { height: 32px; line-height: 32px; width: 32px; font-weight: normal; opacity: 0.74;}
-.bootstrap-datetimepicker-widget table td.today:before { display:none;}
-
-.bootstrap-datetimepicker-widget .accordion-toggle { text-align: center; background-color: #3472d8;}
-.bootstrap-datetimepicker-widget .accordion-toggle a { color: #fff; display:inline-block; padding:3px 0; cursor:pointer;}
-.bootstrap-datetimepicker-widget .accordion-toggle a:hover { background:none; color:#fff;} 
-.bootstrap-datetimepicker-widget table th.picker-switch { width: 145px; font-weight: bold; color: #000; }
-.bootstrap-datetimepicker-widget table td span { display: inline-block; width: 70px; height: 70px; line-height: 70px; }
+.bootstrap-datetimepicker-widget {
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333333;
+  position: relative;
+  transition: none;
+}
+.bootstrap-datetimepicker-widget table td.day:hover, .bootstrap-datetimepicker-widget table td.hour:hover, .bootstrap-datetimepicker-widget table td.minute:hover, .bootstrap-datetimepicker-widget table td.second:hover {
+  background: none;
+}
+.bootstrap-datetimepicker-widget table td.active {
+  background: none;
+}
+.bootstrap-datetimepicker-widget table td.active:hover {
+  background: none;
+}
+.bootstrap-datetimepicker-widget table td span {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+}
+.bootstrap-datetimepicker-widget table th {
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+  font-weight: normal;
+  opacity: 0.74;
+}
+.bootstrap-datetimepicker-widget table th.picker-switch {
+  width: 145px;
+  font-weight: bold;
+  color: #000;
+}
+.bootstrap-datetimepicker-widget table td.today:before {
+  display: none;
+}
+.bootstrap-datetimepicker-widget .accordion-toggle {
+  text-align: center;
+  background-color: #0d5bdd;
+}
+.bootstrap-datetimepicker-widget .accordion-toggle a {
+  color: #ffffff;
+  display: inline-block;
+  padding: 3px 0;
+  cursor: pointer;
+}
+.bootstrap-datetimepicker-widget .accordion-toggle a:hover {
+  background: none;
+  color: #ffffff;
+}
 .bootstrap-datetimepicker-widget .timepicker-hour,
 .bootstrap-datetimepicker-widget .timepicker-minute,
-.bootstrap-datetimepicker-widget .timepicker-second { font-weight:normal; font-size: 3.5rem;}
-.bootstrap-datetimepicker-widget { position:relative; transition:none;}
-.bootstrap-datetimepicker-widget.dropdown-menu {  position:absolute; display: block; visibility: visible; opacity: 1; clip: auto; width:300px; padding:0; margin:0;}
-.bootstrap-datetimepicker-widget.dropdown-menu:after,
-.bootstrap-datetimepicker-widget.dropdown-menu:before { display:none;}
-.bootstrap-datetimepicker-widget .datepicker > div { display:table; width:100%;}
-.pmd-navbar-left .bootstrap-datetimepicker-widget { width:530px;}
-.pmd-navbar-left .bootstrap-datetimepicker-widget .timepicker { display:table; width:100%;}
+.bootstrap-datetimepicker-widget .timepicker-second {
+  font-weight: normal;
+  font-size: 3.5rem;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu {
+  position: absolute;
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  clip: auto;
+  width: 300px;
+  padding: 0;
+  margin: 0;
+}
+.bootstrap-datetimepicker-widget.dropdown-menu:after, .bootstrap-datetimepicker-widget.dropdown-menu:before {
+  display: none;
+}
+.bootstrap-datetimepicker-widget .datepicker > div {
+  display: table;
+  width: 100%;
+}
+
+.pmd-navbar-left .bootstrap-datetimepicker-widget {
+  width: 530px;
+}
+.pmd-navbar-left .bootstrap-datetimepicker-widget .timepicker {
+  display: table;
+  width: 100%;
+}
 .pmd-navbar-left .bootstrap-datetimepicker-widget .timepicker .timepicker-picker,
-.pmd-navbar-left .bootstrap-datetimepicker-widget .datepicker .topdateinfo { display:table-cell; width:40%;  vertical-align:top;} 
-.pmd-navbar-left .bootstrap-datetimepicker-widget table td span { margin:5px;} 
+.pmd-navbar-left .bootstrap-datetimepicker-widget .timepicker .topdateinfo {
+  display: table-cell;
+  width: 40%;
+  vertical-align: top;
+}
+.pmd-navbar-left .bootstrap-datetimepicker-widget table td span {
+  margin: 5px;
+}
 .pmd-navbar-left .bootstrap-datetimepicker-widget .clockpickerseconds,
 .pmd-navbar-left .bootstrap-datetimepicker-widget .clockpickerr,
-.pmd-navbar-left .bootstrap-datetimepicker-widget .clockpickerminute { margin:20px 0;}
+.pmd-navbar-left .bootstrap-datetimepicker-widget .clockpickerminute {
+  margin: 20px 0;
+}
 
 .bootstrap-datetimepicker-widget .timepicker-hour,
 .bootstrap-datetimepicker-widget .timepicker-minute,
-.bootstrap-datetimepicker-widget .timepicker-second { font-size: 2.8rem;}
+.bootstrap-datetimepicker-widget .timepicker-second {
+  font-size: 2.8rem;
+}
+
 .timepicker .uparrow,
 .timepicker .time-separator,
-.timepicker .timeview { font-size: 42px;}
+.timepicker .timeview {
+  font-size: 42px;
+}
 
 /*google materail themes*/
-.topdateinfo{ background-color:#4285f4; text-align:center; color:#fff; line-height:1.0}
-.topdateinfo .dayname{ background-color:#3472d8; padding:8px 0; margin-bottom:0;}
-.topdateinfo .monthonly{ font-size:1.6rem; text-transform:uppercase;}
-.topdateinfo .dateonly{ font-size:3.5rem;}
-.topdateinfo .yearonly{ font-size:1.6rem; margin-bottom:0;}
-.topdateinfo .datetopcol{ padding:16px 0;}
-.bootstrap-datetimepicker-widget table td.day span{ height:32px; line-height:32px; width:32px; display:inline-block; margin:0;}
-.bootstrap-datetimepicker-widget .table-condensed > thead > tr > th, .bootstrap-datetimepicker-widget .table-condensed > tbody > tr > th, .bootstrap-datetimepicker-widget .table-condensed > tfoot > tr > th, .bootstrap-datetimepicker-widget .table-condensed > thead > tr > td, .bootstrap-datetimepicker-widget .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > td{ padding:0 0 0 0;}
+.topdateinfo {
+  background-color: #4285f4;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.0;
+}
+.topdateinfo .dayname {
+  background-color: #4285f4;
+  padding: 8px 0;
+  margin-bottom: 0;
+}
+.topdateinfo .monthonly {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+.topdateinfo .dateonly {
+  font-size: 3.5rem;
+}
+.topdateinfo .yearonly {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+.topdateinfo .datetopcol {
+  padding: 16px 0;
+}
 
-.timepicker > div{}
-.timepicker-second, .timepicker-hour, .timepicker-minute{ cursor:pointer;}
-.clockpickerseconds,
-.clockpickerr, .clockpickerminute{border-radius:50%; width:200px; height:200px; position:relative; background-color:#eceff1; display:inline-block; margin:24px 0 80px 0;}
-.clockpickerseconds .second,
-.clockpickerr .hour, .clockpickerminute .minute { display:inline-block; position:absolute; cursor:pointer;}
-.clockpickerr .hour:nth-child(1){ left:45%;}
-.clockpickerr .hour:nth-child(2){ left:130px; top:15px;}
-.clockpickerr .hour:nth-child(3){ left:160px; top:45px;}
-.clockpickerr .hour:nth-child(4){ left:175px; top:85px;}
-.clockpickerr .hour:nth-child(5){ left:160px; top:130px;}
-.clockpickerr .hour:nth-child(6){ left:130px; top:160px;}
-.clockpickerr .hour:nth-child(7){ left:92px; top:175px;}
-.clockpickerr .hour:nth-child(8){ left:50px; top:160px;}
-.clockpickerr .hour:nth-child(9){ left:20px; top:130px;}
-.clockpickerr .hour:nth-child(10){ left:5px; top:85px;}
-.clockpickerr .hour:nth-child(11){ left:20px; top:45px;}
-.clockpickerr .hour:nth-child(12){ left:50px; top:15px;}
+.bootstrap-datetimepicker-widget table td.day span {
+  height: 32px;
+  line-height: 32px;
+  width: 32px;
+  display: inline-block;
+  margin: 0;
+}
+.bootstrap-datetimepicker-widget .table-condensed > thead > tr > th,
+.bootstrap-datetimepicker-widget .table-condensed > tbody > tr > th,
+.bootstrap-datetimepicker-widget .table-condensed > tfoot > tr > th,
+.bootstrap-datetimepicker-widget .table-condensed > thead > tr > td,
+.bootstrap-datetimepicker-widget .table-condensed > tbody > tr > td,
+.bootstrap-datetimepicker-widget .table-condensed > tfoot > tr > td {
+  padding: 0 0 0 0;
+}
 
-
-.clockpickerminute .minute:nth-child(1){ left:45%;}
-.clockpickerminute .minute:nth-child(2){ left:130px; top:15px;}
-.clockpickerminute .minute:nth-child(3){ left:160px; top:45px;}
-.clockpickerminute .minute:nth-child(4){ left:175px; top:85px;}
-.clockpickerminute .minute:nth-child(5){ left:160px; top:130px;}
-.clockpickerminute .minute:nth-child(6){ left:130px; top:160px;}
-.clockpickerminute .minute:nth-child(7){ left:92px; top:175px;}
-.clockpickerminute .minute:nth-child(8){ left:50px; top:160px;}
-.clockpickerminute .minute:nth-child(9){ left:20px; top:130px;}
-.clockpickerminute .minute:nth-child(10){ left:5px; top:85px;}
-.clockpickerminute .minute:nth-child(11){ left:20px; top:45px;}
-.clockpickerminute .minute:nth-child(12){ left:50px; top:15px;}
-
-.ampmview{width:100%; position:relative;}
-.ampmview .btn{ width:48px; height:48px; border-radius:50%; min-width:inherit;}
-.ampmview > div{position:absolute; top:234px; width:100%; left: 16px}
-.ampmview .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) { border-radius:50%;}
-.amview{ margin-left:30px;}
-.pmview{ margin-right:30px;}
-
-.timeview{ line-height:1;}
-.timepicker{ text-align:center;}
-.timepicker-picker{ background-color:#4285f4; color:#fff; font-size:3.5rem; padding-bottom:5px;}
-.ampmvalue{ font-size:0.8125rem;}
-.timepicker-hours, .ampmview, .timepicker-minutes{ background-color:#fff;}
-.uparrow, .downarrow{ text-align:left; padding-left:42px;}
-.uparrow .btn, .downarrow .btn{ width:59px; margin:0 10px;}
-
-.bootstrap-datetimepicker-widget{ /* position:absolute; */ background-color:#fff;}
-
-.bootstrap-datetimepicker-widget table th.prev, .bootstrap-datetimepicker-widget table th.next{ padding-bottom:0;} 
-.bootstrap-datetimepicker-widget table th.prev span, .bootstrap-datetimepicker-widget table th.next span{ padding-top:8px; display:inline-block;} 
-.bootstrap-datetimepicker-widget table thead tr:first-child th:hover{ background-color:inherit;}
-
-
-/*bootstrap-datetimepicker*/
-.bootstrap-datetimepicker-widget{ z-index:999; width:300px; -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 1px 3px 0 rgba(0, 0, 0, 0.12); -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 1px 3px 0 rgba(0, 0, 0, 0.12); box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16), 0 1px 3px 0 rgba(0, 0, 0, 0.12);}
-
-.modal .bootstrap-datetimepicker-widget { box-shadow:none;}
-
-.bootstrap-datetimepicker-widget table th {  text-transform:capitalize; }
-.bootstrap-datetimepicker-widget table th.dow {  color:#444444; line-height:33px; height:33px; }
-/*.bootstrap-datetimepicker-widget table td.old { opacity:0.3; }
-.bootstrap-datetimepicker-widget table td.new { opacity:0.3; }*/
-.bootstrap-datetimepicker-widget table td.day { height: 40px; line-height: 40px; width: 40px; }
-.bootstrap-datetimepicker-widget table td { position:relative; cursor:pointer;}
-
-.bootstrap-datetimepicker-widget table td.day span { height: 40px; line-height: 40px; width: 40px; position:absolute; z-index:-1; margin:1px 0 0 -15px; border-radius:500px; -moz-border-radius:500px; -ms-border-radius:500px; -o-border-radius:500px; -webkit-border-radius:500px; top: 0; left: -1px; right: 0;bottom: 0; margin: auto;}
-
-.topdateinfo .datetopcol{ padding:0; margin-bottom:0;}
-.topdateinfo .datetopcol p{ display:inline-block; text-align:left; font-size: 2rem; text-transform: inherit; padding:0; margin:0; padding-right:8px; background-color: transparent;}
-.topdateinfo{ text-align:left; padding:16px 20px; }
-.bootstrap-datetimepicker-widget table { margin:5px 0;}
-.topdateinfo .yearonly{font-size: 1rem;  margin-top: 0; margin-bottom:5px; opacity: 0.9;}
-
-.bootstrap-datetimepicker-widget table td span { border-radius:500px; -moz-border-radius:500px; -ms-border-radius:500px; -o-border-radius:500px; -webkit-border-radius:500px;}
-
-.bootstrap-datetimepicker-widget table td.day:hover span,
-.bootstrap-datetimepicker-widget table td.hour:hover span,
-.bootstrap-datetimepicker-widget table td.minute:hover span,
-.bootstrap-datetimepicker-widget table td.second:hover span { background-color:#eeeeee; }
-
-.bootstrap-datetimepicker-widget table td.day.active:hover span,
-.bootstrap-datetimepicker-widget table td.hour.active:hover span,
-.bootstrap-datetimepicker-widget table td.minute.active:hover span,
-.bootstrap-datetimepicker-widget table td.second.active:hover span { background-color:#03a9f5; }
-
-.bootstrap-datetimepicker-widget table td.day:hover,
-.bootstrap-datetimepicker-widget table td.hour:hover,
-.bootstrap-datetimepicker-widget table td.minute:hover,
-.bootstrap-datetimepicker-widget table td.second:hover { color:#444444;}
-
-.bootstrap-datetimepicker-widget table td.day.disabled:hover span,
-.bootstrap-datetimepicker-widget table td.hour.disabled:hover span,
-.bootstrap-datetimepicker-widget table td.minute.disabled:hover span,
-.bootstrap-datetimepicker-widget table td.second.disabled:hover  span{ background:none; }
-.bootstrap-datetimepicker-widget table td.day.disabled:hover,
-.bootstrap-datetimepicker-widget table td.hour.disabled:hover,
-.bootstrap-datetimepicker-widget table td.minute.disabled:hover,
-.bootstrap-datetimepicker-widget table td.second.disabled:hover { color:#777777;}
-
-
-.bootstrap-datetimepicker-widget table td.day.active:hover span,
-.bootstrap-datetimepicker-widget table td.hour.active:hover span,
-.bootstrap-datetimepicker-widget table td.minute.active:hover span,
-.bootstrap-datetimepicker-widget table td.second.active:hover span,
-.bootstrap-datetimepicker-widget table td.active span, 
-.bootstrap-datetimepicker-widget table td.active span:hover,
-.bootstrap-datetimepicker-widget table td span.active { background-color:#4285f4;}
-
-.bootstrap-datetimepicker-widget table td.day.active:hover { color:#fff;}
-
-
-.bootstrap-datetimepicker-widget table td.active, 
-.bootstrap-datetimepicker-widget table td.active span:hover { color:#fff;}
-
-
-.datepicker-modal .datepicker { padding-bottom:30px;}
-.datepicker-modal .timepicker { display:none;}
-.datepicker-modal .datepicker-tab { padding:0; margin:0; display:table; width:100%; background:#444444;}
-.datepicker-modal .datepicker-tab li { float:left; width:50%; display:table-cell; vertical-align:middle;}
-.datepicker-modal .datepicker-tab li a { display:block; font-size:18px; border-bottom:5px solid #444444; color:#b2b2b2; height:60px; line-height:60px; position:relative;} 
-.datepicker-modal .datepicker-tab li a.active { color:#fff; border-color:#fff;}
-.datepicker-modal .datepicker-tab li a.active:before { content:""; width:100%; z-index:10; height:5px; position:absolute; left:0; bottom:-5px; }
-
-.timepicker .downarrow .btn, 
-.timepicker .timeview .btn,
-.timepicker .uparrow .btn { display:none;}
-.timepicker .uparrow { display:inline-block; padding-left:0;}
-.timepicker .time-separator  { display:inline-block;}
-.timepicker .timeview { display:inline-block;}
-.timepicker .downarrow { display:inline-block; padding-left:0;}
-
-.timepicker .uparrow,
-.timepicker .time-separator,
-.timepicker .timeview { font-size:50px; color:#fff; /*font-family: 'source_sans_proregular', Arial;*/ line-height:normal; }
-.timepicker .time-separator,
-.timepicker .downarrow .timepicker-second,
-.timepicker .uparrow .timepicker-hour,
-.timepicker .timeview .timepicker-minute { opacity:0.5;}
-.timepicker .ampmvalue { font-size: 18px;  margin-left: 10px;}
-
-.timepicker .downarrow .timepicker-second.active,
-.timepicker .uparrow .timepicker-hour.active,
-.timepicker .timeview .timepicker-minute.active { opacity:1;}
-.timepicker .time-separator .separator { margin-top:-20px;}
-
-.timepicker .ampmview { width:auto; position:absolute; display:inline-block; font-size:inherit; background:none; top:37px; margin-left:10px;}
-.timepicker .ampmview .btn-group { position:relative; top:auto; left:auto; width:auto;}
-.timepicker .ampmview .btn-group .btn { clear:both; background:none; padding:0;  font-family: Arial; height: 30px; font-size:20px; margin-right:0; color:#fff; opacity:0.5; }
-.timepicker .ampmview .btn-group .btn.active { opacity:1;}
-.timepicker .secondHnad,
-.timepicker .minuteHnad,
-.timepicker .hourHnad { position: absolute; top: 50%; left: 50%; height: 2px; background: #4285f4; right: 25px;	transform-origin: center left; -moz-transform-origin: center left; -ms-transform-origin: center left; -o-transform-origin: center left; -webkit-transform-origin: center left; transition:all ease-in-out 0.3s; }
-.bootstrap-datetimepicker-widget .table-condensed .picker-switch { padding-top:8px;}
+.timepicker-second,
+.timepicker-hour,
+.timepicker-minute {
+  cursor: pointer;
+}
 
 .clockpickerseconds,
 .clockpickerr,
-.clockpickerminute { border-radius:500px; -moz-border-radius:500px; -ms-border-radius:500px; -webkit-border-radius:500px; -o-border-radius:500px; width: 270px; height: 270px; margin:30px 0; /* background:url(sm.png) center no-repeat; background-size:auto 77%;*/}
+.clockpickerminute {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: #eceff1;
+  display: inline-block;
+  margin: 24px 0 80px 0;
+}
 
+.clockpickerseconds .second,
+.clockpickerr .hour,
+.clockpickerminute .minute {
+  display: inline-block;
+  position: absolute;
+  cursor: pointer;
+}
+
+.clockpickerr .hour:nth-child(1),
+.clockpickerminute .minute:nth-child(1) {
+  left: 45%;
+}
+.clockpickerr .hour:nth-child(2),
+.clockpickerminute .minute:nth-child(2) {
+  left: 130px;
+  top: 15px;
+}
+.clockpickerr .hour:nth-child(3),
+.clockpickerminute .minute:nth-child(3) {
+  left: 160px;
+  top: 45px;
+}
+.clockpickerr .hour:nth-child(4),
+.clockpickerminute .minute:nth-child(4) {
+  left: 175px;
+  top: 85px;
+}
+.clockpickerr .hour:nth-child(5),
+.clockpickerminute .minute:nth-child(5) {
+  left: 160px;
+  top: 130px;
+}
+.clockpickerr .hour:nth-child(6),
+.clockpickerminute .minute:nth-child(6) {
+  left: 130px;
+  top: 160px;
+}
+.clockpickerr .hour:nth-child(7),
+.clockpickerminute .minute:nth-child(7) {
+  left: 92px;
+  top: 175px;
+}
+.clockpickerr .hour:nth-child(8),
+.clockpickerminute .minute:nth-child(8) {
+  left: 50px;
+  top: 160px;
+}
+.clockpickerr .hour:nth-child(9),
+.clockpickerminute .minute:nth-child(9) {
+  left: 20px;
+  top: 130px;
+}
+.clockpickerr .hour:nth-child(10),
+.clockpickerminute .minute:nth-child(10) {
+  left: 5px;
+  top: 85px;
+}
+.clockpickerr .hour:nth-child(11),
+.clockpickerminute .minute:nth-child(11) {
+  left: 20px;
+  top: 45px;
+}
+.clockpickerr .hour:nth-child(12),
+.clockpickerminute .minute:nth-child(12) {
+  left: 50px;
+  top: 15px;
+}
+
+.ampmview {
+  width: 100%;
+  position: relative;
+}
+.ampmview .btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  min-width: inherit;
+}
+.ampmview > div {
+  position: absolute;
+  top: 234px;
+  width: 100%;
+  left: 16px;
+}
+.ampmview .btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+  border-radius: 50%;
+}
+
+.amview {
+  margin-left: 30px;
+}
+
+.pmview {
+  margin-right: 30px;
+}
+
+.timeview {
+  line-height: 1;
+}
+
+.timepicker {
+  text-align: center;
+}
+
+.timepicker-picker {
+  background-color: #4285f4;
+  color: #ffffff;
+  font-size: 3.5rem;
+  padding-bottom: 5px;
+}
+
+.ampmvalue {
+  font-size: 0.8125rem;
+}
+
+.timepicker-hours,
+.ampmview,
+.timepicker-minutes {
+  background-color: #ffffff;
+}
+
+.uparrow,
+.downarrow {
+  text-align: left;
+  padding-left: 42px;
+}
+
+.uparrow .btn,
+.downarrow .btn {
+  width: 59px;
+  margin: 0 10px;
+}
+
+.bootstrap-datetimepicker-widget {
+  background-color: #ffffff;
+  z-index: 999;
+  width: 300px;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.bootstrap-datetimepicker-widget table th.prev, .bootstrap-datetimepicker-widget table th.next {
+  padding-bottom: 0;
+}
+.bootstrap-datetimepicker-widget table th.prev span, .bootstrap-datetimepicker-widget table th.next span {
+  padding-top: 8px;
+  display: inline-block;
+}
+.bootstrap-datetimepicker-widget table thead tr:first-child th:hover {
+  background-color: inherit;
+}
+
+/*bootstrap-datetimepicker*/
+.modal .bootstrap-datetimepicker-widget {
+  box-shadow: none;
+}
+
+.bootstrap-datetimepicker-widget table th {
+  text-transform: capitalize;
+}
+.bootstrap-datetimepicker-widget table th.dow {
+  color: #333333;
+  line-height: 33px;
+  height: 33px;
+}
+.bootstrap-datetimepicker-widget table td {
+  position: relative;
+  cursor: pointer;
+}
+.bootstrap-datetimepicker-widget table td.day {
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+}
+.bootstrap-datetimepicker-widget table td.day span {
+  height: 40px;
+  line-height: 40px;
+  width: 40px;
+  position: absolute;
+  z-index: -1;
+  margin: 1px 0 0 -15px;
+  border-radius: 500px;
+  top: 0;
+  left: -1px;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.topdateinfo {
+  text-align: left;
+  padding: 16px 20px;
+}
+.topdateinfo .datetopcol {
+  padding: 0;
+  margin-bottom: 0;
+}
+.topdateinfo .datetopcol p {
+  display: inline-block;
+  text-align: left;
+  font-size: 2rem;
+  text-transform: inherit;
+  padding: 0;
+  margin: 0;
+  padding-right: 8px;
+  background-color: transparent;
+}
+
+.bootstrap-datetimepicker-widget table {
+  margin: 5px 0;
+}
+
+.topdateinfo .yearonly {
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 5px;
+  opacity: 0.9;
+}
+
+.bootstrap-datetimepicker-widget table td span {
+  border-radius: 500px;
+}
+.bootstrap-datetimepicker-widget table td.day:hover, .bootstrap-datetimepicker-widget table td.hour:hover, .bootstrap-datetimepicker-widget table td.minute:hover, .bootstrap-datetimepicker-widget table td.second:hover {
+  color: #444444;
+}
+.bootstrap-datetimepicker-widget table td.day:hover span, .bootstrap-datetimepicker-widget table td.hour:hover span, .bootstrap-datetimepicker-widget table td.minute:hover span, .bootstrap-datetimepicker-widget table td.second:hover span {
+  background-color: #eeeeee;
+}
+.bootstrap-datetimepicker-widget table td.day.active:hover span, .bootstrap-datetimepicker-widget table td.hour.active:hover span, .bootstrap-datetimepicker-widget table td.minute.active:hover span, .bootstrap-datetimepicker-widget table td.second.active:hover span {
+  background-color: #4285f4;
+}
+.bootstrap-datetimepicker-widget table td.day.disabled:hover, .bootstrap-datetimepicker-widget table td.hour.disabled:hover, .bootstrap-datetimepicker-widget table td.minute.disabled:hover, .bootstrap-datetimepicker-widget table td.second.disabled:hover {
+  color: #777777;
+}
+.bootstrap-datetimepicker-widget table td.day.disabled:hover span, .bootstrap-datetimepicker-widget table td.hour.disabled:hover span, .bootstrap-datetimepicker-widget table td.minute.disabled:hover span, .bootstrap-datetimepicker-widget table td.second.disabled:hover span {
+  background: none;
+}
+.bootstrap-datetimepicker-widget table td.active span {
+  background-color: #4285f4;
+}
+.bootstrap-datetimepicker-widget table td.active span:hover {
+  background-color: #4285f4;
+}
+.bootstrap-datetimepicker-widget table td span.active {
+  background-color: #4285f4;
+}
+.bootstrap-datetimepicker-widget table td.day.active:hover {
+  color: #fff;
+}
+.bootstrap-datetimepicker-widget table td.active {
+  color: #fff;
+}
+.bootstrap-datetimepicker-widget table td.active span:hover {
+  color: #fff;
+}
+
+.datepicker-modal .datepicker {
+  padding-bottom: 30px;
+}
+.datepicker-modal .timepicker {
+  display: none;
+}
+.datepicker-modal .datepicker-tab {
+  padding: 0;
+  margin: 0;
+  display: table;
+  width: 100%;
+  background: #444444;
+}
+.datepicker-modal .datepicker-tab li {
+  float: left;
+  width: 50%;
+  display: table-cell;
+  vertical-align: middle;
+}
+.datepicker-modal .datepicker-tab li a {
+  display: block;
+  font-size: 18px;
+  border-bottom: 5px solid #444444;
+  color: #b2b2b2;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+}
+.datepicker-modal .datepicker-tab li a.active {
+  color: #fff;
+  border-color: #fff;
+}
+.datepicker-modal .datepicker-tab li a.active:before {
+  content: "";
+  width: 100%;
+  z-index: 10;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+}
+
+.timepicker .downarrow .btn,
+.timepicker .timeview .btn,
+.timepicker .uparrow .btn {
+  display: none;
+}
+.timepicker .uparrow {
+  display: inline-block;
+  padding-left: 0;
+}
+.timepicker .time-separator,
+.timepicker .timeview,
+.timepicker .downarrow {
+  display: inline-block;
+}
+.timepicker .downarrow {
+  padding-left: 0;
+}
+.timepicker .uparrow,
+.timepicker .time-separator,
+.timepicker .timeview {
+  font-size: 50px;
+  color: #fff;
+  line-height: normal;
+}
+.timepicker .time-separator {
+  opacity: 0.5;
+}
+.timepicker .time-separator .separator {
+  margin-top: -20px;
+}
+.timepicker .downarrow .timepicker-second,
+.timepicker .uparrow .timepicker-hour,
+.timepicker .timeview .timepicker-minute {
+  opacity: 0.5;
+}
+.timepicker .downarrow .timepicker-second.active,
+.timepicker .uparrow .timepicker-hour.active,
+.timepicker .timeview .timepicker-minute.active {
+  opacity: 1;
+}
+.timepicker .ampmvalue {
+  font-size: 18px;
+  margin-left: 10px;
+}
+.timepicker .ampmview {
+  width: auto;
+  position: absolute;
+  display: inline-block;
+  font-size: inherit;
+  background: none;
+  top: 37px;
+  margin-left: 10px;
+}
+.timepicker .ampmview .btn-group {
+  position: relative;
+  top: auto;
+  left: auto;
+  width: auto;
+}
+.timepicker .ampmview .btn-group .btn {
+  clear: both;
+  background: none;
+  padding: 0;
+  font-family: Arial;
+  height: 30px;
+  font-size: 20px;
+  margin-right: 0;
+  color: #ffffff;
+  opacity: 0.5;
+}
+.timepicker .ampmview .btn-group .btn.active {
+  opacity: 1;
+}
+.timepicker .secondHnad,
+.timepicker .minuteHnad,
+.timepicker .hourHnad {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 2px;
+  background: #4285f4;
+  right: 25px;
+  -moz-transform-origin: center left;
+  -webkit-transform-origin: center left;
+  transform-origin: center left;
+  will-change: transform;
+  transition: all 0.2s ease-in-out;
+}
+
+.bootstrap-datetimepicker-widget .table-condensed .picker-switch {
+  padding-top: 8px;
+}
+
+.clockpickerseconds,
+.clockpickerr,
+.clockpickerminute {
+  border-radius: 500px;
+  width: 270px;
+  height: 270px;
+  margin: 30px 0;
+}
 
 .timepicker .clockpickerseconds .second,
 .timepicker .clockpickerminute .minute,
-.timepicker .clockpickerr .hour { width:20px; height:20px; line-height:20px; text-align:center; transform:translate(-50%,-50%); -moz-transform:translate(-50%,-50%); -ms-transform:translate(-50%,-50%); -webkit-transform:translate(-50%,-50%); -o-transform:translate(-50%,-50%);}  
-
+.timepicker .clockpickerr .hour {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
 .timepicker .clockpickerseconds .second.active,
 .timepicker .clockpickerminute .minute.active,
-.timepicker .clockpickerr .hour.active { color:#fff;}
-
+.timepicker .clockpickerr .hour.active {
+  color: #fff;
+}
 .timepicker .secondHnad:before,
 .timepicker .minuteHnad:before,
-.timepicker .hourHnad:before { width:7px; height:7px; content:""; left:-3px; top:50%; position:absolute; background:#4285f4; transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); -o-transform:translateY(-50%); -webkit-transform:translateY(-50%); border-radius:25px; -moz-border-radius:25px; -ms-border-radius:25px; -o-border-radius:25px; -webkit-border-radius:25px; }
+.timepicker .hourHnad:before {
+  width: 7px;
+  height: 7px;
+  content: "";
+  left: -3px;
+  top: 50%;
+  position: absolute;
+  background: #4285f4;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border-radius: 25px;
+}
 .timepicker .secondHnad:after,
 .timepicker .minuteHnad:after,
-.timepicker .hourHnad:after { position: absolute; content: ""; width: 40px; height: 40px; background: #4285f4; right: 0; top: 50%; transform: translate(50%,-50%); -moz-transform: translate(50%,-50%);-ms-transform: translate(50%,-50%);-o-transform: translate(50%,-50%);-webkit-transform: translate(50%,-50%); border-radius: 50px; -moz-border-radius: 50px; -ms-border-radius: 50px; -o-border-radius: 50px; -webkit-border-radius: 50px;}
+.timepicker .hourHnad:after {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: #4285f4;
+  right: 0;
+  top: 50%;
+  -ms-transform: translate(50%, -50%);
+  -webkit-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
+  border-radius: 50px;
+}
+.timepicker .hourHnad.hourHnad-00, .timepicker .hourHnad.hourHnad-13, .timepicker .hourHnad.hourHnad-14, .timepicker .hourHnad.hourHnad-15, .timepicker .hourHnad.hourHnad-16, .timepicker .hourHnad.hourHnad-17, .timepicker .hourHnad.hourHnad-18, .timepicker .hourHnad.hourHnad-19, .timepicker .hourHnad.hourHnad-20, .timepicker .hourHnad.hourHnad-21, .timepicker .hourHnad.hourHnad-22, .timepicker .hourHnad.hourHnad-23, .timepicker .hourHnad.hourHnad-24 {
+  right: 57px;
+}
+.timepicker .hourHnad.hourHnad-00, .timepicker .hourHnad.hourHnad-12 {
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.timepicker .hourHnad.hourHnad-13, .timepicker .hourHnad.hourHnad-01 {
+  -ms-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+.timepicker .hourHnad.hourHnad-14, .timepicker .hourHnad.hourHnad-02 {
+  -ms-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+.timepicker .hourHnad.hourHnad-15, .timepicker .hourHnad.hourHnad-03 {
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.timepicker .hourHnad.hourHnad-16, .timepicker .hourHnad.hourHnad-04 {
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.timepicker .hourHnad.hourHnad-17, .timepicker .hourHnad.hourHnad-05 {
+  -ms-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.timepicker .hourHnad.hourHnad-18, .timepicker .hourHnad.hourHnad-06 {
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.timepicker .hourHnad.hourHnad-19, .timepicker .hourHnad.hourHnad-07 {
+  -ms-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+.timepicker .hourHnad.hourHnad-20, .timepicker .hourHnad.hourHnad-08 {
+  -ms-transform: rotate(150deg);
+  -webkit-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+.timepicker .hourHnad.hourHnad-21, .timepicker .hourHnad.hourHnad-09 {
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.timepicker .hourHnad.hourHnad-22, .timepicker .hourHnad.hourHnad-10 {
+  -ms-transform: rotate(210deg);
+  -webkit-transform: rotate(210deg);
+  transform: rotate(210deg);
+}
+.timepicker .hourHnad.hourHnad-23, .timepicker .hourHnad.hourHnad-11 {
+  -ms-transform: rotate(240deg);
+  -webkit-transform: rotate(240deg);
+  transform: rotate(240deg);
+}
+.timepicker .secondHnad.secondHnad-00, .timepicker .minuteHnad.minuteHnad-00 {
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.timepicker .secondHnad.secondHnad-01, .timepicker .minuteHnad.minuteHnad-01 {
+  -ms-transform: rotate(-84deg);
+  -webkit-transform: rotate(-84deg);
+  transform: rotate(-84deg);
+}
+.timepicker .secondHnad.secondHnad-02, .timepicker .minuteHnad.minuteHnad-02 {
+  -ms-transform: rotate(-78deg);
+  -webkit-transform: rotate(-78deg);
+  transform: rotate(-78deg);
+}
+.timepicker .secondHnad.secondHnad-03, .timepicker .minuteHnad.minuteHnad-03 {
+  -ms-transform: rotate(-72deg);
+  -webkit-transform: rotate(-72deg);
+  transform: rotate(-72deg);
+}
+.timepicker .secondHnad.secondHnad-04, .timepicker .minuteHnad.minuteHnad-04 {
+  -ms-transform: rotate(-66deg);
+  -webkit-transform: rotate(-66deg);
+  transform: rotate(-66deg);
+}
+.timepicker .secondHnad.secondHnad-05, .timepicker .minuteHnad.minuteHnad-05 {
+  -ms-transform: rotate(-60deg);
+  -webkit-transform: rotate(-60deg);
+  transform: rotate(-60deg);
+}
+.timepicker .secondHnad.secondHnad-06, .timepicker .minuteHnad.minuteHnad-06 {
+  -ms-transform: rotate(-54deg);
+  -webkit-transform: rotate(-54deg);
+  transform: rotate(-54deg);
+}
+.timepicker .secondHnad.secondHnad-07, .timepicker .minuteHnad.minuteHnad-07 {
+  -ms-transform: rotate(-48deg);
+  -webkit-transform: rotate(-48deg);
+  transform: rotate(-48deg);
+}
+.timepicker .secondHnad.secondHnad-08, .timepicker .minuteHnad.minuteHnad-08 {
+  -ms-transform: rotate(-42deg);
+  -webkit-transform: rotate(-42deg);
+  transform: rotate(-42deg);
+}
+.timepicker .secondHnad.secondHnad-09, .timepicker .minuteHnad.minuteHnad-09 {
+  -ms-transform: rotate(-36deg);
+  -webkit-transform: rotate(-36deg);
+  transform: rotate(-36deg);
+}
+.timepicker .secondHnad.secondHnad-10, .timepicker .minuteHnad.minuteHnad-10 {
+  -ms-transform: rotate(-30deg);
+  -webkit-transform: rotate(-30deg);
+  transform: rotate(-30deg);
+}
+.timepicker .secondHnad.secondHnad-11, .timepicker .minuteHnad.minuteHnad-11 {
+  -ms-transform: rotate(-24deg);
+  -webkit-transform: rotate(-24deg);
+  transform: rotate(-24deg);
+}
+.timepicker .secondHnad.secondHnad-12, .timepicker .minuteHnad.minuteHnad-12 {
+  -ms-transform: rotate(-18deg);
+  -webkit-transform: rotate(-18deg);
+  transform: rotate(-18deg);
+}
+.timepicker .secondHnad.secondHnad-13, .timepicker .minuteHnad.minuteHnad-13 {
+  -ms-transform: rotate(-12deg);
+  -webkit-transform: rotate(-12deg);
+  transform: rotate(-12deg);
+}
+.timepicker .secondHnad.secondHnad-14, .timepicker .minuteHnad.minuteHnad-14 {
+  -ms-transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+.timepicker .secondHnad.secondHnad-15, .timepicker .minuteHnad.minuteHnad-15 {
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.timepicker .secondHnad.secondHnad-16, .timepicker .minuteHnad.minuteHnad-16 {
+  -ms-transform: rotate(6deg);
+  -webkit-transform: rotate(6deg);
+  transform: rotate(6deg);
+}
+.timepicker .secondHnad.secondHnad-17, .timepicker .minuteHnad.minuteHnad-17 {
+  -ms-transform: rotate(12deg);
+  -webkit-transform: rotate(12deg);
+  transform: rotate(12deg);
+}
+.timepicker .secondHnad.secondHnad-18, .timepicker .minuteHnad.minuteHnad-18 {
+  -ms-transform: rotate(18deg);
+  -webkit-transform: rotate(18deg);
+  transform: rotate(18deg);
+}
+.timepicker .secondHnad.secondHnad-19, .timepicker .minuteHnad.minuteHnad-19 {
+  -ms-transform: rotate(24deg);
+  -webkit-transform: rotate(24deg);
+  transform: rotate(24deg);
+}
+.timepicker .secondHnad.secondHnad-20, .timepicker .minuteHnad.minuteHnad-20 {
+  -ms-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.timepicker .secondHnad.secondHnad-21, .timepicker .minuteHnad.minuteHnad-21 {
+  -ms-transform: rotate(36deg);
+  -webkit-transform: rotate(36deg);
+  transform: rotate(36deg);
+}
+.timepicker .secondHnad.secondHnad-22, .timepicker .minuteHnad.minuteHnad-22 {
+  -ms-transform: rotate(42deg);
+  -webkit-transform: rotate(42deg);
+  transform: rotate(42deg);
+}
+.timepicker .secondHnad.secondHnad-23, .timepicker .minuteHnad.minuteHnad-23 {
+  -ms-transform: rotate(48deg);
+  -webkit-transform: rotate(48deg);
+  transform: rotate(48deg);
+}
+.timepicker .secondHnad.secondHnad-24, .timepicker .minuteHnad.minuteHnad-24 {
+  -ms-transform: rotate(54deg);
+  -webkit-transform: rotate(54deg);
+  transform: rotate(54deg);
+}
+.timepicker .secondHnad.secondHnad-25, .timepicker .minuteHnad.minuteHnad-25 {
+  -ms-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.timepicker .secondHnad.secondHnad-26, .timepicker .minuteHnad.minuteHnad-26 {
+  -ms-transform: rotate(66deg);
+  -webkit-transform: rotate(66deg);
+  transform: rotate(66deg);
+}
+.timepicker .secondHnad.secondHnad-27, .timepicker .minuteHnad.minuteHnad-27 {
+  -ms-transform: rotate(72deg);
+  -webkit-transform: rotate(72deg);
+  transform: rotate(72deg);
+}
+.timepicker .secondHnad.secondHnad-28, .timepicker .minuteHnad.minuteHnad-28 {
+  -ms-transform: rotate(78deg);
+  -webkit-transform: rotate(78deg);
+  transform: rotate(78deg);
+}
+.timepicker .secondHnad.secondHnad-29, .timepicker .minuteHnad.minuteHnad-29 {
+  -ms-transform: rotate(84deg);
+  -webkit-transform: rotate(84deg);
+  transform: rotate(84deg);
+}
+.timepicker .secondHnad.secondHnad-30, .timepicker .minuteHnad.minuteHnad-30 {
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.timepicker .secondHnad.secondHnad-31, .timepicker .minuteHnad.minuteHnad-31 {
+  -ms-transform: rotate(96deg);
+  -webkit-transform: rotate(96deg);
+  transform: rotate(96deg);
+}
+.timepicker .secondHnad.secondHnad-32, .timepicker .minuteHnad.minuteHnad-32 {
+  -ms-transform: rotate(102deg);
+  -webkit-transform: rotate(102deg);
+  transform: rotate(102deg);
+}
+.timepicker .secondHnad.secondHnad-33, .timepicker .minuteHnad.minuteHnad-33 {
+  -ms-transform: rotate(108deg);
+  -webkit-transform: rotate(108deg);
+  transform: rotate(108deg);
+}
+.timepicker .secondHnad.secondHnad-34, .timepicker .minuteHnad.minuteHnad-34 {
+  -ms-transform: rotate(114deg);
+  -webkit-transform: rotate(114deg);
+  transform: rotate(114deg);
+}
+.timepicker .secondHnad.secondHnad-35, .timepicker .minuteHnad.minuteHnad-35 {
+  -ms-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg);
+}
+.timepicker .secondHnad.secondHnad-36, .timepicker .minuteHnad.minuteHnad-36 {
+  -ms-transform: rotate(126deg);
+  -webkit-transform: rotate(126deg);
+  transform: rotate(126deg);
+}
+.timepicker .secondHnad.secondHnad-37, .timepicker .minuteHnad.minuteHnad-37 {
+  -ms-transform: rotate(132deg);
+  -webkit-transform: rotate(132deg);
+  transform: rotate(132deg);
+}
+.timepicker .secondHnad.secondHnad-38, .timepicker .minuteHnad.minuteHnad-38 {
+  -ms-transform: rotate(138deg);
+  -webkit-transform: rotate(138deg);
+  transform: rotate(138deg);
+}
+.timepicker .secondHnad.secondHnad-39, .timepicker .minuteHnad.minuteHnad-39 {
+  -ms-transform: rotate(144deg);
+  -webkit-transform: rotate(144deg);
+  transform: rotate(144deg);
+}
+.timepicker .secondHnad.secondHnad-40, .timepicker .minuteHnad.minuteHnad-40 {
+  -ms-transform: rotate(150deg);
+  -webkit-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+.timepicker .secondHnad.secondHnad-41, .timepicker .minuteHnad.minuteHnad-41 {
+  -ms-transform: rotate(156deg);
+  -webkit-transform: rotate(156deg);
+  transform: rotate(156deg);
+}
+.timepicker .secondHnad.secondHnad-42, .timepicker .minuteHnad.minuteHnad-42 {
+  -ms-transform: rotate(162deg);
+  -webkit-transform: rotate(162deg);
+  transform: rotate(162deg);
+}
+.timepicker .secondHnad.secondHnad-43, .timepicker .minuteHnad.minuteHnad-43 {
+  -ms-transform: rotate(168deg);
+  -webkit-transform: rotate(168deg);
+  transform: rotate(168deg);
+}
+.timepicker .secondHnad.secondHnad-44, .timepicker .minuteHnad.minuteHnad-44 {
+  -ms-transform: rotate(174deg);
+  -webkit-transform: rotate(174deg);
+  transform: rotate(174deg);
+}
+.timepicker .secondHnad.secondHnad-45, .timepicker .minuteHnad.minuteHnad-45 {
+  -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.timepicker .secondHnad.secondHnad-46, .timepicker .minuteHnad.minuteHnad-46 {
+  -ms-transform: rotate(186deg);
+  -webkit-transform: rotate(186deg);
+  transform: rotate(186deg);
+}
+.timepicker .secondHnad.secondHnad-47, .timepicker .minuteHnad.minuteHnad-47 {
+  -ms-transform: rotate(192deg);
+  -webkit-transform: rotate(192deg);
+  transform: rotate(192deg);
+}
+.timepicker .secondHnad.secondHnad-48, .timepicker .minuteHnad.minuteHnad-48 {
+  -ms-transform: rotate(198deg);
+  -webkit-transform: rotate(198deg);
+  transform: rotate(198deg);
+}
+.timepicker .secondHnad.secondHnad-49, .timepicker .minuteHnad.minuteHnad-49 {
+  -ms-transform: rotate(204deg);
+  -webkit-transform: rotate(204deg);
+  transform: rotate(204deg);
+}
+.timepicker .secondHnad.secondHnad-50, .timepicker .minuteHnad.minuteHnad-50 {
+  -ms-transform: rotate(210deg);
+  -webkit-transform: rotate(210deg);
+  transform: rotate(210deg);
+}
+.timepicker .secondHnad.secondHnad-51, .timepicker .minuteHnad.minuteHnad-51 {
+  -ms-transform: rotate(216deg);
+  -webkit-transform: rotate(216deg);
+  transform: rotate(216deg);
+}
+.timepicker .secondHnad.secondHnad-52, .timepicker .minuteHnad.minuteHnad-52 {
+  -ms-transform: rotate(222deg);
+  -webkit-transform: rotate(222deg);
+  transform: rotate(222deg);
+}
+.timepicker .secondHnad.secondHnad-53, .timepicker .minuteHnad.minuteHnad-53 {
+  -ms-transform: rotate(228deg);
+  -webkit-transform: rotate(228deg);
+  transform: rotate(228deg);
+}
+.timepicker .secondHnad.secondHnad-54, .timepicker .minuteHnad.minuteHnad-54 {
+  -ms-transform: rotate(234deg);
+  -webkit-transform: rotate(234deg);
+  transform: rotate(234deg);
+}
+.timepicker .secondHnad.secondHnad-55, .timepicker .minuteHnad.minuteHnad-55 {
+  -ms-transform: rotate(240deg);
+  -webkit-transform: rotate(240deg);
+  transform: rotate(240deg);
+}
+.timepicker .secondHnad.secondHnad-56, .timepicker .minuteHnad.minuteHnad-56 {
+  -ms-transform: rotate(246deg);
+  -webkit-transform: rotate(246deg);
+  transform: rotate(246deg);
+}
+.timepicker .secondHnad.secondHnad-57, .timepicker .minuteHnad.minuteHnad-57 {
+  -ms-transform: rotate(252deg);
+  -webkit-transform: rotate(252deg);
+  transform: rotate(252deg);
+}
+.timepicker .secondHnad.secondHnad-58, .timepicker .minuteHnad.minuteHnad-58 {
+  -ms-transform: rotate(258deg);
+  -webkit-transform: rotate(258deg);
+  transform: rotate(258deg);
+}
+.timepicker .secondHnad.secondHnad-59, .timepicker .minuteHnad.minuteHnad-59 {
+  -ms-transform: rotate(264deg);
+  -webkit-transform: rotate(264deg);
+  transform: rotate(264deg);
+}
+.timepicker .table-condensed > div .position-0 {
+  top: 21.6%;
+  left: 50%;
+}
+.timepicker.tHours .table-condensed > div div:first-child {
+  top: 9.3%;
+  left: 50%;
+}
+.timepicker .table-condensed > div .position-1 {
+  top: 14.8%;
+  left: 70.8%;
+}
+.timepicker .table-condensed > div .position-2 {
+  top: 30.1%;
+  left: 85.4%;
+}
+.timepicker .table-condensed > div .position-3 {
+  top: 50%;
+  left: 91.3%;
+}
+.timepicker .table-condensed > div .position-4 {
+  top: 71%;
+  left: 85.7%;
+}
+.timepicker .table-condensed > div .position-5 {
+  top: 86%;
+  left: 70.8%;
+}
+.timepicker .table-condensed > div .position-6 {
+  top: 91.4%;
+  left: 50%;
+}
+.timepicker .table-condensed > div .position-7 {
+  top: 85.9%;
+  left: 29.6%;
+}
+.timepicker .table-condensed > div .position-8 {
+  top: 70.8%;
+  left: 14.8%;
+}
+.timepicker .table-condensed > div .position-9 {
+  top: 50%;
+  left: 9.3%;
+}
+.timepicker .table-condensed > div .position-10 {
+  top: 30.1%;
+  left: 14.7%;
+}
+.timepicker .table-condensed > div .position-11 {
+  top: 14.8%;
+  left: 29.6%;
+}
+.timepicker .table-condensed > div .position-12 {
+  top: 9.3%;
+  left: 50%;
+}
+.timepicker .table-condensed > div .position-13 {
+  top: 25.4%;
+  left: 64.6%;
+}
+.timepicker .table-condensed > div .position-14 {
+  top: 36.2%;
+  left: 74.4%;
+}
+.timepicker .table-condensed > div .position-15 {
+  top: 50%;
+  left: 78.8%;
+}
+.timepicker .table-condensed > div .position-16 {
+  top: 64.8%;
+  left: 74.9%;
+}
+.timepicker .table-condensed > div .position-17 {
+  top: 75.4%;
+  left: 65%;
+}
+.timepicker .table-condensed > div .position-18 {
+  top: 79.2%;
+  left: 50%;
+}
+.timepicker .table-condensed > div .position-19 {
+  top: 75.2%;
+  left: 35.6%;
+}
+.timepicker .table-condensed > div .position-20 {
+  top: 64.8%;
+  left: 25.2%;
+}
+.timepicker .table-condensed > div .position-21 {
+  top: 50%;
+  left: 21.8%;
+}
+.timepicker .table-condensed > div .position-22 {
+  top: 36.2%;
+  left: 25.5%;
+}
+.timepicker .table-condensed > div .position-23 {
+  top: 25.6%;
+  left: 35.6%;
+}
+.timepicker .table-condensed > div div.second:first-child, .timepicker .table-condensed > div div.minute:first-child {
+  top: 9.3%;
+  left: 50%;
+}
 
+.pmd-time::after {
+  font-family: "Material icons";
+  content: "\E192";
+}
 
-.timepicker .hourHnad.hourHnad-00,
-.timepicker .hourHnad.hourHnad-13,
-.timepicker .hourHnad.hourHnad-14,
-.timepicker .hourHnad.hourHnad-15,
-.timepicker .hourHnad.hourHnad-16,
-.timepicker .hourHnad.hourHnad-17,
-.timepicker .hourHnad.hourHnad-18,
-.timepicker .hourHnad.hourHnad-19,
-.timepicker .hourHnad.hourHnad-20,
-.timepicker .hourHnad.hourHnad-21,
-.timepicker .hourHnad.hourHnad-22,
-.timepicker .hourHnad.hourHnad-23,
-.timepicker .hourHnad.hourHnad-24 { right:57px;}
+.pmd-today::after {
+  font-family: "Material icons";
+  content: "\E916";
+}
 
+.pmd-keyboard-arrow-up::after, .pmd-keyboard-arrow-down::after {
+  font-family: "Material icons";
+  content: "\E192";
+}
 
+.pmd-keyboard-arrow-right::after {
+  font-family: "Material icons";
+  content: "\E315";
+}
 
-.timepicker .hourHnad.hourHnad-00,
-.timepicker .hourHnad.hourHnad-12 { transform:rotate(-90deg); -moz-transform:rotate(-90deg); -webkit-transform:rotate(-90deg); -o-transform:rotate(-90deg); -ms-transform:rotate(-90deg);}
-.timepicker .hourHnad.hourHnad-13,
-.timepicker .hourHnad.hourHnad-01 { transform:rotate(-60deg); -moz-transform:rotate(-60deg); -webkit-transform:rotate(-60deg); -o-transform:rotate(-60deg); -ms-transform:rotate(-60deg);}
-.timepicker .hourHnad.hourHnad-14,
-.timepicker .hourHnad.hourHnad-02 { transform:rotate(-30deg); -moz-transform:rotate(-30deg); -webkit-transform:rotate(-30deg); -o-transform:rotate(-30deg); -ms-transform:rotate(-30deg);}
-.timepicker .hourHnad.hourHnad-15,
-.timepicker .hourHnad.hourHnad-03 { transform:rotate(0deg); -moz-transform:rotate(0deg); -webkit-transform:rotate(0deg); -o-transform:rotate(0deg); -ms-transform:rotate(0deg);}
-.timepicker .hourHnad.hourHnad-16,
-.timepicker .hourHnad.hourHnad-04 { transform:rotate(30deg); -moz-transform:rotate(30deg); -webkit-transform:rotate(30deg); -o-transform:rotate(30deg); -ms-transform:rotate(30deg);}
-.timepicker .hourHnad.hourHnad-17,
-.timepicker .hourHnad.hourHnad-05 { transform:rotate(60deg); -moz-transform:rotate(60deg); -webkit-transform:rotate(60deg); -o-transform:rotate(60deg); -ms-transform:rotate(60deg);}
-.timepicker .hourHnad.hourHnad-18,
-.timepicker .hourHnad.hourHnad-06 { transform:rotate(90deg); -moz-transform:rotate(90deg); -webkit-transform:rotate(90deg); -o-transform:rotate(90deg); -ms-transform:rotate(90deg);}
-.timepicker .hourHnad.hourHnad-19,
-.timepicker .hourHnad.hourHnad-07 { transform:rotate(120deg); -moz-transform:rotate(120deg); -webkit-transform:rotate(120deg); -o-transform:rotate(120deg); -ms-transform:rotate(120deg);}
-.timepicker .hourHnad.hourHnad-20,
-.timepicker .hourHnad.hourHnad-08 { transform:rotate(150deg); -moz-transform:rotate(150deg); -webkit-transform:rotate(150deg); -o-transform:rotate(150deg); -ms-transform:rotate(150deg);}
-.timepicker .hourHnad.hourHnad-21,
-.timepicker .hourHnad.hourHnad-09 { transform:rotate(180deg); -moz-transform:rotate(180deg); -webkit-transform:rotate(180deg); -o-transform:rotate(180deg); -ms-transform:rotate(180deg);}
-.timepicker .hourHnad.hourHnad-22,
-.timepicker .hourHnad.hourHnad-10 { transform:rotate(210deg); -moz-transform:rotate(210deg); -webkit-transform:rotate(210deg); -o-transform:rotate(210deg); -ms-transform:rotate(210deg);}
-.timepicker .hourHnad.hourHnad-23,
-.timepicker .hourHnad.hourHnad-11 { transform:rotate(240deg); -moz-transform:rotate(240deg); -webkit-transform:rotate(240deg); -o-transform:rotate(240deg); -ms-transform:rotate(240deg);}
+.pmd-keyboard-arrow-left::after {
+  font-family: "Material icons";
+  content: "\E314";
+}
 
-
-.timepicker .secondHnad.secondHnad-00,
-.timepicker .minuteHnad.minuteHnad-00 { transform:rotate(-90deg); -moz-transform:rotate(-90deg); -webkit-transform:rotate(-90deg); -o-transform:rotate(-90deg); -ms-transform:rotate(-90deg);}
-.timepicker .secondHnad.secondHnad-01,
-.timepicker .minuteHnad.minuteHnad-01 { transform:rotate(-84deg); -moz-transform:rotate(-84deg); -webkit-transform:rotate(-84deg); -o-transform:rotate(-84deg); -ms-transform:rotate(-84deg);}
-.timepicker .secondHnad.secondHnad-02,
-.timepicker .minuteHnad.minuteHnad-02 { transform:rotate(-78deg); -moz-transform:rotate(-78deg); -webkit-transform:rotate(-78deg); -o-transform:rotate(-78deg); -ms-transform:rotate(-78deg);}
-.timepicker .secondHnad.secondHnad-03,
-.timepicker .minuteHnad.minuteHnad-03 { transform:rotate(-72deg); -moz-transform:rotate(-72deg); -webkit-transform:rotate(-72deg); -o-transform:rotate(-72deg); -ms-transform:rotate(-72deg);}
-.timepicker .secondHnad.secondHnad-04,
-.timepicker .minuteHnad.minuteHnad-04 { transform:rotate(-66deg); -moz-transform:rotate(-66deg); -webkit-transform:rotate(-66deg); -o-transform:rotate(-66deg); -ms-transform:rotate(-66deg);}
-.timepicker .secondHnad.secondHnad-05,
-.timepicker .minuteHnad.minuteHnad-05 { transform:rotate(-60deg); -moz-transform:rotate(-60deg); -webkit-transform:rotate(-60deg); -o-transform:rotate(-60deg); -ms-transform:rotate(-60deg);}
-.timepicker .secondHnad.secondHnad-06,
-.timepicker .minuteHnad.minuteHnad-06 { transform:rotate(-54deg); -moz-transform:rotate(-54deg); -webkit-transform:rotate(-54deg); -o-transform:rotate(-54deg); -ms-transform:rotate(-54deg);}
-.timepicker .secondHnad.secondHnad-07,
-.timepicker .minuteHnad.minuteHnad-07 { transform:rotate(-48deg); -moz-transform:rotate(-48deg); -webkit-transform:rotate(-48deg); -o-transform:rotate(-48deg); -ms-transform:rotate(-48deg);}
-.timepicker .secondHnad.secondHnad-08,
-.timepicker .minuteHnad.minuteHnad-08 { transform:rotate(-42deg); -moz-transform:rotate(-42deg); -webkit-transform:rotate(-42deg); -o-transform:rotate(-42deg); -ms-transform:rotate(-42deg);}
-.timepicker .secondHnad.secondHnad-09,
-.timepicker .minuteHnad.minuteHnad-09 { transform:rotate(-36deg); -moz-transform:rotate(-36deg); -webkit-transform:rotate(-36deg); -o-transform:rotate(-36deg); -ms-transform:rotate(-36deg);}
-.timepicker .secondHnad.secondHnad-10,
-.timepicker .minuteHnad.minuteHnad-10 { transform:rotate(-30deg); -moz-transform:rotate(-30deg); -webkit-transform:rotate(-30deg); -o-transform:rotate(-30deg); -ms-transform:rotate(-30deg);}
-.timepicker .secondHnad.secondHnad-11,
-.timepicker .minuteHnad.minuteHnad-11 { transform:rotate(-24deg); -moz-transform:rotate(-24deg); -webkit-transform:rotate(-24deg); -o-transform:rotate(-24deg); -ms-transform:rotate(-24deg);}
-.timepicker .secondHnad.secondHnad-12,
-.timepicker .minuteHnad.minuteHnad-12 { transform:rotate(-18deg); -moz-transform:rotate(-18deg); -webkit-transform:rotate(-18deg); -o-transform:rotate(-18deg); -ms-transform:rotate(-18deg);}
-.timepicker .secondHnad.secondHnad-13,
-.timepicker .minuteHnad.minuteHnad-13 { transform:rotate(-12deg); -moz-transform:rotate(-12deg); -webkit-transform:rotate(-12deg); -o-transform:rotate(-12deg); -ms-transform:rotate(-12deg);}
-.timepicker .secondHnad.secondHnad-14,
-.timepicker .minuteHnad.minuteHnad-14 { transform:rotate(-6deg); -moz-transform:rotate(-6deg); -webkit-transform:rotate(-6deg); -o-transform:rotate(-6deg); -ms-transform:rotate(-6deg);}
-.timepicker .secondHnad.secondHnad-15,
-.timepicker .minuteHnad.minuteHnad-15 { transform:rotate(0deg); -moz-transform:rotate(0deg); -webkit-transform:rotate(0deg); -o-transform:rotate(0deg); -ms-transform:rotate(0deg);}
-.timepicker .secondHnad.secondHnad-16,
-.timepicker .minuteHnad.minuteHnad-16 { transform:rotate(6deg); -moz-transform:rotate(6deg); -webkit-transform:rotate(6deg); -o-transform:rotate(6deg); -ms-transform:rotate(6deg);}
-.timepicker .secondHnad.secondHnad-17,
-.timepicker .minuteHnad.minuteHnad-17 { transform:rotate(12deg); -moz-transform:rotate(12deg); -webkit-transform:rotate(12deg); -o-transform:rotate(12deg); -ms-transform:rotate(12deg);}
-.timepicker .secondHnad.secondHnad-18,
-.timepicker .minuteHnad.minuteHnad-18 { transform:rotate(18deg); -moz-transform:rotate(18deg); -webkit-transform:rotate(18deg); -o-transform:rotate(18deg); -ms-transform:rotate(18deg);}
-.timepicker .secondHnad.secondHnad-19,
-.timepicker .minuteHnad.minuteHnad-19 { transform:rotate(24deg); -moz-transform:rotate(24deg); -webkit-transform:rotate(24deg); -o-transform:rotate(24deg); -ms-transform:rotate(24deg);}
-.timepicker .secondHnad.secondHnad-20,
-.timepicker .minuteHnad.minuteHnad-20 { transform:rotate(30deg); -moz-transform:rotate(30deg); -webkit-transform:rotate(30deg); -o-transform:rotate(30deg); -ms-transform:rotate(30deg);}
-.timepicker .secondHnad.secondHnad-21,
-.timepicker .minuteHnad.minuteHnad-21 { transform:rotate(36deg); -moz-transform:rotate(36deg); -webkit-transform:rotate(36deg); -o-transform:rotate(36deg); -ms-transform:rotate(36deg);}
-.timepicker .secondHnad.secondHnad-22,
-.timepicker .minuteHnad.minuteHnad-22 { transform:rotate(42deg); -moz-transform:rotate(42deg); -webkit-transform:rotate(42deg); -o-transform:rotate(42deg); -ms-transform:rotate(42deg);}
-.timepicker .secondHnad.secondHnad-23,
-.timepicker .minuteHnad.minuteHnad-23 { transform:rotate(48deg); -moz-transform:rotate(48deg); -webkit-transform:rotate(48deg); -o-transform:rotate(48deg); -ms-transform:rotate(48deg);}
-.timepicker .secondHnad.secondHnad-24,
-.timepicker .minuteHnad.minuteHnad-24 { transform:rotate(54deg); -moz-transform:rotate(54deg); -webkit-transform:rotate(54deg); -o-transform:rotate(54deg); -ms-transform:rotate(54deg);}
-.timepicker .secondHnad.secondHnad-25,
-.timepicker .minuteHnad.minuteHnad-25 { transform:rotate(60deg); -moz-transform:rotate(60deg); -webkit-transform:rotate(60deg); -o-transform:rotate(60deg); -ms-transform:rotate(60deg);}
-.timepicker .secondHnad.secondHnad-26,
-.timepicker .minuteHnad.minuteHnad-26 { transform:rotate(66deg); -moz-transform:rotate(66deg); -webkit-transform:rotate(66deg); -o-transform:rotate(66deg); -ms-transform:rotate(66deg);}
-.timepicker .secondHnad.secondHnad-27,
-.timepicker .minuteHnad.minuteHnad-27 { transform:rotate(72deg); -moz-transform:rotate(72deg); -webkit-transform:rotate(72deg); -o-transform:rotate(72deg); -ms-transform:rotate(72deg);}
-.timepicker .secondHnad.secondHnad-28,
-.timepicker .minuteHnad.minuteHnad-28 { transform:rotate(78deg); -moz-transform:rotate(78deg); -webkit-transform:rotate(78deg); -o-transform:rotate(78deg); -ms-transform:rotate(78deg);}
-.timepicker .secondHnad.secondHnad-29,
-.timepicker .minuteHnad.minuteHnad-29 { transform:rotate(84deg); -moz-transform:rotate(84deg); -webkit-transform:rotate(84deg); -o-transform:rotate(84deg); -ms-transform:rotate(84deg);}
-.timepicker .secondHnad.secondHnad-30,
-.timepicker .minuteHnad.minuteHnad-30 { transform:rotate(90deg); -moz-transform:rotate(90deg); -webkit-transform:rotate(90deg); -o-transform:rotate(90deg); -ms-transform:rotate(90deg);}
-.timepicker .secondHnad.secondHnad-31,
-.timepicker .minuteHnad.minuteHnad-31 { transform:rotate(96deg); -moz-transform:rotate(96deg); -webkit-transform:rotate(96deg); -o-transform:rotate(96deg); -ms-transform:rotate(96deg);}
-.timepicker .secondHnad.secondHnad-32,
-.timepicker .minuteHnad.minuteHnad-32 { transform:rotate(102deg); -moz-transform:rotate(102deg); -webkit-transform:rotate(102deg); -o-transform:rotate(102deg); -ms-transform:rotate(102deg);}
-.timepicker .secondHnad.secondHnad-33,
-.timepicker .minuteHnad.minuteHnad-33 { transform:rotate(108deg); -moz-transform:rotate(108deg); -webkit-transform:rotate(108deg); -o-transform:rotate(108deg); -ms-transform:rotate(108deg);}
-.timepicker .secondHnad.secondHnad-34,
-.timepicker .minuteHnad.minuteHnad-34 { transform:rotate(114deg); -moz-transform:rotate(114deg); -webkit-transform:rotate(114deg); -o-transform:rotate(114deg); -ms-transform:rotate(114deg);}
-.timepicker .secondHnad.secondHnad-35,
-.timepicker .minuteHnad.minuteHnad-35 { transform:rotate(120deg); -moz-transform:rotate(120deg); -webkit-transform:rotate(120deg); -o-transform:rotate(120deg); -ms-transform:rotate(120deg);}
-.timepicker .secondHnad.secondHnad-36,
-.timepicker .minuteHnad.minuteHnad-36 { transform:rotate(126deg); -moz-transform:rotate(126deg); -webkit-transform:rotate(126deg); -o-transform:rotate(126deg); -ms-transform:rotate(126deg);}
-.timepicker .secondHnad.secondHnad-37,
-.timepicker .minuteHnad.minuteHnad-37 { transform:rotate(132deg); -moz-transform:rotate(132deg); -webkit-transform:rotate(132deg); -o-transform:rotate(132deg); -ms-transform:rotate(132deg);}
-.timepicker .secondHnad.secondHnad-38,
-.timepicker .minuteHnad.minuteHnad-38 { transform:rotate(138deg); -moz-transform:rotate(138deg); -webkit-transform:rotate(138deg); -o-transform:rotate(138deg); -ms-transform:rotate(138deg);}
-.timepicker .secondHnad.secondHnad-39,
-.timepicker .minuteHnad.minuteHnad-39 { transform:rotate(144deg); -moz-transform:rotate(144deg); -webkit-transform:rotate(144deg); -o-transform:rotate(144deg); -ms-transform:rotate(144deg);}
-.timepicker .secondHnad.secondHnad-40,
-.timepicker .minuteHnad.minuteHnad-40 { transform:rotate(150deg); -moz-transform:rotate(150deg); -webkit-transform:rotate(150deg); -o-transform:rotate(150deg); -ms-transform:rotate(150deg);}
-.timepicker .secondHnad.secondHnad-41,
-.timepicker .minuteHnad.minuteHnad-41 { transform:rotate(156deg); -moz-transform:rotate(156deg); -webkit-transform:rotate(156deg); -o-transform:rotate(156deg); -ms-transform:rotate(156deg);}
-.timepicker .secondHnad.secondHnad-42,
-.timepicker .minuteHnad.minuteHnad-42 { transform:rotate(162deg); -moz-transform:rotate(162deg); -webkit-transform:rotate(162deg); -o-transform:rotate(162deg); -ms-transform:rotate(162deg);}
-.timepicker .secondHnad.secondHnad-43,
-.timepicker .minuteHnad.minuteHnad-43 { transform:rotate(168deg); -moz-transform:rotate(168deg); -webkit-transform:rotate(168deg); -o-transform:rotate(168deg); -ms-transform:rotate(168deg);}
-.timepicker .secondHnad.secondHnad-44,
-.timepicker .minuteHnad.minuteHnad-44 { transform:rotate(174deg); -moz-transform:rotate(174deg); -webkit-transform:rotate(174deg); -o-transform:rotate(174deg); -ms-transform:rotate(174deg);}
-.timepicker .secondHnad.secondHnad-45,
-.timepicker .minuteHnad.minuteHnad-45 { transform:rotate(180deg); -moz-transform:rotate(180deg); -webkit-transform:rotate(180deg); -o-transform:rotate(180deg); -ms-transform:rotate(180deg);}
-.timepicker .secondHnad.secondHnad-46,
-.timepicker .minuteHnad.minuteHnad-46 { transform:rotate(186deg); -moz-transform:rotate(186deg); -webkit-transform:rotate(186deg); -o-transform:rotate(186deg); -ms-transform:rotate(186deg);}
-.timepicker .secondHnad.secondHnad-47,
-.timepicker .minuteHnad.minuteHnad-47 { transform:rotate(192deg); -moz-transform:rotate(192deg); -webkit-transform:rotate(192deg); -o-transform:rotate(192deg); -ms-transform:rotate(192deg);}
-.timepicker .secondHnad.secondHnad-48,
-.timepicker .minuteHnad.minuteHnad-48 { transform:rotate(198deg); -moz-transform:rotate(198deg); -webkit-transform:rotate(198deg); -o-transform:rotate(198deg); -ms-transform:rotate(198deg);}
-.timepicker .secondHnad.secondHnad-49,
-.timepicker .minuteHnad.minuteHnad-49 { transform:rotate(204deg); -moz-transform:rotate(204deg); -webkit-transform:rotate(204deg); -o-transform:rotate(204deg); -ms-transform:rotate(204deg);}
-.timepicker .secondHnad.secondHnad-50,
-.timepicker .minuteHnad.minuteHnad-50 { transform:rotate(210deg); -moz-transform:rotate(210deg); -webkit-transform:rotate(210deg); -o-transform:rotate(210deg); -ms-transform:rotate(210deg);}
-.timepicker .secondHnad.secondHnad-51,
-.timepicker .minuteHnad.minuteHnad-51 { transform:rotate(216deg); -moz-transform:rotate(216deg); -webkit-transform:rotate(216deg); -o-transform:rotate(216deg); -ms-transform:rotate(216deg);}
-.timepicker .secondHnad.secondHnad-52,
-.timepicker .minuteHnad.minuteHnad-52 { transform:rotate(222deg); -moz-transform:rotate(222deg); -webkit-transform:rotate(222deg); -o-transform:rotate(222deg); -ms-transform:rotate(222deg);}
-.timepicker .secondHnad.secondHnad-53,
-.timepicker .minuteHnad.minuteHnad-53 { transform:rotate(228deg); -moz-transform:rotate(228deg); -webkit-transform:rotate(228deg); -o-transform:rotate(228deg); -ms-transform:rotate(228deg);}
-.timepicker .secondHnad.secondHnad-54,
-.timepicker .minuteHnad.minuteHnad-54 { transform:rotate(234deg); -moz-transform:rotate(234deg); -webkit-transform:rotate(234deg); -o-transform:rotate(234deg); -ms-transform:rotate(234deg);}
-.timepicker .secondHnad.secondHnad-55,
-.timepicker .minuteHnad.minuteHnad-55 { transform:rotate(240deg); -moz-transform:rotate(240deg); -webkit-transform:rotate(240deg); -o-transform:rotate(240deg); -ms-transform:rotate(240deg);}
-.timepicker .secondHnad.secondHnad-56,
-.timepicker .minuteHnad.minuteHnad-56 { transform:rotate(246deg); -moz-transform:rotate(246deg); -webkit-transform:rotate(246deg); -o-transform:rotate(246deg); -ms-transform:rotate(246deg);}
-.timepicker .secondHnad.secondHnad-57,
-.timepicker .minuteHnad.minuteHnad-57 { transform:rotate(252deg); -moz-transform:rotate(252deg); -webkit-transform:rotate(252deg); -o-transform:rotate(252deg); -ms-transform:rotate(252deg);}
-.timepicker .secondHnad.secondHnad-58,
-.timepicker .minuteHnad.minuteHnad-58 { transform:rotate(258deg); -moz-transform:rotate(258deg); -webkit-transform:rotate(258deg); -o-transform:rotate(258deg); -ms-transform:rotate(258deg);}
-.timepicker .secondHnad.secondHnad-59,
-.timepicker .minuteHnad.minuteHnad-59 { transform:rotate(264deg); -moz-transform:rotate(264deg); -webkit-transform:rotate(264deg); -o-transform:rotate(264deg); -ms-transform:rotate(264deg);}
-
-
-
-/*.timepicker .table-condensed > div div:nth-child(1n) { top:21.6%; left:50%;}
-.timepicker.tHours .table-condensed > div div:first-child { top:9.3%; left:50%; }
-
-
-.timepicker .table-condensed > div div:nth-child(2n) { top:14.8%; left:70.8%;}
-.timepicker .table-condensed > div div:nth-child(3n) { top:30.1%; left:85.4%;}
-.timepicker .table-condensed > div div:nth-child(4n) { top:50%; left:91.3%;}
-.timepicker .table-condensed > div div:nth-child(5n) { top:71%; left:85.7%;}
-.timepicker .table-condensed > div div:nth-child(6n) { top:86%; left:70.8%;}
-.timepicker .table-condensed > div div:nth-child(7n) { top:91.4%; left:50%;}
-.timepicker .table-condensed > div div:nth-child(8n) { top:85.9%; left:29.6%;}
-.timepicker .table-condensed > div div:nth-child(9n) { top:70.8%; left:14.8%;}
-.timepicker .table-condensed > div div:nth-child(10n) { top:50%; left:9.3%;}
-.timepicker .table-condensed > div div:nth-child(11n) { top:30.1%; left:14.7%;}
-.timepicker .table-condensed > div div:nth-child(12n) { top:14.8%; left:29.6%;}
-
-
-.timepicker .table-condensed > div div:nth-child(13n) { top:9.3%; left:50%;}
-.timepicker .table-condensed > div div:nth-child(14n) { top:25.4%; left:64.6%;}
-.timepicker .table-condensed > div div:nth-child(15n) { top:36.2%; left:74.4%;}
-.timepicker .table-condensed > div div:nth-child(16n) { top:50%; left:78.8%;}
-.timepicker .table-condensed > div div:nth-child(17n) { top:64.8%; left:74.9%;}
-.timepicker .table-condensed > div div:nth-child(18n) { top:75.4%; left:65%;}
-.timepicker .table-condensed > div div:nth-child(19n) { top:79.2%; left:50%;}
-.timepicker .table-condensed > div div:nth-child(20n) { top:75.2%; left:35.6%;}
-.timepicker .table-condensed > div div:nth-child(21n) { top:64.8%; left:25.2%;}
-.timepicker .table-condensed > div div:nth-child(22n) { top:50%; left:21.8%;}
-.timepicker .table-condensed > div div:nth-child(23n) { top:36.2%; left:25.5%;}
-.timepicker .table-condensed > div div:nth-child(24n) { top:25.6%; left:35.6%;}
-
-
-.timepicker .table-condensed > div div.second:first-child,
-.timepicker .table-condensed > div div.minute:first-child { top:9.3%; left:50%; }
-*/
-/**************************/
-
-.timepicker .table-condensed > div .position-0 { top:21.6%; left:50%;}
-.timepicker.tHours .table-condensed > div div:first-child { top:9.3%; left:50%; }
-
-.timepicker .table-condensed > div .position-1 { top:14.8%; left:70.8%;}
-.timepicker .table-condensed > div .position-2 { top:30.1%; left:85.4%;}
-.timepicker .table-condensed > div .position-3 { top:50%; left:91.3%;}
-.timepicker .table-condensed > div .position-4 { top:71%; left:85.7%;}
-.timepicker .table-condensed > div .position-5 { top:86%; left:70.8%;}
-.timepicker .table-condensed > div .position-6 { top:91.4%; left:50%;}
-.timepicker .table-condensed > div .position-7 { top:85.9%; left:29.6%;}
-.timepicker .table-condensed > div .position-8 { top:70.8%; left:14.8%;}
-.timepicker .table-condensed > div .position-9 { top:50%; left:9.3%;}
-.timepicker .table-condensed > div .position-10 { top:30.1%; left:14.7%;}
-.timepicker .table-condensed > div .position-11 { top:14.8%; left:29.6%;}
-
-
-.timepicker .table-condensed > div .position-12 { top:9.3%; left:50%;}
-.timepicker .table-condensed > div .position-13 { top:25.4%; left:64.6%;}
-.timepicker .table-condensed > div .position-14 { top:36.2%; left:74.4%;}
-.timepicker .table-condensed > div .position-15 { top:50%; left:78.8%;}
-.timepicker .table-condensed > div .position-16 { top:64.8%; left:74.9%;}
-.timepicker .table-condensed > div .position-17 { top:75.4%; left:65%;}
-.timepicker .table-condensed > div .position-18 { top:79.2%; left:50%;}
-.timepicker .table-condensed > div .position-19 { top:75.2%; left:35.6%;}
-.timepicker .table-condensed > div .position-20 { top:64.8%; left:25.2%;}
-.timepicker .table-condensed > div .position-21 { top:50%; left:21.8%;}
-.timepicker .table-condensed > div .position-22 { top:36.2%; left:25.5%;}
-.timepicker .table-condensed > div .position-23 { top:25.6%; left:35.6%;}
-
-
-.timepicker .table-condensed > div div.second:first-child,
-.timepicker .table-condensed > div div.minute:first-child { top:9.3%; left:50%; }
-
-
-.pmd-time::after{ font-family:"Material icons"; content:"\E192";}
-.pmd-today::after{ font-family:"Material icons"; content:"\E916";}
-.pmd-keyboard-arrow-up::after{font-family:"Material icons"; content:"\E192";}
-.pmd-keyboard-arrow-down::after{font-family:"Material icons"; content:"\E192";}
-.pmd-keyboard-arrow-right::after{font-family:"Material icons"; content:"\E315";}
-.pmd-keyboard-arrow-left::after{font-family:"Material icons"; content:"\E314";}
+/*# sourceMappingURL=pmd-datetimepicker.css.map */

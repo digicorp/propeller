@@ -1,0 +1,17 @@
+@mixin popover-variant($background, $border, $color) {
+	color:#ffffff; 
+	background-color: $background; 
+	border-color: $border;
+	&.left > .arrow:after { 
+		border-left-color:$background;
+	}
+	&.right > .arrow:after { 
+		border-right-color:$background;
+	}
+	&.top > .arrow:after { 
+		border-top-color:$background;
+	}
+	&.bottom > .arrow:after { 
+		border-bottom-color:$background;
+	}
+}

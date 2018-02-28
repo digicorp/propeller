@@ -1,0 +1,11 @@
+/*!
+ * Propeller v1.3.0 (http://propeller.in): popover.css
+ * Copyright 2016-2018 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+@each $color, $value in $theme-colors {
+	.popover.#{$color} {
+		@include popover-variant($value, theme-color-level($color, $alert-border-level), $value);
+	 }
+}

@@ -1,0 +1,124 @@
+/*!
+ * Propeller v1.3.0 (http://propeller.in/): card.css
+ * Copyright 2016-2018 Digicorp, Inc
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+.pmd-card {
+  padding: 1px 0;
+  margin-bottom: $card-gutter-width;
+  background-color: $card-bg;
+  @include border-radius($card-border-radius);
+  @include box-shadow-depth(1);
+  .form-horizontal {
+    .form-group {
+      margin-right: inherit;
+      margin-left: inherit;
+    }
+  }
+}
+.pmd-card-body {
+  padding-right: $card-spacer;
+  padding-left: $card-spacer;
+  margin-top: $card-spacer;
+  margin-bottom: $card-spacer;
+  color: $card-body-color;
+}
+.pmd-card-title {
+  padding: $card-spacer $card-spacer 0 $card-spacer;
+  margin-bottom: $card-spacer;
+  border-bottom: 1px solid transparent;
+  @include border-top-radius($card-border-radius);
+  .dropdown {
+    .dropdown-toggle {
+      color: inherit;
+    }
+  }
+}
+.pmd-card-title-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: inherit;
+}
+h2.pmd-card-title-text {
+  margin-bottom: 2px;
+  font-size: $card-title-font-size;
+  font-weight: $card-title-font-weight;
+}
+
+.pmd-card-subtitle-text {
+  margin-bottom: 0;
+  font-size: $card-subtitle-font-size;
+  line-height: $card-subtitle-line-height;
+  color: $card-subtitle-color;
+}
+
+.pmd-card-footer {
+  display: table;
+  width: 100%;
+  padding: $card-spacer/2 $card-spacer;
+  content: "";
+}
+
+.pmd-card-actions {
+	padding: $card-actions-spacer-y $card-actions-spacer-x;
+	.btn {
+		margin-right: $card-actions-spacer-x;
+		margin-bottom: $card-actions-spacer-y;
+		margin-left: $card-actions-spacer-x;
+		min-width: inherit;
+//		padding: 10px 8px;
+
+		&:first-child {
+		  margin-left: $card-actions-btn-spacer-x;
+		}
+		
+		&:last-child {
+		  margin-right: $card-actions-btn-spacer-x;
+		}
+		
+		&.pmd-btn-flat {
+			margin-right: $card-actions-btn-flat-spacer-x;
+			margin-bottom: 0;
+			margin-left: $card-actions-btn-flat-spacer-x;
+		}
+		&.pmd-btn-fab {
+			padding: 0;
+		}
+	}
+}
+
+/* Card Media Action */
+.pmd-card-media-inline {
+	.pmd-card-media {
+		padding-right: $card-spacer;
+		padding-left: $card-spacer;
+		margin-top: $card-spacer;
+		h2.pmd-card-title-text {
+			margin-top: $card-media-spacer-y;
+		}
+	}
+}
+
+.pmd-card-footer-no-border {
+  padding-top: 0;
+  border-color: transparent;
+}
+
+.pmd-card-list {
+  padding-top: $card-list-spacer-y;
+  padding-bottom: $card-list-spacer-y;
+  background-color: $card-list-bg;
+}
+
+/* Card inverse*/
+.pmd-card-inverse {
+	color: $card-inverse-color;
+	background-color: $card-inverse-bg;
+	.pmd-card-body {
+		color: $card-inverse-body-color;
+	}
+	.pmd-card-subtitle-text {
+		color: $card-inverse-subtitle-color;
+	}
+}

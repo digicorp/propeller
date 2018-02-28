@@ -1,0 +1,122 @@
+/*!
+ * Propeller v1.3.0 (http://propeller.in): tab.css
+ * Copyright 2016-2018 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+.pmd-tabs{ 
+	position:relative;
+	@media (max-width: $media-xs) {
+		overflow-x: auto; 
+		overflow-y: hidden;
+	}
+	.nav-tabs {
+		border-bottom:none;
+		&.nav-justified {
+			> li > a {
+				border:none;
+				border-radius:0;
+			}
+			> .active {
+				> a,
+				> a:hover,
+				> a:focus {
+					border:none;
+				}
+			}
+		}
+		> li.active {
+			> a,
+			> a:hover,
+			> a:focus {
+				color:$nav-tabs-link-active-color;
+				cursor:default;
+				background-color:$nav-tabs-link-active-bg;
+				border:none;
+				border-bottom-color: transparent;
+				opacity:1;
+			}
+		}
+		> li {
+			margin-bottom: 0;
+			> a {
+				padding:$nav-tabs-link-padding-top $nav-tabs-link-padding-x $nav-tabs-link-padding-bottom; 
+				color:$nav-tabs-link-color; 
+				font-size:$nav-tabs-link-font-size;
+				font-weight:$nav-tabs-link-font-weight;
+				margin-right:0;
+				line-height:1;
+				border:none;
+				border-radius:0;
+				text-transform:uppercase;
+				&:hover,
+				&:focus {
+					border-color:transparent;
+					background-color:transparent;
+				}
+			}
+		}
+	}
+	.pmd-tab-active-bar {
+		position: absolute;
+		bottom: 0;
+		width: 25%; 
+		height: 3px; 
+		background: $nav-tabs-link-active-bar-bg;
+		@include transition($transition-base);
+	}
+}
+.pmd-tabs-bg {
+	background-color:$nav-tabs-dark-bg;
+	.nav-tabs {
+		> li {
+			> a {
+				color:$nav-tabs-dark-link-color;
+			}
+			.dropdown-menu a {
+				color: $dropdown-link-color;
+			}
+		}
+		> li.active {
+			> a,
+			> a:hover,
+			> a:focus {
+				color:$nav-tabs-dark-link-active-color;
+				background-color:$nav-tabs-link-active-bg;
+			}
+		}
+	}
+	.pmd-tabs-scroll-right,
+	.pmd-tabs-scroll-left {
+		background-color:$nav-tabs-dark-scroll-arrow-bg;
+		color:$nav-tabs-dark-scroll-arrow-color;
+	}
+}
+.pmd-tabs-scroll-container {
+	display: block;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.pmd-tabs-scroll-right {
+	float: right;
+	right:0;
+	top:0;
+}
+.pmd-tabs-scroll-left {
+	float: left;
+	left:0;
+}
+.pmd-tabs-scroll-right, 
+.pmd-tabs-scroll-left{
+	position:absolute; 
+	z-index:99;
+	text-align: center;
+	cursor: pointer;
+	display: none;
+	white-space: no-wrap;
+	vertical-align: middle;
+	padding:$nav-tabs-scroll-arrow-padding-top $nav-tabs-scroll-arrow-padding-x $nav-tabs-scroll-arrow-padding-bottom;
+	background-color:$nav-tabs-scroll-arrow-bg;
+	color:$nav-tabs-scroll-arrow-color;
+}

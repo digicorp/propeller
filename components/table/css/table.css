@@ -1,255 +1,504 @@
-
 /*!
- * Propeller v1.2.0 (http://propeller.in): table.css
+ * Propeller v1.3.0 (http://propeller.in): table.css
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
-
-.table { width: 100%; max-width: 100%; margin-bottom: 1rem;}
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
 .table > thead > tr > th,
 .table > tbody > tr > th,
 .table > tfoot > tr > th,
 .table > thead > tr > td,
 .table > tbody > tr > td,
-.table > tfoot > tr > td { padding: .75rem; line-height: 1.5; vertical-align: top; border-top: 1px solid #eceeef;}
+.table > tfoot > tr > td {
+  padding: 0.75rem;
+  line-height: 1.5;
+  vertical-align: top;
+  border-top: 1px solid #e9ecef;
+}
 
-.pmd-table.table thead th { vertical-align: bottom; border-bottom: 2px solid #eceeef;}
-.pmd-table.table tbody + tbody { border-top: 2px solid #eceeef; }
-.pmd-table.table .table { background-color: #fff;}
-
+.pmd-table.table .table {
+  background-color: #fff;
+}
+.pmd-table.table thead th {
+  vertical-align: bottom;
+  border-bottom: 2px solid #e9ecef;
+}
+.pmd-table.table tbody + tbody {
+  border-top: 2px solid #e9ecef;
+}
 .pmd-table.table-sm th,
-.pmd-table.table-sm td { padding: .3rem; }
+.pmd-table.table-sm td {
+  padding: 0.25rem;
+}
 
-.table-bordered { border: 1px solid #eceeef; }
-
+.table-bordered {
+  border: 1px solid #e9ecef;
+}
 .table-bordered th,
-.table-bordered td { border: 1px solid #eceeef }
-
+.table-bordered td {
+  border: 1px solid #e9ecef;
+}
 .table-bordered thead th,
-.table-bordered thead td { border-bottom-width: 2px; }
+.table-bordered thead td {
+  border-bottom-width: 2px;
+}
 
-.table-striped tbody tr:nth-of-type(odd) { background-color: #f9f9f9; }
+.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
 
-.table-hover tbody tr:hover { background-color: #f5f5f5; }
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
 
-.table-active,
-.table-active > th,
-.table-active > td { background-color: #f5f5f5; }
+.table-default,
+.table-default > th,
+.table-default > td {
+  background-color: white;
+}
 
-.table-hover .table-active:hover { background-color: #e8e8e8;}
+.table-hover .table-default:hover {
+  background-color: #f2f2f2;
+}
+.table-hover .table-default:hover > td,
+.table-hover .table-default:hover > th {
+  background-color: #f2f2f2;
+}
 
-.table-hover .table-active:hover > td,
-.table-hover .table-active:hover > th { background-color: #e8e8e8;}
+.table-primary,
+.table-primary > th,
+.table-primary > td {
+  background-color: #d9e7fd;
+}
+
+.table-hover .table-primary:hover {
+  background-color: #c1d8fc;
+}
+.table-hover .table-primary:hover > td,
+.table-hover .table-primary:hover > th {
+  background-color: #c1d8fc;
+}
+
+.table-secondary,
+.table-secondary > th,
+.table-secondary > td {
+  background-color: #fff3cd;
+}
+
+.table-hover .table-secondary:hover {
+  background-color: #ffedb4;
+}
+.table-hover .table-secondary:hover > td,
+.table-hover .table-secondary:hover > th {
+  background-color: #ffedb4;
+}
 
 .table-success,
 .table-success > th,
-.table-success > td { background-color: #dff0d8;}
+.table-success > td {
+  background-color: #d3ebd3;
+}
 
-.table-hover .table-success:hover { background-color: #d0e9c6;}
-
+.table-hover .table-success:hover {
+  background-color: #c1e3c1;
+}
 .table-hover .table-success:hover > td,
-.table-hover .table-success:hover > th { background-color: #d0e9c6;}
+.table-hover .table-success:hover > th {
+  background-color: #c1e3c1;
+}
 
 .table-info,
 .table-info > th,
-.table-info > td { background-color: #d9edf7; }
+.table-info > td {
+  background-color: #cdeefd;
+}
 
-.table-hover .table-info:hover { background-color: #c4e3f3;}
-
+.table-hover .table-info:hover {
+  background-color: #b4e6fc;
+}
 .table-hover .table-info:hover > td,
-.table-hover .table-info:hover > th { background-color: #c4e3f3; }
+.table-hover .table-info:hover > th {
+  background-color: #b4e6fc;
+}
 
 .table-warning,
 .table-warning > th,
-.table-warning > td { background-color: #fcf8e3;}
+.table-warning > td {
+  background-color: #fff3cd;
+}
 
-.table-hover .table-warning:hover { background-color: #faf2cc;}
-
+.table-hover .table-warning:hover {
+  background-color: #ffedb4;
+}
 .table-hover .table-warning:hover > td,
-.table-hover .table-warning:hover > th { background-color: #faf2cc;}
+.table-hover .table-warning:hover > th {
+  background-color: #ffedb4;
+}
 
 .table-danger,
 .table-danger > th,
-.table-danger > td { background-color: #f2dede;}
+.table-danger > td {
+  background-color: #ffddd3;
+}
 
-.table-hover .table-danger:hover { background-color: #ebcccc;}
-
+.table-hover .table-danger:hover {
+  background-color: #ffc9ba;
+}
 .table-hover .table-danger:hover > td,
-.table-hover .table-danger:hover > th { background-color: #ebcccc;}
+.table-hover .table-danger:hover > th {
+  background-color: #ffc9ba;
+}
 
-.table-responsive { display: block; width: 100%; overflow-x: auto;}
+.table-light,
+.table-light > th,
+.table-light > td {
+  background-color: #fefefe;
+}
 
-.thead-inverse th { color: #fff; background-color: #373a3c;}
+.table-hover .table-light:hover {
+  background-color: #f1f1f1;
+}
+.table-hover .table-light:hover > td,
+.table-hover .table-light:hover > th {
+  background-color: #f1f1f1;
+}
 
-.thead-default th { color: #55595c; background-color: #eceeef;}
+.table-dark,
+.table-dark > th,
+.table-dark > td {
+  background-color: #d6d8d9;
+}
 
-.table-inverse { color: #eceeef; background-color: #373a3c;}
-.table-inverse.table-striped tbody tr:nth-of-type(odd) { background:rgba(255,255,255,0.02);}
+.table-hover .table-dark:hover {
+  background-color: #c9cbcd;
+}
+.table-hover .table-dark:hover > td,
+.table-hover .table-dark:hover > th {
+  background-color: #c9cbcd;
+}
 
+.table-error,
+.table-error > th,
+.table-error > td {
+  background-color: #ffddd3;
+}
+
+.table-hover .table-error:hover {
+  background-color: #ffc9ba;
+}
+.table-hover .table-error:hover > td,
+.table-hover .table-error:hover > th {
+  background-color: #ffc9ba;
+}
+
+.table-inverse,
+.table-inverse > th,
+.table-inverse > td {
+  background-color: #d6d8d9;
+}
+
+.table-hover .table-inverse:hover {
+  background-color: #c9cbcd;
+}
+.table-hover .table-inverse:hover > td,
+.table-hover .table-inverse:hover > th {
+  background-color: #c9cbcd;
+}
+
+.table-information,
+.table-information > th,
+.table-information > td {
+  background-color: #cdeefd;
+}
+
+.table-hover .table-information:hover {
+  background-color: #b4e6fc;
+}
+.table-hover .table-information:hover > td,
+.table-hover .table-information:hover > th {
+  background-color: #b4e6fc;
+}
+
+.table-active,
+.table-active > th,
+.table-active > td {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-hover .table-active:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+.table-hover .table-active:hover > td,
+.table-hover .table-active:hover > th {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-inverse {
+  color: #f8f9fa;
+  background-color: #333333;
+}
+.table-inverse.table-bordered {
+  border: 0;
+}
+.table-inverse.table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
 .table-inverse.table-hover tbody tr:hover,
-.table-inverse.table-hover tbody tr:nth-of-type(odd):hover { background:rgba(255,255,255,0.04); cursor:pointer;}
-
-.table-inverse.table-bordered { border: 0;}
+.table-inverse.table-hover tbody tr:nth-of-type(odd):hover {
+  background: rgba(255, 255, 255, 0.075);
+}
 
 .table.table-inverse > thead > tr > th,
-.table.table-inverse > tbody > tr > th,
-.table.table-inverse > tfoot > tr > th,
 .table.table-inverse > thead > tr > td,
+.table.table-inverse > tbody > tr > th,
 .table.table-inverse > tbody > tr > td,
-.table.table-inverse > tfoot > tr > td { border-color: #55595c;}
+.table.table-inverse > tfoot > tr > th,
+.table.table-inverse > tfoot > tr > td {
+  border-color: #464646;
+}
 
-.table-reflow thead { float: left;}
+.table-reflow thead {
+  float: left;
+}
+.table-reflow tbody {
+  display: block;
+  white-space: nowrap;
+}
 
-.table-reflow tbody { display: block; white-space: nowrap;}
-
+.table.table-reflow tr {
+  float: left;
+}
 .table.table-reflow > thead > tr > th,
-.table.table-reflow > tbody > tr > th,
-.table.table-reflow > tfoot > tr > th,
 .table.table-reflow > thead > tr > td,
+.table.table-reflow > tbody > tr > th,
 .table.table-reflow > tbody > tr > td,
-.table.table-reflow > tfoot > tr > td{ border-top: 1px solid #eceeef; border-left: 1px solid #eceeef;}
-
+.table.table-reflow > tfoot > tr > th,
+.table.table-reflow > tfoot > tr > td {
+  border-top: 1px solid #e9ecef;
+  border-left: 1px solid #e9ecef;
+  display: block !important;
+  border: 1px solid #e9ecef;
+}
 .table.table-reflow > thead > tr > th:last-child,
-.table.table-reflow > tbody > tr > th:last-child,
-.table.table-reflow > tfoot > tr > th:last-child,
 .table.table-reflow > thead > tr > td:last-child,
+.table.table-reflow > tbody > tr > th:last-child,
 .table.table-reflow > tbody > tr > td:last-child,
-.table.table-reflow > tfoot > tr > td:last-child { border-right: 1px solid #eceeef;}
+.table.table-reflow > tfoot > tr > th:last-child,
+.table.table-reflow > tfoot > tr > td:last-child {
+  border-right: 1px solid #e9ecef;
+}
+.table.table-reflow thead:last-child tr:last-child > th,
+.table.table-reflow thead:last-child tr:last-child > td,
+.table.table-reflow tbody:last-child tr:last-child > th,
+.table.table-reflow tbody:last-child tr:last-child > td,
+.table.table-reflow tfoot:last-child tr:last-child > th,
+.table.table-reflow tfoot:last-child tr:last-child > td {
+  border-bottom: 1px solid #e9ecef;
+}
 
-.table-reflow thead:last-child tr:last-child th,
-.table-reflow thead:last-child tr:last-child td,
-.table-reflow tbody:last-child tr:last-child th,
-.table-reflow tbody:last-child tr:last-child td,
-.table-reflow tfoot:last-child tr:last-child th,
-.table-reflow tfoot:last-child tr:last-child td { border-bottom: 1px solid #eceeef;}
-
-.table-reflow tr { float: left;}
-
-.table.table-reflow > thead > tr > th,
-.table.table-reflow > tbody > tr > th,
-.table.table-reflow > tfoot > tr > th,
-.table.table-reflow > thead > tr > td,
-.table.table-reflow > tbody > tr > td,
-.table.table-reflow > tfoot > tr > td { display: block !important; border: 1px solid #eceeef;}
-
-
-/* --------------------------------------------------------------------------
-Propeller Table
----------------------------------------------------------------------------*/
-
-.pmd-table.table > thead > tr > th,
-.pmd-table.table > tbody > tr > th,
-.pmd-table.table > tfoot > tr > th,
-.pmd-table.table > thead > tr > td,
-.pmd-table.table > tbody > tr > td,
-.pmd-table.table > tfoot > tr > td{ vertical-align:middle;}
-.pmd-table-card .pmd-table.table { margin-bottom:0;}
 .pmd-table.table > thead > tr,
 .pmd-table.table > tbody > tr,
-.pmd-table.table > tfoot > tr { transition: all 0.3s ease;}
+.pmd-table.table > tfoot > tr {
+  transition: all 0.2s ease-in-out;
+}
+.pmd-table.table > thead > tr > th,
+.pmd-table.table > thead > tr > td,
+.pmd-table.table > tbody > tr > th,
+.pmd-table.table > tbody > tr > td,
+.pmd-table.table > tfoot > tr > th,
+.pmd-table.table > tfoot > tr > td {
+  vertical-align: middle;
+  text-align: left;
+  transition: all 0.2s ease-in-out;
+}
 .pmd-table.table > thead > tr > th,
 .pmd-table.table > tbody > tr > th,
-.pmd-table.table > tfoot > tr > th,
-.pmd-table.table > thead > tr > td,
-.pmd-table.table > tbody > tr > td,
-.pmd-table.table > tfoot > tr > td { text-align: left; transition: all 0.3s ease;}
-.pmd-table.table > thead > tr > th {font-weight: 400; color:rgba(0, 0, 0, 0.54); border-top:none; border-bottom-width: 1px; font-size:0.8rem; line-height: 1.5;}
+.pmd-table.table > tfoot > tr > th {
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.54);
+  border-top: none;
+  border-bottom-width: 1px;
+  font-size: 0.8rem;
+}
+.pmd-table.table-hover tbody tr:hover {
+  background-color: rgba(0, 0, 0, 0.075);
+}
+.pmd-table .table-bordered th,
+.pmd-table .table-bordered td {
+  border: none;
+  border-top: 1px solid #e9ecef;
+}
 
-
-/* -- Table Hover -------------- */
-.pmd-table.table-hover tbody tr:hover{background-color: #eeeeee;}
-/* -- Inverse Table Hover ------ */
-.pmd-table.table.table-inverse > thead > tr > th {color:rgba(255, 255, 255, 0.54);}
-.pmd-table.table-striped.table-inverse tbody tr:nth-of-type(odd){background-color:#323638;}
-.pmd-table.table-hover.table-inverse tbody tr:hover{background-color: #404446;}
-/* -- Table in card-------------- */
-.table-heading { min-height:64px; border-bottom:1px solid #ddd; padding:4px 24px 4px 24px;}
-.table-footer{ padding: 8px 24px 8px 24px; border-top: 1px solid #ddd; display:inline-block; width:100%;}
+.pmd-table.table-inverse > thead > tr > th {
+  color: rgba(255, 255, 255, 0.54);
+}
+.pmd-table.table-striped.table-inverse tbody tr:nth-of-type(odd) {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+.pmd-table.table-hover.table-inverse tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+}
 .pmd-table.table-bordered .table-heading,
-.pmd-table.table-bordered .table-footer{border: none;}
-.shoarting{ margin-left:6px;}
-
-@media screen and (max-width: 768px) {
-
-/* -------------------------------------
-Table Card
---------------------------------------*/
-.pmd-table-card.pmd-card-main{ background-color: transparent; box-shadow:none;}
-.pmd-table-card .table.pmd-table thead,
-.pmd-table-card .table.pmd-table tfoot { display: none;}
-.pmd-table-card .table.pmd-table tbody {display: block;}
-.pmd-table-card .table.pmd-table tbody tr { display: block; border-radius: 2px; margin-bottom:1.25rem; box-shadow:0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24)}
-.pmd-table-card .table.pmd-table tbody tr td { background-color: #ffffff; display: block; vertical-align: middle; text-align: right;}
-.pmd-table-card .table.pmd-table tbody tr td[data-title]:before { content: attr(data-title); float: left; font-size: inherit; font-weight: 400; color: #757575;}
-
-.pmd-table-card.shadow-z-1 { box-shadow: none;}
-.pmd-table-card.shadow-z-1 .table tbody tr {border: none; box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);}
-
-/* -------------------------------------
-Bordered Table Card */
-.pmd-table.table-bordered th,
-.pmd-table.table-bordered td{border:none; border-top: 1px solid #eceeef;}
-
-/* -------------------------------------
-Striped Table Card */
-.pmd-table-card > .pmd-table.table-striped > tbody > tr > td,
-.pmd-table-card > .pmd-table.table-striped > tbody > tr:nth-child(odd) { background-color: #ffffff;}
-.pmd-table-card > .pmd-table.table-striped > tbody > tr > td:nth-child(odd) { background-color: #f9f9f9; }
-
-/* -------------------------------------
-Table Card Hover
---------------------------------------*/
-.pmd-table-card > .table-hover > tbody > tr > td:hover { background-color:#eeeeee;}
-
-/* -------------------------------------
-Table Card Inverse
---------------------------------------*/
-.pmd-table-card > .pmd-table.table-inverse > tbody > tr > td { background-color: #373a3c;}
-.pmd-table-card > .pmd-table.table-inverse > tbody > tr > td[data-title]:before { color:#757575;}
-.pmd-table-card > .pmd-table.table-hover.table-inverse > tbody > tr > td:hover{background-color: #000;}
-.pmd-table-card > .pmd-table.table-striped.table-inverse > tbody > tr > td,
-.pmd-table-card > .pmd-table.table-striped.table-inverse > tbody > tr:nth-child(odd) { background-color: #252729;}
-.pmd-table-card > .pmd-table.table-striped.table-inverse > tbody > tr > td:nth-child(odd) { background-color:#373a3c; }
-.pmd-table.table-bordered th,
-.pmd-table.table-bordered.table-inverse td{border-color:#55595c;}
-.pmd-table-card.pmd-z-depth{ box-shadow:none; background-color:transparent;}
+.pmd-table.table-bordered .table-footer {
+  border: none;
 }
 
-/* -------------------------------------
-Table Themes
---------------------------------------*/
-.pmd-table.table-striped.table-blue > tbody > tr:nth-child(odd) > td,
-.pmd-table.table-striped.table-blue > tbody > tr:nth-child(odd) > th { background-color: #e7e9fd;}
-.pmd-table.table-hover.table-blue > tbody > tr:hover > td,
-.pmd-table.table-hover.table-blue > tbody > tr:hover > th { background-color: #d0d9ff;}
-@media screen and (max-width: 768px) {
-.pmd-table-card .pmd-table.table-striped.table-blue > tbody > tr > td, .pmd-table-card .table-striped.table-mc-blue > tbody > tr:nth-child(odd) { background-color:#ffffff;}
-.pmd-table-card .pmd-table.table-striped.table-blue > tbody > tr > td:nth-child(odd) { background-color: #e7e9fd;}
-.pmd-table-card .pmd-table.table-hover.table-blue > tbody > tr > td:hover {background-color: #d0d9ff;}
+/* -- Table in card-------------- */
+.table-heading {
+  min-height: 64px;
+  border-bottom: 1px solid #ddd;
+  padding: 4px 24px 4px 24px;
 }
 
+.table-footer {
+  padding: 8px 24px 8px 24px;
+  border-top: 1px solid #ddd;
+  display: inline-block;
+  width: 100%;
+}
+
+.shoarting {
+  margin-left: 6px;
+}
+
+@media screen and (max-width: 768px) {
+  /* -------------------------------------
+     Table Card
+  --------------------------------------*/
+  .pmd-table-card .pmd-table .table {
+    margin-bottom: 0;
+  }
+  .pmd-table-card.pmd-card-main {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .pmd-table-card .table.pmd-table thead,
+  .pmd-table-card .table.pmd-table tfoot {
+    display: none;
+  }
+  .pmd-table-card .table.pmd-table tbody {
+    display: block;
+  }
+  .pmd-table-card .table.pmd-table tbody tr {
+    display: block;
+    border-radius: 0.125rem;
+    margin-bottom: 1.25rem;
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  }
+  .pmd-table-card .table.pmd-table tbody tr td {
+    background-color: #fff;
+    display: block;
+    vertical-align: middle;
+    text-align: right;
+  }
+  .pmd-table-card .table.pmd-table tbody tr td[data-title]:before {
+    content: attr(data-title);
+    float: left;
+    font-size: inherit;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.54);
+  }
+  .pmd-table-card > .pmd-table.table-striped > tbody > tr > td, .pmd-table-card > .pmd-table.table-striped > tbody > tr:nth-child(odd) {
+    background-color: #fff;
+  }
+  .pmd-table-card > .pmd-table.table-striped > tbody > tr > td:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .pmd-table-card > .pmd-table.table-inverse > tbody > tr > td[data-title]:before {
+    color: rgba(255, 255, 255, 0.54);
+  }
+  .pmd-table-card > .pmd-table.table-hover.table-inverse > tbody > tr > td:hover {
+    background-color: rgba(255, 255, 255, 0.075);
+  }
+  .pmd-table-card > .pmd-table.table-striped.table-inverse > tbody > tr > td, .pmd-table-card > .pmd-table.table-striped.table-inverse > tbody > tr:nth-child(odd) {
+    background-color: #333333;
+  }
+  .pmd-table-card > .pmd-table.table-striped.table-inverse > tbody > tr > td:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+  .pmd-table-card > .table-hover > tbody > tr > td:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+  .pmd-table-card.pmd-z-depth {
+    background-color: transparent;
+    box-shadow: none;
+  }
+
+  .pmd-table.table-bordered th, .pmd-table.table-bordered.table-inverse td {
+    border-color: #464646;
+  }
+}
 /* -------------------------------------
 Child Table
 --------------------------------------*/
-.pmd-table .child-table{ background-color:#f9f9f9;}
-.pmd-table .child-table > td{ padding:0 !important;}
-.pmd-table .child-table > td .table > thead > tr{ background-color: #fff;}
-.pmd-table .child-table .table-sm th, .child-table .table-sm td{padding: 0.3rem 0.75rem;}
-.pmd-table .child-table .pmd-table {margin-bottom:0;}
+.pmd-table {
+  margin-bottom: 0;
+}
+.pmd-table .child-table {
+  background-color: #fff;
+}
+.pmd-table .child-table > td {
+  padding: 0 !important;
+}
+.pmd-table .child-table > td .table > thead > tr {
+  background-color: #fff;
+}
+.pmd-table .child-table .table-sm th,
+.pmd-table .child-table .table-sm td {
+  padding: 0.25rem 0.75rem;
+}
 @media screen and (max-width: 768px) {
-.pmd-table .child-table{ margin-top:-20px;}
+  .pmd-table .child-table {
+    margin-top: -20px;
+  }
 }
 
 /* -------------------------------------
 Ttable Reflow
 --------------------------------------*/
-.pmd-table.table-reflow{display: block; overflow-x:scroll;}
-.pmd-table.table-reflow thead, .table-reflow tr{ display:table-cell; vertical-align:top;}
-.pmd-table.table-reflow thead{ position:absolute;}
-.pmd-table.table-reflow tbody{ margin-left:130px;}
-.pmd-table.table-reflow tr, .table-reflow thead{ float:none;}
-.pmd-table.table-reflow > thead > tr > th{ font-size:14px;  white-space: nowrap; text-overflow: ellipsis; overflow:hidden; width: 131px;}
-.pmd-table.table-reflow tr{ width:130px; background-color:#fff;}
-.pmd-table.table-reflow > tbody > tr > td { border:none;  border-left: 1px solid #eceeef;  border-bottom: 1px solid #eceeef; }
-.pmd-table.table-reflow > thead > tr > th,
-.pmd-table.table-reflow > thead > tr > th { line-height:24px;}
+.pmd-table.table-reflow {
+  display: block;
+  overflow-x: scroll;
+}
+.pmd-table.table-reflow thead,
+.pmd-table.table-reflow tr {
+  display: table-cell;
+  vertical-align: top;
+  float: none;
+}
+.pmd-table.table-reflow tr {
+  width: 130px;
+  background-color: #fff;
+}
+.pmd-table.table-reflow thead {
+  position: absolute;
+}
+.pmd-table.table-reflow tbody {
+  margin-left: 130px;
+}
+.pmd-table.table-reflow > thead > tr > th {
+  font-size: 0.875rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 131px;
+}
+.pmd-table.table-reflow > tbody > tr > td {
+  border: none;
+  border-left: 1px solid #e9ecef;
+  border-bottom: 1px solid #e9ecef;
+}
+
+/*# sourceMappingURL=table.css.map */

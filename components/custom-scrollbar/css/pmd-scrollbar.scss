@@ -1,0 +1,15 @@
+/*!
+ * Propeller v1.1.0 (http://propeller.in)
+ * Copyright 2016-2017 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+*/
+
+.pmd-scrollbar {
+  max-height: 200px;
+  overflow: auto;
+  position: relative;
+}
+
+.mCSB_outside + .mCSB_scrollTools {
+  right: -35px;
+}

@@ -1,0 +1,116 @@
+/*!
+ * Propeller v1.3.0 (http://propeller.in): tooltip.css
+ * Copyright 2016-2018 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+.pmd-tooltip {
+	~ .tooltip {
+		filter: alpha(opacity=0);
+		opacity: 0;
+		@include transition($tooltip-transition);
+		@include border-radius(2px);
+		&:before { 
+			background-color: $tooltip-bg; 
+			width: 0; 
+			height: 0; 
+			opacity: 1; 
+			position: absolute;  
+			z-index: -1; 
+			content:""; 	
+			left:50%;
+			@include transform-scale(0);
+			@include transition($transition-base);
+		}
+		.tooltip-arrow { 
+			display:none;
+		}
+		.tooltip-inner {
+			background-color:transparent; 
+			padding:$tooltip-padding-y $tooltip-padding-x; 
+			color: $tooltip-color; 
+			text-align: center;
+			text-decoration: none;
+			font-size: $tooltip-font-size;
+			font-weight: $tooltip-font-weight;
+			line-height: $tooltip-line-height;
+		}
+		
+		// tooltip Show
+		&.in {
+			filter: alpha(opacity=100); 
+			opacity:100;
+			&:before { 
+				width:100%; 
+				height:100%; 
+				left:0; 
+				opacity: 1; 
+				@include transform-scale(1);
+			}
+		}
+		// tooltip top
+		&.top {
+			&:before {
+				top:100%;
+			}
+		}
+		&.in.top {
+			margin-top:-10px;
+			&:before {
+				top:0;
+				@include transform-origin(50% 100% 0)
+			}	
+		}
+		// tooltip bottom
+		&.bottom {
+			&:before {
+				top:0;
+			}
+		}
+		&.in.bottom {
+			margin-top:10px;
+			&:before {
+				@include transform-origin(50% 0 0)
+			}	
+		}
+		// tooltip right
+		&.right {
+			&:before {
+				top:50%;
+				left:0;
+			}
+			.tooltip-arrow{
+				left: 0;
+			}
+		}
+		&.in.right {
+			margin-left:10px;
+			&:before {
+				top:0;
+				@include transform-origin(0% 50% 0)
+			}	
+		}
+		// tooltip left
+		&.left {
+			&:before {
+				top:50%; 
+				left:100%;
+			}
+			.tooltip-arrow{
+				right: 0;
+			}
+		}
+		&.in.left {
+			margin-left:-10px;
+			.tooltip-arrow{
+				right:0;
+			}
+			&:before {
+				left:0; 
+				top:0;
+				@include transform-origin(100% 50% 0)
+			}	
+		}
+	}
+}
+

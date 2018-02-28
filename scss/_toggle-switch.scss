@@ -1,0 +1,76 @@
+
+/*!
+ * Propeller v1.3.0 (http://propeller.in): toggle-switch.css
+ * Copyright 2016-2018 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+// Propeller css for toggle button
+.pmd-switch {
+	vertical-align: middle;
+	-moz-user-select: none;
+	label,
+	input,
+	.pmd-switch-label {
+		-moz-user-select: none;
+	}
+	label { 
+		cursor: pointer;
+		font-weight: 400;
+		input[type="checkbox"] {
+			height: 0; 
+			opacity: 0; 
+			width: 0; 
+			position:absolute;
+		}
+		.pmd-switch-label,
+		input[type="checkbox][disabled"] + .pmd-switch-label {
+			background-color: $toggle-switch-bar-bg; 
+			border-radius:15px; 
+			content:""; 
+			display:block; 
+			height:15px;
+			@include transition($transition-base);
+			vertical-align:middle;
+			width:30px;
+			position:relative;
+		}
+		.pmd-switch-label::after {
+			background-color: $toggle-switch-bg; 
+			border-radius: 20px; 
+			@include box-shadow-depth(1); 
+			content: ""; 
+			display: inline-block; 
+			height: 20px; 
+			left: -6px; 
+			position: absolute; 
+			top: -2px; 
+			@include transition($transition-base);
+			width: 20px;
+		}
+		input[type="checkbox][disabled"] {
+			+ .pmd-switch-label::after,
+			&:checked + .pmd-switch-label::after {
+				background-color: $toggle-switch-disabled-bg;
+			}
+		}
+		input[type="checkbox"], 
+		input[type="checkbox][disabled"] {
+			+ .pmd-switch-label:active::after {
+				@include box-shadow-depth(1);
+			}
+		}
+		input[type="checkbox"]:checked {
+			+ .pmd-switch-label::after {
+				left: 15px;
+				background-color: $toggle-switch-check-bg;
+			}
+			+ .pmd-switch-label {
+				background-color: $toggle-switch-bar-check-bg;
+			}
+			+ .pmd-switch-label:active::after {
+				@include box-shadow-depth(1);
+			}
+		}
+	}
+} 

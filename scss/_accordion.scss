@@ -1,0 +1,89 @@
+/*!
+ * Propeller v1.3.0 (http://propeller.in/): accordion.css
+ * Copyright 2016-2018 Digicorp, Inc
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+.panel-group {
+	// pmd accordion start
+	&.pmd-accordion {
+		.panel {
+			position: relative;
+			margin: $accordion-panel-margin-y $accordion-panel-margin-x;
+			border: none;
+			@include border-radius(0px);
+			@include box-shadow-depth(1);
+			@include transition($transition-base);
+			.panel-body {
+				border: none;
+			}
+			& > .panel-heading {
+				padding: 0;
+				background: none;
+				a {
+					display: block;
+					padding: $accordion-heading-padding-y $accordion-heading-padding-x;
+					line-height: $accordion-heading-line-height;
+					@include hover-focus {
+						color: inherit;
+					}
+				}
+				& + .panel-collapse  {
+				  & > .panel-body {
+					border: none;
+				  }
+				}
+			}
+			&.active {
+				.material-icons {
+					&.pmd-accordion-arrow {
+						@include transform-rotate(180deg);
+					}
+				}
+			}
+			@each $color, $value in $accordion-theme-colors {
+				&.panel-#{$color} { 
+					& > .panel-heading {
+						@include accordion-variant(theme-color-level($color, $alert-bg-level), theme-color-level($color, $alert-border-level), theme-color-level($color, $alert-color-level));
+					}
+				 }	
+			}
+		}
+	}
+
+	// pmd accordion inbox
+	&.pmd-accordion-inbox {
+		.panel {
+			&.active {
+				margin: $accordion-inbox-padding-y $accordion-inbox-padding-x;
+				@include box-shadow-depth(2);
+			}
+		}
+		@media screen and (max-width:$media-xs) {
+			.panel {
+				&.active {
+					margin: $accordion-inbox-padding-y-xs $accordion-inbox-padding-x-xs;
+				}
+			}
+		}
+	}
+	// pmd accordion nospace
+	&.pmd-accordion-nospace {
+		.panel {
+			margin: 0;
+		}
+	}
+}
+
+// actie arrow effect css
+.pmd-accordion-icon-left {
+  float: left;
+  padding-right: $accordion-icon-padding-right;
+}
+.pmd-accordion-icon-right {
+  float: right;
+  padding-left: $accordion-icon-padding-left;
+}
+.pmd-accordion-arrow {
+  float: right;
+}
