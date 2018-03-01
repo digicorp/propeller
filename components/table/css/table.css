@@ -436,7 +436,7 @@
     box-shadow: none;
   }
 
-  .pmd-table.table-bordered th, .pmd-table.table-bordered.table-inverse td {
+  .pmd-table.table-bordered.table-inverse th, .pmd-table.table-bordered.table-inverse td {
     border-color: #464646;
   }
 }
@@ -489,7 +489,7 @@ Ttable Reflow
   margin-left: 130px;
 }
 .pmd-table.table-reflow > thead > tr > th {
-  font-size: 0.875rem;
+  font-size: 1rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

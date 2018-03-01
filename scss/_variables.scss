@@ -72,11 +72,6 @@ $yiq-text-dark: $gray-900 !default;
 $yiq-text-light: $white !default;
 
 // Spacing
-//
-// Control the default styling of most Bootstrap elements by modifying these
-// variables. Mostly focused on spacing.
-// You can add more entries to the $spacers map, should you need more variation.
-
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
@@ -90,8 +85,6 @@ $spacers: (
 // Body
 $body-bg:       			  $gray-100 !default;
 $body-color:    			  $gray-900 !default;
-$body-font-size: 			  .875rem;
-$body-line-height: 			  1.6;
 
 // Links
 $link-color:            	  theme-color("primary") !default;
