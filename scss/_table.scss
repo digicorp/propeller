@@ -332,7 +332,7 @@
 	}
 	.pmd-table {
 		&.table-bordered	{
-			th,
+			&.table-inverse th,
 			&.table-inverse td {
 				border-color:$table-dark-border-color;
 			}
@@ -392,7 +392,7 @@ Ttable Reflow
 		}
 		> thead > tr {
 			> th {
-				font-size:$body-font-size;
+				font-size:$font-size-base;
 				white-space: nowrap;
 				text-overflow: ellipsis;
 				overflow:hidden; 
