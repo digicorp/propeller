@@ -189,6 +189,7 @@ module.exports = function(grunt) {
             expand: true,
             src: [
 				'components/**/*',
+				'scss/**/*',
 				'!components/*/snippets/**',
 				'!components/index.php',
 				'assets/**/*',

@@ -2488,50 +2488,55 @@ fieldset[disabled] .radio label {
   }
 }
 /* -- My Account -------------------------------- */
+.pmd-user-info > a {
+  display: block;
+  padding: .5rem .5rem;
+}
+.pmd-user-info .dropdown-menu {
+  min-width: 100%;
+}
+
 .pmd-navbar .pmd-user-info {
   margin-right: -15px;
   margin-left: 1rem;
-}
-@media (max-width: 767px) {
-  .pmd-navbar .pmd-user-info {
-    width: 100%;
-    margin-right: 0;
-    margin-left: 0;
-  }
-}
-.pmd-navbar .pmd-user-info > a {
-  display: block;
-  padding: .75rem .5rem;
-}
-@media (max-width: 767px) {
-  .pmd-navbar .pmd-user-info > a {
-    padding: .5rem 1rem;
-    color: rgba(255, 255, 255, .75);
-    background-color: #3c3c3c;
-    background-size: cover;
-  }
-  .pmd-navbar .pmd-user-info > a:hover,
-  .pmd-navbar .pmd-user-info > a :focus {
-    background-color: #3c3c3c;
-  }
-}
-.pmd-navbar .pmd-user-info .dropdown-menu {
-  min-width: 100%;
-}
-@media (max-width: 767px) {
-  .pmd-navbar .pmd-user-info .dropdown-menu {
-    position: relative;
-    border-color: #3c3c3c;
-    border-bottom: transparent solid 1px;
-    box-shadow: none;
-  }
 }
 .pmd-navbar .pmd-user-info .media-body {
   width: auto;
   height: 40px;
 }
 @media (max-width: 767px) {
-  .pmd-navbar .pmd-user-info .media-body {
+  .pmd-navbar .pmd-user-info > a {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info {
+    width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info a {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info .dropdown-menu {
+    position: relative;
+    border-color: #3c3c3c;
+    border-bottom: transparent solid 1px;
+    box-shadow: none;
+  }
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info > a {
+    color: rgba(255, 255, 255, .75);
+    background-color: #3c3c3c;
+    background-size: cover;
+  }
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info > a:hover,
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info > a :focus {
+    background-color: #3c3c3c;
+  }
+  .pmd-navbar .pmd-navbar-sidebar .pmd-user-info .media-body {
     width: 100%;
   }
 }
@@ -3138,6 +3143,7 @@ fieldset[disabled] .radio label {
   z-index: 99;
   display: none;
   padding: .75rem 1.5rem .375rem;
+  line-height: 1.7;
   color: #868e96;
   text-align: center;
   white-space: no-wrap;
@@ -3582,7 +3588,7 @@ fieldset[disabled] .radio label {
     box-shadow: none;
   }
 
-  .pmd-table.table-bordered th, .pmd-table.table-bordered.table-inverse td {
+  .pmd-table.table-bordered.table-inverse th, .pmd-table.table-bordered.table-inverse td {
     border-color: #464646;
   }
 }
@@ -3637,7 +3643,7 @@ Ttable Reflow
 .pmd-table.table-reflow > thead > tr > th {
   width: 131px;
   overflow: hidden;
-  font-size: .875rem;
+  font-size: 1rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
