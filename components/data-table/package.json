@@ -1,6 +1,6 @@
 {
   "name": "propellerkit-datatables",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Propeller’s data tables refers to a matrix of information, like an excel spreadsheet with columns, rows, and data. We have used Bootstrap Data table as base and customized it by applying material design principles to it.",
   "homepage": "http://propeller.in/",
   "author": "Digicorp, Inc",
@@ -15,7 +15,9 @@
   },
   "keywords": [
    "css",
+   "scss",
    "js",
+   "material design",
    "mobile-first",
    "responsive",
    "front-end",

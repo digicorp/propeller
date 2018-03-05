@@ -1,0 +1,35 @@
+// Fonts
+$font-family-sans-serif:       		Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace:        		"SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:             		$font-family-sans-serif !default;
+$black: 							#000000 !default;
+$white:  							#ffffff !default;
+
+// Checkbox
+$checkbox-border-width:				0.125rem !default;
+$checkbox-border-radius:			0.125rem !default;
+$checkbox-border-color:				rgba($black,.54) !default;
+$checkbox-check-size:				0.125rem !default;
+$checkbox-check-color:				#ffffff !default;
+$checkbox-checked-bg:				#4285f4 !default;
+
+// Datatable
+$datatable-control-bg:				#ffffff !default;
+$datatable-control-color:			#31b131 !default;
+
+$datatable-checkbox-border-color:	$checkbox-border-color !default;
+$datatable-checkbox-border-radius:	$checkbox-border-radius !default;
+$datatable-checkbox-border-width: 	$checkbox-border-width !default;
+$datatable-checkbox-check-color:	$checkbox-check-color !default;
+$datatable-checkbox-check-size:		$checkbox-check-size !default;
+$datatable-checkbox-checked-bg:		$checkbox-checked-bg !default;
+$datatable-checkbox-checked-border-color: $datatable-checkbox-checked-bg !default;
+
+$datatable-active-bg:			    #edf4fd !default;
+$datatable-dark-active-bg:			#313131 !default;
+$datatable-dark-checkbox-border-color: rgba($white,.54);
+
+$custom-select-inverse-bg:			rgba($black, .84) !default;
+$custom-select-inverse-color:		$white !default;
+$child-table-inverse-bg:			rgba($black, .84) !default;
+$custom-select-option-inverse-color:rgba($black, .84) !default;	

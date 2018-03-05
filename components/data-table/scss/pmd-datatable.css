@@ -335,10 +335,10 @@ div.dataTables_wrapper div.dataTables_length label {
   background: transparent;
 }
 .pmd-card-inverse .custom-select::after {
-  color: #fff;
+  color: #ffffff;
 }
 .pmd-card-inverse div.dataTables_length select {
-  color: #fff;
+  color: #ffffff;
 }
 .pmd-card-inverse div.dataTables_length select option {
   color: rgba(0, 0, 0, 0.84);
