@@ -1,0 +1,22 @@
+// Fonts
+$font-family-sans-serif:       Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace:        "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:             $font-family-sans-serif !default;
+
+// Datetimepicker
+$transition-base:        	  		all .2s ease-in-out !default;
+$black:								#000000 !default;
+$datetimepicker-info-bg:			#4285f4 !default;
+$datepicker-accordion-toggle-bg:	darken($datetimepicker-info-bg, 15%) !default;
+$datepicker-accordion-toggle-color: #ffffff !default;
+$datepicker-info-color:				#ffffff !default;
+$datepicker-bg:						#ffffff !default;
+$datetimepicker-color:				#333333 !default;
+$datetimepicker-font-size:			14px !default;
+$datetimepicker-width:				300px !default;
+$clockpicker-size: 					270px !default;
+$datetimepicker-font-family: 		$font-family-sans-serif !default;
+$timepicker-info-font-size:			2.8rem !default;
+$datepicker-info-font-size:			2rem !default;
+$clockpicker-bg:					#eceff1 !default;
+$datepicker-year-info-font-size:	1rem !default;

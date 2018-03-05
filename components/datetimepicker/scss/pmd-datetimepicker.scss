@@ -1,0 +1,989 @@
+/*!
+ * Propeller v1.2.0 (http://propeller.in)
+ * Copyright 2016-2018 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+*/
+
+// Genral style of mizins and variables
+@import "functions.scss";
+@import "variables.scss";
+@import "mixins.scss";
+
+.bootstrap-datetimepicker-widget {
+	font-family: $datetimepicker-font-family;
+	font-size: $datetimepicker-font-size;
+	line-height: 1.42857143;
+	color: $datetimepicker-color;
+	table {
+		td {
+			&.day:hover, 
+			&.hour:hover, 
+			&.minute:hover, 
+			&.second:hover {
+				background: none;
+			}
+			&.active {
+				background: none;
+				&:hover {
+					background: none;
+				}
+			}
+			span {
+				display: inline-block;
+				width: 70px;
+				height: 70px;
+				line-height: 70px;
+			}
+		}
+		th {
+			height: 32px;
+			line-height: 32px;
+			width: 32px;
+			font-weight: normal;
+			opacity: 0.74;
+			&.picker-switch {
+				width: 145px;
+				font-weight: bold;
+				color:#000;
+			}
+		}
+		td.today:before {
+			display: none;
+		}
+	}
+	.accordion-toggle {
+		text-align: center;
+		background-color:$datepicker-accordion-toggle-bg;
+		a {
+			color: $datepicker-accordion-toggle-color;
+			display: inline-block;
+			padding: 3px 0;
+			cursor: pointer;
+			&:hover {
+				background: none;
+				color: $datepicker-accordion-toggle-color;
+			}
+		}
+	}
+	.timepicker-hour, 
+	.timepicker-minute, 
+	.timepicker-second {
+		font-weight: normal;
+		font-size: 3.5rem;
+	}
+	
+	position: relative;
+	transition: none;
+	&.dropdown-menu {
+		position: absolute;
+		display: block;
+		visibility: visible;
+		opacity: 1;
+		clip: auto;
+		width: $datetimepicker-width;
+		padding: 0;
+		margin: 0;
+		&:after, 
+		&:before {
+			display: none;
+		}
+	}
+	.datepicker > div {
+		display: table;
+		width: 100%;
+	}
+}
+
+.pmd-navbar-left .bootstrap-datetimepicker-widget {
+	width: 530px;
+	.timepicker {
+		display: table;
+		width: 100%;
+		.timepicker-picker {
+			width: 45%;
+			display: table-cell;
+			vertical-align: top;
+		}
+	}
+	.datepicker {
+		.topdateinfo {
+			width: 45%;
+			display: table-cell;
+			vertical-align: top;
+		}
+	}
+	table td span {
+		margin: 5px;
+	}
+	.clockpickerseconds, 
+	.clockpickerr, 
+	.clockpickerminute {
+		margin: 20px 0;
+	}
+}
+
+.bootstrap-datetimepicker-widget {
+	.timepicker-hour, 
+	.timepicker-minute, 
+	.timepicker-second {
+		font-size: $timepicker-info-font-size;
+	}
+}
+.timepicker {
+	.uparrow, 
+	.time-separator, 
+	.timeview {
+    	font-size: 42px;
+  	}
+}
+
+/*google materail themes*/
+.topdateinfo {
+	background-color: $datetimepicker-info-bg;
+	text-align: center;
+	color: $datepicker-info-color;
+	line-height: 1.0;
+	.dayname {
+		background-color: $datetimepicker-info-bg;
+		padding: 8px 0;
+		margin-bottom: 0;
+	}
+	.monthonly {
+		font-size: 1.6rem;
+		text-transform: uppercase;
+	}
+	.dateonly {
+		font-size: 3.5rem;
+	}
+	.yearonly {
+		font-size: 1.6rem;
+		margin-bottom: 0;
+	}
+	.datetopcol {
+		padding: 16px 0;
+	}
+}
+
+.bootstrap-datetimepicker-widget {
+	table td.day span {
+		height: 32px;
+		line-height: 32px;
+		width: 32px;
+		display: inline-block;
+		margin: 0;
+	}
+	.table-condensed > {
+		thead > tr > th, 
+		tbody > tr > th, 
+		tfoot > tr > th, 
+		thead > tr > td, 
+		tbody > tr > td,
+		tfoot > tr > td {
+			padding: 0 0 0 0;
+		}
+	}
+}
+.timepicker-second, 
+.timepicker-hour, 
+.timepicker-minute {
+	cursor: pointer;
+}
+.clockpickerseconds, 
+.clockpickerr, 
+.clockpickerminute {
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	position: relative;
+	background-color: $clockpicker-bg;
+	display: inline-block;
+	margin: 24px 0 80px 0;
+}
+.clockpickerseconds .second, 
+.clockpickerr .hour, 
+.clockpickerminute .minute {
+	display: inline-block;
+	position: absolute;
+	cursor: pointer;
+}
+.clockpickerr .hour, 
+.clockpickerminute .minute {
+	&:nth-child(1) {
+		left: 45%;
+	}
+	&:nth-child(2) {
+		left: 130px;
+		top: 15px;
+	}
+	&:nth-child(3) {
+		left: 160px;
+		top: 45px;
+	}
+	&:nth-child(4) {
+		left: 175px;
+		top: 85px;
+	}
+	&:nth-child(5) {
+		left: 160px;
+		top: 130px;
+	}
+	&:nth-child(6) {
+		left: 130px;
+		top: 160px;
+	}
+	&:nth-child(7) {
+		left: 92px;
+		top: 175px;
+	}
+	&:nth-child(8) {
+		left: 50px;
+		top: 160px;
+	}
+	&:nth-child(9) {
+		left: 20px;
+		top: 130px;
+	}
+	&:nth-child(10) {
+		left: 5px;
+		top: 85px;
+	}
+	&:nth-child(11) {
+		left: 20px;
+		top: 45px;
+	}
+	&:nth-child(12) {
+		left: 50px;
+		top: 15px;
+	}
+}
+
+.ampmview {
+	width: 100%;
+	position: relative;
+	.btn {
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		min-width: inherit;
+	}
+	> div {
+		position: absolute;
+		top: 234px;
+		width: 100%;
+		left: 16px;
+	}
+	.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+		border-radius: 50%;
+	}
+}
+.amview {
+	margin-left: 30px;
+}
+.pmview {
+	margin-right: 30px;
+}
+.timeview {
+	line-height: 1;
+}
+.timepicker {
+	text-align: center;
+}
+.timepicker-picker {
+	background-color: $datetimepicker-info-bg;
+	color: $datepicker-info-color;
+	font-size: 3.5rem;
+	padding-bottom: 5px;
+}
+.ampmvalue {
+	font-size: 0.8125rem;
+}
+.timepicker-hours, 
+.ampmview, 
+.timepicker-minutes {
+	background-color: $datepicker-bg;
+}
+.uparrow, 
+.downarrow {
+	text-align: left;
+	padding-left: 42px;
+}
+.uparrow .btn, 
+.downarrow .btn {
+	width: 59px;
+	margin: 0 10px;
+}
+.bootstrap-datetimepicker-widget {
+	background-color: $datepicker-bg;
+	z-index: 999;
+	width: $datetimepicker-width;
+	@include box-shadow-depth(1);
+	table {
+		th {
+			&.prev, 
+			&.next {
+				padding-bottom: 0;
+			}
+			&.prev span, 
+			&.next span {
+				padding-top: 8px;
+				display: inline-block;
+			}
+		}
+		thead tr:first-child th:hover {
+		  	background-color: inherit;
+		}
+	}
+}
+
+/*bootstrap-datetimepicker*/
+.modal .bootstrap-datetimepicker-widget {
+	box-shadow: none;
+}
+.bootstrap-datetimepicker-widget table {
+	th {
+		text-transform: capitalize;
+		&.dow {
+			color: $datetimepicker-color;
+			line-height: 33px;
+			height: 33px;
+		}
+	}
+	td {
+		&.day {
+			height: 40px;
+			line-height: 40px;
+			width: 40px;
+			span {
+				height: 40px;
+				line-height: 40px;
+				width: 40px;
+				position: absolute;
+				z-index: -1;
+				margin: 1px 0 0 -15px;
+				@include border-radius(500px);
+				top: 0;
+				left: -1px;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+			}
+		}
+		position: relative;
+		cursor: pointer;
+	}
+}
+.topdateinfo {
+	.datetopcol {
+		padding: 0;
+		margin-bottom: 0;
+		p {
+			display: inline-block;
+			text-align: left;
+			font-size: $datepicker-info-font-size;
+			text-transform: inherit;
+			padding: 0;
+			margin: 0;
+			padding-right: 8px;
+			background-color: transparent;
+		}
+	}
+	text-align: left;
+	padding: 16px 20px;
+}
+.bootstrap-datetimepicker-widget table {
+	margin: 5px 0;
+}
+.topdateinfo .yearonly {
+	font-size: $datepicker-year-info-font-size;
+	margin-top: 0;
+	margin-bottom: 5px;
+	opacity: 0.9;
+}
+.bootstrap-datetimepicker-widget table td {
+	span {
+		@include border-radius(500px);
+	}
+	&.day, 
+	&.hour, 
+	&.minute, 
+	&.second {
+		&:hover {
+			color: #444444;
+			span{
+				background-color: #eeeeee;
+			}
+		}
+		&.active:hover {
+			span{
+				background-color: $datetimepicker-info-bg;
+			}
+		}
+		&.disabled:hover {
+			color: #777777;
+			span {
+				background: none;
+			}
+		}
+	}
+	&.active span {
+		background-color: $datetimepicker-info-bg;
+		&:hover {
+			background-color: $datetimepicker-info-bg;
+		}
+	}
+	span.active {
+		background-color: $datetimepicker-info-bg;
+	}
+	&.day.active:hover {
+		color: #fff;
+	}
+	&.active {
+		color: #fff;
+		span:hover {
+			color: #fff;
+		}
+	}
+}
+
+.datepicker-modal {
+	.datepicker {
+		padding-bottom: 30px;
+	}
+	.timepicker {
+		display: none;
+	}
+	.datepicker-tab {
+		padding: 0;
+		margin: 0;
+		display: table;
+		width: 100%;
+		background: #444444;
+		li {
+			float: left;
+			width: 50%;
+			display: table-cell;
+			vertical-align: middle;
+			a {
+				display: block;
+				font-size: 18px;
+				border-bottom: 5px solid #444444;
+				color: #b2b2b2;
+				height: 60px;
+				line-height: 60px;
+				position: relative;
+				&.active {
+					color: #fff;
+					border-color: #fff;
+					&:before {
+						content: "";
+						width: 100%;
+						z-index: 10;
+						height: 5px;
+						position: absolute;
+						left: 0;
+						bottom: -5px;
+					}
+				}
+			}
+		}
+	}
+}
+
+.timepicker {
+	.downarrow .btn, 
+	.timeview .btn,
+	.uparrow .btn {
+		display: none;
+	}
+	.uparrow {
+		display: inline-block;
+		padding-left: 0;
+	}
+	.time-separator, 
+	.timeview, 
+	.downarrow {
+		display: inline-block;
+	}
+	.downarrow {
+		padding-left: 0;
+	}
+	.uparrow, 
+	.time-separator, 
+	.timeview {
+		font-size: 50px;
+		color: #fff;
+		line-height: normal;
+	}
+	.time-separator {
+		opacity: 0.5;
+		.separator {
+			margin-top: -20px;
+		}
+	}
+	.downarrow .timepicker-second, 
+	.uparrow .timepicker-hour, 
+	.timeview .timepicker-minute {
+		opacity: 0.5;
+		&.active {
+			opacity: 1;
+		}
+	}
+	.ampmvalue {
+		font-size: 18px;
+		margin-left: 10px;
+	}
+	.ampmview {
+		width: auto;
+		position: absolute;
+		display: inline-block;
+		font-size: inherit;
+		background: none;
+		top: 37px;
+		margin-left: 10px;
+		.btn-group {
+			position: relative;
+			top: auto;
+			left: auto;
+			width: auto;
+			.btn {
+				clear: both;
+				background: none;
+				padding: 0;
+				font-family: Arial;
+				height: 30px;
+				font-size: 20px;
+				margin-right: 0;
+				color: $datepicker-info-color;
+				opacity: 0.5;
+				&.active {
+					opacity:1;
+				}
+			}
+		}
+	}
+	.secondHnad, 
+	.minuteHnad, 
+	.hourHnad {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: 2px;
+		background: $datetimepicker-info-bg;
+		right: 25px;
+		@include transform-origin(center left);
+		@include transition($transition-base);
+	}
+}
+.bootstrap-datetimepicker-widget .table-condensed .picker-switch {
+	padding-top: 8px;
+}
+.clockpickerseconds, 
+.clockpickerr, 
+.clockpickerminute {
+	@include border-radius(500px);
+	width: $clockpicker-size;
+	height: 270px;
+	margin: 30px 0;
+}
+.timepicker {
+	.clockpickerseconds .second, 
+	.clockpickerminute .minute, 
+	.clockpickerr .hour {
+		width: 20px;
+		height: 20px;
+		line-height: 20px;
+		text-align: center;
+		@include transform-translate(-50%, -50%);
+		&.active{
+			color: #fff;
+		}
+	}
+	.secondHnad, 
+	.minuteHnad, 
+	.hourHnad{
+		&:before {
+			width: 7px;
+			height: 7px;
+			content: "";
+			left: -3px;
+			top: 50%;
+			position: absolute;
+			background: $datetimepicker-info-bg;
+			@include transform-translateY(-50%);
+			@include border-radius(25px);
+		}
+		&:after{
+			position: absolute;
+			content: "";
+			width: 40px;
+			height: 40px;
+			background: $datetimepicker-info-bg;
+			right: 0;
+			top: 50%;
+			@include transform-translate(50%, -50%);
+			@include border-radius(50px);
+		}
+	}
+	.hourHnad {
+		&.hourHnad-00,
+		&.hourHnad-13,
+		&.hourHnad-14,
+		&.hourHnad-15,
+		&.hourHnad-16,
+		&.hourHnad-17,
+		&.hourHnad-18,
+		&.hourHnad-19,
+		&.hourHnad-20,
+		&.hourHnad-21,
+		&.hourHnad-22,
+		&.hourHnad-23,
+		&.hourHnad-24 {
+      		right: 57px;
+    	}
+		&.hourHnad-00, &.hourHnad-12 {
+			@include transform-rotate(-90deg);
+		}
+		&.hourHnad-13, &.hourHnad-01 {
+			@include transform-rotate(-60deg);
+		}
+		&.hourHnad-14, &.hourHnad-02 {
+			@include transform-rotate(-30deg);
+		}
+		&.hourHnad-15, &.hourHnad-03 {
+			@include transform-rotate(0deg);
+		}
+		&.hourHnad-16, &.hourHnad-04 {
+			@include transform-rotate(30deg);
+		}
+		&.hourHnad-17, &.hourHnad-05 {
+			@include transform-rotate(60deg);
+		}
+		&.hourHnad-18, &.hourHnad-06 {
+			@include transform-rotate(90deg);
+		}
+		&.hourHnad-19, &.hourHnad-07 {
+			@include transform-rotate(120deg);
+		}
+		&.hourHnad-20, &.hourHnad-08 {
+			@include transform-rotate(150deg);
+		}
+		&.hourHnad-21, &.hourHnad-09 {
+			@include transform-rotate(180deg);
+		}
+		&.hourHnad-22, &.hourHnad-10 {
+			@include transform-rotate(210deg);
+		}
+		&.hourHnad-23, &.hourHnad-11 {
+			@include transform-rotate(240deg);
+		}
+	}
+	.secondHnad.secondHnad-00, .minuteHnad.minuteHnad-00 {
+		@include transform-rotate(-90deg);	
+	}
+	.secondHnad.secondHnad-01, .minuteHnad.minuteHnad-01 {
+		@include transform-rotate(-84deg);
+	}
+	.secondHnad.secondHnad-02, .minuteHnad.minuteHnad-02 {
+		@include transform-rotate(-78deg);
+	}
+	.secondHnad.secondHnad-03, .minuteHnad.minuteHnad-03 {
+		@include transform-rotate(-72deg);
+	}
+	.secondHnad.secondHnad-04, .minuteHnad.minuteHnad-04 {
+		@include transform-rotate(-66deg);
+	}
+	.secondHnad.secondHnad-05, .minuteHnad.minuteHnad-05 {
+		@include transform-rotate(-60deg);
+	}
+	.secondHnad.secondHnad-06, .minuteHnad.minuteHnad-06 {
+		@include transform-rotate(-54deg);
+	}
+	.secondHnad.secondHnad-07, .minuteHnad.minuteHnad-07 {
+		@include transform-rotate(-48deg);
+	}
+	.secondHnad.secondHnad-08, .minuteHnad.minuteHnad-08 {
+		@include transform-rotate(-42deg);
+	}
+	.secondHnad.secondHnad-09, .minuteHnad.minuteHnad-09 {
+		@include transform-rotate(-36deg);
+	}
+	.secondHnad.secondHnad-10, .minuteHnad.minuteHnad-10 {
+		@include transform-rotate(-30deg);
+	}
+	.secondHnad.secondHnad-11, .minuteHnad.minuteHnad-11 {
+		@include transform-rotate(-24deg);
+	}
+	.secondHnad.secondHnad-12, .minuteHnad.minuteHnad-12 {
+		@include transform-rotate(-18deg);
+	}
+	.secondHnad.secondHnad-13, .minuteHnad.minuteHnad-13 {
+		@include transform-rotate(-12deg);
+	}
+	.secondHnad.secondHnad-14, .minuteHnad.minuteHnad-14 {
+		@include transform-rotate(-6deg);
+	}
+	.secondHnad.secondHnad-15, .minuteHnad.minuteHnad-15 {
+		@include transform-rotate(0deg);
+	}
+	.secondHnad.secondHnad-16, .minuteHnad.minuteHnad-16 {
+		@include transform-rotate(6deg);
+	}
+	.secondHnad.secondHnad-17, .minuteHnad.minuteHnad-17 {
+		@include transform-rotate(12deg);
+	}
+	.secondHnad.secondHnad-18, .minuteHnad.minuteHnad-18 {
+		@include transform-rotate(18deg);
+	}
+	.secondHnad.secondHnad-19, .minuteHnad.minuteHnad-19 {
+		@include transform-rotate(24deg);
+	}
+	.secondHnad.secondHnad-20, .minuteHnad.minuteHnad-20 {
+		@include transform-rotate(30deg);
+	}
+	.secondHnad.secondHnad-21, .minuteHnad.minuteHnad-21 {
+		@include transform-rotate(36deg);
+	}
+	.secondHnad.secondHnad-22, .minuteHnad.minuteHnad-22 {
+		@include transform-rotate(42deg);
+	}
+	.secondHnad.secondHnad-23, .minuteHnad.minuteHnad-23 {
+		@include transform-rotate(48deg);
+	}
+	.secondHnad.secondHnad-24, .minuteHnad.minuteHnad-24 {
+		@include transform-rotate(54deg);
+	}
+	.secondHnad.secondHnad-25, .minuteHnad.minuteHnad-25 {
+		@include transform-rotate(60deg);
+	}
+	.secondHnad.secondHnad-26, .minuteHnad.minuteHnad-26 {
+		@include transform-rotate(66deg);
+	}
+	.secondHnad.secondHnad-27, .minuteHnad.minuteHnad-27 {
+		@include transform-rotate(72deg);
+	}
+	.secondHnad.secondHnad-28, .minuteHnad.minuteHnad-28 {
+		@include transform-rotate(78deg);
+	}
+	.secondHnad.secondHnad-29, .minuteHnad.minuteHnad-29 {
+		@include transform-rotate(84deg);
+	}
+	.secondHnad.secondHnad-30, .minuteHnad.minuteHnad-30 {
+		@include transform-rotate(90deg);
+	}
+	.secondHnad.secondHnad-31, .minuteHnad.minuteHnad-31 {
+		@include transform-rotate(96deg);
+	}
+	.secondHnad.secondHnad-32, .minuteHnad.minuteHnad-32 {
+		@include transform-rotate(102deg);
+	}
+	.secondHnad.secondHnad-33, .minuteHnad.minuteHnad-33 {
+		@include transform-rotate(108deg);
+	}
+	.secondHnad.secondHnad-34, .minuteHnad.minuteHnad-34 {
+		@include transform-rotate(114deg);
+	}
+	.secondHnad.secondHnad-35, .minuteHnad.minuteHnad-35 {
+		@include transform-rotate(120deg);
+	}
+	.secondHnad.secondHnad-36, .minuteHnad.minuteHnad-36 {
+		@include transform-rotate(126deg);
+	}
+	.secondHnad.secondHnad-37, .minuteHnad.minuteHnad-37 {
+		@include transform-rotate(132deg);
+	}
+	.secondHnad.secondHnad-38, .minuteHnad.minuteHnad-38 {
+		@include transform-rotate(138deg);
+	}
+	.secondHnad.secondHnad-39, .minuteHnad.minuteHnad-39 {
+		@include transform-rotate(144deg);
+	}
+	.secondHnad.secondHnad-40, .minuteHnad.minuteHnad-40 {
+		@include transform-rotate(150deg);
+	}
+	.secondHnad.secondHnad-41, .minuteHnad.minuteHnad-41 {
+		@include transform-rotate(156deg);
+	}
+	.secondHnad.secondHnad-42, .minuteHnad.minuteHnad-42 {
+		@include transform-rotate(162deg);
+	}
+	.secondHnad.secondHnad-43, .minuteHnad.minuteHnad-43 {
+		@include transform-rotate(168deg);
+	}
+	.secondHnad.secondHnad-44, .minuteHnad.minuteHnad-44 {
+		@include transform-rotate(174deg);
+	}
+	.secondHnad.secondHnad-45, .minuteHnad.minuteHnad-45 {
+		@include transform-rotate(180deg);
+	}
+	.secondHnad.secondHnad-46, .minuteHnad.minuteHnad-46 {
+		@include transform-rotate(186deg);
+	}
+	.secondHnad.secondHnad-47, .minuteHnad.minuteHnad-47 {
+		@include transform-rotate(192deg);
+	}
+	.secondHnad.secondHnad-48, .minuteHnad.minuteHnad-48 {
+		@include transform-rotate(198deg);
+	}
+	.secondHnad.secondHnad-49, .minuteHnad.minuteHnad-49 {
+		@include transform-rotate(204deg);
+	}
+	.secondHnad.secondHnad-50, .minuteHnad.minuteHnad-50 {
+		@include transform-rotate(210deg);
+	}
+	.secondHnad.secondHnad-51, .minuteHnad.minuteHnad-51 {
+		@include transform-rotate(216deg);
+	}
+	.secondHnad.secondHnad-52, .minuteHnad.minuteHnad-52 {
+		@include transform-rotate(222deg);
+	}
+	.secondHnad.secondHnad-53, .minuteHnad.minuteHnad-53 {
+		@include transform-rotate(228deg);
+	}
+	.secondHnad.secondHnad-54, .minuteHnad.minuteHnad-54 {
+		@include transform-rotate(234deg);
+	}
+	.secondHnad.secondHnad-55, .minuteHnad.minuteHnad-55 {
+		@include transform-rotate(240deg);
+	}
+	.secondHnad.secondHnad-56, .minuteHnad.minuteHnad-56 {
+		@include transform-rotate(246deg);
+	}
+	.secondHnad.secondHnad-57, .minuteHnad.minuteHnad-57 {
+		@include transform-rotate(252deg);
+	}
+	.secondHnad.secondHnad-58, .minuteHnad.minuteHnad-58 {
+		@include transform-rotate(258deg);
+	}
+	.secondHnad.secondHnad-59, .minuteHnad.minuteHnad-59 {
+		@include transform-rotate(264deg);
+	}
+	.table-condensed > div .position-0 {
+		top: 21.6%;
+		left: 50%;
+	}
+	&.tHours .table-condensed > div div:first-child {
+		top: 9.3%;
+		left: 50%;
+	}
+	.table-condensed > div {
+		.position-1 {
+		  top: 14.8%;
+		  left: 70.8%;
+		}
+		.position-2 {
+		  top: 30.1%;
+		  left: 85.4%;
+		}
+		.position-3 {
+		  top: 50%;
+		  left: 91.3%;
+		}
+		.position-4 {
+		  top: 71%;
+		  left: 85.7%;
+		}
+		.position-5 {
+		  top: 86%;
+		  left: 70.8%;
+		}
+		.position-6 {
+		  top: 91.4%;
+		  left: 50%;
+		}
+		.position-7 {
+		  top: 85.9%;
+		  left: 29.6%;
+		}
+		.position-8 {
+		  top: 70.8%;
+		  left: 14.8%;
+		}
+		.position-9 {
+		  top: 50%;
+		  left: 9.3%;
+		}
+		.position-10 {
+		  top: 30.1%;
+		  left: 14.7%;
+		}
+		.position-11 {
+		  top: 14.8%;
+		  left: 29.6%;
+		}
+		.position-12 {
+		  top: 9.3%;
+		  left: 50%;
+		}
+		.position-13 {
+		  top: 25.4%;
+		  left: 64.6%;
+		}
+		.position-14 {
+		  top: 36.2%;
+		  left: 74.4%;
+		}
+		.position-15 {
+		  top: 50%;
+		  left: 78.8%;
+		}
+		.position-16 {
+		  top: 64.8%;
+		  left: 74.9%;
+		}
+		.position-17 {
+		  top: 75.4%;
+		  left: 65%;
+		}
+		.position-18 {
+		  top: 79.2%;
+		  left: 50%;
+		}
+		.position-19 {
+		  top: 75.2%;
+		  left: 35.6%;
+		}
+		.position-20 {
+		  top: 64.8%;
+		  left: 25.2%;
+		}
+		.position-21 {
+		  top: 50%;
+		  left: 21.8%;
+		}
+		.position-22 {
+		  top: 36.2%;
+		  left: 25.5%;
+		}
+		.position-23 {
+		  top: 25.6%;
+		  left: 35.6%;
+		}
+		div {
+			&.second:first-child, 
+			&.minute:first-child {
+			top: 9.3%;
+			left: 50%;
+		  }
+		}
+	}
+}
+.pmd-time::after {
+  font-family: "Material icons";
+  content: "\E192";
+}
+.pmd-today::after {
+  font-family: "Material icons";
+  content: "\E916";
+}
+.pmd-keyboard-arrow-up::after, .pmd-keyboard-arrow-down::after {
+  font-family: "Material icons";
+  content: "\E192";
+}
+.pmd-keyboard-arrow-right::after {
+  font-family: "Material icons";
+  content: "\E315";
+}
+.pmd-keyboard-arrow-left::after {
+  font-family: "Material icons";
+  content: "\E314";
+}

@@ -1,6 +1,6 @@
 
 /*!
- * Propeller v1.3.0 (http://propeller.in): accordion.js
+ * Propeller v1.3.1 (http://propeller.in): accordion.js
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */

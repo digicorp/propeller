@@ -1,0 +1,373 @@
+/*!
+ * Propeller v1.2.0 (http://propeller.in)
+ * Copyright 2016-2018 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+// Genral style of mizins and variables
+@import "variables.scss";
+@import "mixins.scss";
+
+// Propeller common css
+.pmd-range-slider {
+	&.noUi-target {
+		box-shadow: none; 
+		border: none; 
+		height: $range-slider-height; 
+		margin: $range-slider-spacer-top 0 $range-slider-spacer-bottom;
+	}
+	&.noUi-connect {
+		background:$range-slider-bar-bg;
+	}
+	.noUi-connect {
+		background:$range-slider-bar-bg;
+	}
+	.noUi-handle {
+		border:none;
+		box-shadow:none;
+		border-radius:50%;
+		background:none;
+		width:14px; 
+		height:14px; 
+		left: -7px; 
+		top: -6px; 
+		cursor:pointer;
+		&:after,
+		&:before {
+			display:none;
+		}
+		&:before { 
+			display:block; 
+			width:100%; 
+			height:100%; 
+			background:$range-slider-bar-bg; 
+			position:absolute; 
+			left:0; 
+			top:0; 
+			border-radius:50%;
+		}
+	}
+	&.noUi-background,
+	.noUi-background {
+		box-shadow:none; 
+		background:$range-slider-bg;
+	}
+	&.noUi-background {
+		@include transition($transition-base);
+	}
+	.noUi-base {
+		z-index:100;
+	}
+	
+	// horizontal
+	.noUi-pips-horizontal {
+		height:2px; 
+		padding:0; 
+		top:1px; 
+		z-index:10;
+	}
+	.noUi-pips {
+		.noUi-value {
+			display:none;
+		}
+		.noUi-marker-horizontal {
+			background:$range-slider-marker-horizontal-bg; 
+			height:$range-slider-marker-horizontal-height;
+		}
+		&.noUi-pips-horizontal {
+			.noUi-marker-large {
+				&:first-child {
+					margin-left:0;
+				}
+				&:nth-last-child(2) {
+					margin-left:-$range-slider-marker-horizontal-height;
+				}
+			}
+		}
+	}
+	
+	// vertical
+	.noUi-pips-vertical {
+		width:2px; 
+		padding:0; 
+		left:1px; 
+		z-index:10;
+	}
+	.noUi-pips {
+		.noUi-marker-vertical {
+			background:$range-slider-marker-vertical-bg; 
+			width:$range-slider-marker-vertical-width; 
+		}
+		&.noUi-pips-vertical {
+			.noUi-marker-large {
+				&:first-child {
+					margin-top:-$range-slider-marker-vertical-width;
+				}
+				&:nth-last-child(2) { 
+					margin-top:0px;
+				}
+			}
+		}
+	}
+	
+	// tooltip
+	.noUi-tooltip {
+		left:50%;
+		padding:0;
+		width:28px;
+		height:28px;
+		margin-left:-14px;
+		border:none;
+		background:$range-slider-tooltip-bg;
+		color:$range-slider-tooltip-color;
+		line-height:28px;
+		border-radius:50%;
+		font-size:$range-slider-tooltip-font-size;
+	}
+	
+	// Propeller horizontal css
+	&.noUi-horizontal {
+		.noUi-handle-upper,
+		.noUi-handle-lower{
+			.noUi-tooltip {
+				top:-32px; 
+				bottom:auto;
+				&:before {
+					content: ""; 
+					width: 20px; 
+					height: 20px; 
+					position: absolute; 
+					left: 50%; 
+					background: $range-slider-tooltip-bg; 
+					margin-left: -10px; 
+					z-index: -1;
+					@include transform-rotate(45deg);
+					top:9px; 
+					border-radius: 10px 10px 0px 10px;
+				}
+			}
+		}
+	}
+	
+	// horizontal tooltip open  bottom
+	&.pmd-range-tooltip-right-bottom {
+		&.noUi-horizontal {
+			.noUi-handle-upper {
+				.noUi-tooltip {
+					top:auto; 
+					bottom:-32px;
+					&:before {
+						top:auto; 
+						bottom:9px; 
+						border-radius: 0 10px 10px 10px;
+					}
+				}
+			}
+		}
+	}
+	&.pmd-range-tooltip-left-bottom {
+		&.noUi-horizontal{
+			.noUi-handle-lower {
+				.noUi-tooltip {
+					top:auto; 
+					bottom:-32px;
+					&:before {
+						top:auto; 
+						bottom:9px; 
+						border-radius: 0 10px 10px 10px;
+					}
+				}
+			}		
+		}	
+	}
+	&.pmd-range-tooltip-bottom {
+		&.noUi-horizontal{
+			.noUi-handle-upper,
+			.noUi-handle-lower{
+				.noUi-tooltip {
+					top:auto; 
+					bottom:-32px;
+					&:before { 
+						top:auto; 
+						bottom:9px; 
+						border-radius: 0 10px 10px 10px;
+					}
+				}
+			}
+			.noUi-tooltip { 
+				top:auto;
+				bottom:-32px;
+			}
+		}
+	}
+	&.pmd-range-tooltip-right-bottom.noUi-horizontal .noUi-handle-upper .noUi-tooltip,
+	&.pmd-range-tooltip-left-bottom.noUi-horizontal .noUi-handle-lower .noUi-tooltip,
+	&.pmd-range-tooltip-bottom.noUi-horizontal .noUi-tooltip { 
+		@include transform-origin(50% -50%);
+	}
+	
+	// Propeller verticle css 
+	&.noUi-vertical { 
+		height: 300px; 
+		margin: 20px auto;
+		&.noUi-target { 
+			width:2px;
+		}
+		&.noUi-connect { 
+			background:$range-slider-bar-bg;
+		}
+		.noUi-handle {
+			left: -6px;
+		}
+		.noUi-tooltip { 
+			margin-left:0; 
+			margin-top:-14px; 
+			top:50%; 
+			left:-32px;
+		}
+		.noUi-handle-upper,
+		.noUi-handle-lower {
+			.noUi-tooltip {
+				&:before {
+					content: ""; 
+					width: 20px; 
+					height: 20px; 
+					position: absolute; 
+					top: 50%; 
+					background: $range-slider-bar-bg; 
+					margin-top: -10px; 
+					z-index: -1; 
+					@include transform-rotate(45deg);
+					left:9px; 
+					border-radius: 10px 0px 10px 10px;
+				}
+			}
+		}
+	}
+	&.pmd-range-tooltip-top-right{
+		&.noUi-vertical {
+			.noUi-handle-upper {
+				.noUi-tooltip {
+					left:auto; 
+					right:-32px;
+					&:before {
+						left:auto;
+						right:9px;
+						border-radius: 10px 10px 10px 0px;
+					}
+				}
+			}
+		}
+	}
+	&.pmd-range-tooltip-bottom-right {
+		&.noUi-vertical {
+			.noUi-handle-lower {
+				.noUi-tooltip {
+					left:auto; 
+					right:-32px;
+					&:before {
+						left:auto;
+						right:9px;
+						border-radius: 10px 10px 10px 0px;
+					}
+				}
+			}
+		}
+	}
+	&.pmd-range-tooltip-right{
+		&.noUi-vertical {
+			.noUi-handle-upper,
+			.noUi-handle-lower{
+				.noUi-tooltip {
+					left:auto; 
+					right:-32px;
+					&:before {
+						left:auto;
+						right:9px;
+						border-radius: 10px 10px 10px 0px;
+					}
+				}
+			}
+			.noUi-tooltip { 
+				left:auto; 
+				right:-32px;
+			}
+		}
+	}
+	&.pmd-range-tooltip-top-right.noUi-vertical .noUi-handle-upper .noUi-tooltip,
+	&.pmd-range-tooltip-bottom-right.noUi-vertical .noUi-handle-lower .noUi-tooltip,
+	&.pmd-range-tooltip-right.noUi-vertical .noUi-tooltip {
+		@include transform-origin(-50% 50%);
+	}
+	// range slider tooltip animation
+	.noUi-tooltip {  
+		@include transform-scale(0);
+	}
+	&.noUi-horizontal {
+		.noUi-tooltip {
+			@include transform-origin(50% 150%);
+		}
+	}
+	&.noUi-vertical {
+		.noUi-tooltip { 
+			@include transform-origin(150% 50%);
+		}
+	}
+	.noUi-handle:before,
+	.noUi-tooltip { 
+		@include transition($transition-base)
+	}
+	
+	.noUi-handle{
+		&.noUi-active {
+			&:before { 
+				opacity:0;
+				@include transform-scale(0);
+			}
+			.noUi-tooltip {
+				@include transform-scale(1);
+			}
+		}
+	}
+	
+	// default tooltip open
+	&.pmd-range-tooltip {
+		.noUi-handle {
+			&:before {
+				@include transform-scale(0);
+			}
+		}
+		.noUi-tooltip {
+			@include transform-scale(1);
+		}
+	}
+}
+
+// Disable slider 
+[disabled] {
+	&.noUi-connect { 
+		background: $range-slider-disabled-bg;
+	}
+	&.pmd-range-slider {
+		
+	
+		&.noUi-background {
+			background:#f1f1f1;
+		}
+		.noUi-background {
+			background:#f1f1f1;
+		}
+		.noUi-handle:before { 
+			background: $range-slider-disabled-bg;
+		}
+	}
+}
+.pmd-range-slider [disabled].noUi-origin,
+[disabled].pmd-range-slider {
+	.noUi-handle {
+		cursor:not-allowed;
+	}
+}
+.pmd-range-slider [disabled].noUi-origin .noUi-handle:before { 
+	background: $range-slider-disabled-bg;
+}

@@ -1,5 +1,5 @@
 /*!
- * Propeller v1.3.0 (http://propeller.in)
+ * Propeller v1.2.0 (http://propeller.in)
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -9,7 +9,7 @@
 @import "../../../scss/variables.scss";
 @import "../../../scss/mixins.scss";
 
-/* Propeller common css */
+// Propeller common css
 .pmd-range-slider {
 	&.noUi-target {
 		box-shadow: none; 
@@ -56,31 +56,31 @@
 	&.noUi-background {
 		@include transition($transition-base);
 	}
-	.noUi-base { 
+	.noUi-base {
 		z-index:100;
 	}
 	
 	// horizontal
-	.noUi-pips-horizontal { 
+	.noUi-pips-horizontal {
 		height:2px; 
 		padding:0; 
 		top:1px; 
 		z-index:10;
 	}
 	.noUi-pips {
-		.noUi-value { 
+		.noUi-value {
 			display:none;
 		}
-		.noUi-marker-horizontal { 
+		.noUi-marker-horizontal {
 			background:$range-slider-marker-horizontal-bg; 
 			height:$range-slider-marker-horizontal-height;
 		}
 		&.noUi-pips-horizontal {
 			.noUi-marker-large {
-				&:first-child { 
+				&:first-child {
 					margin-left:0;
 				}
-				&:nth-last-child(2) { 
+				&:nth-last-child(2) {
 					margin-left:-$range-slider-marker-horizontal-height;
 				}
 			}
@@ -150,7 +150,7 @@
 		}
 	}
 	
-	/* horizontal tooltip open  bottom */
+	// horizontal tooltip open  bottom
 	&.pmd-range-tooltip-right-bottom {
 		&.noUi-horizontal {
 			.noUi-handle-upper {
@@ -245,8 +245,6 @@
 			}
 		}
 	}
-	
-	/**/
 	&.pmd-range-tooltip-top-right{
 		&.noUi-vertical {
 			.noUi-handle-upper {
@@ -346,7 +344,7 @@
 	}
 }
 
-/* Disable slider */
+// Disable slider 
 [disabled] {
 	&.noUi-connect { 
 		background: $range-slider-disabled-bg;

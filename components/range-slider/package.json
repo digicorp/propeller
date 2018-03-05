@@ -1,6 +1,6 @@
 {
   "name": "propellerkit-range-slider",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Propeller’s range slider lets the user select a range of values by moving the slider thumb. The smallest value is to the left, the largest to the right. We have used noUISlider plugin as  base & customized it by applying material design principles to it.",
   "homepage": "http://propeller.in/",
   "author": "Digicorp, Inc",
@@ -15,7 +15,9 @@
   },
   "keywords": [
    "css",
+   "scss",
    "js",
+   "material design",
    "mobile-first",
    "responsive",
    "front-end",

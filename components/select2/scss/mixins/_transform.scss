@@ -1,0 +1,52 @@
+@mixin transform-scalex($scalex) {
+		-ms-transform: scaleX($scalex); 
+	-webkit-transform: scaleX($scalex);
+			transform:scaleX($scalex); 
+}
+@mixin transform-translateY($translateY) {
+		-ms-transform: translateY($translateY); 
+	-webkit-transform: translateY($translateY);
+			transform: translateY($translateY); 
+}
+@mixin transform-translateZ($translateZ) {
+		-ms-transform: translateZ($translateZ); 
+	-webkit-transform: translateZ($translateZ);
+			transform: translateZ($translateZ); 
+}
+@mixin transform-scale($scale) {
+		-ms-transform: scale($scale); 
+	-webkit-transform: scale($scale);
+			transform: scale($scale); 
+}
+@mixin transform-translate3d($translate3d...) {
+		-ms-transform: translate3d($translate3d); 
+	-webkit-transform: translate3d($translate3d);
+			transform: translate3d($translate3d); 
+}
+@mixin transform-origin($origin...) {
+		-ms-transform-origin: $origin; 
+	-webkit-transform-origin: $origin;
+			transform-origin: $origin; 
+}
+@mixin transform-translate($translate...) {
+		-ms-transform: translate($translate); 
+	-webkit-transform: translate($translate);
+			transform: translate($translate); 
+}
+@mixin transform-rotate($rotate) {
+		-ms-transform: rotate($rotate); 
+	-webkit-transform: rotate($rotate);
+			transform: rotate($rotate); 
+}
+@mixin transform($scale) {
+   -moz-transform: scale($scale);
+-webkit-transform: scale($scale);
+        transform: scale($scale);
+}
+
+@mixin transform-origin($origin...) {
+   -moz-transform-origin: $origin;
+-webkit-transform-origin: $origin;
+        transform-origin: $origin;
+		will-change: transform;
+}

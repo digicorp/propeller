@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAAA;;;;GAIG;AAEH,aAAc;EACb,UAAU,EAAC,8BAAmC;EAC9C,aAAa,ECyjBmB,CAAC;EDxjBjC,UAAU,EAAE,IAAI;EAChB,MAAM,ECojB0B,GAAG;;;ADljBpC,aAAc;EACb,UAAU,EAAC,IAAI",
+"mappings": "AAAA;;;;GAIG;AAEH,aAAc;EACb,UAAU,EAAC,8BAAmC;EAC9C,aAAa,ECkjBmB,CAAC;EDjjBjC,UAAU,EAAE,IAAI;EAChB,MAAM,EC6iB0B,GAAG;;;AD3iBpC,aAAc;EACb,UAAU,EAAC,IAAI",
 "sources": ["../../../scss/_progressbar.scss","../../../scss/_variables.scss"],
 "names": [],
 "file": "progressbar.css"

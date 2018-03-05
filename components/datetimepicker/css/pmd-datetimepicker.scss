@@ -1,5 +1,5 @@
 /*!
- * Propeller v1.1.0 (http://propeller.in)
+ * Propeller v1.2.0 (http://propeller.in)
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
 */
@@ -99,10 +99,16 @@
 	.timepicker {
 		display: table;
 		width: 100%;
-		.timepicker-picker,
-		.topdateinfo {
+		.timepicker-picker {
+			width: 45%;
 			display: table-cell;
-			width: 40%;
+			vertical-align: top;
+		}
+	}
+	.datepicker {
+		.topdateinfo {
+			width: 45%;
+			display: table-cell;
 			vertical-align: top;
 		}
 	}
