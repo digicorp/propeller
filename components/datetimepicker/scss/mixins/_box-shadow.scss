@@ -1,0 +1,8 @@
+@mixin box-shadow($shadow...) {
+    box-shadow: $shadow;
+}
+@mixin box-shadow-depth($depth) {
+   -moz-box-shadow: box-shadow($depth);
+-webkit-box-shadow: box-shadow($depth);
+        box-shadow: box-shadow($depth);
+}

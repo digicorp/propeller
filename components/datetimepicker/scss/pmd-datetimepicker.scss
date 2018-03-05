@@ -5,9 +5,9 @@
 */
 
 // Genral style of mizins and variables
-@import "../../../scss/functions.scss";
-@import "../../../scss/variables.scss";
-@import "../../../scss/mixins.scss";
+@import "functions.scss";
+@import "variables.scss";
+@import "mixins.scss";
 
 .bootstrap-datetimepicker-widget {
 	font-family: $datetimepicker-font-family;
