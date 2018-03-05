@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA;;;;EAIE;AAEF,cAAe;EACb,UAAU,EAAE,KAAK;EACjB,QAAQ,EAAE,IAAI;EACd,QAAQ,EAAE,QAAQ;;;AAGpB,iCAAkC;EAChC,KAAK,EAAE,KAAK",
+"sources": ["pmd-scrollbar.scss"],
+"names": [],
+"file": "pmd-scrollbar.css"
+}
