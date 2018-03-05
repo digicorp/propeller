@@ -1,6 +1,6 @@
 
 /*!
- * Propeller v1.3.0 (http://propeller.in)
+ * Propeller v1.3.1 (http://propeller.in)
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -176,7 +176,7 @@ $(document).ready(function () {
 
 /**
  * --------------------------------------------------------------------------
- * Propeller v1.3.0 (http://propeller.in): textfield.js
+ * Propeller v1.3.1 (http://propeller.in): textfield.js
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * --------------------------------------------------------------------------
@@ -289,7 +289,7 @@ var pmdTextfield = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Propeller v1.3.0 (http://propeller.in): checkbox.js
+ * Propeller v1.3.1 (http://propeller.in): checkbox.js
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * --------------------------------------------------------------------------
@@ -409,7 +409,7 @@ var pmdCheckBox = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Propeller v1.3.0 (http://propeller.in): radio.js
+ * Propeller v1.3.1 (http://propeller.in): radio.js
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * --------------------------------------------------------------------------
@@ -524,7 +524,7 @@ var pmdRadio = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Propeller v1.3.0 (http://propeller.in): button.js
+ * Propeller v1.3.1 (http://propeller.in): button.js
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * -------------------------------------------------------------------------- 
@@ -631,7 +631,7 @@ var pmdButton = function ($) {
 
 /*!
  * --------------------------------------------------------------------------
- * Propeller v1.3.0 (http://propeller.in): dropdown.js
+ * Propeller v1.3.1 (http://propeller.in): dropdown.js
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * -------------------------------------------------------------------------- 
@@ -925,7 +925,7 @@ var pmdDropdown = function ($) {
 } (jQuery)();
 
 /*!
- * Propeller v1.3.0 (http://propeller.in): accordion.js
+ * Propeller v1.3.1 (http://propeller.in): accordion.js
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
@@ -1064,7 +1064,7 @@ var pmdAccordion = function ($) {
 
 /*!
  * --------------------------------------------------------------------------
- * Propeller v1.3.0 (http://propeller.in): alert.js
+ * Propeller v1.3.1 (http://propeller.in): alert.js
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * -------------------------------------------------------------------------- 
@@ -1219,7 +1219,7 @@ var pmdAlert = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Propeller v1.3.0 (http://propeller.in): popover.js
+ * Propeller v1.3.1 (http://propeller.in): popover.js
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * --------------------------------------------------------------------------
@@ -1343,7 +1343,7 @@ var pmdPopover = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Propeller v1.3.0 (http://propeller.in): tab-scrollable.js
+ * Propeller v1.3.1 (http://propeller.in): tab-scrollable.js
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * --------------------------------------------------------------------------
@@ -1664,7 +1664,7 @@ var pmdTab = function ($) {
 
 /**
  * --------------------------------------------------------------------------
- * Propeller v1.3.0 (http://propeller.in): sidebar.js
+ * Propeller v1.3.1 (http://propeller.in): sidebar.js
  * Copyright 2016-2018 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * --------------------------------------------------------------------------
