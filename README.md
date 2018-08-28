@@ -1,13 +1,13 @@
 <br>
 <p align="left">
-  <a href="http://propeller.in/">
+  <a href="https://propeller.in/">
     <img height="40" src="https://demophp.digi-corp.com/CreativeZone/Websites/Propeller/HTML/assets/images/propeller-logo.png" />
   </a>
   <p align="left">
     A front-end responsive framework 
     based on Google's Material Design Standards & Bootstrap.  
     <br>
-    <a href="http://propeller.in/"><strong>Visit Propeller &raquo;</strong></a>
+    <a href="https://propeller.in/"><strong>Visit Propeller &raquo;</strong></a>
   </p>
 </p>
 
@@ -53,7 +53,7 @@ Using third party components:
 
 ## Propeller Guidelines
 
-Follow our [Guidelines](http://propeller.in/docs/index.php) and get familiar with the basic setup and structure.
+Follow our [Guidelines](http://propeller.in/get-started/) and get familiar with the basic setup and structure.
 
 
 ## What's included
