@@ -112,7 +112,7 @@ See [the Releases section of our GitHub project](https://github.com/digicorp/pro
 
 ## License
 
-Propeller v1.3.1 (http://propeller.in)
+Propeller v1.3.1 (https://propeller.in)
 © 2016-2018 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
 Licensed under [MIT](https://github.com/digicorp/propeller/blob/master/LICENSE)
 
