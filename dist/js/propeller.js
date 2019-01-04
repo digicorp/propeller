@@ -15,7 +15,7 @@ var commons = function () {
 	function commons() {}
 	commons.attachParentSelector = function (parentSelector, defaultSelector) {
 		var customSelector = defaultSelector;
-		if (parentSelector !== '' && parentSelector.length > 0) {
+		if (parentSelector && parentSelector !== '' && parentSelector.length > 0) {
 			if (parentSelector === defaultSelector) {
 				customSelector = defaultSelector;
 			} else if ($(parentSelector).hasClass(defaultSelector)) {
@@ -95,6 +95,10 @@ var observeDOM = (function () {
 })();
 
 $(document).ready(function () {
+  $.propellerkit();
+});
+
+$.propellerkit = function() {
 	observeDOM(document.querySelector('body'), function (mutations) {
 		
 		processMutation(0);
@@ -171,7 +175,7 @@ $(document).ready(function () {
 			return false;
 		}
 	});
-});
+};
 
 
 /**
