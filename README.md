@@ -38,7 +38,7 @@
 There are different ways you can start using Propeller,
 
 - [Download the latest release.](https://github.com/digicorp/propeller/archive/v1.3.1.zip)
-- Clone the repo: `git clone https://github.com/propeller.git`
+- Clone the repo: `git clone https://github.com/digicorp/propeller.git`
 - Install with Bower: `bower install propeller`
 - Install with npm: `npm install propellerkit`
 
