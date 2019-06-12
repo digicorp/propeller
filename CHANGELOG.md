@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 --- 
 
-## [1.3.2](https://github.com/digicorp/propeller/releases/tag/v1.3.2) (06/12/2019)
+## [1.3.2](https://github.com/digicorp/propeller/releases/tag/v1.3.1) (06/12/2019)
 Released on Wednesday, June 12, 2019. All issues associated with this milestone can be found using this [filter](https://github.com/digicorp/propeller/issues).
 
 ### Highlights
@@ -13,13 +13,13 @@ Released on Wednesday, June 12, 2019. All issues associated with this milestone 
 * Updated the url of "Propeller Guidelines" in README.md file
 * Updated the package.json file for the SCSS compilations
 * Added the SCSS compiler task with auto watch (grunt dev) in the Grunt file.
-* Added the ability to discover all the jQuery propeller init method calls so that web apps can initialize the entire propellerkit externally. 
+* Added the jQuery plugin - propellerkit(); to re-initialize the entire propellerkit.
 * Solved the issue of "Uncaught RangeError: Maximum call stack size exceeded" in Javascript
 
  ### Added
 ###### JS
 * Added the SCSS compiler task with auto watch (grunt dev) in the Grunt file.
-* Added the ability to discover the propeller init method calls so that SPA type web apps can initialize the propellerkit externally. 
+* Added the jQuery plugin - propellerkit(); to re-initialize the entire propellerkit.
 
 ### Fixed
 ###### JS
