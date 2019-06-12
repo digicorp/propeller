@@ -1,29 +1,34 @@
 /*!
- * Propeller v1.3.1 (http://propeller.in): tab.css
- * Copyright 2016-2018 Digicorp, Inc.
+ * Propeller v1.3.2 (http://propeller.in): tab.css
+ * Copyright 2016-2019 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-tabs {
   position: relative;
 }
+
 @media (max-width: 767px) {
   .pmd-tabs {
     overflow-x: auto;
     overflow-y: hidden;
   }
 }
+
 .pmd-tabs .nav-tabs {
   border-bottom: none;
 }
+
 .pmd-tabs .nav-tabs.nav-justified > li > a {
   border: none;
   border-radius: 0;
 }
+
 .pmd-tabs .nav-tabs.nav-justified > .active > a,
 .pmd-tabs .nav-tabs.nav-justified > .active > a:hover,
 .pmd-tabs .nav-tabs.nav-justified > .active > a:focus {
   border: none;
 }
+
 .pmd-tabs .nav-tabs > li.active > a,
 .pmd-tabs .nav-tabs > li.active > a:hover,
 .pmd-tabs .nav-tabs > li.active > a:focus {
@@ -34,9 +39,11 @@
   border-bottom-color: transparent;
   opacity: 1;
 }
+
 .pmd-tabs .nav-tabs > li {
   margin-bottom: 0;
 }
+
 .pmd-tabs .nav-tabs > li > a {
   padding: 1.125rem 1.5rem 1.0625rem;
   color: rgba(0, 0, 0, 0.54);
@@ -48,10 +55,12 @@
   border-radius: 0;
   text-transform: uppercase;
 }
+
 .pmd-tabs .nav-tabs > li > a:hover, .pmd-tabs .nav-tabs > li > a:focus {
   border-color: transparent;
   background-color: transparent;
 }
+
 .pmd-tabs .pmd-tab-active-bar {
   position: absolute;
   bottom: 0;
@@ -64,18 +73,22 @@
 .pmd-tabs-bg {
   background-color: #4285f4;
 }
+
 .pmd-tabs-bg .nav-tabs > li > a {
   color: rgba(255, 255, 255, 0.54);
 }
+
 .pmd-tabs-bg .nav-tabs > li .dropdown-menu a {
   color: #333333;
 }
+
 .pmd-tabs-bg .nav-tabs > li.active > a,
 .pmd-tabs-bg .nav-tabs > li.active > a:hover,
 .pmd-tabs-bg .nav-tabs > li.active > a:focus {
   color: white;
   background-color: transparent;
 }
+
 .pmd-tabs-bg .pmd-tabs-scroll-right,
 .pmd-tabs-bg .pmd-tabs-scroll-left {
   background-color: #4285f4;

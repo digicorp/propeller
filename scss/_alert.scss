@@ -1,12 +1,12 @@
 /*!
- * Propeller v1.3.1 (http://propeller.in/): alert.css
- * Copyright 2016-2018 Digicorp, Inc
+ * Propeller v1.3.2 (http://propeller.in/): alert.css
+ * Copyright 2016-2019 Digicorp, Inc
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
 // alert container for positions
 .pmd-alert-container {
-	position: fixed;
+	position: fixed; 
 	z-index: 100000000;
 	
 	// alert container for top, bottom, left, right and center positions

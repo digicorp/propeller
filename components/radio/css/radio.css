@@ -1,6 +1,6 @@
 /*!
- * Propeller v1.3.1 (http://propeller.in): radio.css
- * Copyright 2016-2018 Digicorp, Inc.
+ * Propeller v1.3.2 (http://propeller.in): radio.css
+ * Copyright 2016-2019 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-radio {
@@ -9,12 +9,15 @@
   /*Custamize Radio*/
   /*Select Radio*/
 }
+
 .pmd-radio span.pmd-radiobutton {
   margin-bottom: 0;
 }
+
 .pmd-radio input {
   display: none;
 }
+
 .pmd-radio > span.pmd-radio-label {
   display: inline-block;
   position: relative;
@@ -22,6 +25,7 @@
   padding-left: 1rem;
   cursor: pointer;
 }
+
 .pmd-radio > span.pmd-radio-label:before {
   content: "";
   display: block;
@@ -33,6 +37,7 @@
   border: 0.125rem solid rgba(0, 0, 0, 0.54);
   border-radius: 18px;
 }
+
 .pmd-radio > span.pmd-radio-label:after {
   content: "";
   display: block;
@@ -49,14 +54,17 @@
   -webkit-transform: scale(0);
   transform: scale(0);
 }
+
 .pmd-radio :checked + span.pmd-radio-label:before {
   border-color: #4285f4;
 }
+
 .pmd-radio :checked + span.pmd-radio-label:after {
   -ms-transform: scale(1);
   -webkit-transform: scale(1);
   transform: scale(1);
 }
+
 .pmd-radio .ink {
   background-color: rgba(0, 0, 0, 0.2);
 }
@@ -74,6 +82,7 @@
 .radio.disabled label {
   color: rgba(0, 0, 0, 0.26);
 }
+
 .radio.disabled .pmd-radio > span.pmd-radio-label::before {
   border-color: rgba(0, 0, 0, 0.26);
   cursor: not-allowed;
@@ -87,18 +96,23 @@ fieldset[disabled] .radio label {
 .pmd-card-inverse {
   /* Card Inverse Disabled Radio */
 }
+
 .pmd-card-inverse .pmd-radio > span.pmd-radio-label::before {
   border-color: rgba(255, 255, 255, 0.87);
 }
+
 .pmd-card-inverse .pmd-radio > span.pmd-radio-label::after {
   background-color: #4285f4;
 }
+
 .pmd-card-inverse .radio.disabled label {
   color: rgba(255, 255, 255, 0.54);
 }
+
 .pmd-card-inverse .radio.disabled .pmd-radio > span.pmd-radio-label::before {
   border-color: rgba(255, 255, 255, 0.26);
 }
+
 .pmd-card-inverse :checked + span.pmd-radio-label:before {
   border-color: #4285f4;
 }

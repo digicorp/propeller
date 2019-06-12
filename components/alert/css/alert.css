@@ -1,27 +1,33 @@
 /*!
- * Propeller v1.3.1 (http://propeller.in/): alert.css
- * Copyright 2016-2018 Digicorp, Inc
+ * Propeller v1.3.2 (http://propeller.in/): alert.css
+ * Copyright 2016-2019 Digicorp, Inc
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-alert-container {
   position: fixed;
   z-index: 100000000;
 }
+
 .pmd-alert-container.top {
   top: 20px;
 }
+
 .pmd-alert-container.bottom {
   bottom: 20px;
 }
+
 .pmd-alert-container.left {
   left: 20px;
 }
+
 .pmd-alert-container.right {
   right: 20px;
 }
+
 .pmd-alert-container.center {
   left: 50%;
 }
+
 @media screen and (max-width: 767px) {
   .pmd-alert-container.left {
     left: 50%;
@@ -30,6 +36,7 @@
     right: 50%;
   }
 }
+
 .pmd-alert-container .pmd-alert {
   position: relative;
   z-index: 1000;
@@ -46,12 +53,14 @@
   animation-fill-mode: both;
   font-size: 1rem;
 }
+
 .pmd-alert-container .pmd-alert a {
   position: absolute;
   right: 18px;
   float: right;
   color: #4285f4;
 }
+
 .pmd-alert-container .pmd-alert a:before {
   position: absolute;
   top: 0;
@@ -61,26 +70,32 @@
   margin: auto;
   content: "";
 }
+
 .pmd-alert-container .pmd-alert.success {
   color: #fff;
   background-color: #259b24;
 }
+
 .pmd-alert-container .pmd-alert.warning {
   color: #333333;
   background-color: #ffc107;
 }
+
 .pmd-alert-container .pmd-alert.light {
   color: #333333;
   background-color: #f8f9fa;
 }
+
 .pmd-alert-container .pmd-alert.dark {
   color: #fff;
   background-color: #343a40;
 }
+
 .pmd-alert-container .pmd-alert.error {
   color: #fff;
   background-color: #ff5722;
 }
+
 .pmd-alert-container .pmd-alert.information {
   color: #fff;
   background-color: #03a9f4;
@@ -101,6 +116,7 @@
     opacity: 1;
   }
 }
+
 .fadeIn {
   animation-name: fadeIn;
 }
@@ -113,6 +129,7 @@
     opacity: 0;
   }
 }
+
 .fadeOut {
   animation-name: fadeOut;
 }
@@ -126,6 +143,7 @@
     transform: translate3d(0, 100%, 0);
   }
 }
+
 .fadeOutDown {
   animation-name: fadeOutDown;
 }
@@ -140,6 +158,7 @@
     transform: none;
   }
 }
+
 .fadeInDown {
   animation-name: fadeInDown;
 }
@@ -154,6 +173,7 @@
     transform: none;
   }
 }
+
 .fadeInUp {
   animation-name: fadeInUp;
 }

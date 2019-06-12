@@ -1,6 +1,6 @@
 /*!
- * Propeller v1.3.1 (http://propeller.in): navbar.css
- * Copyright 2016-2018 Digicorp, Inc.
+ * Propeller v1.3.2 (http://propeller.in): navbar.css
+ * Copyright 2016-2019 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 @media (min-width: 768px) {
@@ -8,16 +8,19 @@
     border-radius: 0;
   }
 }
+
 .pmd-navbar.navbar > .container .navbar-brand,
 .pmd-navbar.navbar > .container-fluid .navbar-brand {
   margin-left: 0;
 }
+
 @media (min-width: 768px) {
   .pmd-navbar.navbar > .container .navbar-brand,
   .pmd-navbar.navbar > .container-fluid .navbar-brand {
     margin-left: 0px;
   }
 }
+
 .pmd-navbar .navbar-brand {
   float: left;
   padding: 0.5rem 1rem 0.5rem 0.5rem;
@@ -25,22 +28,26 @@
   line-height: 48px;
   height: inherit;
 }
+
 @media (max-width: 767px) {
   .pmd-navbar .navbar-brand {
     line-height: 40px;
   }
 }
+
 .pmd-navbar .navbar-nav > li > a {
   line-height: 24px;
   font-weight: 400;
   text-transform: uppercase;
 }
+
 @media (min-width: 768px) {
   .pmd-navbar .navbar-nav > li > a {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
   }
 }
+
 @media (max-width: 767px) {
   .pmd-navbar .navbar-nav {
     margin: 0;
@@ -84,6 +91,7 @@
     line-height: 24px;
   }
 }
+
 .pmd-navbar .navbar-toggle {
   float: left;
   border-radius: 50%;
@@ -94,20 +102,25 @@
   margin-top: 12px;
   margin-right: 0.5rem;
 }
+
 .pmd-navbar .navbar-toggle .icon-bar {
   width: 20px;
 }
+
 @media (max-width: 767px) {
   .pmd-navbar .navbar-toggle {
     margin-top: 0.5rem;
   }
 }
+
 .pmd-navbar .pmd-navbar-right-icon {
   margin-left: 1rem;
 }
+
 .pmd-navbar .pmd-navbar-right-icon a {
   display: inline-block;
 }
+
 @media (max-width: 767px) {
   .pmd-navbar .pmd-navbar-right-icon {
     position: absolute;
@@ -115,19 +128,23 @@
     right: 8px;
   }
 }
+
 .pmd-navbar .btn.pmd-btn-fab {
   margin: 0.75rem 0;
   padding: 0;
 }
+
 @media (max-width: 767px) {
   .pmd-navbar .btn.pmd-btn-fab {
     margin: 0.5rem 0;
   }
 }
+
 .pmd-navbar .navbar-form {
   padding-top: 7px;
   padding-bottom: 6px;
 }
+
 .pmd-navbar .navbar-form .btn {
   padding: 9px 14px;
 }
@@ -146,6 +163,7 @@
   -ms-transform: translateZ(0);
   transform: translateZ(0);
 }
+
 .pmd-sidebar-overlay.pmd-sidebar-overlay-active, .pmd-sidebar-overlay.active {
   opacity: 0.5;
   visibility: visible;
@@ -204,7 +222,6 @@
     transform: translate3d(0, 0, 0);
     box-shadow: 2px 0px 15px rgba(0, 0, 0, 0.35);
   }
-
   /* -- sidebar nav ------------------------------- */
   .container > .navbar-collapse.pmd-navbar-sidebar,
   .container-fluid > .navbar-collapse.pmd-navbar-sidebar {
@@ -212,7 +229,6 @@
     margin-right: 0;
     padding: 0;
   }
-
   /* -- sidebar inverse ------------------------------- */
   .navbar-inverse .pmd-navbar-sidebar {
     background-color: #222222;
@@ -232,11 +248,13 @@
     color: #9d9d9d;
   }
 }
+
 /* -- My Account -------------------------------- */
 .pmd-user-info > a {
   padding: 0.5rem 0.5rem;
   display: block;
 }
+
 .pmd-user-info .dropdown-menu {
   min-width: 100%;
 }
@@ -245,10 +263,12 @@
   margin-right: -15px;
   margin-left: 1rem;
 }
+
 .pmd-navbar .pmd-user-info .media-body {
   width: auto;
   height: 40px;
 }
+
 @media (max-width: 767px) {
   .pmd-navbar .pmd-user-info > a {
     padding-top: 0.5rem;
@@ -270,16 +290,16 @@
     position: relative;
     box-shadow: none;
     border-bottom: transparent solid 1px;
-    border-color: #3c3c3c;
+    border-color: #3c3b3b;
   }
   .pmd-navbar .pmd-navbar-sidebar .pmd-user-info > a {
     background-size: cover;
     color: rgba(255, 255, 255, 0.75);
-    background-color: #3c3c3c;
+    background-color: #3c3b3b;
   }
   .pmd-navbar .pmd-navbar-sidebar .pmd-user-info > a:hover,
   .pmd-navbar .pmd-navbar-sidebar .pmd-user-info > a :focus {
-    background-color: #3c3c3c;
+    background-color: #3c3b3b;
   }
   .pmd-navbar .pmd-navbar-sidebar .pmd-user-info .media-body {
     width: 100%;

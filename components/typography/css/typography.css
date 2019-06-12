@@ -1,11 +1,11 @@
 /*!
- * Propeller v1.3.1 (http://propeller.in): typography.css
- * Copyright 2016-2018 Digicorp, Inc.
+ * Propeller v1.3.2 (http://propeller.in): typography.css
+ * Copyright 2016-2019 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 html {
   font-size: 16px;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -21,6 +21,7 @@ a {
   text-decoration: none;
   outline: none;
 }
+
 a:focus, a:hover {
   text-decoration: underline;
   outline: none;
