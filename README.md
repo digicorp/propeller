@@ -37,8 +37,8 @@
 
 There are different ways you can start using Propeller,
 
-- [Download the latest release.](https://github.com/digicorp/propeller/blob/master/archive/pmd-1.1.0.zip)
-- Clone the repo: `git clone https://github.com/digicorp/propeller.git`
+- [Download the latest release.](https://github.com/digicorp/propeller/archive/v1.3.2.zip)
+- Clone the repo: `git clone https://github.com/propeller.git`
 - Install with Bower: `bower install propeller`
 - Install with npm: `npm install propellerkit`
 
@@ -112,7 +112,7 @@ See [the Releases section of our GitHub project](https://github.com/digicorp/pro
 
 ## License
 
-Propeller v1.3.2 (http://propeller.in)
+Propeller v1.3.2 (https://propeller.in)
 © 2016-2019 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
 Licensed under [MIT](https://github.com/digicorp/propeller/blob/master/LICENSE)
 
