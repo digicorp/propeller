@@ -1,6 +1,6 @@
 /*!
- * Propeller v1.3.0 (http://propeller.in/): card.css
- * Copyright 2016-2018 Digicorp, Inc
+ * Propeller v1.3.2 (http://propeller.in/): card.css
+ * Copyright 2016-2019 Digicorp, Inc
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-card {
@@ -12,6 +12,7 @@
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+
 .pmd-card .form-horizontal .form-group {
   margin-right: inherit;
   margin-left: inherit;
@@ -32,6 +33,7 @@
   border-top-left-radius: 0.125rem;
   border-top-right-radius: 0.125rem;
 }
+
 .pmd-card-title .dropdown .dropdown-toggle {
   color: inherit;
 }
@@ -65,23 +67,28 @@ h2.pmd-card-title-text {
 .pmd-card-actions {
   padding: 0.5rem 0.25rem;
 }
+
 .pmd-card-actions .btn {
   margin-right: 0.25rem;
   margin-bottom: 0.5rem;
   margin-left: 0.25rem;
   min-width: inherit;
 }
+
 .pmd-card-actions .btn:first-child {
   margin-left: 0.75rem;
 }
+
 .pmd-card-actions .btn:last-child {
   margin-right: 0.75rem;
 }
+
 .pmd-card-actions .btn.pmd-btn-flat {
   margin-right: 0.25rem;
   margin-bottom: 0;
   margin-left: 0.25rem;
 }
+
 .pmd-card-actions .btn.pmd-btn-fab {
   padding: 0;
 }
@@ -92,6 +99,7 @@ h2.pmd-card-title-text {
   padding-left: 1rem;
   margin-top: 1rem;
 }
+
 .pmd-card-media-inline .pmd-card-media h2.pmd-card-title-text {
   margin-top: 0.25rem;
 }
@@ -112,9 +120,11 @@ h2.pmd-card-title-text {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.84);
 }
+
 .pmd-card-inverse .pmd-card-body {
   color: rgba(255, 255, 255, 0.84);
 }
+
 .pmd-card-inverse .pmd-card-subtitle-text {
   color: rgba(255, 255, 255, 0.54);
 }

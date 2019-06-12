@@ -624,6 +624,11 @@ $datatable-active-bg:			    #edf4fd !default;
 $datatable-dark-active-bg:			#313131 !default;
 $datatable-dark-checkbox-border-color: rgba($white,.54);
 
+$custom-select-inverse-bg:			rgba($black, .84) !default;
+$custom-select-inverse-color:		$white !default;
+$child-table-inverse-bg:			rgba($black, .84) !default;
+$custom-select-option-inverse-color:rgba($black, .84) !default;	
+
 // Range slider
 $range-slider-height:				2px !default;
 $range-slider-spacer-top:			40px !default;

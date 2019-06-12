@@ -1,0 +1,18 @@
+$font-family-sans-serif:       		Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-size-base:               		1rem !default;
+$border-width: 			 	  		1px !default;
+$transition-base:        	 		all .2s ease-in-out !default;
+
+// TextField
+$textfield-font-size:				$font-size-base !default;
+$textfield-border-height:			$border-width !default;	
+$textfield-border-color:			#e6e6e6 !default;
+$textfield-padding-bottom:			0.375rem !default; 
+
+// Select2
+$select2-border-color:				$textfield-border-color !default;
+$select2-border-width:				$textfield-border-height !default;
+$select2-padding-y:					6px !default;
+$select2-color:						#555555 !default;
+$select2-font-family:				$font-family-sans-serif !default;
+$select2-font-size:					14px !default;

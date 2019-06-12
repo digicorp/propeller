@@ -1,7 +1,7 @@
 
 /*!
- * Propeller v1.3.0 (http://propeller.in)
- * Copyright 2016-2018 Digicorp, Inc.
+ * Propeller v1.3.2 (http://propeller.in)
+ * Copyright 2016-2019 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 
@@ -15,7 +15,7 @@ var commons = function () {
 	function commons() {}
 	commons.attachParentSelector = function (parentSelector, defaultSelector) {
 		var customSelector = defaultSelector;
-		if (parentSelector !== '' && parentSelector.length > 0) {
+		if (parentSelector && parentSelector !== '' && parentSelector.length > 0) {
 			if (parentSelector === defaultSelector) {
 				customSelector = defaultSelector;
 			} else if ($(parentSelector).hasClass(defaultSelector)) {
@@ -95,10 +95,12 @@ var observeDOM = (function () {
 })();
 
 $(document).ready(function () {
+	$.propellerkit();
+});
+
+$.propellerkit = function() {
 	observeDOM(document.querySelector('body'), function (mutations) {
-		
 		processMutation(0);
-		
 		function processMutation(index) {
 			if (index >= mutations.length) {
 				return;
@@ -147,16 +149,18 @@ $(document).ready(function () {
 					callback();
 				});
 			} else {
-
-				var childNodes = node.childNodes;
-				processNodes(childNodes, function() {
-					processNode(nodes, index+1, function() {
-						callback();
+				try {
+					var childNodes = node.childNodes;
+					processNodes(childNodes, function() {
+						processNode(nodes, index+1, function() {
+							callback();
+						});
 					});
-				});
+				} catch (e) {
+					
+				}
 			}
 		}
-
 		function containsPmdClassPrefix(ele) {
 			if ($(ele).attr('class') === undefined) {
 				return false;
@@ -171,4 +175,4 @@ $(document).ready(function () {
 			return false;
 		}
 	});
-});
+};

@@ -1,6 +1,6 @@
 /*!
- * Propeller v1.3.0 (http://propeller.in): floating-action-button.css
- * Copyright 2016-2018 Digicorp, Inc.
+ * Propeller v1.3.2 (http://propeller.in): floating-action-button.css
+ * Copyright 2016-2019 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-floating-action {
@@ -19,6 +19,7 @@
   bottom: auto;
   overflow: hidden;
 }
+
 .pmd-floating-action:hover .pmd-floating-action-btn:before,
 .menu--floating--open .pmd-floating-action-btn:before {
   opacity: 1;
@@ -30,6 +31,7 @@
   transition: all 0.2s ease-in-out;
   transition: all 0.3s cubic-bezier(0.55, 0, 0.1, 1);
 }
+
 .pmd-floating-action-btn:before {
   bottom: 10%;
   content: attr(data-title);
@@ -49,15 +51,18 @@
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+
 .pmd-floating-action-btn:last-child:before {
   font-size: 14px;
   bottom: 25%;
 }
+
 .pmd-floating-action-btn:hover, .pmd-floating-action-btn:focus, .pmd-floating-action-btn:active {
   -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
+
 .pmd-floating-action-btn:not(:last-child) {
   opacity: 0;
   transform: translateY(20px) scale(0.3);
@@ -67,27 +72,35 @@
   position: absolute;
   bottom: 0;
 }
+
 .pmd-floating-action-btn:not(:last-child):nth-last-child(1) {
   transition-delay: 50ms;
 }
+
 .pmd-floating-action-btn:not(:last-child):nth-last-child(2) {
   transition-delay: 100ms;
 }
+
 .pmd-floating-action-btn:not(:last-child):nth-last-child(3) {
   transition-delay: 150ms;
 }
+
 .pmd-floating-action-btn:not(:last-child):nth-last-child(4) {
   transition-delay: 200ms;
 }
+
 .pmd-floating-action-btn:not(:last-child):nth-last-child(5) {
   transition-delay: 250ms;
 }
+
 .pmd-floating-action-btn:not(:last-child):nth-last-child(6) {
   transition-delay: 300ms;
 }
+
 .pmd-floating-action-btn.btn:hover {
   overflow: visible;
 }
+
 .pmd-floating-action-btn .ink {
   width: 50px;
   height: 50px;

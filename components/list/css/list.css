@@ -1,6 +1,6 @@
 /*!
- * Propeller v1.3.0 (http://propeller.in): list.css
- * Copyright 2016-2018 Digicorp, Inc.
+ * Propeller v1.3.2 (http://propeller.in): list.css
+ * Copyright 2016-2019 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-card-list {
@@ -15,10 +15,12 @@
   border: inherit;
   line-height: 1.4;
 }
+
 .list-group-item:first-child {
   border-top-left-radius: 0;
   border-top-right-radius: 0;
 }
+
 .list-group-item:last-child {
   margin-bottom: 0;
   border-bottom-right-radius: 0;
@@ -42,6 +44,7 @@
 .pmd-list .list-group-item {
   padding: 0.75rem 1rem;
 }
+
 .pmd-list .media-left,
 .pmd-list .media > .pull-left {
   padding-right: 1rem;
@@ -60,6 +63,7 @@
 .pmd-list-avatar {
   padding: 0.5rem 0;
 }
+
 .pmd-list-avatar .list-group-item {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -79,11 +83,13 @@
   vertical-align: top;
   display: table-cell;
 }
+
 .material-icons.media-right {
   padding-left: 32px;
   vertical-align: top;
   display: table-cell;
 }
+
 .material-icons.media-middle {
   vertical-align: middle;
   display: table-cell;

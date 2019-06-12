@@ -1,6 +1,6 @@
 /*!
- * Propeller v1.3.0 (http://propeller.in): checkbox.css
- * Copyright 2016-2018 Digicorp, Inc.
+ * Propeller v1.3.2 (http://propeller.in): checkbox.css
+ * Copyright 2016-2019 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-checkbox-ripple-effect {
@@ -12,6 +12,7 @@
 .checkbox .pmd-checkbox-ripple-effect {
   padding-left: 0;
 }
+
 .checkbox .pmd-checkbox {
   padding-left: 0;
 }
@@ -19,15 +20,18 @@
 .pmd-checkbox [type="checkbox"] {
   /* Disabled checkbox */
 }
+
 .pmd-checkbox [type="checkbox"]:not(:checked), .pmd-checkbox [type="checkbox"]:checked {
   position: absolute;
   left: -9999px;
 }
+
 .pmd-checkbox [type="checkbox"]:not(:checked) + .pmd-checkbox-label, .pmd-checkbox [type="checkbox"]:checked + .pmd-checkbox-label {
   position: relative;
   padding-left: 1.5625rem;
   cursor: pointer;
 }
+
 .pmd-checkbox [type="checkbox"]:not(:checked) + .pmd-checkbox-label:before, .pmd-checkbox [type="checkbox"]:checked + .pmd-checkbox-label:before {
   content: '';
   position: absolute;
@@ -40,6 +44,7 @@
   border-radius: 0.125rem;
   border-color: rgba(0, 0, 0, 0.54);
 }
+
 .pmd-checkbox [type="checkbox"]:not(:checked) + .pmd-checkbox-label:after, .pmd-checkbox [type="checkbox"]:checked + .pmd-checkbox-label:after {
   color: #ffffff;
   border-image: none;
@@ -54,22 +59,26 @@
   width: 6px;
   transition: all .2s;
 }
+
 .pmd-checkbox [type="checkbox"]:checked + .pmd-checkbox-label:before {
   background-color: #4285f4;
   border-color: #4285f4;
 }
+
 .pmd-checkbox [type="checkbox"]:checked + .pmd-checkbox-label:after {
   opacity: 1;
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 .pmd-checkbox [type="checkbox"]:not(:checked) + .pmd-checkbox-label:after {
   opacity: 0;
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 .pmd-checkbox [type="checkbox"]:disabled:not(:checked) + .pmd-checkbox-label:before, .pmd-checkbox [type="checkbox"]:disabled:checked + .pmd-checkbox-label:before {
   box-shadow: none;
   border-color: rgba(0, 0, 0, 0.26);
@@ -113,9 +122,11 @@ fieldset[disabled] .checkbox label.pmd-checkbox {
 .pmd-card-inverse .pmd-checkbox [type="checkbox"] :checked + .pmd-checkbox-label:before {
   border-color: rgba(255, 255, 255, 0.54);
 }
+
 .pmd-card-inverse .pmd-checkbox [type="checkbox"]:checked + .pmd-checkbox-label:before {
   background-color: #4285f4;
 }
+
 .pmd-card-inverse .checkbox.disabled label.pmd-checkbox,
 .pmd-card-inverse fieldset[disabled] .checkbox label.pmd-checkbox {
   color: rgba(255, 255, 255, 0.54);

@@ -1,6 +1,6 @@
 {
   "name": "propellerkit-select2",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Select2 gives a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options. We have used Select2 plugin as a reference which we have then customized based on our Propeller theme.",
   "homepage": "http://propeller.in/",
   "author": "Digicorp, Inc",
@@ -15,7 +15,9 @@
   },
   "keywords": [
    "css",
+   "scss",
    "js",
+   "material design",
    "mobile-first",
    "responsive",
    "front-end",

@@ -1,13 +1,13 @@
 <br>
 <p align="left">
-  <a href="http://propeller.in/">
+  <a href="https://propeller.in/">
     <img height="40" src="https://demophp.digi-corp.com/CreativeZone/Websites/Propeller/HTML/assets/images/propeller-logo.png" />
   </a>
   <p align="left">
     A front-end responsive framework 
     based on Google's Material Design Standards & Bootstrap.  
     <br>
-    <a href="http://propeller.in/"><strong>Visit Propeller &raquo;</strong></a>
+    <a href="https://propeller.in/"><strong>Visit Propeller &raquo;</strong></a>
   </p>
 </p>
 
@@ -38,7 +38,7 @@
 There are different ways you can start using Propeller,
 
 - [Download the latest release.](https://github.com/digicorp/propeller/blob/master/archive/pmd-1.1.0.zip)
-- Clone the repo: `git clone https://github.com/propeller.git`
+- Clone the repo: `git clone https://github.com/digicorp/propeller.git`
 - Install with Bower: `bower install propeller`
 - Install with npm: `npm install propellerkit`
 
@@ -53,7 +53,7 @@ Using third party components:
 
 ## Propeller Guidelines
 
-Follow our [Guidelines](http://propeller.in/docs/index.php) and get familiar with the basic setup and structure.
+Follow our [Guidelines](http://propeller.in/get-started/) and get familiar with the basic setup and structure.
 
 
 ## What's included
@@ -112,8 +112,8 @@ See [the Releases section of our GitHub project](https://github.com/digicorp/pro
 
 ## License
 
-Propeller v1.3.0 (http://propeller.in)
-© 2016-2018 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
+Propeller v1.3.2 (http://propeller.in)
+© 2016-2019 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
 Licensed under [MIT](https://github.com/digicorp/propeller/blob/master/LICENSE)
 
 

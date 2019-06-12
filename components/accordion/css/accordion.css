@@ -1,6 +1,6 @@
 /*!
- * Propeller v1.3.0 (http://propeller.in/): accordion.css
- * Copyright 2016-2018 Digicorp, Inc
+ * Propeller v1.3.2 (http://propeller.in/): accordion.css
+ * Copyright 2016-2019 Digicorp, Inc
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .panel-group.pmd-accordion .panel {
@@ -13,60 +13,73 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.2s ease-in-out;
 }
+
 .panel-group.pmd-accordion .panel .panel-body {
   border: none;
 }
+
 .panel-group.pmd-accordion .panel > .panel-heading {
   padding: 0;
   background: none;
 }
+
 .panel-group.pmd-accordion .panel > .panel-heading a {
   display: block;
   padding: 0.75rem 1rem;
   line-height: 1.5rem;
 }
+
 .panel-group.pmd-accordion .panel > .panel-heading a:hover, .panel-group.pmd-accordion .panel > .panel-heading a:focus {
   color: inherit;
 }
+
 .panel-group.pmd-accordion .panel > .panel-heading + .panel-collapse > .panel-body {
   border: none;
 }
+
 .panel-group.pmd-accordion .panel.active .material-icons.pmd-accordion-arrow {
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
+
 .panel-group.pmd-accordion .panel.panel-success > .panel-heading {
   color: #135113;
   background-color: #d3ebd3;
   border-color: #c2e3c2;
 }
+
 .panel-group.pmd-accordion .panel.panel-info > .panel-heading {
   color: #02587f;
   background-color: #cdeefd;
   border-color: #b8e7fc;
 }
+
 .panel-group.pmd-accordion .panel.panel-warning > .panel-heading {
   color: #856404;
   background-color: #fff3cd;
   border-color: #ffeeba;
 }
+
 .panel-group.pmd-accordion .panel.panel-danger > .panel-heading {
   color: #852d12;
   background-color: #ffddd3;
   border-color: #ffd0c1;
 }
+
 .panel-group.pmd-accordion-inbox .panel.active {
   margin: 0.5rem -0.5rem;
   -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
+
 @media screen and (max-width: 767px) {
   .panel-group.pmd-accordion-inbox .panel.active {
     margin: 1rem -10px;
   }
 }
+
 .panel-group.pmd-accordion-nospace .panel {
   margin: 0;
 }

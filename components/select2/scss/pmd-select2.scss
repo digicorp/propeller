@@ -1,0 +1,42 @@
+/*!
+ * Propeller v1.2.0 (http://propeller.in)
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+ */
+
+// Genral style of mizins and variables
+@import "variables.scss";
+
+.select2-container--bootstrap {
+	.select2-selection{ 
+		border:none; 
+		border-bottom:$select2-border-width solid $select2-border-color; 
+		box-shadow:none; 
+		border-radius:0; 
+		background-color:transparent;
+		color: $select2-color;
+    	font-family: $select2-font-family;
+    	font-size: $select2-font-size;
+	}
+	.select2-selection--single{ 
+		padding:$select2-padding-y 24px $select2-padding-y 0;
+	}
+	&.select2-container--focus,
+	&.select2-container--open{
+		.select2-selection {
+			box-shadow:none; 
+			border-color:$select2-border-color;
+		}
+	}
+	.select2-selection--multiple {
+		.select2-search--inline {
+			.select2-search__field{
+				padding: 0;
+			}
+		}
+		.select2-selection__choice{
+			margin:5px 5px 0 0; 
+			border:$select2-border-width solid $select2-border-color;
+		}
+	}
+}

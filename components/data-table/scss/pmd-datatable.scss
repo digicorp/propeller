@@ -1,0 +1,426 @@
+/*!
+ * Propeller v1.2.0 (http://propeller.in)
+ * Copyright 2016-2019 Digicorp, Inc.
+ * Licensed under MIT (http://propeller.in/LICENSE)
+*/
+
+// Genral style of mizins and variables
+@import "variables.scss";
+@import "mixins.scss";
+
+table.dataTable {
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+	
+	// Datatable Sorting
+	thead {
+		.sorting::after,
+		.sorting_asc::after,
+		.sorting_desc::after,
+		.sorting_asc_disabled::after, 
+		.sorting_desc_disabled::after {
+			font-family: 'Material Icons';
+			font-size: 18px;
+		}
+		.sorting::after {
+			content: "";
+		}
+		.sorting_desc::after {
+			content: "\E5C7";
+		}
+		.sorting_asc::after {
+			content: "\E5C5";
+		}
+	}
+	
+	// Datatable Custom Select
+	&.dtr-column {
+		> tbody > tr {
+			> td.control::before,
+			> th.control::before {
+				border: medium none;
+				box-shadow: none;
+				font-size: 18px;
+				left: inherit;
+				right: 10px;
+				background-color:$datatable-control-bg;
+				color: $datatable-control-color;
+				height: 22px;
+				line-height: 21px;
+				width: 22px;
+				top: 44%;
+			}
+			&.parent {
+				td.control::before,
+				th.control::before {
+					background-color:$datatable-control-bg;
+				}
+			}
+		}
+	}
+	> tbody > tr.child {
+		background-color:$datatable-control-bg;
+		ul {
+			display: block;
+		}
+	}
+	
+	// Select Checkbox
+	td.select-checkbox {
+		width: 24px;
+		&::before,
+		&::after {
+			box-sizing: border-box;
+			display: block;
+			top: 50%;
+			position: absolute;
+			left: 50%;
+		}
+		&::before {
+			border-color: $datatable-checkbox-border-color;
+			@include border-radius($datatable-checkbox-border-radius);
+			border-style: solid;
+			border-width: $datatable-checkbox-border-width;
+			content: "";
+			height: 18px;
+			width: 18px;
+			margin-left: -9px;
+			margin-top: -10px;
+		}
+	}
+	tr.selected {
+		td.select-checkbox {
+			&::after {
+				opacity: 1;
+				transform: rotate(45deg);
+				border-image: none;
+				border-style: none solid solid none;
+				border-width: 0 $datatable-checkbox-check-size $datatable-checkbox-check-size 0;
+				color:$datatable-checkbox-check-color;
+				content: "";
+				display: table;
+				height: 12px;
+				position: absolute;
+				transition: all 0.2s ease 0s;
+				width: 6px;
+				margin: -9px 0 0 -3px
+			}
+			&::before { 
+				background-color: $datatable-checkbox-checked-bg;
+				border-color: $datatable-checkbox-checked-border-color;
+			}
+		}
+	}
+	
+	// Propeller custom checkbox for Data table
+	tbody > tr,
+	&.stripe tbody > tr.odd,
+	&.display tbody > tr.odd,
+	&.hover tbody > tr,
+	&.display tbody > tr{
+		&.selected,
+		> .selected {
+			background-color: $datatable-active-bg;
+			&:hover {
+				background-color:$datatable-active-bg;
+			}
+		}
+	}
+	&.display tbody > tr.even,
+	&.order-column.stripe tbody > tr.even,
+	&.display tbody > tr.odd,
+	&.order-column.stripe tbody > tr.odd{
+		&.selected {
+			> .sorting_1 {
+				background-color: $datatable-active-bg;
+			}
+		}
+	}
+	
+	// Data table inverse
+	&.table-inverse {
+		tbody > tr,
+		&.stripe tbody > tr.odd,
+		&.display tbody > tr.odd,
+		&.hover tbody > tr,
+		&.display tbody > tr{
+			&.selected,
+			> .selected {
+				background-color: $datatable-dark-active-bg;
+			}
+		}
+		&.display tbody > tr.even,
+		&.order-column.stripe tbody > tr.even,
+		&.display tbody > tr.odd,
+		&.order-column.stripe tbody > tr.odd{
+			&.selected {
+				> .sorting_1 {
+					background-color: $datatable-dark-active-bg;
+				}
+			}
+		}
+		td.select-checkbox::before {
+			border-color: $datatable-dark-checkbox-border-color;
+		}
+	}
+}
+
+/*Propeller DataTable pagination*/
+.pmd-datatable-pagination {
+	float: right;
+	line-height: 40px;
+	> div {
+		display: inline-block;
+		vertical-align: middle;
+	}
+	// Propeller Row infornation
+	div.dataTables_info {
+		padding: 0;
+		margin-left: 32px;
+	}
+	div.dataTables_length {
+		select {
+			width: 48px;
+			border-width: 0;
+			border-bottom-width: 1px;
+			box-shadow: none;
+			padding: 0;
+			border-radius: 0;
+			height: 24px;
+			line-height: 24px;
+		}		
+	}
+	// Propeller DataTable Pagination
+	.pagination {
+		margin: 0;
+		li {
+			a,
+			span,
+			&.disabled a,
+			&.disabled span{
+				background: none;
+				border: none;
+				margin-right: 4px;
+				border-radius: 3px;
+				min-width: 24px;
+				text-align: center;
+				padding: 4px 4px;
+				border: 1px solid;
+				border-color: transparent;
+				line-height: 22px;
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+			&.active a,
+			&.active span{
+				background: #fff;
+				color: #333;
+				border: 1px solid rgba(0,0,0,0.15);
+			}
+			&.previous, 
+			&.next {
+				margin: 0 12px;
+				a {
+					font-family: 'Material Icons';
+					font-size: 24px;
+					height: auto;
+					line-height: 24px;
+					padding: 0;
+					background-color: transparent;
+					border: none;
+					margin: 0;
+				}
+			}
+			&.previous {
+				a:before {
+					content: "\e5cb";
+				}
+			}
+			&.next a:before {
+				content: "\e5cc";
+			}
+		}
+		> li {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+}
+
+div.dataTables_wrapper {
+	// Propeller DataTable Paginate
+	div.dataTables_paginate {
+		margin-left: 20px;
+		ul.pagination {
+			vertical-align: middle;
+		}
+	}
+	// Rows per page
+	div.dataTables_length label {
+		margin-bottom: 0;
+	}
+}
+
+// Datatable search
+.search-paper {
+	float: right;
+	@media screen and (max-width: 767px) {
+		float: none;
+	}
+}
+
+// Datatable Title
+.data-table-title {
+	display: inline-block;
+}
+
+// Datatable Custom Select
+.custom-select {
+	margin: 0;
+	border-bottom: 1px solid #ccc;
+	width: 120px;
+	overflow: hidden;
+	background-color: #fff;
+	padding: 2px 0 2px 0;
+	margin-left: 32px;
+	position: relative;
+	&:after {
+		content: "\E5C5";
+		font-family: 'Material Icons';
+		font-size: 18px;
+		position: absolute;
+		right: 0;
+		top: -6px;
+		color: rgba(0,0,0,0.54);
+	}
+	select {
+		padding: 5px 8px;
+		width: 130%;
+		border: none;
+		box-shadow: none;
+		background-color: transparent;
+		background-image: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		&::after {
+			position: absolute;
+			right: 8px;
+			font-size: 18px;
+			top: -3px;
+		}
+		&:focus {
+			outline: none;
+		}
+	}
+}
+
+@media screen and (max-width: 640px) {
+	div.dataTables_wrapper {
+		div.dataTables_length label {
+			position: relative;
+		};
+		.pmd-datatable-pagination {
+			div.dataTables_info {
+				margin-left: 0;
+				word-wrap: break-word;
+			}
+		}
+		div.dataTables_paginate {
+			margin-left: 0;
+		}
+		div.dataTables_filter input {
+			width: 100%;
+			margin-left: 0;
+		}
+		div.dataTables_info {
+			white-space: inherit;
+		}
+	}
+	.custom-select-title {
+		vertical-align: top;
+	}
+	.custom-select {
+		margin-left: 0;
+	}
+	.pmd-datatable-pagination {
+		float: none;
+		> div {
+			display: inline-block;
+			width: 100%;
+			margin-bottom: 8px;
+		}
+	}
+	.search-paper {
+		width: 100%;
+		margin-bottom: -20px;
+		margin-top: 20px;
+		label {
+			width: 100%;
+		}
+	}
+	.pagination {
+		li.previous,
+		li.next {
+			margin: 0 4px;
+		}
+	}
+}
+.dataTables_wrapper {
+	position: relative;
+}
+.custom-select-info {
+	background-color: #edf4fd;
+	height: 64px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	line-height: 64px;
+	padding: 0 16px;
+	font-size: 16px;
+}
+.custom-select-item {
+	float: left;
+}
+.custom-select-action {
+	float: right;
+	button {
+		margin-left: 8px;
+	}
+}
+.pmd-card-inverse {
+	.custom-select {
+		background: transparent;
+		&::after {
+			color: $custom-select-inverse-color;
+		}
+	};
+	div.dataTables_length {
+		select {
+			color: $custom-select-inverse-color;
+			option {
+				color: $custom-select-option-inverse-color;
+			}
+		}
+	}
+	.custom-select-info {
+		background-color: $custom-select-inverse-bg;
+		height: 64px;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		line-height: 64px;
+		padding: 0 16px;
+		font-size: 16px;
+	}
+	table.dataTable {
+		> tbody > tr {
+			&.child {
+				background-color: $child-table-inverse-bg;
+				&::hover{
+					background-color: $child-table-inverse-bg;
+				}
+			}
+		}
+	}
+}

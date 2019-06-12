@@ -1,0 +1,19 @@
+$transition-base:        	 		all .2s ease-in-out !default;
+
+// Range slider
+$range-slider-height:				2px !default;
+$range-slider-spacer-top:			40px !default;
+$range-slider-spacer-bottom:		6px !default;
+$range-slider-bar-bg:				#4285f4 !default;
+$range-slider-bg:					#dedede !default;
+
+$range-slider-marker-horizontal-bg: #000000 !default;
+$range-slider-marker-horizontal-height: 2px !default;
+
+$range-slider-marker-vertical-bg: 	#000000 !default;
+$range-slider-marker-vertical-width: 2px !default;
+
+$range-slider-tooltip-bg:			$range-slider-bar-bg !default;
+$range-slider-tooltip-color:		#ffffff !default;
+$range-slider-tooltip-font-size:	11px !default;
+$range-slider-disabled-bg:			#d0d0d0 !default;
