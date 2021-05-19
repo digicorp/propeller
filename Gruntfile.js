@@ -147,7 +147,7 @@ module.exports = function (grunt) {
       },
       strict: {
         options: {
-          import: false
+          import: false,
         },
         src: ['dist/css/propeller.css']
       }

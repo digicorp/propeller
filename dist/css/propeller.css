@@ -2615,7 +2615,6 @@ fieldset[disabled] .radio label {
     white-space: nowrap;
     cursor: pointer;
     -webkit-user-select: none;
-       -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
     transition: all .2s ease-in-out;
