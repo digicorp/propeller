@@ -69,6 +69,7 @@ module.exports = function (grunt) {
       propellerMinJs: {
         options: {
           banner: '<%= banner %>',
+          sourceMap: true,
           compress: {
             warnings: false
           },
@@ -77,7 +78,6 @@ module.exports = function (grunt) {
         },
         src: '<%= concat.propellerJs.dest %>',
         dest: 'dist/js/<%= pkg.grunt_name %>.min.js'
-
       }
     },
     sass: {
