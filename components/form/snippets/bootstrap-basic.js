@@ -1,8 +1,8 @@
 <!-- Jquery js -->
-<script src="http://propeller.in/assets/js/jquery.js"></script>
+<script src="https://opensource.propeller.in/assets/js/jquery.js"></script>
 
 <!-- Propeller  js -->
-<script type="text/javascript" src="http://propeller.in/assets/js/propeller.min.js"></script>
+<script type="text/javascript" src="https://opensource.propeller.in/assets/js/propeller.min.js"></script>
 
 <!-- Text field js -->
 <script>

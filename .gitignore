@@ -1,2 +1,5 @@
 components/floating-action-button/snippets/floating-button.css
 components/navbar/js/navbar.js
+archive/
+node_modules/
+package-lock.json

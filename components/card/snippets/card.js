@@ -5,4 +5,4 @@
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <!-- Propeller js -->
-<script type="text/javascript" src="http://propeller.in/assets/js/propeller.min.js"></script>
+<script type="text/javascript" src="https://opensource.propeller.in/assets/js/propeller.min.js"></script>

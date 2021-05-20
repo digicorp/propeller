@@ -1,7 +1,7 @@
 <br>
 <p align="left">
   <a href="http://propeller.in/" target="_blank">
-    <img height="40" src="http://propeller.in/assets/images/propeller-logo.png" />
+    <img height="40" src="https://opensource.propeller.in/assets/images/propeller-logo.png" />
   </a>
 	 <p align="left">
 Propeller’s data tables refers to a matrix of information, like an excel spreadsheet with columns, rows, and data. It is used to present raw data sets, and usually appears in desktop enterprise products. We have used <a href="https://datatables.net/examples/styling/bootstrap.html" target="_blank">Bootstrap Data table</a> as base and customized it by applying material design principles to it. 
@@ -19,7 +19,7 @@ npm install propellerkit-datatables
 
 ## Propeller Datatable Guidelines
 
-Follow our [Guidelines](http://propeller.in/components/data-table.php) for more options.
+Follow our [Guidelines](https://opensource.propeller.in/components/data-table) for more options.
 
 
 ## Browser Support
@@ -53,7 +53,7 @@ See [the Releases section of our GitHub project](https://github.com/digicorp/pro
 
 ## License
 
-Code and documentation copyright 2016-2019 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
+Code and documentation copyright 2016-2021 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
 Licensed under [MIT](https://github.com/digicorp/propeller/blob/master/LICENSE)
 
 

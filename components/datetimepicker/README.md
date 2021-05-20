@@ -1,7 +1,7 @@
 <br>
 <p align="left">
   <a href="http://propeller.in/" target="_blank">
-    <img height="40" src="http://propeller.in/assets/images/propeller-logo.png" />
+    <img height="40" src="https://opensource.propeller.in/assets/images/propeller-logo.png" />
   </a>
 	 <p align="left">
 Propeller’s datetimepicker component allows user to select a date from a calendar and time from a visual analog clock; it also accepts values via direct input. You can find a wide variety of date and time pickers here. We have used <a href="http://eonasdan.github.io/bootstrap-datetimepicker/" target="_blank">Bootstraps’ datetimepicker</a> and applied material design principles to it.
@@ -19,7 +19,7 @@ npm install propellerkit-datetimepicker
 
 ## Propeller Datetimepicker Guidelines
 
-Follow our [Guidelines](http://propeller.in/components/datetimepicker.php) for more options.
+Follow our [Guidelines](https://opensource.propeller.in/components/datetimepicker) for more options.
 
 
 ## Browser Support
@@ -53,7 +53,7 @@ See [the Releases section of our GitHub project](https://github.com/digicorp/pro
 
 ## License
 
-Code and documentation copyright 2016-2019 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
+Code and documentation copyright 2016-2021 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
 Licensed under [MIT](https://github.com/digicorp/propeller/blob/master/LICENSE)
 
 

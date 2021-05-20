@@ -1,6 +1,6 @@
 /*!
- * Propeller v1.3.2 (http://propeller.in/)
- * Copyright 2016-2019 Digicorp, Inc
+ * Propeller v1.3.3 (http://propeller.in/)
+ * Copyright 2016-2021 Digicorp, Inc
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 @font-face {
@@ -46,8 +46,8 @@
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): typography.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): typography.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 html {
@@ -153,8 +153,8 @@ h5, .h5 {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in/)
- * Copyright 2016-2019 Digicorp, Inc
+ * Propeller v1.3.3 (http://propeller.in/)
+ * Copyright 2016-2021 Digicorp, Inc
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-z-depth {
@@ -194,8 +194,8 @@ h5, .h5 {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): google-icons.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): google-icons.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .material-icons.pmd-xs, .material-icons.md-18 {
@@ -231,8 +231,8 @@ h5, .h5 {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in/): card.css
- * Copyright 2016-2019 Digicorp, Inc
+ * Propeller v1.3.3 (http://propeller.in/): card.css
+ * Copyright 2016-2021 Digicorp, Inc
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-card {
@@ -362,8 +362,8 @@ h2.pmd-card-title-text {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in/): accordion.css
- * Copyright 2016-2019 Digicorp, Inc
+ * Propeller v1.3.3 (http://propeller.in/): accordion.css
+ * Copyright 2016-2021 Digicorp, Inc
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .panel-group.pmd-accordion .panel {
@@ -462,8 +462,8 @@ h2.pmd-card-title-text {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in/): alert.css
- * Copyright 2016-2019 Digicorp, Inc
+ * Propeller v1.3.3 (http://propeller.in/): alert.css
+ * Copyright 2016-2021 Digicorp, Inc
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-alert-container {
@@ -642,8 +642,8 @@ h2.pmd-card-title-text {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in/): badge.css
- * Copyright 2016-2019 Digicorp, Inc
+ * Propeller v1.3.3 (http://propeller.in/): badge.css
+ * Copyright 2016-2021 Digicorp, Inc
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .badge {
@@ -802,8 +802,8 @@ h2.pmd-card-title-text {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): button.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): button.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .btn {
@@ -1560,8 +1560,8 @@ h2.pmd-card-title-text {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): modal.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): modal.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .modal-content {
@@ -1679,8 +1679,8 @@ h2.pmd-card-title-text {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): dropdown.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): dropdown.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-dropdown .dropdown-menu {
@@ -1889,8 +1889,8 @@ h2.pmd-card-title-text {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): textfield.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): textfield.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-textfield-focused {
@@ -2149,8 +2149,8 @@ h2.pmd-card-title-text {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): checkbox.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): checkbox.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-checkbox-ripple-effect {
@@ -2283,8 +2283,8 @@ fieldset[disabled] .checkbox label.pmd-checkbox {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): radio.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): radio.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-radio {
@@ -2402,8 +2402,8 @@ fieldset[disabled] .radio label {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): toggle-switch.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): toggle-switch.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-switch {
@@ -2486,8 +2486,8 @@ fieldset[disabled] .radio label {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): list.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): list.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-card-list {
@@ -2588,8 +2588,8 @@ fieldset[disabled] .radio label {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): navbar.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): navbar.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 @media (min-width: 768px) {
@@ -2896,8 +2896,8 @@ fieldset[disabled] .radio label {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): popover.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): popover.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .popover.default {
@@ -3165,8 +3165,8 @@ fieldset[disabled] .radio label {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): progressbar.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): progressbar.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-progress {
@@ -3181,8 +3181,8 @@ fieldset[disabled] .radio label {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): sidebar.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): sidebar.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .constructor,
@@ -3477,8 +3477,8 @@ fieldset[disabled] .radio label {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): tab.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): tab.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-tabs {
@@ -3607,8 +3607,8 @@ fieldset[disabled] .radio label {
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): table.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): table.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .table {
@@ -4155,8 +4155,8 @@ Ttable Reflow
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): tooltip.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): tooltip.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-tooltip ~ .tooltip {
@@ -4290,8 +4290,8 @@ Ttable Reflow
 }
 
 /*!
- * Propeller v1.3.2 (http://propeller.in): floating-action-button.css
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): floating-action-button.css
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  */
 .pmd-floating-action {

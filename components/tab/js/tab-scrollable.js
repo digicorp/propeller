@@ -1,8 +1,8 @@
 
 /**
  * --------------------------------------------------------------------------
- * Propeller v1.3.2 (http://propeller.in): tab-scrollable.js
- * Copyright 2016-2019 Digicorp, Inc.
+ * Propeller v1.3.3 (http://propeller.in): tab-scrollable.js
+ * Copyright 2016-2021 Digicorp, Inc.
  * Licensed under MIT (http://propeller.in/LICENSE)
  * --------------------------------------------------------------------------
  */
