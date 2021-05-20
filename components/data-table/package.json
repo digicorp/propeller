@@ -30,7 +30,7 @@
   ],
   "dependencies": {
 	"propellerkit": "*.*.*",
-	"datatables.net":"1.10.12",  
+	"datatables.net":">=1.10.22",  
 	"datatables.net-bs":"1.10.12",  
     "datatables.net-responsive-bs":"2.1.0",
 	"datatables.net-select":"1.2.0",  
