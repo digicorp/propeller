@@ -2,17 +2,17 @@
 @import "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css";
 
 /* Propeller typography */
-@import "http://propeller.in/components/typography/css/typography.css";
+@import "https://opensource.propeller.in/components/typography/css/typography.css";
 
 /* Propeller input */
-@import "http://propeller.in/components/textfield/css/textfield.css";
+@import "https://opensource.propeller.in/components/textfield/css/textfield.css";
 
 /* Propeller icons */
 @import "http://fonts.googleapis.com/icon?family=Material+Icons";
-@import "http://propeller.in/components/icons/css/google-icons.css";
+@import "https://opensource.propeller.in/components/icons/css/google-icons.css";
 
 /* Bootstrap datetimepicker */
-@import "http://propeller.in/components/datetimepicker/css/bootstrap-datetimepicker.css";
+@import "https://opensource.propeller.in/components/datetimepicker/css/bootstrap-datetimepicker.css";
 
 /* Propeller datetimepicker */
-@import "http://propeller.in/components/datetimepicker/css/pmd-datetimepicker.css";
+@import "https://opensource.propeller.in/components/datetimepicker/css/pmd-datetimepicker.css";

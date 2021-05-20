@@ -1,7 +1,7 @@
 <br>
 <p align="left">
   <a href="http://propeller.in/">
-    <img height="40" src="http://propeller.in/assets/images/propeller-logo.png" />
+    <img height="40" src="https://opensource.propeller.in/assets/images/propeller-logo.png" />
   </a>
 	 <p align="left">
 		Select2 gives a customizable select box with support for searching, tagging, remote data sets, infinite scrolling, and many other highly used options.
@@ -19,7 +19,7 @@ npm install propellerkit-select2
 
 ## Propeller select2 Guidelines
 
-Follow our [Guidelines](http://propeller.in/components/select2.php) For more options.
+Follow our [Guidelines](https://opensource.propeller.in/components/select2) For more options.
 
 
 ## Browser Support
@@ -53,7 +53,7 @@ See [the Releases section of our GitHub project](https://github.com/digicorp/pro
 
 ## License
 
-Code and documentation copyright 2016-2019 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
+Code and documentation copyright 2016-2021 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
 Licensed under [MIT](https://github.com/digicorp/propeller/blob/master/LICENSE)
 
 

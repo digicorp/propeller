@@ -2,14 +2,14 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <!-- Propeller checkbox js --> 
-<script type="text/javascript" src="http://propeller.in/components/checkbox/js/checkbox.js"></script>
+<script type="text/javascript" src="https://opensource.propeller.in/components/checkbox/js/checkbox.js"></script>
 
 <!-- Propeller js -->
-<script type="text/javascript" src="http://propeller.in/assets/js/propeller.min.js"></script>
+<script type="text/javascript" src="https://opensource.propeller.in/assets/js/propeller.min.js"></script>
 
 <!-- Slider js -->
-<script src="http://propeller.in/components/range-slider/js/wNumb.js"></script>
-<script src="http://propeller.in/components/range-slider/js/nouislider.js"></script>
+<script src="https://opensource.propeller.in/components/range-slider/js/wNumb.js"></script>
+<script src="https://opensource.propeller.in/components/range-slider/js/nouislider.js"></script>
 <script>
 	// enable $ desable range slider
 	var disableSingle = document.getElementById('disable-single'),

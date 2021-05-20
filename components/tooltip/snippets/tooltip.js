@@ -5,7 +5,7 @@
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <!-- Propeller Global js --> 
-<script src="http://propeller.in/components/global/js/global.js"></script>
+<script src="https://opensource.propeller.in/components/global/js/global.js"></script>
 
 <script>
 $(function () {

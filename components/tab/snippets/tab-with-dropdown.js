@@ -5,10 +5,10 @@
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <!-- Propeller Global js --> 
-<script src="http://propeller.in/components/global/js/global.js"></script>
+<script src="https://opensource.propeller.in/components/global/js/global.js"></script>
 
 <!-- Propeller dropdown -->
-<script type="text/javascript" src="http://propeller.in/components/dropdown/js/dropdown.js"></script>
+<script type="text/javascript" src="https://opensource.propeller.in/components/dropdown/js/dropdown.js"></script>
 
 <!-- Propeller tabs js -->
-<script type="text/javascript" language="javascript" src="http://propeller.in/components/tab/js/tab-scrollable.js"></script>
+<script type="text/javascript" language="javascript" src="https://opensource.propeller.in/components/tab/js/tab-scrollable.js"></script>

@@ -2,7 +2,7 @@
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
 <!-- Slider js -->
-<script type="text/javascript" src="http://propeller.in/components/range-slider/js/jquery.nouislider.min.js"></script>
+<script type="text/javascript" src="https://opensource.propeller.in/components/range-slider/js/jquery.nouislider.min.js"></script>
 <script>
       $(function() {
         //$.material.init();

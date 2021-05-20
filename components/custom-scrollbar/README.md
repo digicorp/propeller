@@ -1,7 +1,7 @@
 <br>
 <p align="left">
   <a href="http://propeller.in/" target="_blank">
-    <img height="40" src="http://propeller.in/assets/images/propeller-logo.png" />
+    <img height="40" src="https://opensource.propeller.in/assets/images/propeller-logo.png" />
   </a>
 	 <p align="left">
 Propeller’s custom scrollbar is used to get rid of browser default scroll bar by utilizing  the feature-rich <a href="http://manos.malihu.gr/jquery-custom-content-scroller/" target="_blank">jQuery custom content scroller</a> plugin. It allows you to customize scrollbars exactly as you need them. It features vertical/horizontal scrolling, mouse-wheel support, scroll easing, adjustable scrollbar height/width and more.
@@ -20,7 +20,7 @@ npm install propellerkit-custom-scrollbar
 
 ## Propeller Custom Scrollbar Guidelines
 
-Follow our [Guidelines](http://propeller.in/components/custom-scroll.php) for more options.
+Follow our [Guidelines](https://opensource.propeller.in/components/custom-scroll) for more options.
 
 
 ## Browser Support
@@ -54,7 +54,7 @@ See [the Releases section of our GitHub project](https://github.com/digicorp/pro
 
 ## License
 
-Code and documentation copyright 2016-2019 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
+Code and documentation copyright 2016-2021 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
 Licensed under [MIT](https://github.com/digicorp/propeller/blob/master/LICENSE)
 
 

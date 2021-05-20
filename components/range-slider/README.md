@@ -1,7 +1,7 @@
 <br>
 <p align="left">
   <a href="http://propeller.in/">
-    <img height="40" src="http://propeller.in/assets/images/propeller-logo.png" />
+    <img height="40" src="https://opensource.propeller.in/assets/images/propeller-logo.png" />
   </a>
 	 <p align="left">
 Propeller’s range slider lets the user select a range of values by moving the slider thumb. The smallest value is to the left, the largest to the right. We have used <a href="https://refreshless.com/nouislider/" target="_blank">noUISlider</a> plugin as a base and customized it by applying material design principles to it. 
@@ -20,7 +20,7 @@ npm install propellerkit-range-slider
 
 ## Propeller Range Slider Guidelines
 
-Follow our [Guidelines](http://propeller.in/components/range-slider.php) for more options.
+Follow our [Guidelines](https://opensource.propeller.in/components/range-slider) for more options.
 
 
 ## Browser Support
@@ -54,7 +54,7 @@ See [the Releases section of our GitHub project](https://github.com/digicorp/pro
 
 ## License
 
-Code and documentation copyright 2016-2019 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
+Code and documentation copyright 2016-2021 [Digicorp Information Systems Pvt. Ltd.](https://www.digi-corp.com/)
 Licensed under [MIT](https://github.com/digicorp/propeller/blob/master/LICENSE)
 
 
